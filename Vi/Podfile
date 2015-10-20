@@ -1,0 +1,15 @@
+platform :ios, '9.0'
+use_frameworks!
+
+target 'Vi' do
+
+end
+
+target 'ViTests' do
+
+end
+
+target 'ViUITests' do
+
+end
+
