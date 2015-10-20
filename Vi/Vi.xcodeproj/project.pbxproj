@@ -99,6 +99,10 @@
 		8352C65D1BD6A5DA007B3F5F /* Vi */ = {
 			isa = PBXGroup;
 			children = (
+				8352C6951BD6BD3A007B3F5F /* Apps */,
+				8352C6941BD6BD34007B3F5F /* Home */,
+				8352C6931BD6BD2F007B3F5F /* Library */,
+				8352C6921BD6BD28007B3F5F /* Settings */,
 				8352C65E1BD6A5DA007B3F5F /* AppDelegate.swift */,
 				8352C6601BD6A5DA007B3F5F /* FirstViewController.swift */,
 				8352C6621BD6A5DA007B3F5F /* SecondViewController.swift */,
@@ -126,6 +130,34 @@
 				8352C6821BD6A5DA007B3F5F /* Info.plist */,
 			);
 			path = ViUITests;
+			sourceTree = "<group>";
+		};
+		8352C6921BD6BD28007B3F5F /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		8352C6931BD6BD2F007B3F5F /* Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		8352C6941BD6BD34007B3F5F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		8352C6951BD6BD3A007B3F5F /* Apps */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Apps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -487,6 +519,7 @@
 				8352C6871BD6A5DA007B3F5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8352C6881BD6A5DA007B3F5F /* Build configuration list for PBXNativeTarget "ViTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +528,7 @@
 				8352C68A1BD6A5DA007B3F5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8352C68B1BD6A5DA007B3F5F /* Build configuration list for PBXNativeTarget "ViUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +537,7 @@
 				8352C68D1BD6A5DA007B3F5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
