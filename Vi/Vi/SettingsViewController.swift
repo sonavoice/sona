@@ -2,7 +2,7 @@
 //  SettingsViewController.swift
 //  Vi
 //
-//  Created by Qwerty on 10/20/15.
+//  Created by Eugene Lee (colemakdvorak) on 10/20/15.
 //  Copyright © 2015 Vi. All rights reserved.
 //
 
