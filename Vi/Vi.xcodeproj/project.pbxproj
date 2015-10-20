@@ -10,6 +10,12 @@
 		05CBBFC21BD6BE3500227BDC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CBBFC11BD6BE3500227BDC /* SettingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		05CBBFC31BD6BE3500227BDC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CBBFC11BD6BE3500227BDC /* SettingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		05CBBFC41BD6BE3500227BDC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CBBFC11BD6BE3500227BDC /* SettingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		05CBBFC61BD6C51B00227BDC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CBBFC51BD6C51B00227BDC /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		05CBBFC71BD6C51B00227BDC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CBBFC51BD6C51B00227BDC /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		05CBBFC81BD6C51B00227BDC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CBBFC51BD6C51B00227BDC /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		05CBBFCA1BD6CBEB00227BDC /* HomeGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CBBFC91BD6CBEB00227BDC /* HomeGestureViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		05CBBFCB1BD6CBEB00227BDC /* HomeGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CBBFC91BD6CBEB00227BDC /* HomeGestureViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		05CBBFCC1BD6CBEB00227BDC /* HomeGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CBBFC91BD6CBEB00227BDC /* HomeGestureViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		8352C65F1BD6A5DA007B3F5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8352C65E1BD6A5DA007B3F5F /* AppDelegate.swift */; };
 		8352C6611BD6A5DA007B3F5F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8352C6601BD6A5DA007B3F5F /* FirstViewController.swift */; };
 		8352C6631BD6A5DA007B3F5F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8352C6621BD6A5DA007B3F5F /* SecondViewController.swift */; };
@@ -39,6 +45,8 @@
 
 /* Begin PBXFileReference section */
 		05CBBFC11BD6BE3500227BDC /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		05CBBFC51BD6C51B00227BDC /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		05CBBFC91BD6CBEB00227BDC /* HomeGestureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeGestureViewController.swift; sourceTree = "<group>"; };
 		8352C65B1BD6A5DA007B3F5F /* Vi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8352C65E1BD6A5DA007B3F5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8352C6601BD6A5DA007B3F5F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +162,8 @@
 		8352C6941BD6BD34007B3F5F /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				05CBBFC51BD6C51B00227BDC /* HomeViewController.swift */,
+				05CBBFC91BD6CBEB00227BDC /* HomeGestureViewController.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -295,10 +305,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05CBBFC61BD6C51B00227BDC /* HomeViewController.swift in Sources */,
 				8352C6631BD6A5DA007B3F5F /* SecondViewController.swift in Sources */,
 				8352C65F1BD6A5DA007B3F5F /* AppDelegate.swift in Sources */,
 				8352C6611BD6A5DA007B3F5F /* FirstViewController.swift in Sources */,
 				05CBBFC21BD6BE3500227BDC /* SettingsViewController.swift in Sources */,
+				05CBBFCA1BD6CBEB00227BDC /* HomeGestureViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,7 +319,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8352C6761BD6A5DA007B3F5F /* ViTests.swift in Sources */,
+				05CBBFCB1BD6CBEB00227BDC /* HomeGestureViewController.swift in Sources */,
 				05CBBFC31BD6BE3500227BDC /* SettingsViewController.swift in Sources */,
+				05CBBFC71BD6C51B00227BDC /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,7 +330,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8352C6811BD6A5DA007B3F5F /* ViUITests.swift in Sources */,
+				05CBBFCC1BD6CBEB00227BDC /* HomeGestureViewController.swift in Sources */,
 				05CBBFC41BD6BE3500227BDC /* SettingsViewController.swift in Sources */,
+				05CBBFC81BD6C51B00227BDC /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
