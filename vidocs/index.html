@@ -1,0 +1,622 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+  <meta name="viewport" content="width=device-width">
+  <title>vi.js</title>
+  <style>
+    body {
+      font-size: 14px;
+      line-height: 22px;
+      font-family: Helvetica Neue, Helvetica, Arial;
+      background: #f4f4f4 url(docs/images/background.png);
+    }
+    .interface {
+      font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif !important;
+    }
+    div#sidebar {
+      background: #fff;
+      position: fixed;
+      z-index: 10;
+      top: 0; left: 0; bottom: 0;
+      width: 200px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: touch;
+      padding: 15px 0 30px 30px;
+      border-right: 1px solid #bbb;
+      box-shadow: 0 0 20px #ccc; -webkit-box-shadow: 0 0 20px #ccc; -moz-box-shadow: 0 0 20px #ccc;
+    }
+      a.toc_title, a.toc_title:visited {
+        display: block;
+        color: black;
+        font-weight: bold;
+        margin-top: 15px;
+      }
+        a.toc_title:hover {
+          text-decoration: underline;
+        }
+        #sidebar .version {
+          font-size: 10px;
+          font-weight: normal;
+        }
+      ul.toc_section {
+        font-size: 11px;
+        line-height: 14px;
+        margin: 5px 0 0 0;
+        padding-left: 0px;
+        list-style-type: none;
+        font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+      }
+        .toc_section li {
+          cursor: pointer;
+          margin: 0 0 3px 0;
+        }
+          .toc_section li a {
+            text-decoration: none;
+            color: black;
+          }
+            .toc_section li a:hover {
+              text-decoration: underline;
+            }
+    div.container {
+      position: relative;
+      width: 650px;
+      margin: 40px 0 50px 260px;
+    }
+    img#logo {
+      width: 450px;
+      height: 80px;
+    }
+    div.run {
+      position: absolute;
+      right: 15px;
+      width: 26px; height: 18px;
+      background: url('docs/images/arrows.png') no-repeat -26px 0;
+    }
+      div.run:active {
+        background-position: -51px 0;
+      }
+    p, div.container ul {
+      margin: 25px 0;
+      width: 550px;
+    }
+      p.warning {
+        font-size: 12px;
+        line-height: 18px;
+        font-style: italic;
+      }
+      div.container ul {
+        list-style: circle;
+        padding-left: 15px;
+        font-size: 13px;
+        line-height: 18px;
+      }
+        div.container ul li {
+          margin-bottom: 10px;
+        }
+        div.container ul.small {
+          font-size: 12px;
+        }
+    a, a:visited {
+      color: #444;
+    }
+    a:active, a:hover {
+      color: #000;
+    }
+    a.punch {
+      display: inline-block;
+      background: #4162a8;
+      border-top: 1px solid #38538c;
+      border-right: 1px solid #1f2d4d;
+      border-bottom: 1px solid #151e33;
+      border-left: 1px solid #1f2d4d;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+      -moz-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+      -ms-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+      -o-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+      box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+      color: #fff;
+      font: bold 14px "helvetica neue", helvetica, arial, sans-serif;
+      line-height: 1;
+      margin-bottom: 15px;
+      padding: 8px 0 10px 0;
+      text-align: center;
+      text-shadow: 0px -1px 1px #1e2d4d;
+      text-decoration: none;
+      width: 225px;
+      -webkit-background-clip: padding-box; }
+      a.punch:hover {
+        -webkit-box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+        -moz-box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+        -ms-box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+        -o-box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+        box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+        cursor: pointer; }
+      a.punch:active {
+        -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
+        -moz-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
+        -ms-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
+        -o-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
+        box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
+        margin-top: 5px; margin-bottom: 10px; }
+    a img {
+      border: 0;
+    }
+    a.travis-badge {
+      display: block;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      padding-top: 20px;
+    }
+      h2 {
+        font-size: 22px;
+      }
+    b.header {
+      font-size: 18px;
+      line-height: 35px;
+    }
+    span.alias {
+      font-size: 14px;
+      font-style: italic;
+      margin-left: 20px;
+    }
+    table {
+      margin: 15px 0 0; padding: 0;
+    }
+      tr, td {
+        margin: 0; padding: 0;
+      }
+        td {
+          padding: 0px 15px 5px 0;
+        }
+        table .rule {
+          height: 1px;
+          background: #ccc;
+          margin: 5px 0;
+        }
+    code, pre, tt {
+      font-family: Monaco, Consolas, "Lucida Console", monospace;
+      font-size: 12px;
+      line-height: 18px;
+      font-style: normal;
+    }
+      tt {
+        padding: 0px 3px;
+        background: #fff;
+        border: 1px solid #ddd;
+        zoom: 1;
+      }
+      code {
+        margin-left: 20px;
+      }
+      pre {
+        font-size: 12px;
+        padding: 2px 0 2px 15px;
+        border: 4px solid #bbb; border-top: 0; border-bottom: 0;
+        margin: 0px 0 25px;
+      }
+      img.example_image {
+        margin: 0px auto;
+      }
+        img.example_retina {
+          margin: 20px;
+          box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+        }
+    @media only screen and (-webkit-max-device-pixel-ratio: 1) and (max-width: 600px),
+           only screen and (max--moz-device-pixel-ratio: 1) and (max-width: 600px) {
+      div#sidebar {
+        display: none;
+      }
+      img#logo {
+        max-width: 450px;
+        width: 100%;
+        height: auto;
+      }
+      div.container {
+        width: auto;
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+        p, div.container ul {
+          width: auto;
+        }
+    }
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 640px),
+          only screen and (-o-min-device-pixel-ratio: 3/2) and (max-width: 640px),
+          only screen and (min-device-pixel-ratio: 1.5) and (max-width: 640px) {
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      div#sidebar {
+        -webkit-overflow-scrolling: initial;
+        position: relative;
+        width: 90%;
+        height: 120px;
+        left: 0;
+        top: -7px;
+        padding: 10px 0 10px 30px;
+        border: 0;
+      }
+      img#logo {
+        width: auto;
+        height: auto;
+      }
+      div.container {
+        margin: 0;
+        width: 100%;
+      }
+      p, div.container ul {
+        max-width: 98%;
+        overflow-x: scroll;
+      }
+      table {
+        position: relative;
+      }
+        tr:first-child td {
+          padding-bottom: 25px;
+        }
+        td.text {
+          line-height: 12px;
+          padding: 0;
+          position: absolute;
+          left: 0;
+          top: 48px;
+        }
+        tr:last-child td.text {
+          top: 122px;
+        }
+      pre {
+        overflow: scroll;
+      }
+    }
+    img.figure {
+      width: 100%;
+    }
+    div.columns {
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+    }
+      div.columns ul {
+        margin: 10px 0;
+      }
+    div.col-50 {
+      display: table-cell;
+      width: 50%;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="sidebar" class="interface">
+
+    <a class="toc_title" href="#">
+      Vi.js <span class="version">(0.0.1)</span>
+    </a>
+    <ul class="toc_section">
+      <li>&raquo; <a href="#">GitHub Repo</a></li>
+    </ul>
+
+    <a class="toc_title" href="#The-Basics">
+      The Basics
+    </a>
+    <ul class="toc_section">
+      <li>- <a href="#What-is-Vi">What is Vi?</a></li>
+      <li>– <a href="#Structure-of-an-App">Structure of an App</a></li>
+      <li>– <a href="#Commands-intro">Commands</a></li>
+    </ul>
+
+    <a class="toc_title" href="#Creating-an-app">
+      Creating an App
+    </a>
+    <ul class="toc_section">
+      <li>– <a href="#Creation-title">title</a></li>
+    </ul>
+
+    <a class="toc_title" href="#Commands">
+      Commands
+    </a>
+
+    <a class="toc_title" href="#Interface">
+      Interface
+    </a>
+    <ul class="toc_section">
+      <li>– <a href="#Interface-speak">voice</a></li>
+    </ul>
+
+    <a class="toc_title" href="#Example">
+      Example
+    </a>
+    <ul class="toc_section">
+      <li>– <a href="#Example-chatterbox">Chat</a></li>
+    </ul>
+
+    <a class="toc_title" href="#changelog">
+      Change Log
+    </a>
+
+  </div>
+
+  <div class="container">
+
+    <p>
+      <h1>Vi.js</h1>
+    </p>
+
+    <p>
+      Vi.js is a simple set of tools that allows you to build your applications for a hands-free virtual assitant. That assistant is Vi - a virtual assistant for iOS where users can add their favorite applications to their custom virtual assistant and have access to the same functionality, hands-free. By communicating with native Objective-C, bridged with React Native, you can bring a website, iOS, or Android app to Vi in only a few lines of Javascript.
+    </p>
+
+    <p>
+      The Vi API is <a href="#">hosted on GitHub</a> and available for use under the <a href="#">MIT software license</a>.
+    </p>
+
+    <h2 id="downloads">
+      Installation
+    </h2>
+
+    <p>
+      Install with NPM<br />
+      <tt>$ npm install -g vi-js</tt>
+    </p>
+
+    <h2 id="The-Basics">The Basics</h2>
+
+    <p>
+      Building an application for the Vi platform is simple - you create a new instance of a Vi App and declare commands. No really, that's it - two steps.  
+    </p>
+
+    <p>
+      The most important part of building an application for Vi is Commands. Commands are the substrings Vi hears when a user says, "Hey Vi, use drinkr(not a real drink ordering app...),  and order me a beer". The <i>command</i> there was <b>'order me a beer'</b>. The syntax for every command in Vi is the same: 'Hey vi, use <i>myApp</i>, and <i>command</i>'. This allows users to learn how to do things in Vi and remember commands. The code:
+<pre>
+commands: {
+  "order me a $1": function(err, voice, drink) {
+    myRESTfulAPI.getOrder(drink, function(err, done){
+      if (err) { //freak out }
+      voice('Your ' + drink + ' has been ordered sir');
+    });
+  }
+}
+</pre>
+
+    </p>
+
+    <p>
+      And there it is. Vi listened to that user input and then triggered the correct function. The <tt>$1</tt> indicates the part(s) of the incoming speech-to-text string that you want to use as arguments. You ping your API, tell Vi to answer with a resounding success, and the rest is history. So where's the beer?
+    </p>
+
+    <h2 id="What-is-Vi">What is Vi?</h2>
+
+    <p>
+      Vi is a virtual assistant for iOS. A <i>very intelligent</i> virtual assistant that allows anyone to use the apps they know and love, hands-free with simple voice recognition. Vi.js is the tool that allows engineers to put parts or all of their application on the Vi Library for everyone to use.
+    </p>
+
+    <h2 id="Structure-of-an-App">Structure of an App</h2>
+
+    <p>
+      Applications written for Vi are very simple. They must have only two properties: <i>title</i> and <i>commands</i>
+    </p>
+
+    <p>
+      <b>Title</b>
+      <ul>
+        <li>The name of your application or service. This should be as similar to the actual name of the application.</li>
+        <li>This add a 'use drinkr' clause to the Vi Library.</li>
+      </ul>
+
+      <b>Commands</b>
+      <ul>
+        <li>Individual phrases to listen for after your application has already been chosen by the user.</li>
+        <li>Takes multiple input arguments at any location in the sentence.</li>
+        <li>Always take <i>err</i> and <i>voice</i> parameters.</li>
+        <li>Flexability: Have different sentence structures, words, and arrangments all trigger the same API call with the correct arguments. </li>
+      </ul>
+    </p>
+
+
+    <h2 id="Commands-intro">Commands</h2>
+
+    <p>
+      Commands are the backbone of your Vi application. Writting them is almost as easy as writing plain english. These commands will get automatically turned into a short, readable list of "Things you can do with MYAPP" section associated with your application. This way every user on Vi, knows how much awesome stuff they can do hands-free. Commands should almost always return a success or failure message, that will get spoken out to the user.
+    </p>
+
+    <h2 id="Creating-an-app">Creating an App</h2>
+
+    <p>
+      After downloading the Vi API, you need to create a new javascript file in a new project directory. This directory should have two files:
+      <ul>
+        <li>
+          <p>
+          <b><i>package.json</i></b><br />
+          This will contain meta-data about your Vi application.
+          </p>  
+        </li>
+        <li>
+          <p>
+          <b><i>app.js</i></b><br />
+          This will have all the code.
+          </p>  
+        </li>
+      </ul>
+    </p>
+
+    <p>
+      In your app.js you should declare your requires at the top (including <i>vi-js</i>). Then instantiate a new app and export at the end.
+
+<pre>
+  var Vi = require('vi-js');
+  var myAppAPI = require('my-app-api') || 'http://superSecretApiRoute' ;
+
+  var myApp = new Vi.App({
+    title: 'MyApp',
+    commands: {
+      // Different commands and calls to your API go here.
+    }
+  });
+
+  module.exports = myApp;
+</pre>
+
+      The simplicity of the required file structure allows you to create as complex of a file structure as you want - as long as there is a <i>app.js</i> file that runs the show.
+    </p>
+
+    <p id="Creation-title">
+      <b class="header">title</b><code>title:'string'</code>
+      <br />
+      The title of your application that your user will speak into Vi, to let Vi know that they want to use your app. This should be written phonetically if you have a unique application name.
+
+      <p><i>A <tt>.pronouce()</tt> method is coming soon to allow you to specify the syllabic breakdown of the title of your application and to allow pronounciation flexablity.</i></p>
+    </p>
+
+    <h2 id="Commands">Commands</h2>
+
+    <p>
+      Commands will be the bulk of the code you write for your Vi application. The consist of functions that will be invoked with passed in arguments when a declared string is heard by Vi. The arguments of the function declaration are <b>in order</b> of that which they are declared, starting after a required err parameter. When input arguments are at the end of the string (no stop word using *) then they will collect input until the voice recording thinks the input is over. For a longer expected input, it is best to place it as the final argument"
+    </p>
+
+<pre>
+//Commands is a property within your Vi application
+  commands: {
+    //Anything within [] is an optional substring. 
+
+    //"call me a car" or "call me a car at 51 Linden St." will invoke
+
+    "call me a car[ at $1]": function(err, voice, location) {
+      if (err) { throw err; }
+      myCarAPI.call(location || 'current location');
+    }
+  }
+</pre>
+
+    <p>
+      Commands can take multiple arguments. Take a chat application that recieves the following user text:
+      <blockquote>"in chatroom super productive say running late so sorry"</blockquote>
+    </p>
+
+<pre>
+  commands: {
+    //*say* indicates the end of the argument section of the string. 
+    "in chatroom $1 *say* $2": function(err, voice, channel, message) {
+      if (err) { throw err; }
+
+      //channel = 'super productive'
+      //message = 'running late so sorry'
+
+      channel = '#' + (channel.replace(/\s/g, '') || 'general');
+
+      //Now in format #superproductive
+      //this parsing can be done with your API instead of within here
+
+      myChatAPI.postMessage()
+    }
+  }
+</pre>
+
+    <p>
+      There are a few important principals to keep in mind when building out your commands. Commands should be as clear and learnable as possible. Rather than making them as smooth as possible, focus on simplicity and <b>learnability</b>.
+      By this I mean make your set of commands as similar to each other as possible, just switching out certain keywords so that the user, within a few usages, can now how to use the bulk of your application on Vi. With several commands and complex applications, it is better for the user to feel confident in communicating with the application rather than speaking as they would to a close friend.
+    </p>
+
+
+
+    <h2 id="Interface">Interface</h2>
+
+    <p>
+      The <i>interface</i> in Vi.js refers to the iOS application Vi. The only interface method available now it <tt>.speak()</tt>. This has been made available to each function you create. It must be declared as the second parameter - following the err parameter and preceding any of your custom parameters. It can be invoked only once with a single string but this string can be a concatenation of several strings, arguments, or results from callbacks.
+    </p>
+
+    <p id="Interface-speak">
+      <b class="header">speak</b><code>Vi.Interface.speak('I did it!') <i>or</i> voice('I did it!')</code>
+      <br />
+<pre>
+  commands: {
+    "read newest post": function(err, voice){
+      var post = mySocialNetworkAPI.getNewestPost(function(post){
+        voice(post);
+      });
+    },
+    "post $1 to everyone": function(err, voice, message){
+      if (err) { voice('I couldn't get that') }
+      mySocialNetworkAPI.tellEveryone(function(){
+        voice('I told everyone ' + message);
+      });
+    }
+  }
+</pre>
+
+    </p>
+
+      <h2 id="Example">Example</h2>
+
+      <p>
+        This is a sample application built for Vi. The application is a simple chat/messaging application that you can see <a href="#github">here</a>.
+      </p>
+
+      <p id="Example-chatterbox">
+        <b class="header">Chat App</b>
+        <br />
+<pre>
+
+var Chat = 'http://chatterbox.com/api/posts';
+var Vi = require('vi-js');
+
+var ChatVi = new Vi.App({
+  title: "chat",
+  commands: {
+    "read newest message": function(err, voice){
+      if (err) { voice('Oh no something went wrong! Try again.')};
+      voice(Chatterbox.getNewestMessage() || 'No new messages');
+    },
+    "post message $1": function(err, voice, message){
+      if (err) { voice('Couldn't post message')};
+      Chatterbox.postNewMessage(message, function(){
+        voice('Posted!');
+      });
+    },
+    "read last $1 *messages*": function(err, voice, numOfMessages){
+      //convert numOfMessages to number
+      var messages = Chatterbox.getAllMessages();
+      for ( var i = 0; i < numOfMessages; i++){
+        voice(messages[i]);
+      };
+      voice('Done reading!');
+    }
+  }
+});
+
+module.exports = ChatVi;
+
+</pre>
+
+    </p>
+
+
+    <h2 id="changelog">Change Log</h2>
+
+    <!-- <b class="header">0.0.1</b> &mdash; <small><i>Sept. 22, 2015</i></small>
+    &mdash; <a href="#mygithublinktocommitdiff">Diff</a>
+    <br />
+    <ul style="margin-top: 5px;">
+      <li>
+        Release version 0.0.1.
+      </li>
+      <li>
+        Documentation created.
+      </li>
+      <li>
+        <tt>someCodeAdded</tt> that does some stuff.
+      </li>
+    </ul> -->
+
+  </div>
+
+</body>
+</html>

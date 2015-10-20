@@ -1,0 +1,13 @@
+{
+  "name": "vi",
+  "version": "0.0.1",
+  "author": "Garrett Maring",
+  "description": "An npm module for creating and publishing Vi applications.",
+  "dependencies": {
+    "shelljs": "^0.4.0",
+    "yargs": "^3.9.0"
+  },
+  "bin": {
+    "vi": "bin/vi.js"
+  }
+}
