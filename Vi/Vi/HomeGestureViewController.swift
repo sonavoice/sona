@@ -1,13 +1,9 @@
-//
-//  HomeGestureViewController.swift
-//  Vi
-//
-//  Created by Eugene Lee (colemakdvorak) on 10/20/15.
-//  Copyright © 2015 Vi. All rights reserved.
-//
 import UIKit
 
+
 class HomeGestureViewController: UIViewController {
+  
+  var stt:SpeechToText = SpeechToText();
   
   @IBOutlet weak var swipeLabel: UILabel?
   var listening:Bool = false
@@ -18,6 +14,16 @@ class HomeGestureViewController: UIViewController {
     upSwipe.direction = .Up
     view.addGestureRecognizer(upSwipe)
     
+    /* Configure Watson */
+    let conf:STTConfiguration = STTConfiguration()
+    
+    conf.basicAuthUsername = "11a2a0e4-02dd-4b14-812a-bc9ec34efc3a"
+    conf.basicAuthPassword = "r5HEtX7J0tqd"
+    
+    self.stt = SpeechToText.init(config: conf)
+    
+    NSLog("View loaded")
+    
 //    let leftSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
 //    leftSwipe.direction = .Left
 //    view.addGestureRecognizer(leftSwipe)
@@ -25,7 +31,7 @@ class HomeGestureViewController: UIViewController {
 //    let rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
 //    rightSwipe.direction = .Right
 //    view.addGestureRecognizer(rightSwipe)
-//    
+//
 //    let downSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
 //    downSwipe.direction = .Down
 //    view.addGestureRecognizer(downSwipe)
@@ -36,6 +42,19 @@ class HomeGestureViewController: UIViewController {
       print("Swipe Up")
       listening = !listening
       print("Listening: \(listening)")
+      
+      self.stt.recognize({ (res: [NSObject:AnyObject]!, err: NSError!) -> Void in
+        
+        if err != nil {
+          if self.stt.isFinalTranscript(res) {
+            self.stt.endRecognize()
+          }
+          NSLog("@%", self.stt.getTranscript(res))
+        } else {
+//          NSLog("@%", err.localizedDescription)
+        }
+      });
+      
     }
     
 //    if (sender.direction == .Left) {

@@ -24,6 +24,18 @@
 		8352C66B1BD6A5DA007B3F5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8352C6691BD6A5DA007B3F5F /* LaunchScreen.storyboard */; };
 		8352C6761BD6A5DA007B3F5F /* ViTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8352C6751BD6A5DA007B3F5F /* ViTests.swift */; };
 		8352C6811BD6A5DA007B3F5F /* ViUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8352C6801BD6A5DA007B3F5F /* ViUITests.swift */; };
+		ECF6000C1BD7FB0400751275 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF6000B1BD7FB0400751275 /* CFNetwork.framework */; };
+		ECF6000E1BD7FB0D00751275 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF6000D1BD7FB0D00751275 /* AudioToolbox.framework */; };
+		ECF600101BD7FB1300751275 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF6000F1BD7FB1300751275 /* AVFoundation.framework */; };
+		ECF600121BD7FB1A00751275 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF600111BD7FB1A00751275 /* Foundation.framework */; };
+		ECF600141BD7FB1F00751275 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF600131BD7FB1F00751275 /* QuartzCore.framework */; };
+		ECF600161BD7FB2400751275 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF600151BD7FB2400751275 /* CoreAudio.framework */; };
+		ECF600181BD7FB2A00751275 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF600171BD7FB2A00751275 /* Security.framework */; };
+		ECF6001B1BD7FB3000751275 /* libicucore.A.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF600191BD7FB3000751275 /* libicucore.A.tbd */; };
+		ECF6001C1BD7FB3000751275 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF6001A1BD7FB3000751275 /* libicucore.tbd */; };
+		ECF6001E1BD7FBC200751275 /* watsonsdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF6001D1BD7FBC200751275 /* watsonsdk.framework */; settings = {ASSET_TAGS = (); }; };
+		ECF6001F1BD7FBC200751275 /* watsonsdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF6001D1BD7FBC200751275 /* watsonsdk.framework */; settings = {ASSET_TAGS = (); }; };
+		ECF600201BD7FBC200751275 /* watsonsdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF6001D1BD7FBC200751275 /* watsonsdk.framework */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +73,17 @@
 		8352C67C1BD6A5DA007B3F5F /* ViUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8352C6801BD6A5DA007B3F5F /* ViUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViUITests.swift; sourceTree = "<group>"; };
 		8352C6821BD6A5DA007B3F5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECF6000B1BD7FB0400751275 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		ECF6000D1BD7FB0D00751275 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		ECF6000F1BD7FB1300751275 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		ECF600111BD7FB1A00751275 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		ECF600131BD7FB1F00751275 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		ECF600151BD7FB2400751275 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		ECF600171BD7FB2A00751275 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		ECF600191BD7FB3000751275 /* libicucore.A.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.A.tbd; path = usr/lib/libicucore.A.tbd; sourceTree = SDKROOT; };
+		ECF6001A1BD7FB3000751275 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		ECF6001D1BD7FBC200751275 /* watsonsdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = watsonsdk.framework; sourceTree = "<group>"; };
+		ECF6003E1BD80B5300751275 /* Vi-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Vi-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +91,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECF6001B1BD7FB3000751275 /* libicucore.A.tbd in Frameworks */,
+				ECF6001E1BD7FBC200751275 /* watsonsdk.framework in Frameworks */,
+				ECF6001C1BD7FB3000751275 /* libicucore.tbd in Frameworks */,
+				ECF600181BD7FB2A00751275 /* Security.framework in Frameworks */,
+				ECF600161BD7FB2400751275 /* CoreAudio.framework in Frameworks */,
+				ECF600141BD7FB1F00751275 /* QuartzCore.framework in Frameworks */,
+				ECF600121BD7FB1A00751275 /* Foundation.framework in Frameworks */,
+				ECF600101BD7FB1300751275 /* AVFoundation.framework in Frameworks */,
+				ECF6000E1BD7FB0D00751275 /* AudioToolbox.framework in Frameworks */,
+				ECF6000C1BD7FB0400751275 /* CFNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECF6001F1BD7FBC200751275 /* watsonsdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECF600201BD7FBC200751275 /* watsonsdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,10 +126,12 @@
 		8352C6521BD6A5DA007B3F5F = {
 			isa = PBXGroup;
 			children = (
+				ECF6003E1BD80B5300751275 /* Vi-Bridging-Header.h */,
 				8352C65D1BD6A5DA007B3F5F /* Vi */,
 				8352C6741BD6A5DA007B3F5F /* ViTests */,
 				8352C67F1BD6A5DA007B3F5F /* ViUITests */,
 				8352C65C1BD6A5DA007B3F5F /* Products */,
+				ECF6000A1BD7FAF100751275 /* Libraries */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,6 +212,23 @@
 			name = Apps;
 			sourceTree = "<group>";
 		};
+		ECF6000A1BD7FAF100751275 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				ECF6001D1BD7FBC200751275 /* watsonsdk.framework */,
+				ECF600191BD7FB3000751275 /* libicucore.A.tbd */,
+				ECF6001A1BD7FB3000751275 /* libicucore.tbd */,
+				ECF600171BD7FB2A00751275 /* Security.framework */,
+				ECF600151BD7FB2400751275 /* CoreAudio.framework */,
+				ECF600131BD7FB1F00751275 /* QuartzCore.framework */,
+				ECF600111BD7FB1A00751275 /* Foundation.framework */,
+				ECF6000F1BD7FB1300751275 /* AVFoundation.framework */,
+				ECF6000D1BD7FB0D00751275 /* AudioToolbox.framework */,
+				ECF6000B1BD7FB0400751275 /* CFNetwork.framework */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -237,6 +291,7 @@
 		8352C6531BD6A5DA007B3F5F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Vi;
 				TargetAttributes = {
@@ -411,6 +466,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Vi-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -449,6 +505,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Vi-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -458,10 +515,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Vi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.viapp.Vi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Vi-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
 			name = Debug;
 		};
@@ -469,10 +535,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Vi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.viapp.Vi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Vi-Bridging-Header.h";
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
 			name = Release;
 		};
@@ -480,10 +554,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ViTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.viapp.ViTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vi.app/Vi";
 			};
 			name = Debug;
@@ -492,10 +573,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ViTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.viapp.ViTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vi.app/Vi";
 			};
 			name = Release;
@@ -503,10 +590,17 @@
 		8352C68C1BD6A5DA007B3F5F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ViUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.viapp.ViUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_TARGET_NAME = Vi;
 				USES_XCTRUNNER = YES;
 			};
@@ -515,10 +609,16 @@
 		8352C68D1BD6A5DA007B3F5F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ViUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.viapp.ViUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TEST_TARGET_NAME = Vi;
 				USES_XCTRUNNER = YES;
 			};
