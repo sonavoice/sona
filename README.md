@@ -17,18 +17,6 @@ After forking and cloning the repo run the following commands:
 
 - In the ios directory run: `$ pod install`
 
-Also add frameworks by going to the Vi targets Build Phases and adding the following linked binaries. Do this by clicking the '+' and searching by name.
-
-You need to manually install the following frameworks:
-- CFNetwork.framework
-- AudioToolbox.framework
-- AVFoundation.framework
-- Quartzcore.framework
-- CoreAudio.framework
-- Security.framework
-- Foundation.framework
-- libicucore.dylib
-
 You also need to add the watsonsdk.framework. Until it's on CocoaPods you need to manually download the framework. Do this be going to the [Watson Speech iOS Repo](https://github.com/watson-developer-cloud/speech-ios-sdk), cloning, and unzipping the framework. Add that to your libraries as well.
 
 Then use viapp.xcworkspace NOT viapp.xcodeproject.
