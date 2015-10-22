@@ -64,18 +64,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zv6-5E-VMv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zv6-5E-VMv">
                                 <rect key="frame" x="236" y="227" width="129" height="45"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="second" translatesAutoresizingMaskIntoConstraints="NO" id="S5U-Gb-7C3">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="second" translatesAutoresizingMaskIntoConstraints="NO" id="S5U-Gb-7C3">
                                 <rect key="frame" x="137" y="64" width="327" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="327" id="SCT-CJ-c82"/>
+                                    <constraint firstAttribute="height" constant="114" id="aij-aA-Peo"/>
+                                </constraints>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HVU-wr-viM">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HVU-wr-viM">
                                 <rect key="frame" x="140" y="296" width="321" height="264"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="264" id="PPa-6l-b6Z"/>
+                                    <constraint firstAttribute="width" constant="321" id="s6T-Tp-LrF"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="gcy-RH-P2h" id="u6a-iL-Uan"/>
                                     <outlet property="delegate" destination="gcy-RH-P2h" id="8pY-gk-bTH"/>
@@ -86,7 +94,11 @@
                         <constraints>
                             <constraint firstItem="HVU-wr-viM" firstAttribute="centerX" secondItem="SrD-LK-lyS" secondAttribute="centerX" id="S1q-2v-vTK"/>
                             <constraint firstItem="S5U-Gb-7C3" firstAttribute="centerX" secondItem="SrD-LK-lyS" secondAttribute="centerX" id="YfC-ez-Xs7"/>
+                            <constraint firstItem="Zv6-5E-VMv" firstAttribute="top" secondItem="S5U-Gb-7C3" secondAttribute="bottom" constant="49" id="Yng-PS-YQu"/>
+                            <constraint firstItem="Vep-PE-XZ8" firstAttribute="top" secondItem="HVU-wr-viM" secondAttribute="bottom" constant="40" id="bvn-t9-fXn"/>
+                            <constraint firstItem="S5U-Gb-7C3" firstAttribute="top" secondItem="6vK-OT-F8r" secondAttribute="bottom" id="cQZ-CB-7Qw"/>
                             <constraint firstItem="Zv6-5E-VMv" firstAttribute="centerX" secondItem="SrD-LK-lyS" secondAttribute="centerX" id="lyf-sw-NaO"/>
+                            <constraint firstItem="HVU-wr-viM" firstAttribute="top" secondItem="Zv6-5E-VMv" secondAttribute="bottom" constant="24" id="ymW-YQ-P5Y"/>
                         </constraints>
                     </view>
                     <connections>
