@@ -10,6 +10,7 @@ import UIKit
 
 class LibraryViewController: UITableViewController {
   var apps = dummyData
+  var appInfo: App!
   
   override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
     return 1
@@ -26,16 +27,17 @@ class LibraryViewController: UITableViewController {
       let appInfo = apps[indexPath.row] as App
       cell.textLabel?.text = appInfo.name
       cell.detailTextLabel?.text = appInfo.description
+      
       return cell
   }
   
-//  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//    
-//    
-//    let selectedApp = apps[indexPath.row]
-//    
-//    let destinationVC = AppInfoViewController(data: selectedApp)
-//    
-//    destinationVC.performSegueWithIdentifier("appSegue", sender: self)
-//  }
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    
+    if (segue.identifier == "appSegue") {
+      let path = self.tableView.indexPathForSelectedRow!
+      let viewController = segue.destinationViewController as! AppInfoViewController
+      viewController.appInfo = apps[path.indexAtPosition(1)]
+    }
+    
+  }
 }
