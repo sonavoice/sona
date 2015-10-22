@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mPE-N4-DrJ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--Plugin View Controller-->
+        <scene sceneID="W38-ZO-pGi">
+            <objects>
+                <viewController id="mPE-N4-DrJ" customClass="PluginViewController" customModule="Vi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BKq-Yw-9uq"/>
+                        <viewControllerLayoutGuide type="bottom" id="lUZ-7S-cJ8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uT1-rv-ddp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Feg-H5-IuX">
+                                <rect key="frame" x="20" y="137" width="560" height="436"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="mPE-N4-DrJ" id="QOi-oa-mfb"/>
+                                    <outlet property="delegate" destination="mPE-N4-DrJ" id="DMF-Ij-f0k"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search for Vi Plugins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ml8-Ek-cqF">
+                                <rect key="frame" x="196" y="28" width="208" height="28"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="8PO-cC-yir"/>
+                                    <constraint firstAttribute="width" constant="208" id="ZNq-4E-uwb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8oH-ww-OvG">
+                                <rect key="frame" x="20" y="64" width="560" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8 matches found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DkH-Qn-BIT">
+                                <rect key="frame" x="220" y="102" width="160" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Jb0-Z7-3WU"/>
+                                    <constraint firstAttribute="width" constant="160" id="Q8I-x6-fLK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.45264710771276595" green="0.45264710771276595" blue="0.45264710771276595" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Feg-H5-IuX" firstAttribute="centerY" secondItem="uT1-rv-ddp" secondAttribute="centerY" constant="55" id="0wf-zJ-7zG"/>
+                            <constraint firstItem="8oH-ww-OvG" firstAttribute="centerX" secondItem="DkH-Qn-BIT" secondAttribute="centerX" id="2ny-u7-VA6"/>
+                            <constraint firstItem="8oH-ww-OvG" firstAttribute="leading" secondItem="Feg-H5-IuX" secondAttribute="leading" id="7lI-KP-PWa"/>
+                            <constraint firstItem="Feg-H5-IuX" firstAttribute="leading" secondItem="uT1-rv-ddp" secondAttribute="leading" constant="20" id="TNi-ro-K8I"/>
+                            <constraint firstItem="8oH-ww-OvG" firstAttribute="top" secondItem="Ml8-Ek-cqF" secondAttribute="bottom" constant="8" symbolic="YES" id="V5g-qz-o1F"/>
+                            <constraint firstAttribute="trailing" secondItem="Feg-H5-IuX" secondAttribute="trailing" constant="20" id="WN3-6c-yq4"/>
+                            <constraint firstItem="Ml8-Ek-cqF" firstAttribute="top" secondItem="BKq-Yw-9uq" secondAttribute="bottom" constant="8" symbolic="YES" id="bkX-j2-cDV"/>
+                            <constraint firstItem="8oH-ww-OvG" firstAttribute="trailing" secondItem="Feg-H5-IuX" secondAttribute="trailing" id="cmK-Gy-vOM"/>
+                            <constraint firstItem="DkH-Qn-BIT" firstAttribute="top" secondItem="8oH-ww-OvG" secondAttribute="bottom" constant="8" symbolic="YES" id="dWa-Pb-kcY"/>
+                            <constraint firstItem="Feg-H5-IuX" firstAttribute="top" secondItem="BKq-Yw-9uq" secondAttribute="bottom" constant="117" id="f2b-cq-4cH"/>
+                            <constraint firstItem="Ml8-Ek-cqF" firstAttribute="centerX" secondItem="8oH-ww-OvG" secondAttribute="centerX" id="yiI-n2-xmI"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VfB-nT-QYU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="212" y="387"/>
+        </scene>
+    </scenes>
+</document>
