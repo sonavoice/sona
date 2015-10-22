@@ -25,11 +25,7 @@
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
-<<<<<<< HEAD
-	<string>Home</string>
-=======
 	<string>LibraryStoryboard</string>
->>>>>>> (UI/Library/AppInfo) Implemented App Library and Info
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
