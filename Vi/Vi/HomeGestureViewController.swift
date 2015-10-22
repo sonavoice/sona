@@ -1,5 +1,5 @@
 import UIKit
-
+import QuartzCore
 
 class HomeGestureViewController: UIViewController {
   
@@ -8,14 +8,27 @@ class HomeGestureViewController: UIViewController {
   var editedTranscript:String = ""
   
   @IBOutlet var transcript: UILabel!
+  @IBOutlet var sunButton: UIButton!
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    let upSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
-    upSwipe.direction = .Up
-    view.addGestureRecognizer(upSwipe)
+    /* Add sun button */
+    createSunPressFunctionality()
+    
+    /* Add gesture capabilities */
+    // No swipe gesturing until exact location of permitted swipe determined
+    //addUpSwipeGesture()
     
     /* Configure Watson */
+    configureWatson()
+  }
+  
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+  }
+  
+  func configureWatson() {
     let conf:STTConfiguration = STTConfiguration()
     
     conf.audioCodec = WATSONSDK_AUDIO_CODEC_TYPE_OPUS
@@ -24,20 +37,12 @@ class HomeGestureViewController: UIViewController {
     conf.basicAuthPassword = "r5HEtX7J0tqd"
     
     self.stt = SpeechToText.init(config: conf)
-    
-    /* Other swip directions */
-    
-    //    let leftSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
-    //    leftSwipe.direction = .Left
-    //    view.addGestureRecognizer(leftSwipe)
-    //    
-    //    let rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
-    //    rightSwipe.direction = .Right
-    //    view.addGestureRecognizer(rightSwipe)
-    //
-    //    let downSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
-    //    downSwipe.direction = .Down
-    //    view.addGestureRecognizer(downSwipe)
+  }
+  
+  func addUpSwipeGesture() {
+    let upSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
+    upSwipe.direction = .Up
+    view.addGestureRecognizer(upSwipe)
   }
   
   func handleSwipes(sender:UISwipeGestureRecognizer) {
@@ -45,39 +50,27 @@ class HomeGestureViewController: UIViewController {
       print("Swipe Up")
       listening = !listening
       print("Listening: \(listening)")
-      
-      self.stt.recognize({ (res: [NSObject:AnyObject]!, err: NSError!) -> Void in
-        
-        if err == nil {
-          if self.stt.isFinalTranscript(res) {
-            self.stt.endRecognize()
-          }
-          self.handleTranscript(self.stt.getTranscript(res))
-          NSLog("@%", self.stt.getTranscript(res))
-        } else {
-          self.stt.endRecognize()
-          NSLog("@%", err.localizedDescription)
-        }
-      });
+      /* Start Watson Listening */
+      startListening()
       
     }
-    
-//    if (sender.direction == .Left) {
-//      print("Swipe Left")
-//    }
-//    
-//    if (sender.direction == .Right) {
-//      print("Swipe Right")
-//    }
-//  
-//    if (sender.direction == .Down) {
-//      print("Swipe Down")
-//    }
   }
   
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+  func startListening() {
+    self.stt.recognize({ (res: [NSObject:AnyObject]!, err: NSError!) -> Void in
+      
+      if err == nil {
+        if self.stt.isFinalTranscript(res) {
+          self.stt.endRecognize()
+        }
+        self.handleTranscript(self.stt.getTranscript(res))
+        self.handlePowerMeter()
+        NSLog("@%", self.stt.getTranscript(res))
+      } else {
+        self.stt.endRecognize()
+        NSLog("@%", err.localizedDescription)
+      }
+    })
   }
   
   func handleTranscript(transcript: String) {
@@ -103,6 +96,36 @@ class HomeGestureViewController: UIViewController {
       }
       ++i
     }
+  }
+  
+  func createSunPressFunctionality() {
+    self.sunButton.addTarget(self, action: "buttonPressed", forControlEvents: .TouchUpInside)
+    
+  }
+  
+  func addPulseAnimation(powerLevel: Float) {
+    let scaleAnimation:CABasicAnimation = CABasicAnimation(keyPath: "transform.scale")
+    
+    scaleAnimation.duration = 0.3
+    scaleAnimation.repeatCount = 0.0
+    scaleAnimation.autoreverses = false
+    scaleAnimation.fromValue = (abs(powerLevel) / 100);
+    scaleAnimation.toValue = 1.0;
+    
+    self.sunButton.layer.addAnimation(scaleAnimation, forKey: "scale")
+  }
+  
+  func buttonPressed() {
+    if !listening {
+      listening = !listening
+      startListening()
+    }
+  }
+  
+  func handlePowerMeter() {
+    self.stt.getPowerLevel({ (power: Float) -> Void in
+      self.addPulseAnimation(power)
+    })
   }
 
 }

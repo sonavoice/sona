@@ -2,11 +2,13 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="icL-od-kdh">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Home Gesture View Controller-->
         <scene sceneID="WTz-al-jWP">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s00-8k-t6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="icL-od-kdh" customClass="HomeGestureViewController" customModule="Vi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="o28-Fs-fby"/>
@@ -16,24 +18,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsC-XZ-O0F">
-                                <rect key="frame" x="165" y="109" width="300" height="323"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Watson Text" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsC-XZ-O0F">
+                                <rect key="frame" x="10" y="28" width="580" height="219"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="219" id="IKQ-4g-O72"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sS-uI-kHY">
+                                <rect key="frame" x="133" y="458" width="334" height="142"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="334" id="AsA-lP-Evm"/>
+                                    <constraint firstAttribute="height" constant="142" id="tsU-Vt-Wkg"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="viSun.png"/>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JsC-XZ-O0F" firstAttribute="leading" secondItem="gUf-WT-IhY" secondAttribute="leadingMargin" constant="-10" id="0HA-RJ-aks"/>
+                            <constraint firstItem="4sS-uI-kHY" firstAttribute="bottom" secondItem="2Qd-di-ts7" secondAttribute="top" id="W2p-L3-xdY"/>
+                            <constraint firstItem="4sS-uI-kHY" firstAttribute="centerX" secondItem="JsC-XZ-O0F" secondAttribute="centerX" id="c3f-Y1-8ff"/>
+                            <constraint firstItem="JsC-XZ-O0F" firstAttribute="top" secondItem="o28-Fs-fby" secondAttribute="bottom" constant="8" symbolic="YES" id="iSv-1r-Xcz"/>
+                            <constraint firstItem="4sS-uI-kHY" firstAttribute="centerX" secondItem="gUf-WT-IhY" secondAttribute="centerX" id="jfL-8z-IQz"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="sunButton" destination="4sS-uI-kHY" id="S49-D0-di3"/>
                         <outlet property="transcript" destination="JsC-XZ-O0F" id="Zsc-A0-REw"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="s00-8k-t6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="190" y="327"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="viSun.png" width="1839" height="858"/>
+    </resources>
 </document>
