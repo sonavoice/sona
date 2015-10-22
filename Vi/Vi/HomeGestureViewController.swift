@@ -22,19 +22,17 @@ class HomeGestureViewController: UIViewController {
     
     self.stt = SpeechToText.init(config: conf)
     
-    NSLog("View loaded")
-    
-//    let leftSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
-//    leftSwipe.direction = .Left
-//    view.addGestureRecognizer(leftSwipe)
-//    
-//    let rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
-//    rightSwipe.direction = .Right
-//    view.addGestureRecognizer(rightSwipe)
-//
-//    let downSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
-//    downSwipe.direction = .Down
-//    view.addGestureRecognizer(downSwipe)
+    //    let leftSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
+    //    leftSwipe.direction = .Left
+    //    view.addGestureRecognizer(leftSwipe)
+    //    
+    //    let rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
+    //    rightSwipe.direction = .Right
+    //    view.addGestureRecognizer(rightSwipe)
+    //
+    //    let downSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
+    //    downSwipe.direction = .Down
+    //    view.addGestureRecognizer(downSwipe)
   }
   
   func handleSwipes(sender:UISwipeGestureRecognizer) {
