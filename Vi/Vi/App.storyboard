@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Fz6-EM-136">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--App View Controller-->
+        <scene sceneID="aOh-57-oa3">
+            <objects>
+                <viewController id="Fz6-EM-136" customClass="AppViewController" customModule="Vi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ak3-Wv-FVc"/>
+                        <viewControllerLayoutGuide type="bottom" id="O8z-fL-CZl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c2d-dp-WqN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p7P-CS-00I">
+                                <rect key="frame" x="20" y="138" width="560" height="442"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TextCell" textLabel="seL-LF-I6c" rowHeight="60" style="IBUITableViewCellStyleDefault" id="XMj-ud-s5e">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XMj-ud-s5e" id="rv3-v2-Y3g">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="seL-LF-I6c">
+                                                    <rect key="frame" x="15" y="0.0" width="530" height="59.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find Vi Apps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QpQ-gi-4eh">
+                                <rect key="frame" x="231" y="28" width="138" height="35"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="fAy-Tm-D3a"/>
+                                    <constraint firstAttribute="width" constant="138" id="qBf-r6-Rvy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IZT-3v-7KG">
+                                <rect key="frame" x="20" y="71" width="560" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 matches found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aaf-w4-D3W">
+                                <rect key="frame" x="218" y="109" width="165" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="KWJ-90-iCo"/>
+                                    <constraint firstAttribute="width" constant="165" id="aKO-7V-xMd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.4589220412234043" green="0.4589220412234043" blue="0.4589220412234043" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="p7P-CS-00I" secondAttribute="bottom" constant="20" symbolic="YES" id="0gZ-XT-oSn"/>
+                            <constraint firstItem="p7P-CS-00I" firstAttribute="trailing" secondItem="c2d-dp-WqN" secondAttribute="trailingMargin" id="2qf-T0-2G8"/>
+                            <constraint firstItem="p7P-CS-00I" firstAttribute="top" secondItem="Aaf-w4-D3W" secondAttribute="bottom" constant="8" symbolic="YES" id="4fa-IE-8Fk"/>
+                            <constraint firstItem="p7P-CS-00I" firstAttribute="leading" secondItem="IZT-3v-7KG" secondAttribute="leading" id="AiH-To-T86"/>
+                            <constraint firstItem="Aaf-w4-D3W" firstAttribute="centerX" secondItem="IZT-3v-7KG" secondAttribute="centerX" id="C3i-IB-yNe"/>
+                            <constraint firstItem="QpQ-gi-4eh" firstAttribute="centerX" secondItem="IZT-3v-7KG" secondAttribute="centerX" id="J1n-XS-M0t"/>
+                            <constraint firstItem="IZT-3v-7KG" firstAttribute="top" secondItem="QpQ-gi-4eh" secondAttribute="bottom" constant="8" symbolic="YES" id="OxP-xV-alT"/>
+                            <constraint firstItem="QpQ-gi-4eh" firstAttribute="top" secondItem="ak3-Wv-FVc" secondAttribute="bottom" constant="8" symbolic="YES" id="WhR-XB-BLS"/>
+                            <constraint firstItem="p7P-CS-00I" firstAttribute="leading" secondItem="c2d-dp-WqN" secondAttribute="leadingMargin" id="dKV-8Z-Sff"/>
+                            <constraint firstItem="Aaf-w4-D3W" firstAttribute="top" secondItem="IZT-3v-7KG" secondAttribute="bottom" constant="8" symbolic="YES" id="la2-HS-IkB"/>
+                            <constraint firstItem="p7P-CS-00I" firstAttribute="trailing" secondItem="IZT-3v-7KG" secondAttribute="trailing" id="xGp-s9-siF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="p7P-CS-00I" id="oLH-Ur-ogQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d5o-M7-WaH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="259" y="359"/>
+        </scene>
+    </scenes>
+</document>
