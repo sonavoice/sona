@@ -8,7 +8,6 @@
         <!--Home Gesture View Controller-->
         <scene sceneID="WTz-al-jWP">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="s00-8k-t6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="icL-od-kdh" customClass="HomeGestureViewController" customModule="Vi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="o28-Fs-fby"/>
@@ -53,6 +52,7 @@
                         <outlet property="transcript" destination="JsC-XZ-O0F" id="Zsc-A0-REw"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s00-8k-t6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="190" y="327"/>
         </scene>
