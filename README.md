@@ -15,7 +15,6 @@ Make sure you have Node, NPM, and CocoaPods installed globally. Install CocoaPod
 
 After forking and cloning the repo run the following commands:
 
-- In the root directory run: `$ npm install`
 - In the ios directory run: `$ pod install`
 
 Also add frameworks by going to the Vi targets Build Phases and adding the following linked binaries. Do this by clicking the '+' and searching by name.
