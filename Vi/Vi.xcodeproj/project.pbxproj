@@ -40,6 +40,9 @@
 		05CBBFCA1BD6CBEB00227BDC /* HomeGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CBBFC91BD6CBEB00227BDC /* HomeGestureViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		05CBBFCB1BD6CBEB00227BDC /* HomeGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CBBFC91BD6CBEB00227BDC /* HomeGestureViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		05CBBFCC1BD6CBEB00227BDC /* HomeGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CBBFC91BD6CBEB00227BDC /* HomeGestureViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		53447A271BD848EC00282C54 /* dog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 53447A261BD848EC00282C54 /* dog.jpg */; settings = {ASSET_TAGS = (); }; };
+		53BD747C1BD885F200CA92BD /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53BD747B1BD885F200CA92BD /* App.storyboard */; settings = {ASSET_TAGS = (); }; };
+		53BD747E1BD886C000CA92BD /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BD747D1BD886C000CA92BD /* AppViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		8352C65F1BD6A5DA007B3F5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8352C65E1BD6A5DA007B3F5F /* AppDelegate.swift */; };
 		8352C6661BD6A5DA007B3F5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8352C6641BD6A5DA007B3F5F /* Main.storyboard */; };
 		8352C6681BD6A5DA007B3F5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8352C6671BD6A5DA007B3F5F /* Assets.xcassets */; };
@@ -86,7 +89,10 @@
 		05BC1C901BD8551A00D47DAB /* DummyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		05CBBFC11BD6BE3500227BDC /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		05CBBFC51BD6C51B00227BDC /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		05CBBFC91BD6CBEB00227BDC /* HomeGestureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeGestureViewController.swift; sourceTree = "<group>"; };
+		05CBBFC91BD6CBEB00227BDC /* HomeGestureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = HomeGestureViewController.swift; sourceTree = "<group>"; tabWidth = 2; };
+		53447A261BD848EC00282C54 /* dog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog.jpg; sourceTree = "<group>"; };
+		53BD747B1BD885F200CA92BD /* App.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = App.storyboard; sourceTree = "<group>"; };
+		53BD747D1BD886C000CA92BD /* AppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 		8352C65B1BD6A5DA007B3F5F /* Vi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8352C65E1BD6A5DA007B3F5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8352C6651BD6A5DA007B3F5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -180,6 +186,7 @@
 				8352C6931BD6BD2F007B3F5F /* Library */,
 				8352C6921BD6BD28007B3F5F /* Settings */,
 				8352C65E1BD6A5DA007B3F5F /* AppDelegate.swift */,
+				53447A261BD848EC00282C54 /* dog.jpg */,
 				8352C6641BD6A5DA007B3F5F /* Main.storyboard */,
 				8352C6671BD6A5DA007B3F5F /* Assets.xcassets */,
 				8352C6691BD6A5DA007B3F5F /* LaunchScreen.storyboard */,
@@ -240,6 +247,8 @@
 		8352C6951BD6BD3A007B3F5F /* Apps */ = {
 			isa = PBXGroup;
 			children = (
+				53BD747B1BD885F200CA92BD /* App.storyboard */,
+				53BD747D1BD886C000CA92BD /* AppViewController.swift */,
 			);
 			name = Apps;
 			sourceTree = "<group>";
@@ -374,10 +383,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				05BC1C8A1BD8537F00D47DAB /* SettingsStoryboard.storyboard in Resources */,
+				53447A271BD848EC00282C54 /* dog.jpg in Resources */,
 				8352C66B1BD6A5DA007B3F5F /* LaunchScreen.storyboard in Resources */,
 				8352C6681BD6A5DA007B3F5F /* Assets.xcassets in Resources */,
 				05BC1C821BD852ED00D47DAB /* HomeStoryboard.storyboard in Resources */,
 				8352C6661BD6A5DA007B3F5F /* Main.storyboard in Resources */,
+				53BD747C1BD885F200CA92BD /* App.storyboard in Resources */,
 				05BC1C861BD8535F00D47DAB /* LibraryStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +426,7 @@
 				05CBBFC21BD6BE3500227BDC /* SettingsViewController.swift in Sources */,
 				05BC1C911BD8551A00D47DAB /* App.swift in Sources */,
 				05BC1C971BD8551A00D47DAB /* LibraryViewController.swift in Sources */,
+				53BD747E1BD886C000CA92BD /* AppViewController.swift in Sources */,
 				05BC1C941BD8551A00D47DAB /* AppInfoViewController.swift in Sources */,
 				EC2CBFB31BD85C6100F2D05C /* TextToSpeech.swift in Sources */,
 				05CBBFCA1BD6CBEB00227BDC /* HomeGestureViewController.swift in Sources */,
@@ -506,6 +518,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -552,6 +565,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -577,6 +591,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -597,6 +612,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
