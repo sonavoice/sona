@@ -4,9 +4,9 @@ import UIKit
 class HomeGestureViewController: UIViewController {
   
   var stt:SpeechToText = SpeechToText();
-  
-  @IBOutlet weak var swipeLabel: UILabel?
   var listening:Bool = false
+  
+  @IBOutlet var transcript: UILabel!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -16,6 +16,8 @@ class HomeGestureViewController: UIViewController {
     
     /* Configure Watson */
     let conf:STTConfiguration = STTConfiguration()
+    
+//    conf.audioCodec = WATSONSDK_AUDIO_CODEC_TYPE_OPUS
     
     conf.basicAuthUsername = "11a2a0e4-02dd-4b14-812a-bc9ec34efc3a"
     conf.basicAuthPassword = "r5HEtX7J0tqd"
@@ -43,10 +45,12 @@ class HomeGestureViewController: UIViewController {
       
       self.stt.recognize({ (res: [NSObject:AnyObject]!, err: NSError!) -> Void in
         
-        if err != nil {
+        if err == nil {
           if self.stt.isFinalTranscript(res) {
             self.stt.endRecognize()
           }
+          self.transcript.text = self.stt.getTranscript(res)!
+          
           NSLog("@%", self.stt.getTranscript(res))
         } else {
 //          NSLog("@%", err.localizedDescription)
