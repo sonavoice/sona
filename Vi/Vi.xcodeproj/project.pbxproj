@@ -46,6 +46,7 @@
 		8352C66B1BD6A5DA007B3F5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8352C6691BD6A5DA007B3F5F /* LaunchScreen.storyboard */; };
 		8352C6761BD6A5DA007B3F5F /* ViTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8352C6751BD6A5DA007B3F5F /* ViTests.swift */; };
 		8352C6811BD6A5DA007B3F5F /* ViUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8352C6801BD6A5DA007B3F5F /* ViUITests.swift */; };
+		EC2CBFB31BD85C6100F2D05C /* TextToSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2CBFB21BD85C6100F2D05C /* TextToSpeech.swift */; settings = {ASSET_TAGS = (); }; };
 		ECF6000C1BD7FB0400751275 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF6000B1BD7FB0400751275 /* CFNetwork.framework */; };
 		ECF6000E1BD7FB0D00751275 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF6000D1BD7FB0D00751275 /* AudioToolbox.framework */; };
 		ECF600101BD7FB1300751275 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF6000F1BD7FB1300751275 /* AVFoundation.framework */; };
@@ -98,6 +99,7 @@
 		8352C67C1BD6A5DA007B3F5F /* ViUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8352C6801BD6A5DA007B3F5F /* ViUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViUITests.swift; sourceTree = "<group>"; };
 		8352C6821BD6A5DA007B3F5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC2CBFB21BD85C6100F2D05C /* TextToSpeech.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextToSpeech.swift; sourceTree = "<group>"; };
 		ECF6000B1BD7FB0400751275 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		ECF6000D1BD7FB0D00751275 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		ECF6000F1BD7FB1300751275 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -172,6 +174,7 @@
 		8352C65D1BD6A5DA007B3F5F /* Vi */ = {
 			isa = PBXGroup;
 			children = (
+				EC2CBFB11BD85C5100F2D05C /* TextToSpeech */,
 				8352C6951BD6BD3A007B3F5F /* Apps */,
 				8352C6941BD6BD34007B3F5F /* Home */,
 				8352C6931BD6BD2F007B3F5F /* Library */,
@@ -239,6 +242,14 @@
 			children = (
 			);
 			name = Apps;
+			sourceTree = "<group>";
+		};
+		EC2CBFB11BD85C5100F2D05C /* TextToSpeech */ = {
+			isa = PBXGroup;
+			children = (
+				EC2CBFB21BD85C6100F2D05C /* TextToSpeech.swift */,
+			);
+			name = TextToSpeech;
 			sourceTree = "<group>";
 		};
 		ECF6000A1BD7FAF100751275 /* Libraries */ = {
@@ -405,6 +416,7 @@
 				05BC1C911BD8551A00D47DAB /* App.swift in Sources */,
 				05BC1C971BD8551A00D47DAB /* LibraryViewController.swift in Sources */,
 				05BC1C941BD8551A00D47DAB /* AppInfoViewController.swift in Sources */,
+				EC2CBFB31BD85C6100F2D05C /* TextToSpeech.swift in Sources */,
 				05CBBFCA1BD6CBEB00227BDC /* HomeGestureViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
