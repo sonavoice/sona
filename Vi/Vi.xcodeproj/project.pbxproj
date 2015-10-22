@@ -48,6 +48,7 @@
 		8352C6811BD6A5DA007B3F5F /* ViUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8352C6801BD6A5DA007B3F5F /* ViUITests.swift */; };
 		EC2CBFB31BD85C6100F2D05C /* TextToSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2CBFB21BD85C6100F2D05C /* TextToSpeech.swift */; settings = {ASSET_TAGS = (); }; };
 		EC6BDDE61BD8969300DD79F4 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC6BDDE51BD8969300DD79F4 /* Home.storyboard */; settings = {ASSET_TAGS = (); }; };
+		ECD639C21BD99819008530A4 /* viSun.png in Resources */ = {isa = PBXBuildFile; fileRef = ECD639C11BD99819008530A4 /* viSun.png */; settings = {ASSET_TAGS = (); }; };
 		ECF6000C1BD7FB0400751275 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF6000B1BD7FB0400751275 /* CFNetwork.framework */; };
 		ECF6000E1BD7FB0D00751275 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF6000D1BD7FB0D00751275 /* AudioToolbox.framework */; };
 		ECF600101BD7FB1300751275 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF6000F1BD7FB1300751275 /* AVFoundation.framework */; };
@@ -104,6 +105,7 @@
 		8352C6821BD6A5DA007B3F5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC2CBFB21BD85C6100F2D05C /* TextToSpeech.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextToSpeech.swift; sourceTree = "<group>"; };
 		EC6BDDE51BD8969300DD79F4 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		ECD639C11BD99819008530A4 /* viSun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = viSun.png; sourceTree = "<group>"; };
 		ECF6000B1BD7FB0400751275 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		ECF6000D1BD7FB0D00751275 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		ECF6000F1BD7FB1300751275 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -178,17 +180,15 @@
 		8352C65D1BD6A5DA007B3F5F /* Vi */ = {
 			isa = PBXGroup;
 			children = (
+				EC9163CC1BD960F500401DC6 /* Extras */,
+				EC9163CB1BD960E300401DC6 /* Assets */,
 				EC2CBFB11BD85C5100F2D05C /* TextToSpeech */,
 				8352C6951BD6BD3A007B3F5F /* Apps */,
 				8352C6941BD6BD34007B3F5F /* Home */,
 				8352C6931BD6BD2F007B3F5F /* Library */,
 				8352C6921BD6BD28007B3F5F /* Settings */,
 				8352C65E1BD6A5DA007B3F5F /* AppDelegate.swift */,
-				53447A261BD848EC00282C54 /* dog.jpg */,
 				8352C6641BD6A5DA007B3F5F /* Main.storyboard */,
-				8352C6671BD6A5DA007B3F5F /* Assets.xcassets */,
-				8352C6691BD6A5DA007B3F5F /* LaunchScreen.storyboard */,
-				8352C66C1BD6A5DA007B3F5F /* Info.plist */,
 			);
 			path = Vi;
 			sourceTree = "<group>";
@@ -257,6 +257,25 @@
 				EC2CBFB21BD85C6100F2D05C /* TextToSpeech.swift */,
 			);
 			name = TextToSpeech;
+			sourceTree = "<group>";
+		};
+		EC9163CB1BD960E300401DC6 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				8352C6671BD6A5DA007B3F5F /* Assets.xcassets */,
+				53447A261BD848EC00282C54 /* dog.jpg */,
+				ECD639C11BD99819008530A4 /* viSun.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		EC9163CC1BD960F500401DC6 /* Extras */ = {
+			isa = PBXGroup;
+			children = (
+				8352C6691BD6A5DA007B3F5F /* LaunchScreen.storyboard */,
+				8352C66C1BD6A5DA007B3F5F /* Info.plist */,
+			);
+			name = Extras;
 			sourceTree = "<group>";
 		};
 		ECF6000A1BD7FAF100751275 /* Libraries */ = {
@@ -384,6 +403,7 @@
 				53447A271BD848EC00282C54 /* dog.jpg in Resources */,
 				8352C66B1BD6A5DA007B3F5F /* LaunchScreen.storyboard in Resources */,
 				8352C6681BD6A5DA007B3F5F /* Assets.xcassets in Resources */,
+				ECD639C21BD99819008530A4 /* viSun.png in Resources */,
 				8352C6661BD6A5DA007B3F5F /* Main.storyboard in Resources */,
 				53BD747C1BD885F200CA92BD /* App.storyboard in Resources */,
 				05BC1C861BD8535F00D47DAB /* LibraryStoryboard.storyboard in Resources */,
