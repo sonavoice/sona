@@ -19,7 +19,7 @@ class AppInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
     super.viewDidLoad()
     AppTitle.text = self.appInfo.name
     self.CommandView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
-    self.CommandView.allowsSelection = false;
+    self.CommandView.allowsSelection = false
   }
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
