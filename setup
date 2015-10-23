@@ -1,0 +1,12 @@
+#!/bin/bash
+cd Vi;
+echo "Executing pod install";
+pod install;
+echo "Downloading Watson SDK Framework";
+cd Vi;
+curl -L https://www.dropbox.com/s/lc8j7ku3slz8n5t/watsonsdk.framework.zip?dl=1 -o watsonsdk.framework.zip;
+echo "Extracting Watson SDK Framework";
+unzip watsonsdk.framework.zip
+echo "Removing zip";
+rm watsonsdk.framework.zip;
+echo "Done!";
