@@ -48,6 +48,8 @@
 		53060AB01BD99195008AE89A /* image7.png in Resources */ = {isa = PBXBuildFile; fileRef = 53060AA81BD99195008AE89A /* image7.png */; };
 		53060AB11BD99195008AE89A /* image8.png in Resources */ = {isa = PBXBuildFile; fileRef = 53060AA91BD99195008AE89A /* image8.png */; };
 		53447A271BD848EC00282C54 /* dog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 53447A261BD848EC00282C54 /* dog.jpg */; };
+		83391CDA1BD9B008005924DB /* NavigatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83391CD91BD9B008005924DB /* NavigatorViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		83391CDC1BD9B26A005924DB /* watsonsdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83391CDB1BD9B26A005924DB /* watsonsdk.framework */; settings = {ASSET_TAGS = (); }; };
 		8352C65F1BD6A5DA007B3F5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8352C65E1BD6A5DA007B3F5F /* AppDelegate.swift */; };
 		8352C6661BD6A5DA007B3F5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8352C6641BD6A5DA007B3F5F /* Main.storyboard */; };
 		8352C6681BD6A5DA007B3F5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8352C6671BD6A5DA007B3F5F /* Assets.xcassets */; };
@@ -107,6 +109,8 @@
 		53060AA81BD99195008AE89A /* image7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image7.png; sourceTree = "<group>"; };
 		53060AA91BD99195008AE89A /* image8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image8.png; sourceTree = "<group>"; };
 		53447A261BD848EC00282C54 /* dog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog.jpg; sourceTree = "<group>"; };
+		83391CD91BD9B008005924DB /* NavigatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigatorViewController.swift; sourceTree = "<group>"; };
+		83391CDB1BD9B26A005924DB /* watsonsdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = watsonsdk.framework; sourceTree = "<group>"; };
 		8352C65B1BD6A5DA007B3F5F /* Vi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8352C65E1BD6A5DA007B3F5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8352C6651BD6A5DA007B3F5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -140,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECF6001B1BD7FB3000751275 /* libicucore.A.tbd in Frameworks */,
+				83391CDC1BD9B26A005924DB /* watsonsdk.framework in Frameworks */,
 				05BC1C7E1BD8513D00D47DAB /* watsonsdk.framework in Frameworks */,
 				ECF6001C1BD7FB3000751275 /* libicucore.tbd in Frameworks */,
 				ECF600181BD7FB2A00751275 /* Security.framework in Frameworks */,
@@ -171,6 +176,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		83391CD81BD9AFF6005924DB /* Navigator */ = {
+			isa = PBXGroup;
+			children = (
+				83391CD91BD9B008005924DB /* NavigatorViewController.swift */,
+			);
+			name = Navigator;
+			sourceTree = "<group>";
+		};
 		8352C6521BD6A5DA007B3F5F = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +209,7 @@
 		8352C65D1BD6A5DA007B3F5F /* Vi */ = {
 			isa = PBXGroup;
 			children = (
+				83391CD81BD9AFF6005924DB /* Navigator */,
 				EC9163CC1BD960F500401DC6 /* Extras */,
 				EC9163CB1BD960E300401DC6 /* Assets */,
 				EC2CBFB11BD85C5100F2D05C /* TextToSpeech */,
@@ -248,6 +262,7 @@
 		8352C6931BD6BD2F007B3F5F /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				83391CDB1BD9B26A005924DB /* watsonsdk.framework */,
 				05BC1C8D1BD8551A00D47DAB /* App.swift */,
 				05BC1C8E1BD8551A00D47DAB /* AppInfoViewController.swift */,
 				05BC1C8F1BD8551A00D47DAB /* LibraryViewController.swift */,
@@ -473,6 +488,7 @@
 				05BC1C9A1BD8551A00D47DAB /* DummyData.swift in Sources */,
 				05CBBFC61BD6C51B00227BDC /* HomeViewController.swift in Sources */,
 				8352C65F1BD6A5DA007B3F5F /* AppDelegate.swift in Sources */,
+				83391CDA1BD9B008005924DB /* NavigatorViewController.swift in Sources */,
 				05CBBFC21BD6BE3500227BDC /* SettingsViewController.swift in Sources */,
 				05BC1C911BD8551A00D47DAB /* App.swift in Sources */,
 				05BC1C971BD8551A00D47DAB /* LibraryViewController.swift in Sources */,
@@ -645,6 +661,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Vi",
 				);
 				INFOPLIST_FILE = Vi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -668,6 +685,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Vi",
 				);
 				INFOPLIST_FILE = Vi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
