@@ -125,6 +125,8 @@
 		8352C6821BD6A5DA007B3F5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC2CBFB21BD85C6100F2D05C /* TextToSpeech.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextToSpeech.swift; sourceTree = "<group>"; };
 		EC6BDDE51BD8969300DD79F4 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		EC8F9AB21BD9D4F2001A7CCD /* ViTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		EC8F9AB31BD9D4F2001A7CCD /* ViUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViUITests-Bridging-Header.h"; sourceTree = "<group>"; };
 		ECD639C11BD99819008530A4 /* viSun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = viSun.png; sourceTree = "<group>"; };
 		ECF6000B1BD7FB0400751275 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		ECF6000D1BD7FB0D00751275 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -187,7 +189,7 @@
 		8352C6521BD6A5DA007B3F5F = {
 			isa = PBXGroup;
 			children = (
-				ECF6003E1BD80B5300751275 /* Vi-Bridging-Header.h */,
+				EC8F9AB81BD9D501001A7CCD /* BridgingHeaders */,
 				8352C65D1BD6A5DA007B3F5F /* Vi */,
 				8352C6741BD6A5DA007B3F5F /* ViTests */,
 				8352C67F1BD6A5DA007B3F5F /* ViUITests */,
@@ -297,6 +299,16 @@
 				EC2CBFB21BD85C6100F2D05C /* TextToSpeech.swift */,
 			);
 			name = TextToSpeech;
+			sourceTree = "<group>";
+		};
+		EC8F9AB81BD9D501001A7CCD /* BridgingHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				ECF6003E1BD80B5300751275 /* Vi-Bridging-Header.h */,
+				EC8F9AB21BD9D4F2001A7CCD /* ViTests-Bridging-Header.h */,
+				EC8F9AB31BD9D4F2001A7CCD /* ViUITests-Bridging-Header.h */,
+			);
+			name = BridgingHeaders;
 			sourceTree = "<group>";
 		};
 		EC9163CB1BD960E300401DC6 /* Assets */ = {
@@ -710,7 +722,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.viapp.ViTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ViTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vi.app/Vi";
 			};
@@ -729,7 +741,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.viapp.ViTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ViTests-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vi.app/Vi";
 			};
 			name = Release;
@@ -746,7 +758,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.viapp.ViUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ViUITests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_TARGET_NAME = Vi;
 				USES_XCTRUNNER = YES;
@@ -765,7 +777,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.viapp.ViUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ViUITests-Bridging-Header.h";
 				TEST_TARGET_NAME = Vi;
 				USES_XCTRUNNER = YES;
 			};
