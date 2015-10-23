@@ -22,11 +22,16 @@ class LibraryViewController: UITableViewController {
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath)
     -> UITableViewCell {
-      let cell = tableView.dequeueReusableCellWithIdentifier("AppInfo", forIndexPath: indexPath)
+      let cell = self.tableView.dequeueReusableCellWithIdentifier("CellView", forIndexPath: indexPath) as! CellView
       
       let appInfo = apps[indexPath.row] as App
-      cell.textLabel?.text = appInfo.name
-      cell.detailTextLabel?.text = appInfo.description
+      cell.Name.text = appInfo.name
+      cell.Detail.text = appInfo.description
+      
+      let url = NSURL(string: "https://www.google.com/favicon.ico")
+      let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
+      
+      cell.AppIcon.image = UIImage(data: data!)
       
       return cell
   }
