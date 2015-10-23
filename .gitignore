@@ -1,4 +1,5 @@
 .DS_Store
 node_modules
 Vi/**/*.framework
-*.xcuserdatad
+Vi/**/*.xcuserdatad
+Vi/**/*.xcuserstate
