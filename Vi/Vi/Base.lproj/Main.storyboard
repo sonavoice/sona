@@ -21,7 +21,9 @@
                                 <rect key="frame" x="19" y="18" width="46" height="34"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
-                                <state key="normal" title="Home"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="changeToHome" destination="HeO-i6-ztk" eventType="touchUpInside" id="Xbf-t5-hD3"/>
                                 </connections>
@@ -30,7 +32,9 @@
                                 <rect key="frame" x="350" y="18" width="54" height="34"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
-                                <state key="normal" title="Plugins"/>
+                                <state key="normal" title="Plugins">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="changeToPlugins" destination="HeO-i6-ztk" eventType="touchUpInside" id="G8y-Mq-XEc"/>
                                 </connections>
@@ -42,7 +46,9 @@
                                     <constraint firstAttribute="width" constant="90" id="4AK-nP-Nvo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
-                                <state key="normal" title="Settings"/>
+                                <state key="normal" title="Settings">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="4AK-nP-Nvo"/>
@@ -53,14 +59,16 @@
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ez-0t-mWX">
-                                <rect key="frame" x="0.0" y="70" width="600" height="530"/>
+                                <rect key="frame" x="0.0" y="60" width="600" height="540"/>
                                 <animations/>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ibx-B1-SH5">
                                 <rect key="frame" x="180" y="18" width="53" height="34"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
-                                <state key="normal" title="Library"/>
+                                <state key="normal" title="Library">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="changeToLibrary" destination="HeO-i6-ztk" eventType="touchUpInside" id="Qh6-aG-ww5"/>
                                 </connections>
@@ -79,7 +87,7 @@
                             </view>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.011764705882352941" green="0.66274509803921566" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="nU7-5w-jgW" firstAttribute="bottom" secondItem="5Gx-cA-N4U" secondAttribute="bottom" constant="1" id="7TR-gc-4we"/>
                             <constraint firstItem="f5U-gK-Ie7" firstAttribute="top" secondItem="9Ez-0t-mWX" secondAttribute="bottom" id="AyV-0X-RV0"/>
@@ -117,7 +125,7 @@
                             <constraint firstItem="Ibx-B1-SH5" firstAttribute="width" secondItem="nU7-5w-jgW" secondAttribute="width" id="up8-bq-ZKe"/>
                             <constraint firstItem="U88-VS-qkj" firstAttribute="height" secondItem="nU7-5w-jgW" secondAttribute="height" id="w26-kS-mA5"/>
                             <constraint firstItem="Ibx-B1-SH5" firstAttribute="height" secondItem="nU7-5w-jgW" secondAttribute="height" id="w3R-M1-vZd"/>
-                            <constraint firstItem="9Ez-0t-mWX" firstAttribute="top" secondItem="FEn-sE-S1w" secondAttribute="bottom" constant="50" id="wVY-11-bTh"/>
+                            <constraint firstItem="9Ez-0t-mWX" firstAttribute="top" secondItem="FEn-sE-S1w" secondAttribute="bottom" constant="40" id="wVY-11-bTh"/>
                             <constraint firstAttribute="leadingMargin" secondItem="nU7-5w-jgW" secondAttribute="leading" constant="1" id="z7i-f1-rAZ"/>
                         </constraints>
                         <variation key="default">
@@ -607,6 +615,10 @@
         <scene sceneID="BBv-Pn-eXq">
             <objects>
                 <viewController id="CIq-zr-GRT" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bIp-bE-hCt"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZbW-Um-VBW"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RNg-Yh-U4d">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
