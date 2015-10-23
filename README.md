@@ -5,9 +5,10 @@
 
 The API for Vi lives at [Vi API](http://viapi.io). You can interact with it using the following routes:
 
-* '/viauth' - This is used for authentication of master app calls. The authentication token for this will be used on every application. This ensures api requests are coming from installed applications or from a dev environment standpoint. Production application API keys will be hidden in the environment variables. For access to test environment, using test credentials given out to developers.
-
-These must be passed in as parameters to calls to the '/viauth' API. It is best to do this call on applicationDidFinishLoading in Objective-C or viewDidMount in React Native. This will then give you a session to indicate all api calls from the current application environment are authenticated.
+- '/:transcript' GET -> This is the core route for sending a transcript to the server, running (if available) a command, and returning text to be spoken back to the user. This get request should container to following:
+  - transcript : passed in the url as a parameter and access in the API as req.params.transcript
+  - user : passed as a json object on the req object. Using body.parser middle way to retrieve
+  - WILL RETURN : A string to be passed to the "speak" function to be spoken back out by the user
 
 ##Set up
 
