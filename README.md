@@ -12,12 +12,12 @@ The API for Vi lives at [Vi API](http://viapi.io). You can interact with it usin
 
 ##Set up
 
-Make sure you have Node, NPM, and CocoaPods installed globally. Install CocoaPods using `$ sudo gem install cocoapods`. The docs [CocoaPods setup](http://guides.cocoapods.org/using/getting-started.html)
+Make sure you CocoaPods installed globally. Install CocoaPods using `$ sudo gem install cocoapods`. The docs [CocoaPods setup](http://guides.cocoapods.org/using/getting-started.html)
 
 After forking and cloning the repo run the following commands:
 
-- In the ios directory run: `$ pod install`
+- `$ pod install`
+- `$ ./setup` : This runs our setup executable which will download SpeechKit and place it as a framework in your Libraries directory.
 
-You also need to add the watsonsdk.framework. Until it's on CocoaPods you need to manually download the framework. Do this be going to the [Watson Speech iOS Repo](https://github.com/watson-developer-cloud/speech-ios-sdk), cloning, and unzipping the framework. Add that to your libraries as well.
 
 Then use viapp.xcworkspace NOT viapp.xcodeproject.
