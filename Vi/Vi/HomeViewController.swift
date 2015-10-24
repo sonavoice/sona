@@ -7,12 +7,16 @@ class HomeViewController: UIViewController {
   var listening:Bool = false
   
   @IBOutlet var transcript: UILabel!
-  @IBOutlet var sunButton: UIButton!
+  @IBOutlet var MicButton: UIButton!
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    /* Add sun button */
-    createSunPressFunctionality()
+    
+    /* Add button circle */
+    createMicButton()
+    
+    /* Add sun button press functionality */
+    createMicButtonPressFunctionality()
     
     /* Add gesture capabilities */
     // No swipe gesturing until exact location of permitted swipe determined
@@ -78,21 +82,9 @@ class HomeViewController: UIViewController {
     self.transcript.text! = newTranscript
   }
   
-  func createSunPressFunctionality() {
-    self.sunButton.addTarget(self, action: "buttonPressed", forControlEvents: .TouchUpInside)
+  func createMicButtonPressFunctionality() {
+    self.MicButton.addTarget(self, action: "buttonPressed", forControlEvents: .TouchUpInside)
     
-  }
-  
-  func addPulseAnimation(powerLevel: Float) {
-    let scaleAnimation:CABasicAnimation = CABasicAnimation(keyPath: "transform.scale")
-    
-    scaleAnimation.duration = 0.3
-    scaleAnimation.repeatCount = 0.0
-    scaleAnimation.autoreverses = false
-    scaleAnimation.fromValue = (abs(powerLevel) / 100);
-    scaleAnimation.toValue = 1.0;
-    
-    self.sunButton.layer.addAnimation(scaleAnimation, forKey: "scale")
   }
   
   func buttonPressed() {
@@ -104,8 +96,14 @@ class HomeViewController: UIViewController {
   
   func handlePowerMeter() {
     self.stt.getPowerLevel({ (power: Float) -> Void in
-      self.addPulseAnimation(power)
+      NSLog("Current power level is %@", power)
     })
   }
   
+  func createMicButton() {
+    let circlePath = UIBezierPath.init(arcCenter: CGPointMake(MicButton.bounds.size.width / 2, MicButton.bounds.size.height / 2), radius: MicButton.bounds.size.height / 2, startAngle: 0.0, endAngle: 2 * CGFloat(M_PI), clockwise: true)
+    let circleShape = CAShapeLayer()
+    circleShape.path = circlePath.CGPath
+    MicButton.layer.mask = circleShape
+  }
 }

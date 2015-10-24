@@ -5,25 +5,6 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Home Gesture View Controller-->
-        <scene sceneID="f04-fA-uM9">
-            <objects>
-                <viewController id="hmc-PS-5lf" customClass="HomeGestureViewController" customModule="Vi" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ga1-JX-mwN"/>
-                        <viewControllerLayoutGuide type="bottom" id="Zxo-Ve-b7N"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="hDP-1H-P1C">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aCA-fc-WAW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="594" y="737"/>
-        </scene>
         <!--Home View Controller-->
         <scene sceneID="JLx-fj-KJS">
             <objects>
@@ -40,34 +21,38 @@
                                 <rect key="frame" x="10" y="28" width="580" height="219"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="219" id="cYj-6F-sf9"/>
+                                    <constraint firstAttribute="height" constant="219" id="bs4-Yx-T5I"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wv2-qq-lZy">
-                                <rect key="frame" x="133" y="458" width="334" height="142"/>
+                                <rect key="frame" x="250" y="480" width="100" height="100"/>
                                 <animations/>
+                                <color key="backgroundColor" red="0.0078431372550000003" green="0.6588235294" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="142" id="VgS-ib-pLs"/>
-                                    <constraint firstAttribute="width" constant="334" id="oKu-Hx-gtb"/>
+                                    <constraint firstAttribute="width" constant="100" id="6zD-7w-Q4a"/>
+                                    <constraint firstAttribute="height" constant="100" id="zxH-SX-t9P"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="viSun.png"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wv2-qq-lZy" firstAttribute="centerX" secondItem="V1i-Y3-Ydi" secondAttribute="centerX" id="IpN-CV-BPe"/>
-                            <constraint firstItem="Nkt-xZ-XfK" firstAttribute="leading" secondItem="V1i-Y3-Ydi" secondAttribute="leadingMargin" constant="-10" id="LTX-pR-Lc0"/>
-                            <constraint firstItem="wv2-qq-lZy" firstAttribute="centerX" secondItem="Nkt-xZ-XfK" secondAttribute="centerX" id="XZC-l5-jlB"/>
-                            <constraint firstItem="Nkt-xZ-XfK" firstAttribute="top" secondItem="2Ms-RR-jvF" secondAttribute="bottom" constant="8" symbolic="YES" id="bze-bB-0lj"/>
-                            <constraint firstItem="wv2-qq-lZy" firstAttribute="bottom" secondItem="16m-cY-i7o" secondAttribute="top" id="oVL-wJ-Czd"/>
+                            <constraint firstItem="Nkt-xZ-XfK" firstAttribute="centerX" secondItem="wv2-qq-lZy" secondAttribute="centerX" id="Cfe-nO-crp"/>
+                            <constraint firstItem="Nkt-xZ-XfK" firstAttribute="leading" secondItem="V1i-Y3-Ydi" secondAttribute="leadingMargin" constant="-10" id="DNk-pI-UJi"/>
+                            <constraint firstAttribute="bottom" secondItem="wv2-qq-lZy" secondAttribute="bottom" constant="20" symbolic="YES" id="Q9a-8U-F6Z"/>
+                            <constraint firstItem="Nkt-xZ-XfK" firstAttribute="centerX" secondItem="V1i-Y3-Ydi" secondAttribute="centerX" id="Tjs-tO-gIf"/>
+                            <constraint firstItem="Nkt-xZ-XfK" firstAttribute="top" secondItem="2Ms-RR-jvF" secondAttribute="bottom" constant="8" symbolic="YES" id="i76-L6-KUb"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="sunButton" destination="wv2-qq-lZy" id="nY6-Dn-bOO"/>
+                        <outlet property="MicButton" destination="wv2-qq-lZy" id="z8t-c0-VSv"/>
                         <outlet property="transcript" destination="Nkt-xZ-XfK" id="l8T-5z-ezq"/>
                     </connections>
                 </viewController>
@@ -76,7 +61,4 @@
             <point key="canvasLocation" x="554" y="39"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="viSun.png" width="1839" height="858"/>
-    </resources>
 </document>
