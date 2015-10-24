@@ -28,38 +28,27 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
     super.didReceiveMemoryWarning()
   }
   
-  func createMicButtonPressFunctionality() {
-    self.MicButton.addTarget(self, action: "startListening", forControlEvents: .TouchUpInside)
-  }
-  
   func startListening() {
     /* There are alternate options for these:
     
-    detectionType(s):
-    - SKLongEndOfSpeechDetection (long utterances)
-    
-    recoType(s):
-    - SKShortEndOfSpeechDetection - good for search look up and short small pause utterances
-    - SKTvRecognizerType - good for pauses occasionally and for messages/dictation
-    - SKDictationRecognizerType - Long utterances for dictation
-    
-    landType(s):
-    - "fr_FR"
-    - "de_DE"
+      detectionType(s):
+      - SKLongEndOfSpeechDetection (long utterances)
+      
+      recoType(s):
+      - SKShortEndOfSpeechDetection - good for search look up and short small pause utterances
+      - SKTvRecognizerType - good for pauses occasionally and for messages/dictation
+      - SKDictationRecognizerType - Long utterances for dictation
+      
+      landType(s):
+      - "fr_FR"
+      - "de_DE"
     
     */
 
     self.voiceSearch = SKRecognizer(type: SKSearchRecognizerType, detection: UInt(SKShortEndOfSpeechDetection), language:"eng-USA", delegate: self)
   }
   
-  func styleMicButton() {
-    let circlePath = UIBezierPath.init(arcCenter: CGPointMake(MicButton.bounds.size.width / 2, MicButton.bounds.size.height / 2), radius: MicButton.bounds.size.height / 2, startAngle: 0.0, endAngle: 2 * CGFloat(M_PI), clockwise: true)
-    let circleShape = CAShapeLayer()
-    circleShape.path = circlePath.CGPath
-    MicButton.layer.mask = circleShape
-  }
-  
-  /* Swipe gesture */
+  /* UI Set up */
   func addUpSwipeGesture() {
     let upSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
     upSwipe.direction = .Up
@@ -71,6 +60,37 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
       NSLog("Swipe Up")
       startListening()
     }
+  }
+  
+  func styleMicButton() {
+    let circlePath = UIBezierPath.init(arcCenter: CGPointMake(MicButton.bounds.size.width / 2, MicButton.bounds.size.height / 2), radius: MicButton.bounds.size.height / 2, startAngle: 0.0, endAngle: 2 * CGFloat(M_PI), clockwise: true)
+    let circleShape = CAShapeLayer()
+    circleShape.path = circlePath.CGPath
+    MicButton.layer.mask = circleShape
+  }
+  
+  func createMicButtonPressFunctionality() {
+    self.MicButton.addTarget(self, action: "startListening", forControlEvents: .TouchUpInside)
+  }
+  
+  /* Server & API */
+  func attemptToExecuteOnTranscript(transcript: String) {
+    
+    let apiCallManager = AFHTTPRequestOperationManager()
+    
+    apiCallManager.GET(
+      "http://viapi.io/",
+      parameters: nil,
+      success: { (operation: AFHTTPRequestOperation!,
+        responseObject: AnyObject!) in
+        NSLog("JSON: %@", responseObject.description)
+      },
+      failure: { (operation: AFHTTPRequestOperation!,
+        error: NSError!) in
+        NSLog("Error: %@", error.localizedDescription)
+      }
+    )
+    
   }
 
   /*** Nuance ***/

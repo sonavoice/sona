@@ -3,3 +3,4 @@ node_modules
 Vi/**/*.framework
 Vi/**/xcuserdata
 Vi/**/*.xcuserstate
+Vi/Pods/
