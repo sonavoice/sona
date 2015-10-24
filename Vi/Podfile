@@ -2,14 +2,16 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'Vi' do
-pod 'FontAwesome.swift'
+  pod 'FontAwesome.swift'
+  pod 'AFNetworking', '~> 2.5'
 end
 
 target 'ViTests' do
-pod 'FontAwesome.swift'
+  pod 'FontAwesome.swift'
+  pod 'AFNetworking', '~> 2.5'
 end
 
 target 'ViUITests' do
-pod 'FontAwesome.swift'
+  pod 'FontAwesome.swift'
+  pod 'AFNetworking', '~> 2.5'
 end
-
