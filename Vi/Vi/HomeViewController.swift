@@ -83,18 +83,6 @@ class HomeViewController: UIViewController {
     
   }
   
-  func addPulseAnimation(powerLevel: Float) {
-    let scaleAnimation:CABasicAnimation = CABasicAnimation(keyPath: "transform.scale")
-    
-    scaleAnimation.duration = 0.3
-    scaleAnimation.repeatCount = 0.0
-    scaleAnimation.autoreverses = false
-    scaleAnimation.fromValue = (abs(powerLevel) / 100);
-    scaleAnimation.toValue = 1.0;
-    
-    self.sunButton.layer.addAnimation(scaleAnimation, forKey: "scale")
-  }
-  
   func buttonPressed() {
     if !listening {
       listening = !listening
@@ -104,7 +92,7 @@ class HomeViewController: UIViewController {
   
   func handlePowerMeter() {
     self.stt.getPowerLevel({ (power: Float) -> Void in
-      self.addPulseAnimation(power)
+      NSLog("Current power level is %@", power)
     })
   }
   

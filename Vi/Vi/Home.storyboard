@@ -53,7 +53,6 @@
                                     <constraint firstAttribute="height" constant="142" id="VgS-ib-pLs"/>
                                     <constraint firstAttribute="width" constant="334" id="oKu-Hx-gtb"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="viSun.png"/>
                             </button>
                         </subviews>
                         <animations/>
@@ -76,7 +75,4 @@
             <point key="canvasLocation" x="554" y="39"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="viSun.png" width="1839" height="858"/>
-    </resources>
 </document>
