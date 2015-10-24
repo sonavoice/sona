@@ -28,12 +28,6 @@
 		05CBBFC21BD6BE3500227BDC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CBBFC11BD6BE3500227BDC /* SettingsViewController.swift */; };
 		05CBBFC31BD6BE3500227BDC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CBBFC11BD6BE3500227BDC /* SettingsViewController.swift */; };
 		05CBBFC41BD6BE3500227BDC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CBBFC11BD6BE3500227BDC /* SettingsViewController.swift */; };
-		05CBBFC61BD6C51B00227BDC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CBBFC51BD6C51B00227BDC /* HomeViewController.swift */; };
-		05CBBFC71BD6C51B00227BDC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CBBFC51BD6C51B00227BDC /* HomeViewController.swift */; };
-		05CBBFC81BD6C51B00227BDC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CBBFC51BD6C51B00227BDC /* HomeViewController.swift */; };
-		05CBBFCA1BD6CBEB00227BDC /* HomeGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CBBFC91BD6CBEB00227BDC /* HomeGestureViewController.swift */; };
-		05CBBFCB1BD6CBEB00227BDC /* HomeGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CBBFC91BD6CBEB00227BDC /* HomeGestureViewController.swift */; };
-		05CBBFCC1BD6CBEB00227BDC /* HomeGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CBBFC91BD6CBEB00227BDC /* HomeGestureViewController.swift */; };
 		53060AA11BD98F6D008AE89A /* PluginsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53060AA01BD98F6D008AE89A /* PluginsViewController.swift */; };
 		53060AAA1BD99195008AE89A /* image1.png in Resources */ = {isa = PBXBuildFile; fileRef = 53060AA21BD99195008AE89A /* image1.png */; };
 		53060AAB1BD99195008AE89A /* image2.png in Resources */ = {isa = PBXBuildFile; fileRef = 53060AA31BD99195008AE89A /* image2.png */; };
@@ -56,6 +50,7 @@
 		8352C6761BD6A5DA007B3F5F /* ViTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8352C6751BD6A5DA007B3F5F /* ViTests.swift */; };
 		8352C6811BD6A5DA007B3F5F /* ViUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8352C6801BD6A5DA007B3F5F /* ViUITests.swift */; };
 		EC2CBFB31BD85C6100F2D05C /* TextToSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2CBFB21BD85C6100F2D05C /* TextToSpeech.swift */; };
+		EC90FC391BDB046D00F60AE9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90FC381BDB046D00F60AE9 /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		ECD639C21BD99819008530A4 /* viSun.png in Resources */ = {isa = PBXBuildFile; fileRef = ECD639C11BD99819008530A4 /* viSun.png */; };
 		ECF6000C1BD7FB0400751275 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF6000B1BD7FB0400751275 /* CFNetwork.framework */; };
 		ECF6000E1BD7FB0D00751275 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF6000D1BD7FB0D00751275 /* AudioToolbox.framework */; };
@@ -93,8 +88,6 @@
 		05BC1C8F1BD8551A00D47DAB /* LibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		05BC1C901BD8551A00D47DAB /* DummyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		05CBBFC11BD6BE3500227BDC /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		05CBBFC51BD6C51B00227BDC /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		05CBBFC91BD6CBEB00227BDC /* HomeGestureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = HomeGestureViewController.swift; sourceTree = "<group>"; tabWidth = 2; };
 		53060AA01BD98F6D008AE89A /* PluginsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = PluginsViewController.swift; sourceTree = "<group>"; tabWidth = 2; };
 		53060AA21BD99195008AE89A /* image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image1.png; sourceTree = "<group>"; };
 		53060AA31BD99195008AE89A /* image2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image2.png; sourceTree = "<group>"; };
@@ -125,6 +118,7 @@
 		EC2CBFB21BD85C6100F2D05C /* TextToSpeech.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextToSpeech.swift; sourceTree = "<group>"; };
 		EC8F9AB21BD9D4F2001A7CCD /* ViTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		EC8F9AB31BD9D4F2001A7CCD /* ViUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		EC90FC381BDB046D00F60AE9 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		ECD639C11BD99819008530A4 /* viSun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = viSun.png; sourceTree = "<group>"; };
 		ECF6000B1BD7FB0400751275 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		ECF6000D1BD7FB0D00751275 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -265,9 +259,8 @@
 		8352C6941BD6BD34007B3F5F /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				05CBBFC51BD6C51B00227BDC /* HomeViewController.swift */,
-				05CBBFC91BD6CBEB00227BDC /* HomeGestureViewController.swift */,
 				53C09A7D1BDB01C30080CD62 /* Home.storyboard */,
+				EC90FC381BDB046D00F60AE9 /* HomeViewController.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -491,16 +484,15 @@
 			files = (
 				53060AA11BD98F6D008AE89A /* PluginsViewController.swift in Sources */,
 				05BC1C9A1BD8551A00D47DAB /* DummyData.swift in Sources */,
-				05CBBFC61BD6C51B00227BDC /* HomeViewController.swift in Sources */,
 				8352C65F1BD6A5DA007B3F5F /* AppDelegate.swift in Sources */,
 				83391CDA1BD9B008005924DB /* NavigatorViewController.swift in Sources */,
 				05CBBFC21BD6BE3500227BDC /* SettingsViewController.swift in Sources */,
 				05B02BFA1BDAA79B0057C80C /* CellView.swift in Sources */,
 				05BC1C911BD8551A00D47DAB /* App.swift in Sources */,
+				EC90FC391BDB046D00F60AE9 /* HomeViewController.swift in Sources */,
 				05BC1C971BD8551A00D47DAB /* LibraryViewController.swift in Sources */,
 				05BC1C941BD8551A00D47DAB /* AppInfoViewController.swift in Sources */,
 				EC2CBFB31BD85C6100F2D05C /* TextToSpeech.swift in Sources */,
-				05CBBFCA1BD6CBEB00227BDC /* HomeGestureViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,13 +502,11 @@
 			files = (
 				05BC1C9B1BD8551A00D47DAB /* DummyData.swift in Sources */,
 				8352C6761BD6A5DA007B3F5F /* ViTests.swift in Sources */,
-				05CBBFCB1BD6CBEB00227BDC /* HomeGestureViewController.swift in Sources */,
 				05B02BFB1BDAA79B0057C80C /* CellView.swift in Sources */,
 				05CBBFC31BD6BE3500227BDC /* SettingsViewController.swift in Sources */,
 				05BC1C921BD8551A00D47DAB /* App.swift in Sources */,
 				05BC1C981BD8551A00D47DAB /* LibraryViewController.swift in Sources */,
 				05BC1C951BD8551A00D47DAB /* AppInfoViewController.swift in Sources */,
-				05CBBFC71BD6C51B00227BDC /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,13 +516,11 @@
 			files = (
 				05BC1C9C1BD8551A00D47DAB /* DummyData.swift in Sources */,
 				8352C6811BD6A5DA007B3F5F /* ViUITests.swift in Sources */,
-				05CBBFCC1BD6CBEB00227BDC /* HomeGestureViewController.swift in Sources */,
 				05B02BFC1BDAA79B0057C80C /* CellView.swift in Sources */,
 				05CBBFC41BD6BE3500227BDC /* SettingsViewController.swift in Sources */,
 				05BC1C931BD8551A00D47DAB /* App.swift in Sources */,
 				05BC1C991BD8551A00D47DAB /* LibraryViewController.swift in Sources */,
 				05BC1C961BD8551A00D47DAB /* AppInfoViewController.swift in Sources */,
-				05CBBFC81BD6C51B00227BDC /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

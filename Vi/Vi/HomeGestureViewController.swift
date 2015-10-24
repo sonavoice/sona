@@ -1,11 +1,10 @@
 import UIKit
 import QuartzCore
 
-class HomeGestureViewController: UIViewController {
+class HomeViewController: UIViewController {
   
   var stt:SpeechToText = SpeechToText();
   var listening:Bool = false
-  var editedTranscript:String = ""
   
   @IBOutlet var transcript: UILabel!
   @IBOutlet var sunButton: UIButton!
@@ -52,7 +51,6 @@ class HomeGestureViewController: UIViewController {
       print("Listening: \(listening)")
       /* Start Watson Listening */
       startListening()
-      
     }
   }
   
@@ -74,28 +72,12 @@ class HomeGestureViewController: UIViewController {
   }
   
   func handleTranscript(transcript: String) {
+    var oldTranscript = self.transcript.text!
+    let newTranscript = transcript
     
-    let totalString = self.editedTranscript
-    let newTranscriptString = transcript
+    self.transcript.text! = newTranscript
     
-    let totalStringAsArray = totalString.characters.split{$0 == " " || $0 == ","}.map(String.init)
-    let newTranscriptStringAsArray = newTranscriptString.characters.split{$0 == " " || $0 == ","}.map(String.init)
-    
-    var i = 0
-    var temp = ""
-    
-    for word in newTranscriptStringAsArray {
-      if i >= totalStringAsArray.count {
-        temp = ""
-      } else {
-        temp = totalStringAsArray[i]
-      }
-      if ( word != temp){
-        /* Not working :( */
-        self.transcript.text = "\(temp)  \(word)";
-      }
-      ++i
-    }
+    NSLog("Transcript text %@", self.transcript.text!)
   }
   
   func createSunPressFunctionality() {
@@ -127,5 +109,5 @@ class HomeGestureViewController: UIViewController {
       self.addPulseAnimation(power)
     })
   }
-
+  
 }
