@@ -1,5 +1,5 @@
 //
-//  PluginViewController.swift
+//  PluginsViewController.swift
 //  Vi
 //
 //  Created by Keith Armstrong on 10/22/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PluginViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class PluginsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var tableViewObject: UITableView!
     var foodNames: [String] = ["Food1","Food2","Food3","Food4","Food5","Food6","Food7","Food8"]

@@ -1,38 +1,57 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="icL-od-kdh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Home Gesture View Controller-->
-        <scene sceneID="WTz-al-jWP">
+        <scene sceneID="f04-fA-uM9">
             <objects>
-                <viewController id="icL-od-kdh" customClass="HomeGestureViewController" customModule="Vi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hmc-PS-5lf" customClass="HomeGestureViewController" customModule="Vi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="o28-Fs-fby"/>
-                        <viewControllerLayoutGuide type="bottom" id="2Qd-di-ts7"/>
+                        <viewControllerLayoutGuide type="top" id="ga1-JX-mwN"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zxo-Ve-b7N"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gUf-WT-IhY">
+                    <view key="view" contentMode="scaleToFill" id="hDP-1H-P1C">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aCA-fc-WAW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="594" y="737"/>
+        </scene>
+        <!--Home Gesture View Controller-->
+        <scene sceneID="JLx-fj-KJS">
+            <objects>
+                <viewController storyboardIdentifier="homeComponent" id="rSf-h4-L5D" customClass="HomeGestureViewController" customModule="Vi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Ms-RR-jvF"/>
+                        <viewControllerLayoutGuide type="bottom" id="16m-cY-i7o"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="V1i-Y3-Ydi">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Watson Text" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsC-XZ-O0F">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Watson Text" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nkt-xZ-XfK">
                                 <rect key="frame" x="10" y="28" width="580" height="219"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="219" id="IKQ-4g-O72"/>
+                                    <constraint firstAttribute="height" constant="219" id="cYj-6F-sf9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sS-uI-kHY">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wv2-qq-lZy">
                                 <rect key="frame" x="133" y="458" width="334" height="142"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="334" id="AsA-lP-Evm"/>
-                                    <constraint firstAttribute="height" constant="142" id="tsU-Vt-Wkg"/>
+                                    <constraint firstAttribute="height" constant="142" id="VgS-ib-pLs"/>
+                                    <constraint firstAttribute="width" constant="334" id="oKu-Hx-gtb"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="viSun.png"/>
                             </button>
@@ -40,21 +59,21 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="JsC-XZ-O0F" firstAttribute="leading" secondItem="gUf-WT-IhY" secondAttribute="leadingMargin" constant="-10" id="0HA-RJ-aks"/>
-                            <constraint firstItem="4sS-uI-kHY" firstAttribute="bottom" secondItem="2Qd-di-ts7" secondAttribute="top" id="W2p-L3-xdY"/>
-                            <constraint firstItem="4sS-uI-kHY" firstAttribute="centerX" secondItem="JsC-XZ-O0F" secondAttribute="centerX" id="c3f-Y1-8ff"/>
-                            <constraint firstItem="JsC-XZ-O0F" firstAttribute="top" secondItem="o28-Fs-fby" secondAttribute="bottom" constant="8" symbolic="YES" id="iSv-1r-Xcz"/>
-                            <constraint firstItem="4sS-uI-kHY" firstAttribute="centerX" secondItem="gUf-WT-IhY" secondAttribute="centerX" id="jfL-8z-IQz"/>
+                            <constraint firstItem="wv2-qq-lZy" firstAttribute="centerX" secondItem="V1i-Y3-Ydi" secondAttribute="centerX" id="IpN-CV-BPe"/>
+                            <constraint firstItem="Nkt-xZ-XfK" firstAttribute="leading" secondItem="V1i-Y3-Ydi" secondAttribute="leadingMargin" constant="-10" id="LTX-pR-Lc0"/>
+                            <constraint firstItem="wv2-qq-lZy" firstAttribute="centerX" secondItem="Nkt-xZ-XfK" secondAttribute="centerX" id="XZC-l5-jlB"/>
+                            <constraint firstItem="Nkt-xZ-XfK" firstAttribute="top" secondItem="2Ms-RR-jvF" secondAttribute="bottom" constant="8" symbolic="YES" id="bze-bB-0lj"/>
+                            <constraint firstItem="wv2-qq-lZy" firstAttribute="bottom" secondItem="16m-cY-i7o" secondAttribute="top" id="oVL-wJ-Czd"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="sunButton" destination="4sS-uI-kHY" id="S49-D0-di3"/>
-                        <outlet property="transcript" destination="JsC-XZ-O0F" id="Zsc-A0-REw"/>
+                        <outlet property="sunButton" destination="wv2-qq-lZy" id="bqy-zL-Ji1"/>
+                        <outlet property="transcript" destination="Nkt-xZ-XfK" id="0Y6-VS-NYI"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="s00-8k-t6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cxh-BC-v7O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="190" y="327"/>
+            <point key="canvasLocation" x="554" y="39"/>
         </scene>
     </scenes>
     <resources>
