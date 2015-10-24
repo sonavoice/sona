@@ -1,2 +1,2 @@
-#import "watsonsdk/STTConfiguration.h"
-#import "watsonsdk/SpeechToText.h"
+#import <SpeechKit/SpeechKit.h>
+#import "NuanceHeader.h"

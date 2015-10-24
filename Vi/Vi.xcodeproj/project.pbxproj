@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05B02BF61BD9D71A0057C80C /* watsonsdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B02BF51BD9D71A0057C80C /* watsonsdk.framework */; };
-		05B02BF71BD9D71A0057C80C /* watsonsdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B02BF51BD9D71A0057C80C /* watsonsdk.framework */; };
-		05B02BF81BD9D71A0057C80C /* watsonsdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B02BF51BD9D71A0057C80C /* watsonsdk.framework */; };
 		05B02BFA1BDAA79B0057C80C /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B02BF91BDAA79B0057C80C /* CellView.swift */; };
 		05B02BFB1BDAA79B0057C80C /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B02BF91BDAA79B0057C80C /* CellView.swift */; };
 		05B02BFC1BDAA79B0057C80C /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B02BF91BDAA79B0057C80C /* CellView.swift */; };
@@ -50,17 +47,22 @@
 		8352C6761BD6A5DA007B3F5F /* ViTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8352C6751BD6A5DA007B3F5F /* ViTests.swift */; };
 		8352C6811BD6A5DA007B3F5F /* ViUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8352C6801BD6A5DA007B3F5F /* ViUITests.swift */; };
 		EC2CBFB31BD85C6100F2D05C /* TextToSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2CBFB21BD85C6100F2D05C /* TextToSpeech.swift */; };
+		EC4D3AE21BDB4618008C245F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4D3AE11BDB4618008C245F /* SystemConfiguration.framework */; };
 		EC90FC391BDB046D00F60AE9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90FC381BDB046D00F60AE9 /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		EC90FC431BDB3EFA00F60AE9 /* NuanceHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = EC90FC421BDB3EFA00F60AE9 /* NuanceHeader.m */; settings = {ASSET_TAGS = (); }; };
+		EC90FC441BDB3EFA00F60AE9 /* NuanceHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = EC90FC421BDB3EFA00F60AE9 /* NuanceHeader.m */; settings = {ASSET_TAGS = (); }; };
+		EC90FC451BDB3EFA00F60AE9 /* NuanceHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = EC90FC421BDB3EFA00F60AE9 /* NuanceHeader.m */; settings = {ASSET_TAGS = (); }; };
+		EC90FC621BDB44CB00F60AE9 /* SpeechKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC90FC4D1BDB44CB00F60AE9 /* SpeechKit.framework */; settings = {ASSET_TAGS = (); }; };
+		EC90FC631BDB44CB00F60AE9 /* SpeechKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC90FC4D1BDB44CB00F60AE9 /* SpeechKit.framework */; settings = {ASSET_TAGS = (); }; };
+		EC90FC641BDB44CB00F60AE9 /* SpeechKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC90FC4D1BDB44CB00F60AE9 /* SpeechKit.framework */; settings = {ASSET_TAGS = (); }; };
+		EC90FC701BDB459100F60AE9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC90FC6F1BDB459100F60AE9 /* UIKit.framework */; };
+		EC90FC721BDB459700F60AE9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC90FC711BDB459700F60AE9 /* AudioToolbox.framework */; };
+		EC90FC741BDB459D00F60AE9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC90FC731BDB459D00F60AE9 /* AVFoundation.framework */; };
+		EC90FC761BDB45AB00F60AE9 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC90FC751BDB45AB00F60AE9 /* CFNetwork.framework */; };
+		EC90FC781BDB45B000F60AE9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC90FC771BDB45B000F60AE9 /* CoreGraphics.framework */; };
+		EC90FC7A1BDB45BD00F60AE9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC90FC791BDB45BD00F60AE9 /* Foundation.framework */; };
+		EC90FC7C1BDB45C700F60AE9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC90FC7B1BDB45C700F60AE9 /* Security.framework */; };
 		ECD639C21BD99819008530A4 /* viSun.png in Resources */ = {isa = PBXBuildFile; fileRef = ECD639C11BD99819008530A4 /* viSun.png */; };
-		ECF6000C1BD7FB0400751275 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF6000B1BD7FB0400751275 /* CFNetwork.framework */; };
-		ECF6000E1BD7FB0D00751275 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF6000D1BD7FB0D00751275 /* AudioToolbox.framework */; };
-		ECF600101BD7FB1300751275 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF6000F1BD7FB1300751275 /* AVFoundation.framework */; };
-		ECF600121BD7FB1A00751275 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF600111BD7FB1A00751275 /* Foundation.framework */; };
-		ECF600141BD7FB1F00751275 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF600131BD7FB1F00751275 /* QuartzCore.framework */; };
-		ECF600161BD7FB2400751275 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF600151BD7FB2400751275 /* CoreAudio.framework */; };
-		ECF600181BD7FB2A00751275 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF600171BD7FB2A00751275 /* Security.framework */; };
-		ECF6001B1BD7FB3000751275 /* libicucore.A.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF600191BD7FB3000751275 /* libicucore.A.tbd */; };
-		ECF6001C1BD7FB3000751275 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF6001A1BD7FB3000751275 /* libicucore.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +83,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05B02BF51BD9D71A0057C80C /* watsonsdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = watsonsdk.framework; sourceTree = "<group>"; };
 		05B02BF91BDAA79B0057C80C /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		05BC1C8D1BD8551A00D47DAB /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		05BC1C8E1BD8551A00D47DAB /* AppInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfoViewController.swift; sourceTree = "<group>"; };
@@ -116,19 +117,21 @@
 		8352C6801BD6A5DA007B3F5F /* ViUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViUITests.swift; sourceTree = "<group>"; };
 		8352C6821BD6A5DA007B3F5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC2CBFB21BD85C6100F2D05C /* TextToSpeech.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextToSpeech.swift; sourceTree = "<group>"; };
+		EC4D3AE11BDB4618008C245F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		EC8F9AB21BD9D4F2001A7CCD /* ViTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		EC8F9AB31BD9D4F2001A7CCD /* ViUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViUITests-Bridging-Header.h"; sourceTree = "<group>"; };
 		EC90FC381BDB046D00F60AE9 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		EC90FC421BDB3EFA00F60AE9 /* NuanceHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NuanceHeader.m; sourceTree = "<group>"; };
+		EC90FC461BDB3F2900F60AE9 /* NuanceHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NuanceHeader.h; sourceTree = "<group>"; };
+		EC90FC4D1BDB44CB00F60AE9 /* SpeechKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpeechKit.framework; sourceTree = "<group>"; };
+		EC90FC6F1BDB459100F60AE9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EC90FC711BDB459700F60AE9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		EC90FC731BDB459D00F60AE9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		EC90FC751BDB45AB00F60AE9 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		EC90FC771BDB45B000F60AE9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EC90FC791BDB45BD00F60AE9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EC90FC7B1BDB45C700F60AE9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		ECD639C11BD99819008530A4 /* viSun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = viSun.png; sourceTree = "<group>"; };
-		ECF6000B1BD7FB0400751275 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		ECF6000D1BD7FB0D00751275 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		ECF6000F1BD7FB1300751275 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		ECF600111BD7FB1A00751275 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		ECF600131BD7FB1F00751275 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		ECF600151BD7FB2400751275 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
-		ECF600171BD7FB2A00751275 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		ECF600191BD7FB3000751275 /* libicucore.A.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.A.tbd; path = usr/lib/libicucore.A.tbd; sourceTree = SDKROOT; };
-		ECF6001A1BD7FB3000751275 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		ECF6003E1BD80B5300751275 /* Vi-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Vi-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,16 +140,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECF6001B1BD7FB3000751275 /* libicucore.A.tbd in Frameworks */,
-				05B02BF61BD9D71A0057C80C /* watsonsdk.framework in Frameworks */,
-				ECF6001C1BD7FB3000751275 /* libicucore.tbd in Frameworks */,
-				ECF600181BD7FB2A00751275 /* Security.framework in Frameworks */,
-				ECF600161BD7FB2400751275 /* CoreAudio.framework in Frameworks */,
-				ECF600141BD7FB1F00751275 /* QuartzCore.framework in Frameworks */,
-				ECF600121BD7FB1A00751275 /* Foundation.framework in Frameworks */,
-				ECF600101BD7FB1300751275 /* AVFoundation.framework in Frameworks */,
-				ECF6000E1BD7FB0D00751275 /* AudioToolbox.framework in Frameworks */,
-				ECF6000C1BD7FB0400751275 /* CFNetwork.framework in Frameworks */,
+				EC4D3AE21BDB4618008C245F /* SystemConfiguration.framework in Frameworks */,
+				EC90FC7C1BDB45C700F60AE9 /* Security.framework in Frameworks */,
+				EC90FC7A1BDB45BD00F60AE9 /* Foundation.framework in Frameworks */,
+				EC90FC781BDB45B000F60AE9 /* CoreGraphics.framework in Frameworks */,
+				EC90FC761BDB45AB00F60AE9 /* CFNetwork.framework in Frameworks */,
+				EC90FC741BDB459D00F60AE9 /* AVFoundation.framework in Frameworks */,
+				EC90FC721BDB459700F60AE9 /* AudioToolbox.framework in Frameworks */,
+				EC90FC701BDB459100F60AE9 /* UIKit.framework in Frameworks */,
+				EC90FC621BDB44CB00F60AE9 /* SpeechKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,7 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05B02BF71BD9D71A0057C80C /* watsonsdk.framework in Frameworks */,
+				EC90FC631BDB44CB00F60AE9 /* SpeechKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,7 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05B02BF81BD9D71A0057C80C /* watsonsdk.framework in Frameworks */,
+				EC90FC641BDB44CB00F60AE9 /* SpeechKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +290,8 @@
 				ECF6003E1BD80B5300751275 /* Vi-Bridging-Header.h */,
 				EC8F9AB21BD9D4F2001A7CCD /* ViTests-Bridging-Header.h */,
 				EC8F9AB31BD9D4F2001A7CCD /* ViUITests-Bridging-Header.h */,
+				EC90FC461BDB3F2900F60AE9 /* NuanceHeader.h */,
+				EC90FC421BDB3EFA00F60AE9 /* NuanceHeader.m */,
 			);
 			name = BridgingHeaders;
 			sourceTree = "<group>";
@@ -322,16 +326,15 @@
 		ECF6000A1BD7FAF100751275 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				05B02BF51BD9D71A0057C80C /* watsonsdk.framework */,
-				ECF600191BD7FB3000751275 /* libicucore.A.tbd */,
-				ECF6001A1BD7FB3000751275 /* libicucore.tbd */,
-				ECF600171BD7FB2A00751275 /* Security.framework */,
-				ECF600151BD7FB2400751275 /* CoreAudio.framework */,
-				ECF600131BD7FB1F00751275 /* QuartzCore.framework */,
-				ECF600111BD7FB1A00751275 /* Foundation.framework */,
-				ECF6000F1BD7FB1300751275 /* AVFoundation.framework */,
-				ECF6000D1BD7FB0D00751275 /* AudioToolbox.framework */,
-				ECF6000B1BD7FB0400751275 /* CFNetwork.framework */,
+				EC4D3AE11BDB4618008C245F /* SystemConfiguration.framework */,
+				EC90FC7B1BDB45C700F60AE9 /* Security.framework */,
+				EC90FC791BDB45BD00F60AE9 /* Foundation.framework */,
+				EC90FC771BDB45B000F60AE9 /* CoreGraphics.framework */,
+				EC90FC751BDB45AB00F60AE9 /* CFNetwork.framework */,
+				EC90FC731BDB459D00F60AE9 /* AVFoundation.framework */,
+				EC90FC711BDB459700F60AE9 /* AudioToolbox.framework */,
+				EC90FC6F1BDB459100F60AE9 /* UIKit.framework */,
+				EC90FC4D1BDB44CB00F60AE9 /* SpeechKit.framework */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -486,6 +489,7 @@
 				05BC1C9A1BD8551A00D47DAB /* DummyData.swift in Sources */,
 				8352C65F1BD6A5DA007B3F5F /* AppDelegate.swift in Sources */,
 				83391CDA1BD9B008005924DB /* NavigatorViewController.swift in Sources */,
+				EC90FC431BDB3EFA00F60AE9 /* NuanceHeader.m in Sources */,
 				05CBBFC21BD6BE3500227BDC /* SettingsViewController.swift in Sources */,
 				05B02BFA1BDAA79B0057C80C /* CellView.swift in Sources */,
 				05BC1C911BD8551A00D47DAB /* App.swift in Sources */,
@@ -504,6 +508,7 @@
 				8352C6761BD6A5DA007B3F5F /* ViTests.swift in Sources */,
 				05B02BFB1BDAA79B0057C80C /* CellView.swift in Sources */,
 				05CBBFC31BD6BE3500227BDC /* SettingsViewController.swift in Sources */,
+				EC90FC441BDB3EFA00F60AE9 /* NuanceHeader.m in Sources */,
 				05BC1C921BD8551A00D47DAB /* App.swift in Sources */,
 				05BC1C981BD8551A00D47DAB /* LibraryViewController.swift in Sources */,
 				05BC1C951BD8551A00D47DAB /* AppInfoViewController.swift in Sources */,
@@ -518,6 +523,7 @@
 				8352C6811BD6A5DA007B3F5F /* ViUITests.swift in Sources */,
 				05B02BFC1BDAA79B0057C80C /* CellView.swift in Sources */,
 				05CBBFC41BD6BE3500227BDC /* SettingsViewController.swift in Sources */,
+				EC90FC451BDB3EFA00F60AE9 /* NuanceHeader.m in Sources */,
 				05BC1C931BD8551A00D47DAB /* App.swift in Sources */,
 				05BC1C991BD8551A00D47DAB /* LibraryViewController.swift in Sources */,
 				05BC1C961BD8551A00D47DAB /* AppInfoViewController.swift in Sources */,

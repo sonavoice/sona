@@ -1,10 +1,9 @@
 import UIKit
 import QuartzCore
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate {
   
-  var stt:SpeechToText = SpeechToText();
-  var listening:Bool = false
+  var voiceSearch: SKRecognizer?
   
   @IBOutlet var transcript: UILabel!
   @IBOutlet var MicButton: UIButton!
@@ -12,36 +11,55 @@ class HomeViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    /* Add button circle */
-    createMicButton()
+    /* Style Button */
+    styleMicButton()
     
-    /* Add sun button press functionality */
+    /* Add Button functionality */
     createMicButtonPressFunctionality()
     
-    /* Add gesture capabilities */
-    // No swipe gesturing until exact location of permitted swipe determined
-    //addUpSwipeGesture()
+    /* Configure SpeechKit Server */
+    configureNuance()
     
-    /* Configure Watson */
-    configureWatson()
+    /* Add gesture capabilities */
+    //addUpSwipeGesture()
   }
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
   }
   
-  func configureWatson() {
-    let conf:STTConfiguration = STTConfiguration()
-    
-    conf.audioCodec = WATSONSDK_AUDIO_CODEC_TYPE_OPUS
-    
-    conf.basicAuthUsername = "11a2a0e4-02dd-4b14-812a-bc9ec34efc3a"
-    conf.basicAuthPassword = "r5HEtX7J0tqd"
-    
-    self.stt = SpeechToText.init(config: conf)
+  func createMicButtonPressFunctionality() {
+    self.MicButton.addTarget(self, action: "startListening", forControlEvents: .TouchUpInside)
   }
   
+  func startListening() {
+    /* There are alternate options for these:
+    
+    detectionType(s):
+    - SKLongEndOfSpeechDetection (long utterances)
+    
+    recoType(s):
+    - SKShortEndOfSpeechDetection - good for search look up and short small pause utterances
+    - SKTvRecognizerType - good for pauses occasionally and for messages/dictation
+    - SKDictationRecognizerType - Long utterances for dictation
+    
+    landType(s):
+    - "fr_FR"
+    - "de_DE"
+    
+    */
+
+    self.voiceSearch = SKRecognizer(type: SKSearchRecognizerType, detection: UInt(SKShortEndOfSpeechDetection), language:"eng-USA", delegate: self)
+  }
+  
+  func styleMicButton() {
+    let circlePath = UIBezierPath.init(arcCenter: CGPointMake(MicButton.bounds.size.width / 2, MicButton.bounds.size.height / 2), radius: MicButton.bounds.size.height / 2, startAngle: 0.0, endAngle: 2 * CGFloat(M_PI), clockwise: true)
+    let circleShape = CAShapeLayer()
+    circleShape.path = circlePath.CGPath
+    MicButton.layer.mask = circleShape
+  }
+  
+  /* Swipe gesture */
   func addUpSwipeGesture() {
     let upSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
     upSwipe.direction = .Up
@@ -50,60 +68,50 @@ class HomeViewController: UIViewController {
   
   func handleSwipes(sender:UISwipeGestureRecognizer) {
     if (sender.direction == .Up) {
-      print("Swipe Up")
-      listening = !listening
-      print("Listening: \(listening)")
-      /* Start Watson Listening */
+      NSLog("Swipe Up")
       startListening()
     }
   }
-  
-  func startListening() {
-    self.stt.recognize({ (res: [NSObject:AnyObject]!, err: NSError!) -> Void in
-      
-      if err == nil {
-        if self.stt.isFinalTranscript(res) {
-          self.stt.endRecognize()
-        }
-        self.handleTranscript(self.stt.getTranscript(res))
-        self.handlePowerMeter()
-        NSLog("@%", self.stt.getTranscript(res))
-      } else {
-        self.stt.endRecognize()
-        NSLog("@%", err.localizedDescription)
-      }
-    })
-  }
-  
-  func handleTranscript(transcript: String) {
-    var oldTranscript = self.transcript.text!
-    let newTranscript = transcript
+
+  /*** Nuance ***/
+  func configureNuance() {
+    SpeechKit.setupWithID("NMDPTRIAL_garrettmaring_gmail_com20151023221408", host: "sslsandbox.nmdp.nuancemobility.net", port: 443, useSSL: true, delegate: self)
     
-    self.transcript.text! = newTranscript
-  }
-  
-  func createMicButtonPressFunctionality() {
-    self.MicButton.addTarget(self, action: "buttonPressed", forControlEvents: .TouchUpInside)
+    //    let earconStart = SKEarcon.earconWithName("earcon_listening.wav") as! SKEarcon
+    //    let earconStop = SKEarcon.earconWithName("earcon_done_listening.wav") as! SKEarcon
+    //    let earconCancel = SKEarcon.earconWithName("earcon_cancel.wav") as! SKEarcon
+    //
+    //    SpeechKit.setEarcon(earconStart, forType: UInt(SKStartRecordingEarconType))
+    //    SpeechKit.setEarcon(earconStop, forType: UInt(SKStopRecordingEarconType))
+    //    SpeechKit.setEarcon(earconCancel, forType: UInt(SKCancelRecordingEarconType))
+    
     
   }
-  
-  func buttonPressed() {
-    if !listening {
-      listening = !listening
-      startListening()
-    }
+
+  func recognizerDidBeginRecording(recognizer: SKRecognizer!) {
+    NSLog("I have started recording")
   }
   
+  func recognizerDidFinishRecording(recognizer: SKRecognizer!) {
+    NSLog("I have finished recording")
+    voiceSearch!.stopRecording()
+  }
+  
+  func recognizer(recognizer: SKRecognizer!, didFinishWithResults results: SKRecognition!) {
+    NSLog("Some results! \n %@", results.results)
+    transcript.text! = results.firstResult()
+  }
+  
+  func recognizer(recognizer: SKRecognizer!, didFinishWithError error: NSError!, suggestion: String!) {
+    NSLog("I errored out with the following error: %@", error)
+  }
+  
+  func audioSessionReleased() {
+    NSLog("Audio session released")
+  }
+
   func handlePowerMeter() {
-    self.stt.getPowerLevel({ (power: Float) -> Void in
-      NSLog("Current power level is %@", power)
-    })
+    /* Get power level */
   }
   
-  func createMicButton() {
-    let circlePath = UIBezierPath.init(arcCenter: CGPointMake(MicButton.bounds.size.width / 2, MicButton.bounds.size.height / 2), radius: MicButton.bounds.size.height / 2, startAngle: 0.0, endAngle: 2 * CGFloat(M_PI), clockwise: true)
-    let circleShape = CAShapeLayer()
-    circleShape.path = circlePath.CGPath
-    MicButton.layer.mask = circleShape
-  }
 }
