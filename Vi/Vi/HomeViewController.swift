@@ -11,9 +11,6 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    /* Word wrapping for label */
-    wordWrapLabel()
-    
     /* Style Button */
     styleMicButton()
     
@@ -74,11 +71,6 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   
   func createMicButtonPressFunctionality() {
     self.MicButton.addTarget(self, action: "startListening", forControlEvents: .TouchUpInside)
-  }
-  
-  func wordWrapLabel() {
-    transcript.numberOfLines = 0
-    transcript.lineBreakMode = .ByWordWrapping
   }
   
   /* Server & API */

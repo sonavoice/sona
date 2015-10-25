@@ -65,6 +65,7 @@
 		EC90FC781BDB45B000F60AE9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC90FC771BDB45B000F60AE9 /* CoreGraphics.framework */; };
 		EC90FC7A1BDB45BD00F60AE9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC90FC791BDB45BD00F60AE9 /* Foundation.framework */; };
 		EC90FC7C1BDB45C700F60AE9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC90FC7B1BDB45C700F60AE9 /* Security.framework */; };
+		ECBD06061BDC9AA500AB9C01 /* transcriptLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD06051BDC9AA500AB9C01 /* transcriptLabel.swift */; settings = {ASSET_TAGS = (); }; };
 		ECD639C21BD99819008530A4 /* viSun.png in Resources */ = {isa = PBXBuildFile; fileRef = ECD639C11BD99819008530A4 /* viSun.png */; };
 /* End PBXBuildFile section */
 
@@ -145,6 +146,7 @@
 		EC90FC771BDB45B000F60AE9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		EC90FC791BDB45BD00F60AE9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EC90FC7B1BDB45C700F60AE9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		ECBD06051BDC9AA500AB9C01 /* transcriptLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = transcriptLabel.swift; sourceTree = "<group>"; };
 		ECD639C11BD99819008530A4 /* viSun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = viSun.png; sourceTree = "<group>"; };
 		ECF6003E1BD80B5300751275 /* Vi-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Vi-Bridging-Header.h"; sourceTree = "<group>"; };
 		FE03DF245C4E56D5808E49D8 /* Pods-Vi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Vi/Pods-Vi.debug.xcconfig"; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 		8352C65D1BD6A5DA007B3F5F /* Vi */ = {
 			isa = PBXGroup;
 			children = (
+				ECBD06041BDC9A9000AB9C01 /* UI */,
 				83391CD81BD9AFF6005924DB /* Navigator */,
 				EC9163CC1BD960F500401DC6 /* Extras */,
 				EC9163CB1BD960E300401DC6 /* Assets */,
@@ -364,6 +367,14 @@
 				8352C66C1BD6A5DA007B3F5F /* Info.plist */,
 			);
 			name = Extras;
+			sourceTree = "<group>";
+		};
+		ECBD06041BDC9A9000AB9C01 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				ECBD06051BDC9AA500AB9C01 /* transcriptLabel.swift */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 		ECF6000A1BD7FAF100751275 /* Libraries */ = {
@@ -674,6 +685,7 @@
 				05BC1C971BD8551A00D47DAB /* LibraryViewController.swift in Sources */,
 				05BC1C941BD8551A00D47DAB /* AppInfoViewController.swift in Sources */,
 				EC2CBFB31BD85C6100F2D05C /* TextToSpeech.swift in Sources */,
+				ECBD06061BDC9AA500AB9C01 /* transcriptLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
