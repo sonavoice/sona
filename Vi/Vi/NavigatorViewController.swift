@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import FontAwesome_swift
 
 class NavigatorViewController: UIViewController {
 
+  @IBOutlet weak var settingsButton: UIButton!
+  @IBOutlet weak var pluginsButton: UIButton!
+  @IBOutlet weak var libraryButton: UIButton!
+  @IBOutlet weak var homeButton: UIButton!
   @IBOutlet weak var containerView: UIView!
   weak var currentViewController: UIViewController?
   
@@ -18,6 +23,16 @@ class NavigatorViewController: UIViewController {
     self.currentViewController!.view.translatesAutoresizingMaskIntoConstraints = false
     self.addChildViewController(self.currentViewController!)
     self.addSubview(self.currentViewController!.view, toView: self.containerView)
+    
+    
+    homeButton.titleLabel?.font = UIFont.fontAwesomeOfSize(28)
+    homeButton.setTitle(String.fontAwesomeIconWithCode("fa-home"), forState: .Normal)
+    libraryButton.titleLabel?.font = UIFont.fontAwesomeOfSize(28)
+    libraryButton.setTitle(String.fontAwesomeIconWithCode("fa-book"), forState: .Normal)
+    pluginsButton.titleLabel?.font = UIFont.fontAwesomeOfSize(28)
+    pluginsButton.setTitle(String.fontAwesomeIconWithCode("fa-search"), forState: .Normal)
+    settingsButton.titleLabel?.font = UIFont.fontAwesomeOfSize(28)
+    settingsButton.setTitle(String.fontAwesomeIconWithCode("fa-cog"), forState: .Normal)
     super.viewDidLoad()
   }
 
@@ -57,9 +72,9 @@ class NavigatorViewController: UIViewController {
     self.addSubview(newViewController.view, toView:self.containerView!)
     newViewController.view.alpha = 0
     newViewController.view.layoutIfNeeded()
-    UIView.animateWithDuration(0.5, animations: {
+    UIView.animateWithDuration(0.0, animations: {
       newViewController.view.alpha = 1
-      oldViewController.view.alpha = 0
+      oldViewController.view.alpha = 1
       },
       completion: { finished in
         oldViewController.view.removeFromSuperview()
