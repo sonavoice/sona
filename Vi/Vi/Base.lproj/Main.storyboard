@@ -30,7 +30,7 @@
                                 <animations/>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ibx-B1-SH5">
-                                <rect key="frame" x="160" y="20" width="139.5" height="39"/>
+                                <rect key="frame" x="160" y="20" width="140" height="39"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="22"/>
                                 <state key="normal" title="Library">
@@ -46,12 +46,12 @@
                                 <color key="backgroundColor" red="0.01176470588" green="0.66274509800000003" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0HT-KS-HVv">
-                                <rect key="frame" x="299.5" y="20" width="1" height="39"/>
+                                <rect key="frame" x="300" y="20" width="0.0" height="39"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.01176470588" green="0.66274509800000003" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ofS-FW-DZq">
-                                <rect key="frame" x="440.5" y="20" width="0.0" height="39"/>
+                                <rect key="frame" x="440" y="20" width="0.0" height="39"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.01176470588" green="0.66274509800000003" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -67,9 +67,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U88-VS-qkj">
-                                <rect key="frame" x="300.5" y="20" width="140" height="39"/>
+                                <rect key="frame" x="300" y="20" width="140" height="39"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="22"/>
+                                <color key="tintColor" red="0.011764705882352941" green="0.66274509803921566" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Plugins">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -78,7 +79,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3a-f0-3ab">
-                                <rect key="frame" x="440.5" y="20" width="139.5" height="39"/>
+                                <rect key="frame" x="440" y="20" width="140" height="39"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="4AK-nP-Nvo"/>
@@ -108,7 +109,8 @@
                             </view>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.0078431372549019607" green="0.6588235294117647" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.011764705882352941" green="0.66274509803921566" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="T3a-f0-3ab" firstAttribute="width" secondItem="nU7-5w-jgW" secondAttribute="width" id="15o-5S-h2V"/>
                             <constraint firstItem="Ibx-B1-SH5" firstAttribute="height" secondItem="nU7-5w-jgW" secondAttribute="height" id="67n-bh-9cL"/>
@@ -139,7 +141,7 @@
                             <constraint firstItem="U88-VS-qkj" firstAttribute="width" secondItem="nU7-5w-jgW" secondAttribute="width" id="Qxj-0X-kLK"/>
                             <constraint firstItem="ofS-FW-DZq" firstAttribute="top" secondItem="5Gx-cA-N4U" secondAttribute="top" id="R97-kK-ijM"/>
                             <constraint firstItem="T3a-f0-3ab" firstAttribute="height" secondItem="nU7-5w-jgW" secondAttribute="height" id="Rt2-dG-vUx"/>
-                            <constraint firstItem="0HT-KS-HVv" firstAttribute="width" secondItem="5Gx-cA-N4U" secondAttribute="width" constant="1" id="SZC-Os-Gd1"/>
+                            <constraint firstItem="0HT-KS-HVv" firstAttribute="width" secondItem="5Gx-cA-N4U" secondAttribute="width" id="SZC-Os-Gd1"/>
                             <constraint firstItem="U88-VS-qkj" firstAttribute="bottom" secondItem="0HT-KS-HVv" secondAttribute="bottom" id="Su7-Pg-tNX"/>
                             <constraint firstItem="U88-VS-qkj" firstAttribute="width" secondItem="nU7-5w-jgW" secondAttribute="width" id="Tse-72-UFF"/>
                             <constraint firstItem="T3a-f0-3ab" firstAttribute="height" secondItem="nU7-5w-jgW" secondAttribute="height" id="UN4-k2-Wve"/>
