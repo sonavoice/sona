@@ -25,14 +25,16 @@ class LibraryViewController: UITableViewController {
       let cell = self.tableView.dequeueReusableCellWithIdentifier("CellView", forIndexPath: indexPath) as! CellView
       
       let appInfo = apps[indexPath.row] as App
-      cell.Name.text = appInfo.name
-      cell.Detail.text = appInfo.description
+      cell.name.font = UIFont(name: "Lato-Regular", size: 18)
+      cell.name.textColor = UIColor(red: 33/255.0, green: 33/255.0, blue: 33/255.0, alpha: 1)
+      cell.name.text = appInfo.name
       
-      let url = NSURL(string: "https://www.google.com/favicon.ico")
+      let url = NSURL(string: appInfo.iconURL!)
       let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
       
-      cell.AppIcon.image = UIImage(data: data!)
-      
+      cell.icon.image = UIImage(data: data!)
+      cell.arrow.font = UIFont.fontAwesomeOfSize(30)
+      cell.arrow.text = String.fontAwesomeIconWithCode("fa-angle-right")
       return cell
   }
   

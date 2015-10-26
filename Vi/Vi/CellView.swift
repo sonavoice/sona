@@ -2,10 +2,9 @@ import UIKit
 
 class CellView: UITableViewCell {
   
-  @IBOutlet var Name: UILabel!
-  @IBOutlet var Detail: UILabel!
-  @IBOutlet var AppIcon: UIImageView!
-  
+  @IBOutlet weak var arrow: UILabel!
+  @IBOutlet weak var icon: UIImageView!
+  @IBOutlet weak var name: UILabel!
   override func awakeFromNib() {
     super.awakeFromNib()
   }
@@ -13,4 +12,6 @@ class CellView: UITableViewCell {
   override func setSelected(selected: Bool, animated: Bool) {
     super.setSelected(selected, animated: animated)
   }
+  
+  
 }

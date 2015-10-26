@@ -12,10 +12,12 @@ struct App {
   var name: String?
   var description: String?
   var commands: [String]
+  var iconURL: String?
   
-  init(name: String?, description: String?, commands: [String]?){
+  init(name: String?, description: String?, commands: [String]?, iconURL: String?){
     self.name = name
     self.description = description
     self.commands = commands!
+    self.iconURL = iconURL
   }
 }

@@ -17,6 +17,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
       UIApplication.sharedApplication().statusBarStyle = .LightContent
+      UINavigationBar.appearance().titleTextAttributes = [
+        NSFontAttributeName: UIFont(name: "Lato-Regular", size: 24)!,
+        NSForegroundColorAttributeName : UIColor.whiteColor(),
+//        NSForegroundColorAttributeName : UIColor(red: 33/255.0, green: 33/255.0, blue: 33/255.0, alpha: 1),
+      ]
+//      UINavigationBar.appearance().barTintColor = UIColor(red: 2.0/255.0, green: 136.0/255.0, blue: 209.0/255.0, alpha: 1.0) // light blue - dark
+        UINavigationBar.appearance().barTintColor = UIColor(red: 3/255.0, green: 169/255.0, blue: 244/255.0, alpha: 1) // light blue - primary
+//      UINavigationBar.appearance().barTintColor = UIColor(red: 179.0/255.0, green: 229.0/255.0, blue: 252.0/255.0, alpha: 1.0) // light blue - light
+//      UINavigationBar.appearance().barTintColor = UIColor(red: 158/255.0, green: 158/255.0, blue: 158/255.0, alpha: 1) //
+//      UINavigationBar.appearance().barTintColor = UIColor(red: 0/255.0, green: 150/255.0, blue: 136/255.0, alpha: 1)
+//      UINavigationBar.appearance().barTintColor = UIColor(red: 158/255.0, green: 158/255.0, blue: 158/255.0, alpha: 1)
+      
+      UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+//      UINavigationBar.appearance().tintColor = UIColor(red: 33/255.0, green: 33/255.0, blue: 33/255.0, alpha: 1)
+//      UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
       return true
     }
 
