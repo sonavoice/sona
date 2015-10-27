@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0555B9851BDEECFC00C41580 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0555B9841BDEECFC00C41580 /* Settings.swift */; settings = {ASSET_TAGS = (); }; };
-		0555B9861BDEECFC00C41580 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0555B9841BDEECFC00C41580 /* Settings.swift */; settings = {ASSET_TAGS = (); }; };
-		0555B9871BDEECFC00C41580 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0555B9841BDEECFC00C41580 /* Settings.swift */; settings = {ASSET_TAGS = (); }; };
-		0555B98E1BDEEE7300C41580 /* ViData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0555B98C1BDEEE7300C41580 /* ViData.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
-		0555B98F1BDEEE7300C41580 /* ViData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0555B98C1BDEEE7300C41580 /* ViData.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
-		0555B9901BDEEE7300C41580 /* ViData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0555B98C1BDEEE7300C41580 /* ViData.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
+		0555B9851BDEECFC00C41580 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0555B9841BDEECFC00C41580 /* Settings.swift */; };
+		0555B9861BDEECFC00C41580 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0555B9841BDEECFC00C41580 /* Settings.swift */; };
+		0555B9871BDEECFC00C41580 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0555B9841BDEECFC00C41580 /* Settings.swift */; };
+		0555B98E1BDEEE7300C41580 /* ViData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0555B98C1BDEEE7300C41580 /* ViData.xcdatamodeld */; };
+		0555B98F1BDEEE7300C41580 /* ViData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0555B98C1BDEEE7300C41580 /* ViData.xcdatamodeld */; };
+		0555B9901BDEEE7300C41580 /* ViData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0555B98C1BDEEE7300C41580 /* ViData.xcdatamodeld */; };
 		05B02BFA1BDAA79B0057C80C /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B02BF91BDAA79B0057C80C /* CellView.swift */; };
 		05B02BFB1BDAA79B0057C80C /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B02BF91BDAA79B0057C80C /* CellView.swift */; };
 		05B02BFC1BDAA79B0057C80C /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B02BF91BDAA79B0057C80C /* CellView.swift */; };
@@ -61,6 +61,7 @@
 		B766D0BDF98CFBFA1B4C3942 /* Pods_Vi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4EE609C1BED1A14BD74639E /* Pods_Vi.framework */; };
 		EC2350AA1BDEEC8500547EC4 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2350A91BDEEC8500547EC4 /* Authentication.swift */; };
 		EC2CBFB31BD85C6100F2D05C /* TextToSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2CBFB21BD85C6100F2D05C /* TextToSpeech.swift */; };
+		EC30DF6D1BDF3745001493F2 /* start_listening.wav in Resources */ = {isa = PBXBuildFile; fileRef = EC30DF6C1BDF3745001493F2 /* start_listening.wav */; };
 		EC4D3AE21BDB4618008C245F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4D3AE11BDB4618008C245F /* SystemConfiguration.framework */; };
 		EC90FC391BDB046D00F60AE9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90FC381BDB046D00F60AE9 /* HomeViewController.swift */; };
 		EC90FC431BDB3EFA00F60AE9 /* NuanceHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = EC90FC421BDB3EFA00F60AE9 /* NuanceHeader.m */; };
@@ -147,6 +148,7 @@
 		ACD58AEFFDF83F26FFDC68EE /* Pods-ViUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ViUITests/Pods-ViUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EC2350A91BDEEC8500547EC4 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		EC2CBFB21BD85C6100F2D05C /* TextToSpeech.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextToSpeech.swift; sourceTree = "<group>"; };
+		EC30DF6C1BDF3745001493F2 /* start_listening.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = start_listening.wav; sourceTree = "<group>"; };
 		EC4D3AE11BDB4618008C245F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		EC8F9AB21BD9D4F2001A7CCD /* ViTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		EC8F9AB31BD9D4F2001A7CCD /* ViUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViUITests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -389,6 +391,7 @@
 				53060AA61BD99195008AE89A /* image5.png */,
 				53060AA71BD99195008AE89A /* image6.png */,
 				53060AA81BD99195008AE89A /* image7.png */,
+				EC30DF6C1BDF3745001493F2 /* start_listening.wav */,
 				53060AA91BD99195008AE89A /* image8.png */,
 				8352C6671BD6A5DA007B3F5F /* Assets.xcassets */,
 				ECD639C11BD99819008530A4 /* viSun.png */,
@@ -553,6 +556,7 @@
 				53C09A721BDB00B70080CD62 /* Settings.storyboard in Resources */,
 				53060AAF1BD99195008AE89A /* image6.png in Resources */,
 				53447A271BD848EC00282C54 /* dog.jpg in Resources */,
+				EC30DF6D1BDF3745001493F2 /* start_listening.wav in Resources */,
 				53C09A7E1BDB01C30080CD62 /* Home.storyboard in Resources */,
 				8352C66B1BD6A5DA007B3F5F /* LaunchScreen.storyboard in Resources */,
 				53060AAA1BD99195008AE89A /* image1.png in Resources */,
