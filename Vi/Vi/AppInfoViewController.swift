@@ -1,12 +1,5 @@
-//
-//  AppInfoViewController.swift
-//  Vi
-//
-//  Created by Eugene Lee (colemakdvorak) on 10/21/15.
-//  Copyright © 2015 Vi. All rights reserved.
-//
-
 import UIKit
+import Lock
 
 class AppInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -16,6 +9,11 @@ class AppInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
   @IBOutlet weak var appTitle: UILabel!
   @IBOutlet weak var appDescription: UILabel!
   @IBOutlet weak var CommandView: UITableView!
+  
+  @IBAction func signIn(sender: UIBarButtonItem) {
+    let lock = Authentication.sharedInstance.lock
+    lock.identityProviderAuthenticator().authenticateWithConnectionName(appInfo.name!, parameters: nil, success: self.successCallback(), failure: self.errorCallback())
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -63,6 +61,27 @@ class AppInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
     self.CommandView.estimatedRowHeight = 150 // for example. Set your average height
     self.CommandView.rowHeight = UITableViewAutomaticDimension
     self.CommandView.reloadData()
+  }
+  
+  /* Callbacks for authentication */
+  
+  private func errorCallback() -> NSError -> () {
+    return { error in
+      let alert = UIAlertController(title: "Login failed", message: "Please check you application logs for more info", preferredStyle: .Alert)
+      alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+      self.presentViewController(alert, animated: true, completion: nil)
+      print("Failed with error \(error)")
+    }
+  }
+  
+  private func successCallback() -> (A0UserProfile, A0Token) -> () {
+    return { (profile, token) -> Void in
+      let alert = UIAlertController(title: "Logged In!", message: "User with name \(profile.name) logged in!", preferredStyle: .Alert)
+      alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+      self.presentViewController(alert, animated: true, completion: nil)
+      print("Logged in user \(profile.name)")
+      print("Tokens: \(token)")
+    }
   }
   
 }
