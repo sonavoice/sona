@@ -5,15 +5,21 @@ import AFNetworking
 class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate {
   
   var voiceSearch: SKRecognizer?
+  var animation: Bool = false
   
   @IBOutlet var transcript: UILabel!
   @IBOutlet var MicButton: UIButton!
+  @IBOutlet weak var rippleView: UIView!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    transcript.numberOfLines = 0
+    transcript.sizeToFit()
+    
     /* Style Button */
     styleMicButton()
+    setupViewsForRippleEffect()
     
     /* Add Button functionality */
     createMicButtonPressFunctionality()
@@ -23,6 +29,30 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
     
     /* Add gesture capabilities */
     //addUpSwipeGesture()
+  }
+  
+  func setupViewsForRippleEffect(){
+    self.rippleView.layer.zPosition = 1111
+    self.rippleView.layer.cornerRadius = self.rippleView.frame.size.width / 2;
+    self.rippleView.clipsToBounds = true
+    self.rippleView.layer.borderColor = UIColor(red: 3/255.0, green: 169/255.0, blue: 244/255.0, alpha: 1.0).CGColor
+    self.rippleView.layer.borderWidth = 1
+    self.rippleView.hidden = true
+  }
+  
+  func animateRippleEffect(){
+    if (!animation) {
+      return ()
+    }
+    self.rippleView.transform = CGAffineTransformMakeScale(0.2, 0.2)
+    
+    UIView.animateWithDuration(0.8, delay: 0,
+      options: UIViewAnimationOptions.CurveLinear,
+      animations: {
+        self.rippleView.transform = CGAffineTransformMakeScale(1.0, 1.0)
+      }, completion: { finished in
+        self.animateRippleEffect()
+    })
   }
   
   override func didReceiveMemoryWarning() {
@@ -68,6 +98,8 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
     let circleShape = CAShapeLayer()
     circleShape.path = circlePath.CGPath
     MicButton.layer.mask = circleShape
+    MicButton.titleLabel?.font = UIFont.fontAwesomeOfSize(50)
+    MicButton.setTitle(String.fontAwesomeIconWithCode("fa-microphone"), forState: .Normal)
   }
   
   func createMicButtonPressFunctionality() {
@@ -111,16 +143,21 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
 
   func recognizerDidBeginRecording(recognizer: SKRecognizer!) {
     NSLog("I have started recording")
+    animation = true
+    self.rippleView.hidden = false
+    animateRippleEffect()
   }
   
   func recognizerDidFinishRecording(recognizer: SKRecognizer!) {
     NSLog("I have finished recording")
     voiceSearch!.stopRecording()
+    animation = false
+    self.rippleView.hidden = true
   }
   
   func recognizer(recognizer: SKRecognizer!, didFinishWithResults results: SKRecognition!) {
     NSLog("Some results! \n %@", results.results)
-    transcript.text! = results.firstResult()
+    transcript.text! = "\"" + results.firstResult() + "\""
   }
   
   func recognizer(recognizer: SKRecognizer!, didFinishWithError error: NSError!, suggestion: String!) {
