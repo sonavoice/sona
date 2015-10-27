@@ -4,14 +4,20 @@ use_frameworks!
 target 'Vi' do
   pod 'FontAwesome.swift'
   pod 'AFNetworking', '~> 2.5'
+  pod 'Lock', '-> 1.2'
+  pod 'JWTDecode', '~> 0.3'
 end
 
 target 'ViTests' do
   pod 'FontAwesome.swift'
   pod 'AFNetworking', '~> 2.5'
+  pod 'Lock', '-> 1.2'
+  pod 'JWTDecode', '~> 0.3'
 end
 
 target 'ViUITests' do
   pod 'FontAwesome.swift'
   pod 'AFNetworking', '~> 2.5'
+  pod 'Lock', '-> 1.2'
+  pod 'JWTDecode', '~> 0.3'
 end
