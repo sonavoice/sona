@@ -30,6 +30,7 @@ PODS:
     - CocoaLumberjack/Default
   - FontAwesome.swift (0.6.2)
   - ISO8601DateFormatter (0.7)
+  - JWTDecode (1.0.0)
   - libextobjc (0.4.1):
     - libextobjc/EXTADT (= 0.4.1)
     - libextobjc/EXTConcreteProtocol (= 0.4.1)
@@ -92,6 +93,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 2.5)
   - FontAwesome.swift
+  - JWTDecode (~> 1.0)
   - Lock (~> 1.2)
 
 SPEC CHECKSUMS:
@@ -99,6 +101,7 @@ SPEC CHECKSUMS:
   CocoaLumberjack: d6627e7ad42e14d41a4fa2e6c7ae42489d5f3e8b
   FontAwesome.swift: d40ac0a660f079c77945bab632ca20bf46ddc1ac
   ISO8601DateFormatter: ab926648eebe497f4d167c0fd083992f959f1274
+  JWTDecode: d172edcb1607cc15aed85d58eceedcbb675a4534
   libextobjc: a650fc1bf489a3d3a9bc2e621efa3e1006fc5471
   Lock: 3279f6a648e318449950c638aa6d56d2cf95b931
 

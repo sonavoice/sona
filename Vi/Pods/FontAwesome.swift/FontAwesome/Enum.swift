@@ -395,7 +395,6 @@ public enum FontAwesome: String {
     case ListOL = "\u{f0cb}"
     case ListUL = "\u{f0ca}"
     case LocationArrow = "\u{f124}"
-    case Lock = "\u{f023}"
     case LongArrowDown = "\u{f175}"
     case LongArrowLeft = "\u{f177}"
     case LongArrowRight = "\u{f178}"
