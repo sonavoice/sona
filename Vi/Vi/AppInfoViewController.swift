@@ -24,7 +24,12 @@ class AppInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     let url = NSURL(string: self.appInfo.iconURL!)
     let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
-    icon.image = UIImage(data: data!)
+    
+    if data == nil {
+      icon.image = UIImage(named: "image1")
+    } else {
+      icon.image = UIImage(data: data!)
+    }
     
     self.CommandView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
     self.CommandView.allowsSelection = false

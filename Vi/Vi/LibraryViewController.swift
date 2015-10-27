@@ -32,7 +32,11 @@ class LibraryViewController: UITableViewController {
       let url = NSURL(string: appInfo.iconURL!)
       let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
       
-      cell.icon.image = UIImage(data: data!)
+      if data == nil {
+        cell.icon.image = UIImage(named: "image1")
+      } else {
+        cell.icon.image = UIImage(data: data!)
+      }
       cell.arrow.font = UIFont.fontAwesomeOfSize(30)
       cell.arrow.text = String.fontAwesomeIconWithCode("fa-angle-right")
       return cell
