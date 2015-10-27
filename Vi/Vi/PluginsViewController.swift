@@ -9,44 +9,45 @@
 import UIKit
 
 class PluginsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    @IBOutlet var tableViewObject: UITableView!
-    var foodNames: [String] = ["Food1","Food2","Food3","Food4","Food5","Food6","Food7","Food8"]
-    
-    var foodImages: [String] = ["image1", "image2", "image3","image4","image5","image6","image7","image8"]
+    var apps = dummyData
+    var appInfo: App!
+    @IBOutlet weak var tableView: UITableView!
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      return foodNames.count
+      return apps.count
     }
-
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-      let cell:UITableViewCell=UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "mycell")
-      cell.textLabel!.text = foodNames[indexPath.row]
-      let image:UIImage = UIImage(named: foodImages[indexPath.row])!
-      cell.imageView!.image = image
+  
+  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath)
+    -> UITableViewCell {
+      let cell = tableView.dequeueReusableCellWithIdentifier("CellView", forIndexPath: indexPath) as! CellView
+      
+      let appInfo = apps[indexPath.row] as App
+      cell.name.font = UIFont(name: "Lato-Regular", size: 18)
+      cell.name.textColor = UIColor(red: 33/255.0, green: 33/255.0, blue: 33/255.0, alpha: 1)
+      cell.name.text = appInfo.name
+      
+      let url = NSURL(string: appInfo.iconURL!)
+      let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
+      
+      if data == nil {
+        cell.icon.image = UIImage(named: "image1")
+      } else {
+        cell.icon.image = UIImage(data: data!)
+      }
+      cell.arrow.font = UIFont.fontAwesomeOfSize(30)
+      cell.arrow.text = String.fontAwesomeIconWithCode("fa-angle-right")
       return cell
+  }
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if (segue.identifier == "appSegue") {
+      let path = self.tableView.indexPathForSelectedRow!
+      self.tableView.deselectRowAtIndexPath(path, animated: true)
+      let viewController = segue.destinationViewController as! AppInfoViewController
+      viewController.appInfo = apps[path.indexAtPosition(1)]
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  }
+  
 
 }

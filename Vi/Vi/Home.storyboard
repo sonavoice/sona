@@ -10,10 +10,27 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Home View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="ZsX-Lw-swp">
+            <objects>
+                <navigationController storyboardIdentifier="homeComponent" id="BYS-p0-R4N" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="F6Q-VU-FnB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="rSf-h4-L5D" kind="relationship" relationship="rootViewController" id="dkk-aX-njQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AU3-4r-DrR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-587" y="-305"/>
+        </scene>
+        <!--Home-->
         <scene sceneID="JLx-fj-KJS">
             <objects>
-                <viewController storyboardIdentifier="homeComponent" id="rSf-h4-L5D" customClass="HomeViewController" customModule="Vi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rSf-h4-L5D" customClass="HomeViewController" customModule="Vi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2Ms-RR-jvF"/>
                         <viewControllerLayoutGuide type="bottom" id="16m-cY-i7o"/>
@@ -35,7 +52,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="topRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nkt-xZ-XfK" customClass="TopAlignedLabel" customModule="Vi" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="topRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nkt-xZ-XfK" customClass="TopAlignedLabel" customModule="Vi" customModuleProvider="target">
                                 <rect key="frame" x="20" y="28" width="560" height="200"/>
                                 <animations/>
                                 <constraints>
@@ -74,6 +91,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Home" id="8bL-65-0WK"/>
                     <connections>
                         <outlet property="MicButton" destination="wv2-qq-lZy" id="z8t-c0-VSv"/>
                         <outlet property="rippleView" destination="Zh8-2U-rUg" id="IXB-ng-mda"/>
@@ -82,7 +100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cxh-BC-v7O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="554" y="39"/>
+            <point key="canvasLocation" x="241" y="-305"/>
         </scene>
     </scenes>
 </document>
