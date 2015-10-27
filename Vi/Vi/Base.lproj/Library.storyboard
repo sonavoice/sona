@@ -27,7 +27,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="45"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LvU-Ss-LWM" id="QKP-qZ-S8H">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R4w-Xw-hIa">
@@ -172,6 +172,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="WQz-Ti-LcY">
+                        <barButtonItem key="rightBarButtonItem" title="Sign In" id="9do-UI-6uy"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="CommandView" destination="goS-Rs-0lT" id="HCR-h9-F50"/>
                         <outlet property="appDescription" destination="6u1-e6-AzT" id="0hx-nZ-sFJ"/>
