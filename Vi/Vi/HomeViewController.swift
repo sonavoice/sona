@@ -1,12 +1,14 @@
 import UIKit
 import QuartzCore
 import AFNetworking
+import AudioToolbox
 
 class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate {
   
   var voiceSearch: SKRecognizer?
   var tts = TextToSpeech()
   var animation: Bool = false
+  var isListening: Bool = false
   
   @IBOutlet var transcript: UILabel!
   @IBOutlet var MicButton: UIButton!
@@ -76,8 +78,13 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
       - "de_DE"
     
     */
-
-    self.voiceSearch = SKRecognizer(type: SKSearchRecognizerType, detection: UInt(SKShortEndOfSpeechDetection), language:"eng-USA", delegate: self)
+    if !self.isListening {
+     self.voiceSearch = SKRecognizer(type: SKSearchRecognizerType, detection: UInt(SKShortEndOfSpeechDetection), language:"eng-USA", delegate: self)
+      self.isListening = true
+    } else {
+      self.voiceSearch?.cancel()
+      self.isListening = false
+    }
   }
   
   /* UI Set up */
@@ -131,14 +138,12 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   func configureNuance() {
     SpeechKit.setupWithID("NMDPTRIAL_garrettmaring_gmail_com20151023221408", host: "sslsandbox.nmdp.nuancemobility.net", port: 443, useSSL: true, delegate: self)
     
-    //    let earconStart = SKEarcon.earconWithName("earcon_listening.wav") as! SKEarcon
-    //    let earconStop = SKEarcon.earconWithName("earcon_done_listening.wav") as! SKEarcon
-    //    let earconCancel = SKEarcon.earconWithName("earcon_cancel.wav") as! SKEarcon
-    //
-    //    SpeechKit.setEarcon(earconStart, forType: UInt(SKStartRecordingEarconType))
-    //    SpeechKit.setEarcon(earconStop, forType: UInt(SKStopRecordingEarconType))
-    //    SpeechKit.setEarcon(earconCancel, forType: UInt(SKCancelRecordingEarconType))
-    
+    let earconStart = SKEarcon.earconWithName("start_listening.wav") as! SKEarcon
+    let earconStop = SKEarcon.earconWithName("start_listening.wav") as! SKEarcon
+    let earconCancel = SKEarcon.earconWithName("start_listening.wav") as! SKEarcon
+    SpeechKit.setEarcon(earconStart, forType: UInt(SKStartRecordingEarconType))
+    SpeechKit.setEarcon(earconStop, forType: UInt(SKStopRecordingEarconType))
+    SpeechKit.setEarcon(earconCancel, forType: UInt(SKCancelRecordingEarconType))
     
   }
 
