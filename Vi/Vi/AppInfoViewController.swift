@@ -44,8 +44,6 @@ class AppInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell:UITableViewCell = self.CommandView.dequeueReusableCellWithIdentifier("cell")!
     
-//    cell.textLabel!.adjustsFontSizeToFitWidth = true
-//    cell.textLabel!.minimumScaleFactor = 0.1
     cell.textLabel!.font = UIFont(name: "Lato-Regular", size: 11)
     cell.textLabel?.textColor = UIColor(red: 33/255.0, green: 33/255.0, blue: 33/255.0, alpha: 1)
     cell.textLabel?.text = self.appInfo.commands[indexPath.row]
@@ -67,18 +65,12 @@ class AppInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
   
   private func errorCallback() -> NSError -> () {
     return { error in
-      let alert = UIAlertController(title: "Login failed", message: "Please check you application logs for more info", preferredStyle: .Alert)
-      alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-      self.presentViewController(alert, animated: true, completion: nil)
       print("Failed with error \(error)")
     }
   }
   
   private func successCallback() -> (A0UserProfile, A0Token) -> () {
     return { (profile, token) -> Void in
-      let alert = UIAlertController(title: "Logged In!", message: "User with name \(profile.name) logged in!", preferredStyle: .Alert)
-      alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-      self.presentViewController(alert, animated: true, completion: nil)
       print("Logged in user \(profile.name)")
       print("Tokens: \(token)")
     }
