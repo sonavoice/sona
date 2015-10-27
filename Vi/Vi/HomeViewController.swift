@@ -117,11 +117,15 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   /* Server & API */
   func attemptToExecuteOnTranscript(transcript: String) {
     
-    let apiCallManager = AFHTTPRequestOperationManager()
+    /* Will be relevant user data */
+    let userData = []
     
-    apiCallManager.GET(
+    let apiCallManager = AFHTTPRequestOperationManager()
+    apiCallManager.requestSerializer = AFJSONRequestSerializer()
+    
+    apiCallManager.POST(
       "http://viapi.io/",
-      parameters: nil,
+      parameters: userData,
       success: { (operation: AFHTTPRequestOperation!,
         responseObject: AnyObject!) in
         NSLog("JSON: %@", responseObject.description)
