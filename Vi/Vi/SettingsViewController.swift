@@ -14,9 +14,9 @@ class SettingsViewController: UITableViewController {
   // Table view handling. group header.
   override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
     let headerView = view as! UITableViewHeaderFooterView
-    headerView.textLabel!.textColor = UIColor(red: 151.0/255, green: 193.0/255, blue: 100.0/255, alpha: 1)
+    headerView.textLabel!.textColor = UIColor(red: 33/255.0, green: 33/255.0, blue: 33/255.0, alpha: 1)
     
-    if let font = UIFont(name: "Montserrat", size: 18.0){
+    if let font = UIFont(name: "Lato-Regular", size: 18.0){
       headerView.textLabel?.font = font
     }
   }
