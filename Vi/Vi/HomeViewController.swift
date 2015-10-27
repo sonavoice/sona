@@ -5,6 +5,7 @@ import AFNetworking
 class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate {
   
   var voiceSearch: SKRecognizer?
+  var tts = TextToSpeech()
   var animation: Bool = false
   
   @IBOutlet var transcript: UILabel!
@@ -157,7 +158,11 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   
   func recognizer(recognizer: SKRecognizer!, didFinishWithResults results: SKRecognition!) {
     NSLog("Some results! \n %@", results.results)
-    transcript.text! = "\"" + results.firstResult() + "\""
+    if results.firstResult() == nil {
+      self.tts.speak("I can't hear you")
+    } else {
+      transcript.text! = "\"" + results.firstResult() + "\""
+    }
   }
   
   func recognizer(recognizer: SKRecognizer!, didFinishWithError error: NSError!, suggestion: String!) {
