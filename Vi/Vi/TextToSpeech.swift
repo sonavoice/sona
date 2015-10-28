@@ -8,8 +8,8 @@ public class TextToSpeech : NSObject {
     speaker = AVSpeechSynthesizer()
   }
   
-  func speak(text: NSString) {
-    var text:AVSpeechUtterance = AVSpeechUtterance()
-    speaker.speakUtterance(text)
+  func speak(text: String) {
+    var texttoread:AVSpeechUtterance = AVSpeechUtterance(string: text)
+    speaker.speakUtterance(texttoread)
   }
 }
