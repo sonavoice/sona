@@ -54,10 +54,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellView" rowHeight="45" id="iyb-ef-KXD" customClass="CellView" customModule="Vi" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="560" height="45"/>
+                                        <rect key="frame" x="0.0" y="28" width="560" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iyb-ef-KXD" id="uMB-8I-ySw">
-                                            <rect key="frame" x="0.0" y="0.0" width="560" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="44.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ent-Ah-ipt">
@@ -160,8 +160,8 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="Oto-oW-YbU"/>
                                         <exclude reference="3p8-41-evI"/>
+                                        <exclude reference="Oto-oW-YbU"/>
                                     </mask>
                                 </variation>
                                 <connections>

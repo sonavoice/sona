@@ -57,6 +57,8 @@
 		8352C6761BD6A5DA007B3F5F /* ViTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8352C6751BD6A5DA007B3F5F /* ViTests.swift */; };
 		8352C6811BD6A5DA007B3F5F /* ViUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8352C6801BD6A5DA007B3F5F /* ViUITests.swift */; };
 		837815BC1BDEE2C80049FEBE /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 837815BA1BDEE2C80049FEBE /* Library.storyboard */; };
+		83CDBF731BE12D5C0053D4BA /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CDBF721BE12D5C0053D4BA /* Launch Screen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		83CDBF751BE12E930053D4BA /* chris.png in Resources */ = {isa = PBXBuildFile; fileRef = 83CDBF741BE12E930053D4BA /* chris.png */; settings = {ASSET_TAGS = (); }; };
 		8CEE63402734D740A43E0B7F /* Pods_ViUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8669FC4F92925624489158A /* Pods_ViUITests.framework */; };
 		B766D0BDF98CFBFA1B4C3942 /* Pods_Vi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4EE609C1BED1A14BD74639E /* Pods_Vi.framework */; };
 		EC2350AA1BDEEC8500547EC4 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2350A91BDEEC8500547EC4 /* Authentication.swift */; };
@@ -142,6 +144,8 @@
 		836DA7E01BDC471F0031D676 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		836DA7E11BDC477D0031D676 /* SF-UI-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Regular.otf"; sourceTree = "<group>"; };
 		837815BB1BDEE2C80049FEBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Library.storyboard; sourceTree = "<group>"; };
+		83CDBF721BE12D5C0053D4BA /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		83CDBF741BE12E930053D4BA /* chris.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chris.png; sourceTree = "<group>"; };
 		8D43755505FD9E0E43C57065 /* Pods_ViTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4EE609C1BED1A14BD74639E /* Pods_Vi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8669FC4F92925624489158A /* Pods_ViUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -288,6 +292,7 @@
 				8352C6921BD6BD28007B3F5F /* Settings */,
 				8352C65E1BD6A5DA007B3F5F /* AppDelegate.swift */,
 				8352C6641BD6A5DA007B3F5F /* Main.storyboard */,
+				83CDBF721BE12D5C0053D4BA /* Launch Screen.storyboard */,
 			);
 			path = Vi;
 			sourceTree = "<group>";
@@ -383,6 +388,7 @@
 		EC9163CB1BD960E300401DC6 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				83CDBF741BE12E930053D4BA /* chris.png */,
 				53447A261BD848EC00282C54 /* dog.jpg */,
 				53060AA21BD99195008AE89A /* image1.png */,
 				53060AA31BD99195008AE89A /* image2.png */,
@@ -554,12 +560,14 @@
 				83303FD51BDE9AC90024A10D /* Lato-Regular.ttf in Resources */,
 				53060AAD1BD99195008AE89A /* image4.png in Resources */,
 				53C09A721BDB00B70080CD62 /* Settings.storyboard in Resources */,
+				83CDBF731BE12D5C0053D4BA /* Launch Screen.storyboard in Resources */,
 				53060AAF1BD99195008AE89A /* image6.png in Resources */,
 				53447A271BD848EC00282C54 /* dog.jpg in Resources */,
 				EC30DF6D1BDF3745001493F2 /* start_listening.wav in Resources */,
 				53C09A7E1BDB01C30080CD62 /* Home.storyboard in Resources */,
 				8352C66B1BD6A5DA007B3F5F /* LaunchScreen.storyboard in Resources */,
 				53060AAA1BD99195008AE89A /* image1.png in Resources */,
+				83CDBF751BE12E930053D4BA /* chris.png in Resources */,
 				53060AB01BD99195008AE89A /* image7.png in Resources */,
 				8352C6681BD6A5DA007B3F5F /* Assets.xcassets in Resources */,
 				ECD639C21BD99819008530A4 /* viSun.png in Resources */,
