@@ -179,6 +179,7 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   }
   
   func audioSessionReleased() {
+    self.isListening = false
     NSLog("Audio session released")
   }
 
