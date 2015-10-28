@@ -9,6 +9,9 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   var tts = TextToSpeech()
   var animation: Bool = false
   var isListening: Bool = false
+  let apiCallManager = AFHTTPRequestOperationManager()
+  let userId = UIDevice.currentDevice().identifierForVendor!.UUIDString
+  var apps = [String]()
   
   @IBOutlet var transcript: UILabel!
   @IBOutlet var MicButton: UIButton!
@@ -32,6 +35,9 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
     
     /* Add gesture capabilities */
     //addUpSwipeGesture()
+    
+    /* Configure User Data */
+    configureUser()
   }
   
   func setupViewsForRippleEffect(){
@@ -115,26 +121,27 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   }
   
   /* Server & API */
-  func attemptToExecuteOnTranscript(transcript: String, successCB: AnyObject -> (), failureCB: () -> ()){
+  func attemptToExecuteOnTranscript(transcript: String) {
+    /* Send transript with user data */
+  }
+  
+  func configureUser() {
+    var userData = [String:String]()
+    userData = ["userId": userId, "extensions": apps.joinWithSeparator(", ")]
     
-    /* Will be relevant user data */
-    let userData = []
-    
-    let apiCallManager = AFHTTPRequestOperationManager()
     apiCallManager.requestSerializer = AFJSONRequestSerializer()
+    apiCallManager.responseSerializer = AFHTTPResponseSerializer()
     
     apiCallManager.POST(
-      "http://viapi.io/",
+      "http://viapi.io/db/addUser",
       parameters: userData,
       success: { (operation: AFHTTPRequestOperation!,
         responseObject: AnyObject!) in
         NSLog("JSON: %@", responseObject.description)
-        successCB(responseObject)
       },
       failure: { (operation: AFHTTPRequestOperation!,
         error: NSError!) in
         NSLog("Error: %@", error.localizedDescription)
-        failureCB()
       }
     )
   }
@@ -149,7 +156,6 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
     SpeechKit.setEarcon(earconStart, forType: UInt(SKStartRecordingEarconType))
     SpeechKit.setEarcon(earconStop, forType: UInt(SKStopRecordingEarconType))
     SpeechKit.setEarcon(earconCancel, forType: UInt(SKCancelRecordingEarconType))
-    
   }
 
   func recognizerDidBeginRecording(recognizer: SKRecognizer!) {
