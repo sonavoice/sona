@@ -115,7 +115,7 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   }
   
   /* Server & API */
-  func attemptToExecuteOnTranscript(transcript: String) {
+  func attemptToExecuteOnTranscript(transcript: String, successCB: AnyObject -> (), failureCB: () -> ()){
     
     /* Will be relevant user data */
     let userData = []
@@ -129,13 +129,14 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
       success: { (operation: AFHTTPRequestOperation!,
         responseObject: AnyObject!) in
         NSLog("JSON: %@", responseObject.description)
+        successCB(responseObject)
       },
       failure: { (operation: AFHTTPRequestOperation!,
         error: NSError!) in
         NSLog("Error: %@", error.localizedDescription)
+        failureCB()
       }
     )
-    
   }
 
   /*** Nuance ***/
@@ -171,6 +172,15 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
       self.tts.speak("I can't hear you")
     } else {
       transcript.text! = "\"" + results.firstResult() + "\""
+      attemptToExecuteOnTranscript(transcript.text!,
+        successCB: {
+          (response:AnyObject) in
+          let resDict = response as! Dictionary<String, String>
+          self.tts.speak(resDict["feedback"]!)
+        },
+        failureCB: {
+          self.tts.speak("Please check you internet connection")
+        })
     }
   }
   
