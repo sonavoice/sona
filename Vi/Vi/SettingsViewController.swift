@@ -3,6 +3,8 @@ import CoreData
 
 class SettingsViewController: UITableViewController {
   
+  // current language
+  @IBOutlet var langSet: UILabel!
   // Array of all the switches on the component
   @IBOutlet var settings: Array<UISwitch>?
   
@@ -32,21 +34,10 @@ class SettingsViewController: UITableViewController {
     // persistent data
     let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     let context:NSManagedObjectContext = appDel.managedObjectContext
-    let entity = NSEntityDescription.entityForName("Settings", inManagedObjectContext: context)
-    let request = NSFetchRequest(entityName: "Settings")
-    request.returnsObjectsAsFaults = false;
-    request.predicate = nil
+    //let entity = NSEntityDescription.entityForName("Settings", inManagedObjectContext: context)
+    //let langEnt = NSEntityDescription.entityForName("Language", inManagedObjectContext: context)
+
     do {
-      // Load all settings
-      let results:NSArray = try context.executeFetchRequest(request)
-      
-      // If there is no settings, initialize basic settings
-      if results.count == 0 {
-        // initiateSetting sets default settings.
-        self.initiateSetting(entity!, context: context)
-        try context.save()
-      }
-      
       // For all settings (array of UISwitch), set them to value according to setting data
       for setting in settings! {
         let search = NSFetchRequest(entityName: "Settings")
@@ -56,33 +47,19 @@ class SettingsViewController: UITableViewController {
         let results:NSArray = try context.executeFetchRequest(search)
         setting.setValue(results[0].valueForKey("status"), forKey: "on")
       }
+      
+      let langSearch = NSFetchRequest(entityName: "Language")
+      langSearch.returnsObjectsAsFaults = false
+      langSearch.predicate = nil
+      let langResults:NSArray = try context.executeFetchRequest(langSearch)
+      langSet.text = langResults[0].name + "    >"
+      
     } catch {
-      print("ERROR: Either we failed to save")
+      print("ERROR: Either we failed to save asdfwefgaesgef")
     }
   }
   
-  func initiateSetting(entity: NSEntityDescription, context: NSManagedObjectContext){
-    let setting1 = Settings(entity: entity, insertIntoManagedObjectContext: context)
-    setting1.name = "alwaysListen"
-    setting1.status = true
-    
-    let setting2 = Settings(entity: entity, insertIntoManagedObjectContext: context)
-    setting2.name = "UIsound"
-    setting2.status = true
-    
-    let setting3 = Settings(entity: entity, insertIntoManagedObjectContext: context)
-    setting3.name = "autoUpdate"
-    setting3.status = true
-    
-    let setting4 = Settings(entity: entity, insertIntoManagedObjectContext: context)
-    setting4.name = "notifyUpdate"
-    setting4.status = true
-    
-    let setting5 = Settings(entity: entity, insertIntoManagedObjectContext: context)
-    setting5.name = "responseVoiceOnOff"
-    setting5.status = true
-  }
-  
+  // Reference DataInitalizer and tags on storyboard
   func matchSetting(ID: NSInteger) -> NSString {
     switch ID {
     case 1:
@@ -115,4 +92,16 @@ class SettingsViewController: UITableViewController {
       print("ERROR: Couldn't find requested setting or failed to save modified data")
     }
   }
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    
+  }
+  
+  @IBAction func TriggerForm(sender: AnyObject) {
+    self.performSegueWithIdentifier("languages", sender: self)
+  }
+  
+  @IBAction func unwindSegue(segue:UIStoryboardSegue) {
+  }
+
 }

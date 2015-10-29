@@ -31,6 +31,18 @@
 		05CBBFC21BD6BE3500227BDC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CBBFC11BD6BE3500227BDC /* SettingsViewController.swift */; };
 		05CBBFC31BD6BE3500227BDC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CBBFC11BD6BE3500227BDC /* SettingsViewController.swift */; };
 		05CBBFC41BD6BE3500227BDC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CBBFC11BD6BE3500227BDC /* SettingsViewController.swift */; };
+		05DE3A291BE1B6630028B4E0 /* LanguageChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DE3A281BE1B6630028B4E0 /* LanguageChoice.swift */; settings = {ASSET_TAGS = (); }; };
+		05DE3A2A1BE1B6630028B4E0 /* LanguageChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DE3A281BE1B6630028B4E0 /* LanguageChoice.swift */; settings = {ASSET_TAGS = (); }; };
+		05DE3A2B1BE1B6630028B4E0 /* LanguageChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DE3A281BE1B6630028B4E0 /* LanguageChoice.swift */; settings = {ASSET_TAGS = (); }; };
+		05DE3A2D1BE1B8CB0028B4E0 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DE3A2C1BE1B8CB0028B4E0 /* Language.swift */; settings = {ASSET_TAGS = (); }; };
+		05DE3A2E1BE1B8CB0028B4E0 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DE3A2C1BE1B8CB0028B4E0 /* Language.swift */; settings = {ASSET_TAGS = (); }; };
+		05DE3A2F1BE1B8CB0028B4E0 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DE3A2C1BE1B8CB0028B4E0 /* Language.swift */; settings = {ASSET_TAGS = (); }; };
+		05DE3A321BE1EABC0028B4E0 /* DataInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DE3A311BE1EABC0028B4E0 /* DataInitializer.swift */; settings = {ASSET_TAGS = (); }; };
+		05DE3A331BE1EABC0028B4E0 /* DataInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DE3A311BE1EABC0028B4E0 /* DataInitializer.swift */; settings = {ASSET_TAGS = (); }; };
+		05DE3A341BE1EABC0028B4E0 /* DataInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DE3A311BE1EABC0028B4E0 /* DataInitializer.swift */; settings = {ASSET_TAGS = (); }; };
+		05EEEF431BE175FD00FA759C /* LanguageOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EEEF421BE175FD00FA759C /* LanguageOptionViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		05EEEF441BE175FD00FA759C /* LanguageOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EEEF421BE175FD00FA759C /* LanguageOptionViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		05EEEF451BE175FD00FA759C /* LanguageOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EEEF421BE175FD00FA759C /* LanguageOptionViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		4157A4720162F2F25EB1D1E2 /* Pods_ViTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D43755505FD9E0E43C57065 /* Pods_ViTests.framework */; };
 		53060AA11BD98F6D008AE89A /* PluginsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53060AA01BD98F6D008AE89A /* PluginsViewController.swift */; };
 		53060AAA1BD99195008AE89A /* image1.png in Resources */ = {isa = PBXBuildFile; fileRef = 53060AA21BD99195008AE89A /* image1.png */; };
@@ -109,6 +121,10 @@
 		05BC1C8F1BD8551A00D47DAB /* LibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		05BC1C901BD8551A00D47DAB /* DummyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		05CBBFC11BD6BE3500227BDC /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		05DE3A281BE1B6630028B4E0 /* LanguageChoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageChoice.swift; sourceTree = "<group>"; };
+		05DE3A2C1BE1B8CB0028B4E0 /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		05DE3A311BE1EABC0028B4E0 /* DataInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataInitializer.swift; sourceTree = "<group>"; };
+		05EEEF421BE175FD00FA759C /* LanguageOptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageOptionViewController.swift; sourceTree = "<group>"; };
 		1B71BEC2CC252775D10FD1CC /* Pods-ViUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ViUITests/Pods-ViUITests.release.xcconfig"; sourceTree = "<group>"; };
 		472C346C0DEEB63EF78834A7 /* Pods-ViTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ViTests/Pods-ViTests.release.xcconfig"; sourceTree = "<group>"; };
 		494E34089B254FB16BC192F1 /* Pods-ViTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ViTests/Pods-ViTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -217,8 +233,17 @@
 			children = (
 				0555B9841BDEECFC00C41580 /* Settings.swift */,
 				0555B98C1BDEEE7300C41580 /* ViData.xcdatamodeld */,
+				05DE3A2C1BE1B8CB0028B4E0 /* Language.swift */,
 			);
 			name = DataModel;
+			sourceTree = "<group>";
+		};
+		05DE3A301BE1EAA40028B4E0 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				05DE3A311BE1EABC0028B4E0 /* DataInitializer.swift */,
+			);
+			name = DataManager;
 			sourceTree = "<group>";
 		};
 		1F3E009C87B731B6C58FFCD0 /* Frameworks */ = {
@@ -279,6 +304,7 @@
 		8352C65D1BD6A5DA007B3F5F /* Vi */ = {
 			isa = PBXGroup;
 			children = (
+				05DE3A301BE1EAA40028B4E0 /* DataManager */,
 				0555B9831BDEECCF00C41580 /* DataModel */,
 				EC2350A81BDEEC7100547EC4 /* Authentication */,
 				ECBD06041BDC9A9000AB9C01 /* UI */,
@@ -320,6 +346,8 @@
 			children = (
 				05CBBFC11BD6BE3500227BDC /* SettingsViewController.swift */,
 				53C09A701BDB00B70080CD62 /* Settings.storyboard */,
+				05EEEF421BE175FD00FA759C /* LanguageOptionViewController.swift */,
+				05DE3A281BE1B6630028B4E0 /* LanguageChoice.swift */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -733,8 +761,12 @@
 				EC90FC431BDB3EFA00F60AE9 /* NuanceHeader.m in Sources */,
 				05CBBFC21BD6BE3500227BDC /* SettingsViewController.swift in Sources */,
 				05B02BFA1BDAA79B0057C80C /* CellView.swift in Sources */,
+				05DE3A2D1BE1B8CB0028B4E0 /* Language.swift in Sources */,
+				05DE3A321BE1EABC0028B4E0 /* DataInitializer.swift in Sources */,
 				EC2350AA1BDEEC8500547EC4 /* Authentication.swift in Sources */,
 				05BC1C911BD8551A00D47DAB /* App.swift in Sources */,
+				05DE3A291BE1B6630028B4E0 /* LanguageChoice.swift in Sources */,
+				05EEEF431BE175FD00FA759C /* LanguageOptionViewController.swift in Sources */,
 				0555B9851BDEECFC00C41580 /* Settings.swift in Sources */,
 				EC90FC391BDB046D00F60AE9 /* HomeViewController.swift in Sources */,
 				05BC1C971BD8551A00D47DAB /* LibraryViewController.swift in Sources */,
@@ -750,12 +782,16 @@
 			files = (
 				05BC1C9B1BD8551A00D47DAB /* DummyData.swift in Sources */,
 				8352C6761BD6A5DA007B3F5F /* ViTests.swift in Sources */,
+				05DE3A2A1BE1B6630028B4E0 /* LanguageChoice.swift in Sources */,
+				05DE3A331BE1EABC0028B4E0 /* DataInitializer.swift in Sources */,
 				05B02BFB1BDAA79B0057C80C /* CellView.swift in Sources */,
+				05EEEF441BE175FD00FA759C /* LanguageOptionViewController.swift in Sources */,
 				05CBBFC31BD6BE3500227BDC /* SettingsViewController.swift in Sources */,
 				0555B98F1BDEEE7300C41580 /* ViData.xcdatamodeld in Sources */,
 				EC90FC441BDB3EFA00F60AE9 /* NuanceHeader.m in Sources */,
 				05BC1C921BD8551A00D47DAB /* App.swift in Sources */,
 				0555B9861BDEECFC00C41580 /* Settings.swift in Sources */,
+				05DE3A2E1BE1B8CB0028B4E0 /* Language.swift in Sources */,
 				05BC1C981BD8551A00D47DAB /* LibraryViewController.swift in Sources */,
 				05BC1C951BD8551A00D47DAB /* AppInfoViewController.swift in Sources */,
 			);
@@ -767,12 +803,16 @@
 			files = (
 				05BC1C9C1BD8551A00D47DAB /* DummyData.swift in Sources */,
 				8352C6811BD6A5DA007B3F5F /* ViUITests.swift in Sources */,
+				05DE3A2B1BE1B6630028B4E0 /* LanguageChoice.swift in Sources */,
+				05DE3A341BE1EABC0028B4E0 /* DataInitializer.swift in Sources */,
 				05B02BFC1BDAA79B0057C80C /* CellView.swift in Sources */,
+				05EEEF451BE175FD00FA759C /* LanguageOptionViewController.swift in Sources */,
 				05CBBFC41BD6BE3500227BDC /* SettingsViewController.swift in Sources */,
 				0555B9901BDEEE7300C41580 /* ViData.xcdatamodeld in Sources */,
 				EC90FC451BDB3EFA00F60AE9 /* NuanceHeader.m in Sources */,
 				05BC1C931BD8551A00D47DAB /* App.swift in Sources */,
 				0555B9871BDEECFC00C41580 /* Settings.swift in Sources */,
+				05DE3A2F1BE1B8CB0028B4E0 /* Language.swift in Sources */,
 				05BC1C991BD8551A00D47DAB /* LibraryViewController.swift in Sources */,
 				05BC1C961BD8551A00D47DAB /* AppInfoViewController.swift in Sources */,
 			);
