@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0534A0591BE2D6FC00655B7E /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534A0581BE2D6FC00655B7E /* SigninViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		0534A05A1BE2D6FC00655B7E /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534A0581BE2D6FC00655B7E /* SigninViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		0534A05B1BE2D6FC00655B7E /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0534A0581BE2D6FC00655B7E /* SigninViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		0555B9851BDEECFC00C41580 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0555B9841BDEECFC00C41580 /* Settings.swift */; };
 		0555B9861BDEECFC00C41580 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0555B9841BDEECFC00C41580 /* Settings.swift */; };
 		0555B9871BDEECFC00C41580 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0555B9841BDEECFC00C41580 /* Settings.swift */; };
@@ -113,6 +116,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0534A0581BE2D6FC00655B7E /* SigninViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		0555B9841BDEECFC00C41580 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		0555B98D1BDEEE7300C41580 /* ViData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ViData.xcdatamodel; sourceTree = "<group>"; };
 		05B02BF91BDAA79B0057C80C /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
@@ -362,6 +366,7 @@
 				05BC1C901BD8551A00D47DAB /* DummyData.swift */,
 				05B02BF91BDAA79B0057C80C /* CellView.swift */,
 				83303FD81BDEA3990024A10D /* LibraryNavController.swift */,
+				0534A0581BE2D6FC00655B7E /* SigninViewController.swift */,
 			);
 			name = Library;
 			sourceTree = "<group>";
@@ -754,6 +759,7 @@
 			files = (
 				83303FD91BDEA3990024A10D /* LibraryNavController.swift in Sources */,
 				53060AA11BD98F6D008AE89A /* SearchViewController.swift in Sources */,
+				0534A0591BE2D6FC00655B7E /* SigninViewController.swift in Sources */,
 				05BC1C9A1BD8551A00D47DAB /* DummyData.swift in Sources */,
 				8352C65F1BD6A5DA007B3F5F /* AppDelegate.swift in Sources */,
 				0555B98E1BDEEE7300C41580 /* ViData.xcdatamodeld in Sources */,
@@ -791,6 +797,7 @@
 				EC90FC441BDB3EFA00F60AE9 /* NuanceHeader.m in Sources */,
 				05BC1C921BD8551A00D47DAB /* App.swift in Sources */,
 				0555B9861BDEECFC00C41580 /* Settings.swift in Sources */,
+				0534A05A1BE2D6FC00655B7E /* SigninViewController.swift in Sources */,
 				05DE3A2E1BE1B8CB0028B4E0 /* Language.swift in Sources */,
 				05BC1C981BD8551A00D47DAB /* LibraryViewController.swift in Sources */,
 				05BC1C951BD8551A00D47DAB /* AppInfoViewController.swift in Sources */,
@@ -812,6 +819,7 @@
 				EC90FC451BDB3EFA00F60AE9 /* NuanceHeader.m in Sources */,
 				05BC1C931BD8551A00D47DAB /* App.swift in Sources */,
 				0555B9871BDEECFC00C41580 /* Settings.swift in Sources */,
+				0534A05B1BE2D6FC00655B7E /* SigninViewController.swift in Sources */,
 				05DE3A2F1BE1B8CB0028B4E0 /* Language.swift in Sources */,
 				05BC1C991BD8551A00D47DAB /* LibraryViewController.swift in Sources */,
 				05BC1C961BD8551A00D47DAB /* AppInfoViewController.swift in Sources */,
