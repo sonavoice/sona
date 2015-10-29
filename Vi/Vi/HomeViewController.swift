@@ -121,8 +121,24 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   }
   
   /* Server & API */
-  func attemptToExecuteOnTranscript(transcript: String) {
+  func attemptToExecuteOnTranscript(transcript: String, successCB: AnyObject -> (), failureCB: () -> ()) {
     /* Send transript with user data */
+    
+    apiCallManager.requestSerializer = AFJSONRequestSerializer()
+    apiCallManager.responseSerializer = AFHTTPResponseSerializer()
+    
+    apiCallManager.POST(
+      "http://viapi.io/command",
+      parameters: self.transcript,
+      success: { (operation: AFHTTPRequestOperation!,
+        responseObject: AnyObject!) in
+        NSLog("JSON: %@", responseObject.description)
+      },
+      failure: { (operation: AFHTTPRequestOperation!,
+        error: NSError!) in
+        NSLog("Error: %@", error.localizedDescription)
+      }
+    )
   }
   
   func configureUser() {
@@ -133,7 +149,7 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
     apiCallManager.responseSerializer = AFHTTPResponseSerializer()
     
     apiCallManager.POST(
-      "http://viapi.io/db/addUser",
+      "http://viapi.io/user",
       parameters: userData,
       success: { (operation: AFHTTPRequestOperation!,
         responseObject: AnyObject!) in
