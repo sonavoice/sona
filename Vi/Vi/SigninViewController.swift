@@ -23,7 +23,7 @@ class SigninViewController: UIViewController {
     let webView:UIWebView = UIWebView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
     
     // let address = "http://viapi.io/authenticate/" + self.appname
-    let address = "http://facebook.com"
+    let address = "https://slack.com/signin"
     webView.loadRequest(NSURLRequest(URL: NSURL(string: address)!))
 
     self.view.addSubview(webView)
