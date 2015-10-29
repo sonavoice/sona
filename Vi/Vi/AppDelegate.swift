@@ -16,6 +16,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+
+      /* Data initialization check */
+      let context:NSManagedObjectContext = self.managedObjectContext
+      let request = NSFetchRequest(entityName: "Settings")
+      request.returnsObjectsAsFaults = false;
+      request.predicate = nil
+      
+      do {
+        // Load all settings
+        let results:NSArray = try context.executeFetchRequest(request)
+        
+        // If there is no settings, initialize basic settings
+        if results.count == 0 {
+          // initiateSetting sets default settings.
+          DataInitializer(context: context)
+        }
+      } catch {
+        print("If you see this message, that's a very bad sign")
+      }
+      
       
       /* Authentication Set up */
       Authentication.sharedInstance.lock.applicationLaunchedWithOptions(launchOptions)
