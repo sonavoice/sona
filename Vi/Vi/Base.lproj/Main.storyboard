@@ -71,7 +71,7 @@
                                 <animations/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="22"/>
                                 <color key="tintColor" red="0.011764705882352941" green="0.66274509803921566" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Plugins">
+                                <state key="normal" title="Search">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -203,7 +203,7 @@
                         <outlet property="containerView" destination="9Ez-0t-mWX" id="mWy-tZ-VM3"/>
                         <outlet property="homeButton" destination="nU7-5w-jgW" id="6cE-OO-ORn"/>
                         <outlet property="libraryButton" destination="Ibx-B1-SH5" id="MSC-hv-JR8"/>
-                        <outlet property="pluginsButton" destination="U88-VS-qkj" id="X7J-ee-jxM"/>
+                        <outlet property="searchButton" destination="U88-VS-qkj" id="BqR-rU-V53"/>
                         <outlet property="settingsButton" destination="T3a-f0-3ab" id="R97-Di-JY0"/>
                     </connections>
                 </viewController>
@@ -218,14 +218,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kxF-0E-7cv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32" y="687"/>
-        </scene>
-        <!--pluginsComponent-->
-        <scene sceneID="zIj-kF-EHq">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="pluginsComponent" storyboardName="Plugins" referencedIdentifier="pluginsComponent" id="K3H-8a-nAU" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZJj-rh-NNv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="32.5" y="603"/>
         </scene>
         <!--libraryComponent-->
         <scene sceneID="67T-L0-tW3">
@@ -242,6 +234,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mbm-eT-eMH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32" y="558"/>
+        </scene>
+        <!--searchComponent-->
+        <scene sceneID="GEY-54-57G">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="searchComponent" storyboardName="Search" referencedIdentifier="searchComponent" id="cA0-s2-Lf0" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qv7-02-Exy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="56.5" y="771"/>
         </scene>
     </scenes>
 </document>
