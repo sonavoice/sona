@@ -12,7 +12,7 @@ import FontAwesome_swift
 class NavigatorViewController: UIViewController {
 
   @IBOutlet weak var settingsButton: UIButton!
-  @IBOutlet weak var pluginsButton: UIButton!
+  @IBOutlet weak var searchButton: UIButton!
   @IBOutlet weak var libraryButton: UIButton!
   @IBOutlet weak var homeButton: UIButton!
   @IBOutlet weak var containerView: UIView!
@@ -29,8 +29,8 @@ class NavigatorViewController: UIViewController {
     homeButton.setTitle(String.fontAwesomeIconWithCode("fa-home"), forState: .Normal)
     libraryButton.titleLabel?.font = UIFont.fontAwesomeOfSize(28)
     libraryButton.setTitle(String.fontAwesomeIconWithCode("fa-book"), forState: .Normal)
-    pluginsButton.titleLabel?.font = UIFont.fontAwesomeOfSize(28)
-    pluginsButton.setTitle(String.fontAwesomeIconWithCode("fa-search"), forState: .Normal)
+    searchButton.titleLabel?.font = UIFont.fontAwesomeOfSize(28)
+    searchButton.setTitle(String.fontAwesomeIconWithCode("fa-search"), forState: .Normal)
     settingsButton.titleLabel?.font = UIFont.fontAwesomeOfSize(28)
     settingsButton.setTitle(String.fontAwesomeIconWithCode("fa-cog"), forState: .Normal)
     super.viewDidLoad()
@@ -60,7 +60,7 @@ class NavigatorViewController: UIViewController {
     changeTab("libraryComponent")
   }
   @IBAction func changeToPlugins() {
-    changeTab("pluginsComponent")
+    changeTab("searchComponent")
   }
   @IBAction func changeToSettings() {
     changeTab("settingsComponent")

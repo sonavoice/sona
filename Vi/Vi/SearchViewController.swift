@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PluginsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var apps = dummyData
     var appInfo: App!
     @IBOutlet weak var tableView: UITableView!
