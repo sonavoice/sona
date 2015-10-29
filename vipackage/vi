@@ -1,0 +1,28 @@
+#!/usr/bin/env node
+
+var path    = require('path');
+var fs      = require('fs');
+var color   = require('colors');
+var request = require('request');
+var utils   = require('./utils.js');
+var pack    = require('./package.json');
+var uploader = require('file-uploader')
+
+var args = process.argv.slice(2);
+
+// Copy template to current directory
+if (args[0] === 'init') {
+  fs.copy(utils.lodir('logo.png'), 'logo.png', function(err) {
+    if (err) console.log('Error: It looks like this directory has already been initialized.'.red);
+    else {
+      fs.copy(utils.lodir('template.js'), 'extension.js', function(err) {
+        if (err) console.log('Error: It looks like this directory has already been initialized.'.red);
+        else {
+          console.log(('Initialized empty Vi extension in ' + process.cwd()).green);
+        }
+      });
+    }
+  });
+} else {
+  console.log('Error: unknown command'.red);
+}
