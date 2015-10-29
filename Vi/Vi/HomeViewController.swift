@@ -123,20 +123,23 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   /* Server & API */
   func attemptToExecuteOnTranscript(transcript: String, successCB: AnyObject -> (), failureCB: () -> ()) {
     /* Send transript with user data */
+    let data = ["transcript": transcript]
     
     apiCallManager.requestSerializer = AFJSONRequestSerializer()
-    apiCallManager.responseSerializer = AFHTTPResponseSerializer()
+    apiCallManager.responseSerializer = AFJSONResponseSerializer()
     
     apiCallManager.POST(
       "http://viapi.io/command",
-      parameters: self.transcript,
+      parameters: data,
       success: { (operation: AFHTTPRequestOperation!,
         responseObject: AnyObject!) in
         NSLog("JSON: %@", responseObject.description)
+        successCB(responseObject)
       },
       failure: { (operation: AFHTTPRequestOperation!,
         error: NSError!) in
         NSLog("Error: %@", error.localizedDescription)
+        failureCB()
       }
     )
   }
@@ -190,18 +193,20 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   
   func recognizer(recognizer: SKRecognizer!, didFinishWithResults results: SKRecognition!) {
     NSLog("Some results! \n %@", results.results)
-    if results.firstResult() == nil {
+    let res = results.firstResult()
+    if res == nil {
       self.tts.speak("I can't hear you")
     } else {
-      transcript.text! = "\"" + results.firstResult() + "\""
-      attemptToExecuteOnTranscript(transcript.text!,
+      transcript.text! = "\"" + res + "\""
+      attemptToExecuteOnTranscript(res,
         successCB: {
           (response:AnyObject) in
-          let resDict = response as! Dictionary<String, String>
-          self.tts.speak(resDict["feedback"]!)
+          let resDict = response as! Dictionary<String, AnyObject>
+          let feedback = (resDict["feedback"] as AnyObject?) as? String
+          self.tts.speak(feedback!)
         },
         failureCB: {
-          self.tts.speak("Please check you internet connection")
+          self.tts.speak("Please check your internet connection")
         })
     }
   }
