@@ -1,6 +1,7 @@
 import UIKit
 import QuartzCore
 import AFNetworking
+import Alamofire
 import AudioToolbox
 
 class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate {

@@ -11,8 +11,12 @@ class AppInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
   @IBOutlet weak var CommandView: UITableView!
   
   @IBAction func signIn(sender: UIBarButtonItem) {
-    let lock = Authentication.sharedInstance.lock
-    lock.identityProviderAuthenticator().authenticateWithConnectionName(appInfo.name!, parameters: nil, success: self.successCallback(), failure: self.errorCallback())
+//    let lock = Authentication.sharedInstance.lock
+//    lock.identityProviderAuthenticator().authenticateWithConnectionName(appInfo.name!, parameters: nil, success: self.successCallback(), failure: self.errorCallback())
+    let signinController: SigninViewController = SigninViewController()
+    signinController.appname = appInfo.name!
+    self.presentViewController(signinController, animated: true, completion: nil)
+    
   }
   
   override func viewDidLoad() {
