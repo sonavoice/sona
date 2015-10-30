@@ -9,22 +9,26 @@
 import UIKit
 
 class LibraryViewController: UITableViewController {
-  var apps = dummyData
+  var apps:[App]?
   var appInfo: App!
+  
+  override func viewDidLoad() {
+    self.apps = dummyData
+  }
   
   override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
     return 1
   }
   
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return apps.count
+    return self.apps!.count
   }
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath)
     -> UITableViewCell {
       let cell = self.tableView.dequeueReusableCellWithIdentifier("CellView", forIndexPath: indexPath) as! CellView
       
-      let appInfo = apps[indexPath.row] as App
+      let appInfo = self.apps![indexPath.row] as App
       cell.name.font = UIFont(name: "Lato-Regular", size: 18)
       cell.name.textColor = UIColor(red: 33/255.0, green: 33/255.0, blue: 33/255.0, alpha: 1)
       cell.name.text = appInfo.name
@@ -47,7 +51,7 @@ class LibraryViewController: UITableViewController {
     if (segue.identifier == "appSegue") {
       let path = self.tableView.indexPathForSelectedRow!
       let viewController = segue.destinationViewController as! AppInfoViewController
-      viewController.appInfo = apps[path.indexAtPosition(1)]
+      viewController.appInfo = self.apps![path.indexAtPosition(1)]
     }
     
   }
