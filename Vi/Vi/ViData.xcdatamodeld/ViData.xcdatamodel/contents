@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8195" systemVersion="15A284" minimumToolsVersion="Xcode 7.0">
+    <entity name="AppToken" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="token" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Language" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="ref" optional="YES" attributeType="String" syncable="YES"/>
@@ -11,5 +15,6 @@
     <elements>
         <element name="Language" positionX="-63" positionY="0" width="128" height="75"/>
         <element name="Settings" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="AppToken" positionX="-63" positionY="9" width="128" height="75"/>
     </elements>
 </model>
