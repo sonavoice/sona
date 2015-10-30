@@ -1,15 +1,16 @@
 #!/usr/bin/env node
 
-var path    = require('path');
-var fs      = require('fs.extra');
-var color   = require('colors');
-var request = require('request');
-var utils   = require('./utils.js');
-var pack    = require('./package.json');
-var uploader = require('file-uploader')
+var path     = require('path');
+var fs       = require('fs.extra');
+var color    = require('colors');
+var request  = require('request');
+var utils    = require('./utils.js');
+var pack     = require('./package.json');
+var uploader = require('file-uploader');
 
 var args = process.argv.slice(2);
-var demo = false;
+var demo = true;
+var config = utils.getConfig();
 
 // Copy template to current directory
 if (args[0] === 'init') {
@@ -25,7 +26,14 @@ if (args[0] === 'init') {
     }
   });
 } else if (args[0] === 'publish') {
-  utils.zip('.', 'ext', function() {
+  var name;
+  if (args[1] !== undefined) {
+    name = args[1];
+  } else {
+    name = path.basename(process.cwd());
+  }
+  console.log("Publishing " + name.yellow + "...");
+  utils.zip('.', name, function() {
 
     var host;
     if (!demo) {
@@ -34,9 +42,17 @@ if (args[0] === 'init') {
       host = "http://localhost:3000";
     }
 
-    fs.createReadStream(utils.lodir('ext.zip')).pipe(request.post(host + "/extension"))
+    fs.createReadStream(utils.lodir(name + '.zip')).pipe(request.post(host + "/extension", function(err, response) {
+      if (response === undefined || response.statusCode !== 200) {
+        console.log(("Unable to publish" + name + "! A server error occured.").red);
+      } else {
+        console.log((name + " was published successfully!").green);
+      }
+    }));
   });
 
+} else if (args[0] === 'login') {
+  console.log(config);
 } else {
   console.log('Error: unknown command'.red);
 }

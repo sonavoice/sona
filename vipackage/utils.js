@@ -11,13 +11,30 @@ var lodir = function(dir) {
   return path.join.apply(this, newArgs);
 };
 
+var getHome = function() {
+  return process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME'];
+};
+
+var getConfig = function() {
+  var config;
+  try {
+    config = JSON.parse(fs.readFileSync(getHome() + "/.vi.json"));
+  } catch (e) {
+    config = {
+      email: null
+    };
+    fs.writeFileSync(getHome() + "/.vi.json", JSON.stringify(config, null, 2));
+  }
+  return config;
+};
+
 var zip = function(dir, name, cb) {
   var output = fs.createWriteStream(lodir(name + ".zip"));
   var archive = archiver('zip');
 
   output.on('close', function() {
-    console.log(archive.pointer() + ' total bytes');
-    console.log('archiver has been finalized and the output file descriptor has closed.');
+    //console.log(archive.pointer() + ' total bytes');
+    //console.log('archiver has been finalized and the output file descriptor has closed.');
     cb();
   });
 
@@ -33,4 +50,6 @@ var zip = function(dir, name, cb) {
 };
 
 module.exports.lodir = lodir;
+module.exports.getConfig = getConfig;
+module.exports.getHome = getHome;
 module.exports.zip = zip;
