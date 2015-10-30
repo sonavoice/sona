@@ -1,7 +1,7 @@
-var extension = new Vi.App({
-  title: 'extension',
-  iconURL: 'logo.png',
-  commands: {
-
+{
+  "title": "extension",
+  "iconURL": "logo.png",
+  "commands": {
+    
   }
-});
+}
