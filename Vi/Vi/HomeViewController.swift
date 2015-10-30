@@ -1,6 +1,5 @@
 import UIKit
 import QuartzCore
-import AFNetworking
 import Alamofire
 import AudioToolbox
 
@@ -10,7 +9,6 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   var tts = TextToSpeech()
   var animation: Bool = false
   var isListening: Bool = false
-  let apiCallManager = AFHTTPRequestOperationManager()
   let userId = UIDevice.currentDevice().identifierForVendor!.UUIDString
   var apps = [String]()
   
@@ -35,10 +33,7 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
     configureNuance()
     
     /* Add gesture capabilities */
-    //addUpSwipeGesture()
-    
-    /* Configure User Data */
-    configureUser()
+    //addUpSwipeGesture() 
   }
   
   func setupViewsForRippleEffect(){
@@ -122,48 +117,30 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   }
   
   /* Server & API */
-  func attemptToExecuteOnTranscript(transcript: String, successCB: AnyObject -> (), failureCB: () -> ()) {
+  func attemptToExecuteOnTranscript(transcript: String, successCB: String -> (), failureCB: () -> ()) {
     /* Send transript with user data */
-    let data = ["transcript": transcript]
+    let parameters = ["transcript": transcript]
     
-    apiCallManager.requestSerializer = AFJSONRequestSerializer()
-    apiCallManager.responseSerializer = AFJSONResponseSerializer()
-    
-    apiCallManager.POST(
-      "http://viapi.io/command",
-      parameters: data,
-      success: { (operation: AFHTTPRequestOperation!,
-        responseObject: AnyObject!) in
-        NSLog("JSON: %@", responseObject.description)
-        successCB(responseObject)
-      },
-      failure: { (operation: AFHTTPRequestOperation!,
-        error: NSError!) in
-        NSLog("Error: %@", error.localizedDescription)
-        failureCB()
+    Alamofire.request(.POST, "http://localhost:3000/command", parameters: parameters)
+      .responseJSON { response in
+        switch response.result {
+          case .Success:
+            if let JSON = response.result.value {
+              if let feedback = JSON["feedback"] {
+                successCB(feedback as! String)
+              }
+              else {
+                failureCB()
+              }
+            }
+            else {
+              failureCB()
+            }
+
+          case .Failure:
+            failureCB()
+        }
       }
-    )
-  }
-  
-  func configureUser() {
-    var userData = [String:String]()
-    userData = ["userId": userId, "extensions": apps.joinWithSeparator(", ")]
-    
-    apiCallManager.requestSerializer = AFJSONRequestSerializer()
-    apiCallManager.responseSerializer = AFHTTPResponseSerializer()
-    
-    apiCallManager.POST(
-      "http://viapi.io/user",
-      parameters: userData,
-      success: { (operation: AFHTTPRequestOperation!,
-        responseObject: AnyObject!) in
-        NSLog("JSON: %@", responseObject.description)
-      },
-      failure: { (operation: AFHTTPRequestOperation!,
-        error: NSError!) in
-        NSLog("Error: %@", error.localizedDescription)
-      }
-    )
   }
 
   /*** Nuance ***/
@@ -201,10 +178,10 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
       transcript.text! = "\"" + res + "\""
       attemptToExecuteOnTranscript(res,
         successCB: {
-          (response:AnyObject) in
-          let resDict = response as! Dictionary<String, AnyObject>
-          let feedback = (resDict["feedback"] as AnyObject?) as? String
-          self.tts.speak(feedback!)
+          (response:String) in
+//          let resDict = response as! Dictionary<String, AnyObject>
+//          let feedback = (resDict["feedback"] as AnyObject?) as? String
+          self.tts.speak(response)
         },
         failureCB: {
           self.tts.speak("Please check your internet connection")
