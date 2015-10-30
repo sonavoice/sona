@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 var path    = require('path');
-var fs      = require('fs');
+var fs      = require('fs.extra');
 var color   = require('colors');
 var request = require('request');
 var utils   = require('./utils.js');
@@ -9,6 +9,7 @@ var pack    = require('./package.json');
 var uploader = require('file-uploader')
 
 var args = process.argv.slice(2);
+var demo = false;
 
 // Copy template to current directory
 if (args[0] === 'init') {
@@ -23,6 +24,19 @@ if (args[0] === 'init') {
       });
     }
   });
+} else if (args[0] === 'publish') {
+  utils.zip('.', 'ext', function() {
+
+    var host;
+    if (!demo) {
+      host = "http://viapi.io";
+    } else {
+      host = "http://localhost:3000";
+    }
+
+    fs.createReadStream(utils.lodir('ext.zip')).pipe(request.post(host + "/extension"))
+  });
+
 } else {
   console.log('Error: unknown command'.red);
 }
