@@ -11,6 +11,7 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   var isListening: Bool = false
   let userId = UIDevice.currentDevice().identifierForVendor!.UUIDString
   var apps = [String]()
+  var lang = "eng-USA" // Default to prevent crash
   
   @IBOutlet var transcript: UILabel!
   @IBOutlet var MicButton: UIButton!
@@ -18,6 +19,10 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    let langMan = LanguageManager()
+    let langres = langMan.getCurrentLang()
+    self.lang = langres[1]
     
     transcript.numberOfLines = 0
     transcript.sizeToFit()
@@ -81,7 +86,7 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
     
     */
     if !self.isListening {
-     self.voiceSearch = SKRecognizer(type: SKSearchRecognizerType, detection: UInt(SKShortEndOfSpeechDetection), language:"eng-USA", delegate: self)
+     self.voiceSearch = SKRecognizer(type: SKSearchRecognizerType, detection: UInt(SKShortEndOfSpeechDetection), language:self.lang, delegate: self)
       self.isListening = true
     } else {
       self.voiceSearch?.cancel()

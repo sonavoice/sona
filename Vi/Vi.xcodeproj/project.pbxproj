@@ -16,6 +16,9 @@
 		053FAC931BE311E000073295 /* AppToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053FAC921BE311E000073295 /* AppToken.swift */; settings = {ASSET_TAGS = (); }; };
 		053FAC941BE311E000073295 /* AppToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053FAC921BE311E000073295 /* AppToken.swift */; settings = {ASSET_TAGS = (); }; };
 		053FAC951BE311E000073295 /* AppToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053FAC921BE311E000073295 /* AppToken.swift */; settings = {ASSET_TAGS = (); }; };
+		05447A691BE45AF100B3C63E /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05447A681BE45AF100B3C63E /* LanguageManager.swift */; settings = {ASSET_TAGS = (); }; };
+		05447A6A1BE45AF100B3C63E /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05447A681BE45AF100B3C63E /* LanguageManager.swift */; settings = {ASSET_TAGS = (); }; };
+		05447A6B1BE45AF100B3C63E /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05447A681BE45AF100B3C63E /* LanguageManager.swift */; settings = {ASSET_TAGS = (); }; };
 		0555B9851BDEECFC00C41580 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0555B9841BDEECFC00C41580 /* Settings.swift */; };
 		0555B9861BDEECFC00C41580 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0555B9841BDEECFC00C41580 /* Settings.swift */; };
 		0555B9871BDEECFC00C41580 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0555B9841BDEECFC00C41580 /* Settings.swift */; };
@@ -125,6 +128,7 @@
 		0534A0581BE2D6FC00655B7E /* SigninViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		053FAC8E1BE30AFE00073295 /* AppManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		053FAC921BE311E000073295 /* AppToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppToken.swift; sourceTree = "<group>"; };
+		05447A681BE45AF100B3C63E /* LanguageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
 		0555B9841BDEECFC00C41580 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		0555B98D1BDEEE7300C41580 /* ViData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ViData.xcdatamodel; sourceTree = "<group>"; };
 		05B02BF91BDAA79B0057C80C /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
@@ -256,6 +260,7 @@
 			children = (
 				05DE3A311BE1EABC0028B4E0 /* DataInitializer.swift */,
 				053FAC8E1BE30AFE00073295 /* AppManager.swift */,
+				05447A681BE45AF100B3C63E /* LanguageManager.swift */,
 			);
 			name = DataManager;
 			sourceTree = "<group>";
@@ -771,6 +776,7 @@
 				53060AA11BD98F6D008AE89A /* SearchViewController.swift in Sources */,
 				0534A0591BE2D6FC00655B7E /* SigninViewController.swift in Sources */,
 				05BC1C9A1BD8551A00D47DAB /* DummyData.swift in Sources */,
+				05447A691BE45AF100B3C63E /* LanguageManager.swift in Sources */,
 				8352C65F1BD6A5DA007B3F5F /* AppDelegate.swift in Sources */,
 				0555B98E1BDEEE7300C41580 /* ViData.xcdatamodeld in Sources */,
 				83391CDA1BD9B008005924DB /* NavigatorViewController.swift in Sources */,
@@ -813,6 +819,7 @@
 				0555B9861BDEECFC00C41580 /* Settings.swift in Sources */,
 				0534A05A1BE2D6FC00655B7E /* SigninViewController.swift in Sources */,
 				05DE3A2E1BE1B8CB0028B4E0 /* Language.swift in Sources */,
+				05447A6A1BE45AF100B3C63E /* LanguageManager.swift in Sources */,
 				05BC1C981BD8551A00D47DAB /* LibraryViewController.swift in Sources */,
 				05BC1C951BD8551A00D47DAB /* AppInfoViewController.swift in Sources */,
 			);
@@ -837,6 +844,7 @@
 				0555B9871BDEECFC00C41580 /* Settings.swift in Sources */,
 				0534A05B1BE2D6FC00655B7E /* SigninViewController.swift in Sources */,
 				05DE3A2F1BE1B8CB0028B4E0 /* Language.swift in Sources */,
+				05447A6B1BE45AF100B3C63E /* LanguageManager.swift in Sources */,
 				05BC1C991BD8551A00D47DAB /* LibraryViewController.swift in Sources */,
 				05BC1C961BD8551A00D47DAB /* AppInfoViewController.swift in Sources */,
 			);

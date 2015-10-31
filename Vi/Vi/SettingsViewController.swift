@@ -48,11 +48,9 @@ class SettingsViewController: UITableViewController {
         setting.setValue(results[0].valueForKey("status"), forKey: "on")
       }
       
-      let langSearch = NSFetchRequest(entityName: "Language")
-      langSearch.returnsObjectsAsFaults = false
-      langSearch.predicate = nil
-      let langResults:NSArray = try context.executeFetchRequest(langSearch)
-      langSet.text = langResults[0].name + "    >"
+//      let langMan = LanguageManager()
+//      let langname = langMan.getCurrentLang()
+      langSet.text = "    >"
       
     } catch {
       print("ERROR: Either we failed to save asdfwefgaesgef")
@@ -94,14 +92,10 @@ class SettingsViewController: UITableViewController {
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    
+
   }
   
   @IBAction func TriggerForm(sender: AnyObject) {
     self.performSegueWithIdentifier("languages", sender: self)
   }
-  
-  @IBAction func unwindSegue(segue:UIStoryboardSegue) {
-  }
-
 }

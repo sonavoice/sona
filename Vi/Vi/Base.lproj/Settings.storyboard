@@ -120,7 +120,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="User langugage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcN-Gk-lVW">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="User language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcN-Gk-lVW">
                                                     <rect key="frame" x="15" y="11" width="193" height="23"/>
                                                     <animations/>
                                                     <gestureRecognizers/>
@@ -333,14 +333,22 @@
                                 <animations/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
-                                    <segue destination="OSu-AY-oE1" kind="unwind" unwindAction="unwindSegue:" id="lKo-1B-6rv"/>
+                                    <action selector="cancelLang:" destination="4vd-FF-CBM" eventType="touchUpInside" id="18r-8R-Frq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TTn-81-Xup">
                                 <rect key="frame" x="543" y="20" width="37" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="saveLang:" destination="4vd-FF-CBM" eventType="touchUpInside" id="iek-iT-4eS"/>
+                                </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TPg-IC-5HM">
+                                <rect key="frame" x="20" y="58" width="560" height="522"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -351,9 +359,11 @@
                             <constraint firstItem="TTn-81-Xup" firstAttribute="top" secondItem="FRn-w6-yi7" secondAttribute="bottom" id="hzt-vI-sKt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="langTable" destination="TPg-IC-5HM" id="0EU-hy-saD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rlg-Ar-gIh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="OSu-AY-oE1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="634" y="736"/>
         </scene>

@@ -38,6 +38,4 @@ class AppManager: NSObject {
       print("Error: Failed to save token")
     }
   }
-  
-  
 }
