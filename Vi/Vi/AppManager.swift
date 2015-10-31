@@ -38,4 +38,19 @@ class AppManager: NSObject {
       print("Error: Failed to save token")
     }
   }
+  
+  func getToken(appName: String) -> String? {
+    let request = NSFetchRequest(entityName: "AppToken")
+    request.returnsObjectsAsFaults = false;
+    request.predicate = NSPredicate(format: "name == %@", appName)
+    
+    do {
+      let results:NSArray = try context.executeFetchRequest(request)
+      print(results)
+      return results[0].valueForKey("token") as! String?
+    } catch {
+      print("Error: Failed to save token")
+      return nil;
+    }
+  }
 }

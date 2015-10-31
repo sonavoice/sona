@@ -12,6 +12,7 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   let userId = UIDevice.currentDevice().identifierForVendor!.UUIDString
   var apps = [String]()
   var lang = "eng-USA" // Default to prevent crash
+  let appManager = AppManager()
   
   @IBOutlet var transcript: UILabel!
   @IBOutlet var MicButton: UIButton!
@@ -126,15 +127,16 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
     
     /* Seperates words by space */
     let transcriptAsArray = transcript.componentsSeparatedByString(" ")
+    let extensionName = transcriptAsArray[1]
     
     /* Do call to core data to get token with the extensionName and assign to authDict. */
-    /* DUMMY DATA */
-    let authDict = ["token": "abcd1234"]
+    let token = appManager.getToken(extensionName)!
+    let authDict = ["token": token]
     
     /* Configure final object to be sent to server as JSON */
     let parameters = ["transcript": transcript, "auth": authDict]
     
-    Alamofire.request(.POST, "http://localhost:3000/command", parameters: parameters as! [String : AnyObject], encoding: .JSON)
+    Alamofire.request(.POST, "http://localhost:3000/command", parameters: parameters as? [String : AnyObject], encoding: .JSON)
       .responseJSON { response in
         switch response.result {
           case .Success:
