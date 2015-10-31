@@ -118,10 +118,18 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   
   /* Server & API */
   func attemptToExecuteOnTranscript(transcript: String, successCB: String -> (), failureCB: () -> ()) {
-    /* Send transript with user data */
-    let parameters = ["transcript": transcript]
     
-    Alamofire.request(.POST, "http://localhost:3000/command", parameters: parameters)
+    /* Seperates words by space */
+    let transcriptAsArray = transcript.componentsSeparatedByString(" ")
+    
+    /* Do call to core data to get token with the extensionName and assign to authDict. */
+    /* DUMMY DATA */
+    let authDict = ["token": "abcd1234"]
+    
+    /* Configure final object to be sent to server as JSON */
+    let parameters = ["transcript": transcript, "auth": authDict]
+    
+    Alamofire.request(.POST, "http://localhost:3000/command", parameters: parameters as! [String : AnyObject], encoding: .JSON)
       .responseJSON { response in
         switch response.result {
           case .Success:
