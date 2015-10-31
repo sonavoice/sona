@@ -17,7 +17,6 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
     self.getApp()
   }
   
-  
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return self.apps.count
   }

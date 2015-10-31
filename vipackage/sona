@@ -16,13 +16,10 @@ if (!args.length)
   return;
 
 try {
-  console.log('args[0] =', args[0]);
   var filename = utils.lodir('commands/', args[0]);
-  console.log('filename =', filename);
   var cmd = require(filename);
   cmd.run(args);
 } catch(e) {
   console.log('Could not find ' + args[0].red);
-  console.log(e);
   return;
 }

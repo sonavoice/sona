@@ -28,7 +28,7 @@ module.exports.run = function(args) {
       utils.zip('.', name, function() {
 
         var host;
-        var demo = true;
+        var demo = false;
         if (!demo) {
           host = "http://viapi.io";
         } else {
@@ -37,7 +37,8 @@ module.exports.run = function(args) {
 
         fs.createReadStream(utils.lodir(name + '.zip')).pipe(request.post(host + "/extension", function(err, response) {
           if (response === undefined || response.statusCode !== 200) {
-            console.log(("Unable to publish" + name + "! A server error occured.").red);
+            console.log(("Unable to publish " + name + "! A server error occured.").red);
+            console.log(response.statusCode);
           } else {
             console.log((name + " was published successfully!").green);
           }
@@ -50,7 +51,6 @@ module.exports.run = function(args) {
       console.log('Invalid extension. Please check your syntax.'.red);
       return;
     }
-    console.log('data =', data);
 
   });
 

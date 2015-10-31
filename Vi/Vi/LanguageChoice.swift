@@ -9,7 +9,7 @@
 import Foundation
 
 let languages = [
-  ["English", "eng_USA"],
+  ["English", "eng-USA"],
   ["Spanish", "spa-ESP"],
   ["Japanese", "jpn-JPN"],
   ["Korean", "Kor-KOR"],

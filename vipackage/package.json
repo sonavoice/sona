@@ -1,11 +1,11 @@
 {
-  "name": "vi",
+  "name": "Sona",
   "version": "0.0.1",
-  "description": "An npm module for creating and publishing Vi applications.",
-  "author": "Vi Inc.",
+  "description": "An npm module for creating and publishing Sona applications.",
+  "author": "Sona Inc.",
   "preferGlobal": "true",
   "bin": {
-    "chris": "chris"
+    "sona": "sona"
   },
   "dependencies": {
     "archiver": "^0.16.0",
