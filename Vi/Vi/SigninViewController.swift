@@ -10,6 +10,7 @@ import UIKit
 
 class SigninViewController: UIViewController, UIWebViewDelegate {
   var appname: String = ""
+  let appManager = AppManager()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -36,8 +37,7 @@ class SigninViewController: UIViewController, UIWebViewDelegate {
       if(num == 0) {
         let subview = subview as! UIWebView
         let html = subview.stringByEvaluatingJavaScriptFromString("document.body.innerHTML")
-        let appMan = AppManager()
-        appMan.saveToken(self.appname, tokenToSave: html!)
+        appManager.saveToken(self.appname, tokenToSave: html!)
       }
       num = num + 1
     }
