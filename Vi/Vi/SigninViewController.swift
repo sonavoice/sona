@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SigninViewController: UIViewController {
+class SigninViewController: UIViewController, UIWebViewDelegate {
   var appname: String = ""
   
   override func viewDidLoad() {
@@ -22,15 +22,25 @@ class SigninViewController: UIViewController {
     
     let webView:UIWebView = UIWebView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
     
-    // let address = "http://viapi.io/authenticate/" + self.appname
-    let address = "https://slack.com/signin"
+    let address = "http://localhost:3000/authenticate/" + self.appname
+    //let address = "https://slack.com/signin"
     webView.loadRequest(NSURLRequest(URL: NSURL(string: address)!))
-
+    
     self.view.addSubview(webView)
     self.view.addSubview(button)
   }
   
   func closeWebView(sender: UIButton!) {
+    var num = 0
+    for subview in self.view.subviews {
+      if(num == 0) {
+        let subview = subview as! UIWebView
+        let html = subview.stringByEvaluatingJavaScriptFromString("document.body.innerHTML")
+        let appMan = AppManager()
+        appMan.saveToken(self.appname, tokenToSave: html!)
+      }
+      num = num + 1
+    }
     self.dismissViewControllerAnimated(true, completion: nil)
   }
 }

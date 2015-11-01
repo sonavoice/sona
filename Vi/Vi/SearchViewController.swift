@@ -31,12 +31,11 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
       cell.name.text = appInfo.name
       
       let url = NSURL(string: appInfo.iconURL!)
-      let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
       
-      if data == nil {
-        cell.icon.image = UIImage(named: "image1")
+      if let data = NSData(contentsOfURL: url!) {
+        cell.icon.image = UIImage(data: data)
       } else {
-        cell.icon.image = UIImage(data: data!)
+        cell.icon.image = UIImage(named: "image1")
       }
       cell.arrow.font = UIFont.fontAwesomeOfSize(30)
       cell.arrow.text = String.fontAwesomeIconWithCode("fa-angle-right")
@@ -65,6 +64,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                   let appDesc = item.valueForKey("description") as! String
                   let appComm = item.valueForKey("commands") as! [String]
                   let appIcon = item.valueForKey("iconURL") as! String
+                  print(appIcon)
                   self.apps.append(App(name: appName, description: appDesc, commands: appComm, iconURL: appIcon))
                 }
               }
@@ -79,7 +79,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
   }
   
   func appCheck(item:AnyObject) -> Bool {
-    if item.valueForKey("name") != nil && item.valueForKey("description") != nil && item.valueForKey("commands") != nil && item.valueForKey("iconURL") != nil {
+    if item.valueForKey("name") != nil && item.valueForKey("description") != nil && item.valueForKey("commands") != nil && item.valueForKey("iconURL") as! String != "fake icon URL" {
       return true
     } else {
       return false
