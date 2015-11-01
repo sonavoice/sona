@@ -18,14 +18,24 @@ var getHome = function() {
 var getConfig = function() {
   var config;
   try {
-    config = JSON.parse(fs.readFileSync(getHome() + "/.vi.json"));
+    config = JSON.parse(fs.readFileSync(getHome() + "/.sona.json"));
   } catch (e) {
     config = {
-      email: null
+      guid: null
     };
-    fs.writeFileSync(getHome() + "/.vi.json", JSON.stringify(config, null, 2));
+    fs.writeFileSync(getHome() + "/.sona.json", JSON.stringify(config, null, 2));
   }
   return config;
+};
+
+var getGUID = function() {
+  return getConfig().guid;
+};
+
+var setGUID = function(guid) {
+  var config = JSON.parse(fs.readFileSync(getHome() + "/.sona.json"));
+  config.guid = guid;
+  fs.writeFileSync(getHome() + "/.sona.json", JSON.stringify(config, null, 2));
 };
 
 var zip = function(dir, name, cb) {
@@ -51,5 +61,7 @@ var zip = function(dir, name, cb) {
 
 module.exports.lodir = lodir;
 module.exports.getConfig = getConfig;
+module.exports.getGUID = getGUID;
+module.exports.setGUID = setGUID;
 module.exports.getHome = getHome;
 module.exports.zip = zip;
