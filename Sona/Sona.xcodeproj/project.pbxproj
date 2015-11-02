@@ -370,8 +370,7 @@
 				8352C6931BD6BD2F007B3F5F /* Library */,
 				8352C6921BD6BD28007B3F5F /* Settings */,
 			);
-			name = Sona;
-			path = Vi;
+			path = Sona;
 			sourceTree = "<group>";
 		};
 		8352C6741BD6A5DA007B3F5F /* SonaTests */ = {
