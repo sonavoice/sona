@@ -1,9 +1,9 @@
 #!/bin/bash
-cd Vi;
+cd Sona;
 echo "Executing pod install";
 pod install;
 echo "Downloading Nuance Speechkit Framework";
-cd Vi;
+cd Sona;
 curl -L https://www.dropbox.com/s/er8k6k6h44lkuhi/SpeechKit.framework.zip?dl=1 -o SpeechKit.framework.zip;
 echo "Extracting Nuance Speechkit Framework";
 unzip SpeechKit.framework.zip;
