@@ -1,6 +1,6 @@
 .DS_Store
 node_modules
-Vi/**/*.framework
-Vi/**/xcuserdata
-Vi/**/*.xcuserstate
-Vi/Pods/
+Sona/**/*.framework
+Sona/**/xcuserdata
+Sona/**/*.xcuserstate
+Sona/Pods/

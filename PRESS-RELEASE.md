@@ -1,4 +1,4 @@
-# Vi #
+# Sona #
 
 <!-- 
 > This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterities sake.
@@ -24,7 +24,7 @@ Once the project moves into development, the press release can be used as a touc
 
 ## Summary ##
   > Using third-party applications in a virtual assistant environment
-  > Extends functionality of third party applications to be available on Vi, hands free
+  > Extends functionality of third party applications to be available on sona, hands free
   > Allows for "always listening mode" for totally hands free environment
   > See list of commands that applications offer
   > Native apps too
@@ -34,7 +34,7 @@ Once the project moves into development, the press release can be used as a touc
   > Functionality of the virtual assistant is determined by the company that built the virtual assistant, not the developers of the apps or the community
 
 ## Solution ##
-  > Creat a virtual assistant that allows users to access third part apps that have been built out forthe Vi virtaul assistant environment
+  > Creat a virtual assistant that allows users to access third part apps that have been built out for the sona virtaul assistant environment
 
 ## Quote from You ##
   > "The first virtual that assistant that allows you to use the apps you know and love, hands-free."
@@ -44,10 +44,10 @@ Once the project moves into development, the press release can be used as a touc
   > Download the app here.
   
   > For developers:
-  > `npm install vi`
-  > `viapp init <app_name>`
+  > `npm install sona`
+  > `sona init <app_name>`
   > Write application (documentation here)
-  > `viapp publish`
+  > `sona publish`
 
 ## Customer Quote ##
   > "It's so much better than Cortana, Siri, and Google Now!"
@@ -55,4 +55,4 @@ Once the project moves into development, the press release can be used as a touc
 ## Closing and Call to Action ##
   > Go to our site, and give it a try!
   
-## Apps Available on Vi ##
+## Apps Available on Sona ##

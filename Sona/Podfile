@@ -1,0 +1,26 @@
+platform :ios, '9.0'
+use_frameworks!
+
+target 'Sona' do
+  pod 'FontAwesome.swift'
+  pod 'AFNetworking', '~> 2.5'
+  pod 'Lock', '~> 1.2'
+  pod 'JWTDecode', '~> 1.0'
+  pod 'Alamofire', '~> 3.0'
+end
+
+target 'SonaTests' do
+  pod 'FontAwesome.swift'
+  pod 'AFNetworking', '~> 2.5'
+  pod 'Lock', '~> 1.2'
+  pod 'JWTDecode', '~> 1.0'
+  pod 'Alamofire', '~> 3.0'
+end
+
+target 'SonaUITests' do
+  pod 'FontAwesome.swift'
+  pod 'AFNetworking', '~> 2.5'
+  pod 'Lock', '~> 1.2'
+  pod 'JWTDecode', '~> 1.0'
+  pod 'Alamofire', '~> 3.0'
+end

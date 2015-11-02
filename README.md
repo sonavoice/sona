@@ -15,4 +15,4 @@ Open `viapp.xcworkspace` in Xcode.
 
 ##API Interface
 
-The API for Vi is documented at [Vi API](http://optctimer.com).
+The API for Sona is documented at [Sona API](http://sonavoice.com).
