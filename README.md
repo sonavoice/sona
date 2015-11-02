@@ -11,7 +11,7 @@ pod install
 ./setup
 ```
 
-Open `viapp.xcworkspace` in Xcode.
+Open `Sona.xcworkspace` in Xcode.
 
 ##API Interface
 
