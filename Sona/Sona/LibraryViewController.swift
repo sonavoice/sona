@@ -11,9 +11,22 @@ import UIKit
 class LibraryViewController: UITableViewController {
   var apps:[App]?
   var appInfo: App!
+  @IBOutlet weak var menuButton: UIBarButtonItem!
   
   override func viewDidLoad() {
     self.apps = dummyData
+    
+    if revealViewController() != nil {
+      revealViewController().rearViewRevealWidth = 150
+      menuButton.target = revealViewController()
+      menuButton.action = "revealToggle:"
+      
+      //      revealViewController().rightViewRevealWidth = 150
+      //      extraButton.target = revealViewController()
+      //      extraButton.action = "rightRevealToggle:"
+      
+      view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+    }
   }
   
   override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

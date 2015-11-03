@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="seK-Vb-w7B">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -36,7 +36,7 @@
         <!--Settings-->
         <scene sceneID="Xlz-fg-GmV">
             <objects>
-                <tableViewController id="hqN-xV-UYj" customClass="SettingsViewController" customModule="Vi" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="hqN-xV-UYj" customClass="SettingsViewController" customModule="Sona" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="G2h-cM-LlH">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -132,7 +132,7 @@
                                                     <rect key="frame" x="541" y="10" width="42" height="23.5"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -166,7 +166,7 @@
                                                     <rect key="frame" x="517" y="12" width="42" height="21"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -296,9 +296,12 @@
                             <outlet property="delegate" destination="hqN-xV-UYj" id="8JR-h9-nwN"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Settings" id="jTq-ql-HUT"/>
+                    <navigationItem key="navigationItem" title="Settings" id="jTq-ql-HUT">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="gna-yK-oJ1"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="langSet" destination="zkB-UC-o5M" id="rCd-3p-Oww"/>
+                        <outlet property="menuButton" destination="gna-yK-oJ1" id="YkV-zr-kLv"/>
                         <outletCollection property="settings" destination="mN9-oC-R3G" collectionClass="NSMutableArray" id="OjF-70-wAH"/>
                         <outletCollection property="settings" destination="i7t-ey-0s4" collectionClass="NSMutableArray" id="jYc-Li-qsb"/>
                         <outletCollection property="settings" destination="5XF-7K-Yel" collectionClass="NSMutableArray" id="hV2-Nq-NU7"/>
@@ -319,7 +322,7 @@
         <!--Language Option View Controller-->
         <scene sceneID="EFK-ov-cGA">
             <objects>
-                <viewController id="4vd-FF-CBM" customClass="LanguageOptionViewController" customModule="Vi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4vd-FF-CBM" customClass="LanguageOptionViewController" customModule="Sona" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FRn-w6-yi7"/>
                         <viewControllerLayoutGuide type="bottom" id="hfO-Pm-4bl"/>
