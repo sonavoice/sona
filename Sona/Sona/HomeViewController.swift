@@ -136,21 +136,25 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   
   /* Server & API */
   func attemptToExecuteOnTranscript(transcript: String, successCB: String -> (), failureCB: () -> ()) {
-    
+
     /* Seperates words by space */
     let transcriptAsArray = transcript.componentsSeparatedByString(" ")
-    let extensionName = transcriptAsArray[1]
+    let extensionName = appManager.scan(transcriptAsArray)
     
-    /* Do call to core data to get token with the extensionName and assign to authDict. */
-    let token = appManager.getToken(extensionName)!
-    let authDict = ["token": token]
-    
-    /* Configure final object to be sent to server as JSON */
-    let parameters = ["transcript": transcript, "auth": authDict]
-    
-    Alamofire.request(.POST, "http://localhost:3000/command", parameters: parameters as? [String : AnyObject], encoding: .JSON)
-      .responseJSON { response in
-        switch response.result {
+    if extensionName == nil {
+      self.tts.speak("Sorry, couldn't find plug-in. Please add relevant plug-in at the plug-in page")
+    } else {
+      let token = appManager.getToken(extensionName!)
+      
+      /* Do call to core data to get token with the extensionName and assign to authDict. */
+      let authDict = ["token": token]
+      
+      /* Configure final object to be sent to server as JSON */
+      let parameters : [String: Any] = ["transcript": transcript, "auth": authDict]
+      
+      Alamofire.request(.POST, "http://localhost:3000/command", parameters: parameters as? [String : AnyObject], encoding: .JSON)
+        .responseJSON { response in
+          switch response.result {
           case .Success:
             if let JSON = response.result.value {
               if let feedback = JSON["feedback"] {
@@ -163,11 +167,12 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
             else {
               failureCB()
             }
-
+            
           case .Failure:
             failureCB()
-        }
+          }
       }
+    }
   }
 
   /*** Nuance ***/

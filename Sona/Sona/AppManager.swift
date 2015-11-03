@@ -38,11 +38,45 @@ class AppManager: NSObject {
     
     do {
       let results:NSArray = try context.executeFetchRequest(request)
-      print(results)
-      return results[0].valueForKey("token") as! String?
+      if results.count == 0 {
+        return nil
+      } else {
+        return results[0].valueForKey("token") as! String?
+      }
     } catch {
       print("Error: Failed to save token")
-      return nil;
+      return nil
     }
+  }
+  
+  func scan(transcriptArray: [String]) -> String? {
+    let request = NSFetchRequest(entityName: "AppToken")
+    let results:NSArray = []
+    request.returnsObjectsAsFaults = false;
+    // Load all local app to an array
+    do {
+      let results = try context.executeFetchRequest(request)
+      if results.count == 0 {
+        return nil
+      } else {
+        
+      }
+    } catch {
+      print("Error: Failed to search app. check local storage")
+    }
+    // check first 3 elements
+    var counter = 0
+    for element in transcriptArray {
+      for apps in results {
+        if element == (apps.valueForKey("name") as! String) {
+          return apps.valueForKey("name") as! String
+        }
+      }
+      counter++
+      if(counter > 3) {
+        break
+      }
+    }
+    return nil
   }
 }
