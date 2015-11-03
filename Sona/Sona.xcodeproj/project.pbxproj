@@ -20,6 +20,7 @@
 		83303FD51BDE9AC90024A10D /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 836DA7E01BDC471F0031D676 /* Lato-Regular.ttf */; };
 		83303FD61BDE9AD00024A10D /* SF-UI-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 836DA7E11BDC477D0031D676 /* SF-UI-Display-Regular.otf */; };
 		83303FD71BDE9AD60024A10D /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 836DA7DF1BDC46580031D676 /* Roboto-Regular.ttf */; };
+		83FD405A1BE856D100A683B4 /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FD40591BE856D100A683B4 /* RecordButton.swift */; settings = {ASSET_TAGS = (); }; };
 		99334BB3569321B6938147FE /* Pods_SonaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4AA68EEA6A2712BC22C2AFE /* Pods_SonaUITests.framework */; };
 		A634616A1CECEEF34F9E0BA6 /* Pods_SonaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FBD770CD99F84404CD9FAD7 /* Pods_SonaTests.framework */; };
 		C48C5841D156504A1A618CCA /* Pods_Sona.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C495AC49167F8FC76008486E /* Pods_Sona.framework */; };
@@ -186,6 +187,7 @@
 		836DA7DF1BDC46580031D676 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		836DA7E01BDC471F0031D676 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		836DA7E11BDC477D0031D676 /* SF-UI-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Regular.otf"; sourceTree = "<group>"; };
+		83FD40591BE856D100A683B4 /* RecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordButton.swift; sourceTree = "<group>"; };
 		8CED057656D2E548620FC05D /* Pods-Sona.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sona.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sona/Pods-Sona.release.xcconfig"; sourceTree = "<group>"; };
 		A4AA68EEA6A2712BC22C2AFE /* Pods_SonaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SonaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA8E279F9FF4B3E21F838D5E /* Pods-SonaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SonaTests/Pods-SonaTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -451,6 +453,7 @@
 			children = (
 				ECBCCFB61BE814890000425F /* Home.storyboard */,
 				ECBCCFBA1BE814900000425F /* HomeViewController.swift */,
+				83FD40591BE856D100A683B4 /* RecordButton.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -865,6 +868,7 @@
 				ECBCCFCF1BE814FE0000425F /* LibraryNavController.swift in Sources */,
 				EC90FC431BDB3EFA00F60AE9 /* NuanceHeader.m in Sources */,
 				ECBCCFE21BE8153D0000425F /* SettingsViewController.swift in Sources */,
+				83FD405A1BE856D100A683B4 /* RecordButton.swift in Sources */,
 				ECBCCF4F1BE7FD2A0000425F /* Settings.swift in Sources */,
 				ECBCCF431BE7FCA80000425F /* DataInitializer.swift in Sources */,
 				056FA6271BE83022007DE1AC /* SWRevealViewController.m in Sources */,
