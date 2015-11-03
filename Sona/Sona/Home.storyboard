@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYS-p0-R4N">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -30,7 +30,7 @@
         <!--Home-->
         <scene sceneID="JLx-fj-KJS">
             <objects>
-                <viewController id="rSf-h4-L5D" customClass="HomeViewController" customModule="Vi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rSf-h4-L5D" customClass="HomeViewController" customModule="Sona" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2Ms-RR-jvF"/>
                         <viewControllerLayoutGuide type="bottom" id="16m-cY-i7o"/>
@@ -52,7 +52,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="topRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nkt-xZ-XfK" customClass="TopAlignedLabel" customModule="Vi" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="topRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nkt-xZ-XfK" customClass="TopAlignedLabel" customModule="Sona" customModuleProvider="target">
                                 <rect key="frame" x="20" y="72" width="560" height="200"/>
                                 <animations/>
                                 <constraints>
@@ -91,9 +91,12 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="8bL-65-0WK"/>
+                    <navigationItem key="navigationItem" title="Home" id="8bL-65-0WK">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="hbE-UW-EOb"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="MicButton" destination="wv2-qq-lZy" id="z8t-c0-VSv"/>
+                        <outlet property="menuButton" destination="hbE-UW-EOb" id="Lh9-9R-3aw"/>
                         <outlet property="rippleView" destination="Zh8-2U-rUg" id="IXB-ng-mda"/>
                         <outlet property="transcript" destination="Nkt-xZ-XfK" id="l8T-5z-ezq"/>
                     </connections>

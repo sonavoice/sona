@@ -8,6 +8,8 @@ class SettingsViewController: UITableViewController {
   // Array of all the switches on the component
   @IBOutlet var settings: Array<UISwitch>?
   
+  @IBOutlet weak var menuButton: UIBarButtonItem!
+  
   // Memory warning handle
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
@@ -26,6 +28,18 @@ class SettingsViewController: UITableViewController {
   // on load
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    if revealViewController() != nil {
+      revealViewController().rearViewRevealWidth = 150
+      menuButton.target = revealViewController()
+      menuButton.action = "revealToggle:"
+      
+      //      revealViewController().rightViewRevealWidth = 150
+      //      extraButton.target = revealViewController()
+      //      extraButton.action = "rightRevealToggle:"
+      
+      view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+    }
     
     // table styling
     self.tableView.allowsSelection = false

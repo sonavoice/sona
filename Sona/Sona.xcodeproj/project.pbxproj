@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		056FA61E1BE82F6D007DE1AC /* Master.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 056FA61D1BE82F6D007DE1AC /* Master.storyboard */; settings = {ASSET_TAGS = (); }; };
+		056FA6211BE82FDE007DE1AC /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056FA6201BE82FDE007DE1AC /* MenuController.swift */; settings = {ASSET_TAGS = (); }; };
+		056FA6221BE82FDE007DE1AC /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056FA6201BE82FDE007DE1AC /* MenuController.swift */; settings = {ASSET_TAGS = (); }; };
+		056FA6231BE82FDE007DE1AC /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056FA6201BE82FDE007DE1AC /* MenuController.swift */; settings = {ASSET_TAGS = (); }; };
+		056FA6271BE83022007DE1AC /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 056FA6261BE83022007DE1AC /* SWRevealViewController.m */; settings = {ASSET_TAGS = (); }; };
+		056FA6281BE83022007DE1AC /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 056FA6261BE83022007DE1AC /* SWRevealViewController.m */; settings = {ASSET_TAGS = (); }; };
+		056FA6291BE83022007DE1AC /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 056FA6261BE83022007DE1AC /* SWRevealViewController.m */; settings = {ASSET_TAGS = (); }; };
 		83303FD51BDE9AC90024A10D /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 836DA7E01BDC471F0031D676 /* Lato-Regular.ttf */; };
 		83303FD61BDE9AD00024A10D /* SF-UI-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 836DA7E11BDC477D0031D676 /* SF-UI-Display-Regular.otf */; };
 		83303FD71BDE9AD60024A10D /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 836DA7DF1BDC46580031D676 /* Roboto-Regular.ttf */; };
@@ -164,6 +171,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		056FA61D1BE82F6D007DE1AC /* Master.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Master.storyboard; sourceTree = "<group>"; };
+		056FA6201BE82FDE007DE1AC /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		056FA6251BE83022007DE1AC /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		056FA6261BE83022007DE1AC /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		0ED40D70AE992BAE998A421D /* Pods-SonaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SonaUITests/Pods-SonaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		20AE062583503E9B97AB5A4C /* Pods-SonaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SonaTests/Pods-SonaTests.release.xcconfig"; sourceTree = "<group>"; };
 		5643E61EFBBA406E9A2688DC /* Pods-Sona.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sona.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sona/Pods-Sona.debug.xcconfig"; sourceTree = "<group>"; };
@@ -286,6 +297,24 @@
 			name = DataModel;
 			sourceTree = "<group>";
 		};
+		056FA61F1BE82F7A007DE1AC /* Hamburger */ = {
+			isa = PBXGroup;
+			children = (
+				056FA6241BE83013007DE1AC /* SWRevealViewController */,
+				056FA6201BE82FDE007DE1AC /* MenuController.swift */,
+			);
+			name = Hamburger;
+			sourceTree = "<group>";
+		};
+		056FA6241BE83013007DE1AC /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				056FA6251BE83022007DE1AC /* SWRevealViewController.h */,
+				056FA6261BE83022007DE1AC /* SWRevealViewController.m */,
+			);
+			name = SWRevealViewController;
+			sourceTree = "<group>";
+		};
 		05DE3A301BE1EAA40028B4E0 /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -355,8 +384,10 @@
 		8352C65D1BD6A5DA007B3F5F /* Sona */ = {
 			isa = PBXGroup;
 			children = (
+				056FA61F1BE82F7A007DE1AC /* Hamburger */,
 				EC8838761BE8171100D616C3 /* AppDelegate.swift */,
 				EC8838691BE8158500D616C3 /* Main.storyboard */,
+				056FA61D1BE82F6D007DE1AC /* Master.storyboard */,
 				EC88386C1BE8159B00D616C3 /* LaunchScreen.storyboard */,
 				05DE3A301BE1EAA40028B4E0 /* DataManager */,
 				0555B9831BDEECCF00C41580 /* DataModel */,
@@ -628,6 +659,7 @@
 				ECBCCF731BE8122D0000425F /* Assets.xcassets in Resources */,
 				ECBCCFAF1BE814790000425F /* Search.storyboard in Resources */,
 				ECBCCFE71BE8154A0000425F /* Settings.storyboard in Resources */,
+				056FA61E1BE82F6D007DE1AC /* Master.storyboard in Resources */,
 				ECBCCF8F1BE812470000425F /* image4.png in Resources */,
 				EC88386E1BE8159B00D616C3 /* LaunchScreen.storyboard in Resources */,
 				ECBCCF8C1BE812470000425F /* image3.png in Resources */,
@@ -822,6 +854,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				056FA6211BE82FDE007DE1AC /* MenuController.swift in Sources */,
 				ECBCCFBB1BE814900000425F /* HomeViewController.swift in Sources */,
 				ECBCCF4B1BE7FD030000425F /* LanguageManager.swift in Sources */,
 				ECBCCF671BE8119D0000425F /* transcriptLabel.swift in Sources */,
@@ -834,6 +867,7 @@
 				ECBCCFE21BE8153D0000425F /* SettingsViewController.swift in Sources */,
 				ECBCCF4F1BE7FD2A0000425F /* Settings.swift in Sources */,
 				ECBCCF431BE7FCA80000425F /* DataInitializer.swift in Sources */,
+				056FA6271BE83022007DE1AC /* SWRevealViewController.m in Sources */,
 				EC8838771BE8171100D616C3 /* AppDelegate.swift in Sources */,
 				ECBCCF531BE7FD450000425F /* Language.swift in Sources */,
 				EC7EFCD01BE81C060063EE70 /* SonaData.xcdatamodeld in Sources */,
@@ -863,6 +897,8 @@
 				EC90FC441BDB3EFA00F60AE9 /* NuanceHeader.m in Sources */,
 				ECBCCFB41BE8147D0000425F /* SearchViewController.swift in Sources */,
 				ECBCCFF01BE815650000425F /* LanguageOptionViewController.swift in Sources */,
+				056FA6221BE82FDE007DE1AC /* MenuController.swift in Sources */,
+				056FA6281BE83022007DE1AC /* SWRevealViewController.m in Sources */,
 				ECBCCFCB1BE814F40000425F /* AppInfoViewController.swift in Sources */,
 				ECBCCFD31BE814FE0000425F /* LibraryViewController.swift in Sources */,
 				ECBCCF481BE7FCE40000425F /* AppManager.swift in Sources */,
@@ -892,6 +928,8 @@
 				EC90FC451BDB3EFA00F60AE9 /* NuanceHeader.m in Sources */,
 				ECBCCFB51BE8147D0000425F /* SearchViewController.swift in Sources */,
 				ECBCCFF11BE815650000425F /* LanguageOptionViewController.swift in Sources */,
+				056FA6231BE82FDE007DE1AC /* MenuController.swift in Sources */,
+				056FA6291BE83022007DE1AC /* SWRevealViewController.m in Sources */,
 				ECBCCFCC1BE814F40000425F /* AppInfoViewController.swift in Sources */,
 				ECBCCFD41BE814FE0000425F /* LibraryViewController.swift in Sources */,
 				ECBCCF491BE7FCE40000425F /* AppManager.swift in Sources */,

@@ -17,9 +17,21 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   @IBOutlet var transcript: UILabel!
   @IBOutlet var MicButton: UIButton!
   @IBOutlet weak var rippleView: UIView!
-  
+  @IBOutlet weak var menuButton: UIBarButtonItem!
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    if revealViewController() != nil {
+      revealViewController().rearViewRevealWidth = 150
+      menuButton.target = revealViewController()
+      menuButton.action = "revealToggle:"
+      
+//      revealViewController().rightViewRevealWidth = 150
+//      extraButton.target = revealViewController()
+//      extraButton.action = "rightRevealToggle:"
+      
+      view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+    }
     
     let langMan = LanguageManager()
     let langres = langMan.getCurrentLang()
