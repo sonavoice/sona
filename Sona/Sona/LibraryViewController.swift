@@ -46,14 +46,19 @@ class LibraryViewController: UITableViewController {
       cell.name.textColor = UIColor(red: 33/255.0, green: 33/255.0, blue: 33/255.0, alpha: 1)
       cell.name.text = appInfo.name
       
-      let url = NSURL(string: appInfo.iconURL!)
-      let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
+//      let url = NSURL(string: appInfo.iconURL!)
+//      let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
       
-      if data == nil {
-        cell.icon.image = UIImage(named: "image1")
-      } else {
-        cell.icon.image = UIImage(data: data!)
-      }
+      cell.icon.image = UIImage(named: "image1")
+      cell.icon.downloadImageFrom(link: appInfo.iconURL!, contentMode: UIViewContentMode.ScaleAspectFit)
+      
+      //set your image from link array.
+//      
+//      if data == nil {
+//        cell.icon.image = UIImage(named: "image1")
+//      } else {
+//        cell.icon.image = UIImage(data: data!)
+//      }
       cell.arrow.font = UIFont.fontAwesomeOfSize(30)
       cell.arrow.text = String.fontAwesomeIconWithCode("fa-angle-right")
       return cell
@@ -66,6 +71,17 @@ class LibraryViewController: UITableViewController {
       let viewController = segue.destinationViewController as! AppInfoViewController
       viewController.appInfo = self.apps![path.indexAtPosition(1)]
     }
-    
+  }
+}
+
+extension UIImageView {
+  func downloadImageFrom(link link:String, contentMode: UIViewContentMode) {
+    NSURLSession.sharedSession().dataTaskWithURL( NSURL(string:link)!, completionHandler: {
+      (data, response, error) -> Void in
+      dispatch_async(dispatch_get_main_queue()) {
+        self.contentMode =  contentMode
+        if let data = data { self.image = UIImage(data: data) }
+      }
+    }).resume()
   }
 }
