@@ -1,11 +1,3 @@
-//
-//  SigninViewController.swift
-//  Vi
-//
-//  Created by Qwerty on 10/29/15.
-//  Copyright © 2015 Vi. All rights reserved.
-//
-
 import UIKit
 
 class SigninViewController: UIViewController, UIWebViewDelegate {
@@ -15,32 +7,33 @@ class SigninViewController: UIViewController, UIWebViewDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    let button   = UIButton(type: UIButtonType.System) as UIButton
-    button.frame = CGRectMake(100, 100, 100, 50)
-    button.backgroundColor = UIColor.greenColor()
-    button.setTitle("Test Button", forState: UIControlState.Normal)
-    button.addTarget(self, action: "closeWebView:", forControlEvents: UIControlEvents.TouchUpInside)
-    
     let webView:UIWebView = UIWebView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
     
     let address = "http://localhost:3000/authenticate/" + self.appname
-    //let address = "https://slack.com/signin"
     webView.loadRequest(NSURLRequest(URL: NSURL(string: address)!))
+    webView.delegate = self
     
     self.view.addSubview(webView)
-    self.view.addSubview(button)
   }
   
-  func closeWebView(sender: UIButton!) {
-    var num = 0
-    for subview in self.view.subviews {
-      if(num == 0) {
-        let subview = subview as! UIWebView
-        let html = subview.stringByEvaluatingJavaScriptFromString("document.body.innerHTML")
-        appManager.saveToken(self.appname, tokenToSave: html!)
-      }
-      num = num + 1
+  func webViewDidFinishLoad(webView: UIWebView) {
+    if matchesForRegexInText("done$", text: webView.request?.mainDocumentURL?.absoluteString).count >= 1 {
+      let token = webView.stringByEvaluatingJavaScriptFromString("token")
+      appManager.saveToken(self.appname, tokenToSave: token!)
+      self.dismissViewControllerAnimated(true, completion: nil)
     }
-    self.dismissViewControllerAnimated(true, completion: nil)
+  }
+  
+  func matchesForRegexInText(regex: String!, text: String!) -> [String] {
+    do {
+      let regex = try NSRegularExpression(pattern: regex, options: [])
+      let nsString = text as NSString
+      let results = regex.matchesInString(text,
+        options: [], range: NSMakeRange(0, nsString.length))
+      return results.map { nsString.substringWithRange($0.range)}
+    } catch let error as NSError {
+      print("invalid regex: \(error.localizedDescription)")
+      return []
+    }
   }
 }
