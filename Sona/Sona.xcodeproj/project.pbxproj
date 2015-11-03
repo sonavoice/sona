@@ -14,6 +14,9 @@
 		056FA6271BE83022007DE1AC /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 056FA6261BE83022007DE1AC /* SWRevealViewController.m */; settings = {ASSET_TAGS = (); }; };
 		056FA6281BE83022007DE1AC /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 056FA6261BE83022007DE1AC /* SWRevealViewController.m */; settings = {ASSET_TAGS = (); }; };
 		056FA6291BE83022007DE1AC /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 056FA6261BE83022007DE1AC /* SWRevealViewController.m */; settings = {ASSET_TAGS = (); }; };
+		0592AC6A1BE8376900F84307 /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0592AC681BE8376900F84307 /* Library.storyboard */; settings = {ASSET_TAGS = (); }; };
+		0592AC6B1BE8376900F84307 /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0592AC681BE8376900F84307 /* Library.storyboard */; settings = {ASSET_TAGS = (); }; };
+		0592AC6C1BE8376900F84307 /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0592AC681BE8376900F84307 /* Library.storyboard */; settings = {ASSET_TAGS = (); }; };
 		83303FD51BDE9AC90024A10D /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 836DA7E01BDC471F0031D676 /* Lato-Regular.ttf */; };
 		83303FD61BDE9AD00024A10D /* SF-UI-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 836DA7E11BDC477D0031D676 /* SF-UI-Display-Regular.otf */; };
 		83303FD71BDE9AD60024A10D /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 836DA7DF1BDC46580031D676 /* Roboto-Regular.ttf */; };
@@ -115,9 +118,6 @@
 		ECBCCFBB1BE814900000425F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBCCFBA1BE814900000425F /* HomeViewController.swift */; };
 		ECBCCFBC1BE814900000425F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBCCFBA1BE814900000425F /* HomeViewController.swift */; };
 		ECBCCFBD1BE814900000425F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBCCFBA1BE814900000425F /* HomeViewController.swift */; };
-		ECBCCFC21BE814D60000425F /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBCCFC01BE814D60000425F /* Library.storyboard */; };
-		ECBCCFC31BE814D60000425F /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBCCFC01BE814D60000425F /* Library.storyboard */; };
-		ECBCCFC41BE814D60000425F /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBCCFC01BE814D60000425F /* Library.storyboard */; };
 		ECBCCFC61BE814EF0000425F /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBCCFC51BE814EF0000425F /* App.swift */; };
 		ECBCCFC71BE814EF0000425F /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBCCFC51BE814EF0000425F /* App.swift */; };
 		ECBCCFC81BE814EF0000425F /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBCCFC51BE814EF0000425F /* App.swift */; };
@@ -175,6 +175,7 @@
 		056FA6201BE82FDE007DE1AC /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		056FA6251BE83022007DE1AC /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		056FA6261BE83022007DE1AC /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		0592AC691BE8376900F84307 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Library.storyboard; sourceTree = "<group>"; };
 		0ED40D70AE992BAE998A421D /* Pods-SonaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SonaUITests/Pods-SonaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		20AE062583503E9B97AB5A4C /* Pods-SonaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SonaTests/Pods-SonaTests.release.xcconfig"; sourceTree = "<group>"; };
 		5643E61EFBBA406E9A2688DC /* Pods-Sona.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sona.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sona/Pods-Sona.debug.xcconfig"; sourceTree = "<group>"; };
@@ -233,7 +234,6 @@
 		ECBCCFB21BE8147D0000425F /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = Sona/SearchViewController.swift; sourceTree = SOURCE_ROOT; };
 		ECBCCFB61BE814890000425F /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = Sona/Home.storyboard; sourceTree = SOURCE_ROOT; };
 		ECBCCFBA1BE814900000425F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Sona/HomeViewController.swift; sourceTree = SOURCE_ROOT; };
-		ECBCCFC11BE814D60000425F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Sona/Base.lproj/Library.storyboard; sourceTree = SOURCE_ROOT; };
 		ECBCCFC51BE814EF0000425F /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = App.swift; path = Sona/App.swift; sourceTree = SOURCE_ROOT; };
 		ECBCCFC91BE814F40000425F /* AppInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppInfoViewController.swift; path = Sona/AppInfoViewController.swift; sourceTree = SOURCE_ROOT; };
 		ECBCCFCD1BE814FE0000425F /* LibraryNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LibraryNavController.swift; path = Sona/LibraryNavController.swift; sourceTree = SOURCE_ROOT; };
@@ -434,11 +434,11 @@
 		8352C6931BD6BD2F007B3F5F /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				0592AC681BE8376900F84307 /* Library.storyboard */,
 				ECBCCFC51BE814EF0000425F /* App.swift */,
 				ECBCCFC91BE814F40000425F /* AppInfoViewController.swift */,
 				ECBCCFCD1BE814FE0000425F /* LibraryNavController.swift */,
 				ECBCCFCE1BE814FE0000425F /* LibraryViewController.swift */,
-				ECBCCFC01BE814D60000425F /* Library.storyboard */,
 				ECBCCFD51BE815130000425F /* DummyData.swift */,
 				ECBCCFD91BE8151B0000425F /* CellView.swift */,
 				ECBCCFDD1BE815290000425F /* SigninViewController.swift */,
@@ -671,8 +671,8 @@
 				ECBCCF771BE812360000425F /* chris.png in Resources */,
 				ECBCCF891BE812470000425F /* image2.png in Resources */,
 				ECBCCF861BE812470000425F /* image1.png in Resources */,
+				0592AC6A1BE8376900F84307 /* Library.storyboard in Resources */,
 				ECBCCF9B1BE812470000425F /* image8.png in Resources */,
-				ECBCCFC21BE814D60000425F /* Library.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -688,6 +688,7 @@
 				ECBCCFB01BE814790000425F /* Search.storyboard in Resources */,
 				ECBCCF901BE812470000425F /* image4.png in Resources */,
 				ECBCCFB81BE814890000425F /* Home.storyboard in Resources */,
+				0592AC6B1BE8376900F84307 /* Library.storyboard in Resources */,
 				ECBCCF931BE812470000425F /* image5.png in Resources */,
 				ECBCCFA01BE812570000425F /* start_listening.wav in Resources */,
 				ECBCCF961BE812470000425F /* image6.png in Resources */,
@@ -695,7 +696,6 @@
 				ECBCCF9C1BE812470000425F /* image8.png in Resources */,
 				ECBCCF991BE812470000425F /* image7.png in Resources */,
 				ECBCCF8D1BE812470000425F /* image3.png in Resources */,
-				ECBCCFC31BE814D60000425F /* Library.storyboard in Resources */,
 				ECBCCF701BE811BE0000425F /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -712,6 +712,7 @@
 				ECBCCFB11BE814790000425F /* Search.storyboard in Resources */,
 				ECBCCF911BE812470000425F /* image4.png in Resources */,
 				ECBCCFB91BE814890000425F /* Home.storyboard in Resources */,
+				0592AC6C1BE8376900F84307 /* Library.storyboard in Resources */,
 				ECBCCF941BE812470000425F /* image5.png in Resources */,
 				ECBCCFA11BE812570000425F /* start_listening.wav in Resources */,
 				ECBCCF971BE812470000425F /* image6.png in Resources */,
@@ -719,7 +720,6 @@
 				ECBCCF9D1BE812470000425F /* image8.png in Resources */,
 				ECBCCF9A1BE812470000425F /* image7.png in Resources */,
 				ECBCCF8E1BE812470000425F /* image3.png in Resources */,
-				ECBCCFC41BE814D60000425F /* Library.storyboard in Resources */,
 				ECBCCF711BE811BE0000425F /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -961,6 +961,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		0592AC681BE8376900F84307 /* Library.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0592AC691BE8376900F84307 /* Base */,
+			);
+			name = Library.storyboard;
+			sourceTree = "<group>";
+		};
 		EC8838691BE8158500D616C3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -975,14 +983,6 @@
 				EC88386D1BE8159B00D616C3 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		ECBCCFC01BE814D60000425F /* Library.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ECBCCFC11BE814D60000425F /* Base */,
-			);
-			name = Library.storyboard;
 			sourceTree = "<group>";
 		};
 		ECBCCFE51BE8154A0000425F /* Settings.storyboard */ = {
