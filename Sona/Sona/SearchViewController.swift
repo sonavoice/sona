@@ -34,13 +34,15 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
       cell.name.textColor = UIColor(red: 33/255.0, green: 33/255.0, blue: 33/255.0, alpha: 1)
       cell.name.text = appInfo.name
       
-      let url = NSURL(string: appInfo.iconURL!)
+      //let url = NSURL(string: appInfo.iconURL!)
+//      if let data = NSData(contentsOfURL: url!) {
+//        cell.icon.image = UIImage(data: data)
+//      } else {
+//        cell.icon.image = UIImage(named: "image1")
+//      }
+      cell.icon.image = UIImage(named: "image1")
+      cell.icon.downloadImageFrom(link: appInfo.iconURL!, contentMode: UIViewContentMode.ScaleAspectFit)
       
-      if let data = NSData(contentsOfURL: url!) {
-        cell.icon.image = UIImage(data: data)
-      } else {
-        cell.icon.image = UIImage(named: "image1")
-      }
       cell.arrow.font = UIFont.fontAwesomeOfSize(30)
       cell.arrow.text = String.fontAwesomeIconWithCode("fa-angle-right")
       return cell
