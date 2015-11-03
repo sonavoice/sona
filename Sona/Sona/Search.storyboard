@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MAj-qE-wfv">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -33,7 +33,7 @@
         <!--Search-->
         <scene sceneID="Cwt-a9-hXK">
             <objects>
-                <viewController id="wF0-2r-Qak" customClass="SearchViewController" customModule="Vi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wF0-2r-Qak" customClass="SearchViewController" customModule="Sona" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Xj8-UT-I63"/>
                         <viewControllerLayoutGuide type="bottom" id="Vvr-rv-Dyt"/>
@@ -53,7 +53,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellView" rowHeight="45" id="Wqc-FO-sx0" customClass="CellView" customModule="Vi" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellView" rowHeight="45" id="Wqc-FO-sx0" customClass="CellView" customModule="Sona" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="560" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wqc-FO-sx0" id="gjq-Rw-GHZ">
@@ -99,9 +99,7 @@
                                             <outlet property="arrow" destination="moa-nS-zSa" id="RpG-gY-eqW"/>
                                             <outlet property="icon" destination="90Q-eo-qg0" id="pRA-uP-r0R"/>
                                             <outlet property="name" destination="a8v-8Z-pv8" id="cMy-UE-GKG"/>
-                                            <segue destination="9yR-hL-ZRl" kind="show" identifier="appSegue" id="cJZ-b1-Gag">
-                                                <nil key="action"/>
-                                            </segue>
+                                            <segue destination="9yR-hL-ZRl" kind="show" identifier="appSegue" id="cJZ-b1-Gag"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -123,7 +121,13 @@
                             <constraint firstAttribute="trailingMargin" secondItem="dvh-nY-lSF" secondAttribute="trailing" id="xxS-FG-WBU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Search" id="4j0-Uv-4iy"/>
+                    <navigationItem key="navigationItem" title="Search" id="4j0-Uv-4iy">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="fXt-fd-ake">
+                            <connections>
+                                <action selector="exitSearch:" destination="wF0-2r-Qak" id="4zc-Lz-Jz5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="dvh-nY-lSF" id="x2t-NN-9ro"/>
                     </connections>
@@ -135,7 +139,7 @@
         <!--App Info View Controller-->
         <scene sceneID="ObJ-ag-PZx">
             <objects>
-                <viewController id="9yR-hL-ZRl" customClass="AppInfoViewController" customModule="Vi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9yR-hL-ZRl" customClass="AppInfoViewController" customModule="Sona" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6DF-mM-tNW"/>
                         <viewControllerLayoutGuide type="bottom" id="Zdg-qE-LSs"/>

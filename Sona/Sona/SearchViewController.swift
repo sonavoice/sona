@@ -13,6 +13,10 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
   var appInfo: App!
   @IBOutlet weak var tableView: UITableView!
   
+  @IBAction func exitSearch(sender: AnyObject) {
+    self.navigationController?.popViewControllerAnimated(true)
+  }
+  
   override func viewDidLoad() {
     self.getApp()
   }
