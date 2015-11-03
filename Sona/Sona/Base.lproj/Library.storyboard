@@ -410,8 +410,8 @@
                                 <exclude reference="aoD-S6-7T8"/>
                                 <exclude reference="C2p-LL-LKe"/>
                                 <exclude reference="slI-CA-6zk"/>
-                                <exclude reference="yl3-Mw-nt1"/>
                                 <exclude reference="YTJ-WN-Mda"/>
+                                <exclude reference="yl3-Mw-nt1"/>
                             </mask>
                         </variation>
                     </view>
