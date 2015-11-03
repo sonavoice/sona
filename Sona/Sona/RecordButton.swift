@@ -13,47 +13,34 @@ let PI:CGFloat = CGFloat(M_PI)
 @IBDesignable
 class RecordButton: UIButton {
   
-  let primary: UIColor = UIColor(red: 249.0/255, green: 53.0/255, blue: 78.0/255, alpha: 1)
-  let primaryLight: UIColor = UIColor(red: 255.0/255, green: 232.0/255, blue: 235.0/255, alpha: 1)
-  
   override func drawRect(rect: CGRect) {
-    let center = CGPoint(x:bounds.width/2, y: bounds.height/2)
-    let radius: CGFloat = max(bounds.width, bounds.height)/2
+    //// Color Declarations
+    let primary = UIColor(red: 0.969, green: 0.149, blue: 0.243, alpha: 1.000)
+    let light = UIColor(red: 1.000, green: 0.910, blue: 0.918, alpha: 1.000)
+    let white = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000)
     
-    var arcWidth: CGFloat = radius-10
-    let startAngle: CGFloat = 0
-    let endAngle: CGFloat = 2 * PI
-    
-    let innerCircle = UIBezierPath(arcCenter: center, radius: radius-10 - (arcWidth/2), startAngle: startAngle, endAngle: endAngle, clockwise: true)
-    
-    innerCircle.lineWidth = arcWidth
-    primary.setStroke()
-    innerCircle.stroke()
-
-    arcWidth = radius * 0.5
-    
-    let innerRing = UIBezierPath(arcCenter: center, radius: radius - (radius/2.5)+0.5, startAngle: startAngle, endAngle: endAngle, clockwise: true)
-    
-    innerRing.lineWidth = arcWidth
-    primaryLight.setStroke()
-    innerRing.stroke()
+    //// outerRing Drawing
+    let outerRingPath = UIBezierPath(ovalInRect: CGRectMake(0, 0, 175, 175))
+    light.setFill()
+    outerRingPath.fill()
     
     
-    arcWidth = radius * 0.14
+    //// whiteRing Drawing
+    let whiteRingPath = UIBezierPath(ovalInRect: CGRectMake(4, 4, 167, 167))
+    white.setFill()
+    whiteRingPath.fill()
     
-    let whiteRing = UIBezierPath(arcCenter: center, radius: radius - (arcWidth*1.0), startAngle: startAngle, endAngle: endAngle, clockwise: true)
     
-    whiteRing.lineWidth = arcWidth
-    UIColor.whiteColor().setStroke()
-    whiteRing.stroke()
+    //// InnerRing Drawing
+    let innerRingPath = UIBezierPath(ovalInRect: CGRectMake(18, 18, 139, 139))
+    light.setFill()
+    innerRingPath.fill()
     
-    arcWidth = radius*0.09
     
-    let outerRing = UIBezierPath(arcCenter: center, radius: radius - (arcWidth/2), startAngle: startAngle, endAngle: endAngle, clockwise: true)
-    
-    outerRing.lineWidth = arcWidth
-    primaryLight.setStroke()
-    outerRing.stroke()
+    //// innerCircle Drawing
+    let innerCirclePath = UIBezierPath(ovalInRect: CGRectMake(57, 57, 61, 61))
+    primary.setFill()
+    innerCirclePath.fill()
   }
   
 }
