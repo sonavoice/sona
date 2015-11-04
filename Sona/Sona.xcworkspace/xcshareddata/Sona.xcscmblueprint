@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E6591023120D2DE0A1BE61865997752B036D4BF5",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E6591023120D2DE0A1BE61865997752B036D4BF5" : 0,
+    "8B18FB632A2A4AA718C3E584F635067837EA6926" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "74F52C27-60BE-4239-B4B0-C753948DCB21",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E6591023120D2DE0A1BE61865997752B036D4BF5" : "Sona\/",
+    "8B18FB632A2A4AA718C3E584F635067837EA6926" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Sona",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Sona\/Sona.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:sonavoice\/SonaSite.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8B18FB632A2A4AA718C3E584F635067837EA6926"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:garrettmaring\/Sona.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E6591023120D2DE0A1BE61865997752B036D4BF5"
+    }
+  ]
+}

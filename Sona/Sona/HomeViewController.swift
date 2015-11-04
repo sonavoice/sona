@@ -13,11 +13,11 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   var apps = [String]()
   var lang = "eng-USA" // Default to prevent crash
   let appManager = AppManager()
+  var button: HamburgerButton! = nil
   
   @IBOutlet var transcript: UILabel!
-  @IBOutlet var MicButton: UIButton!
-  @IBOutlet weak var rippleView: UIView!
-  @IBOutlet weak var menuButton: UIBarButtonItem!
+  @IBOutlet var recordButton: RecordButton!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -28,8 +28,12 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
     
     if revealViewController() != nil {
       revealViewController().rearViewRevealWidth = 150
-      menuButton.target = revealViewController()
-      menuButton.action = "revealToggle:"
+      
+      self.button = HamburgerButton(frame: CGRectMake(0, 0, 40, 40))
+      
+      self.button.addTarget(revealViewController(), action: "revealToggle:", forControlEvents: .TouchUpInside)
+      self.button.addTarget(self, action: "toggle:", forControlEvents: .TouchUpInside)
+      self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: button)
       
 //      revealViewController().rightViewRevealWidth = 150
 //      extraButton.target = revealViewController()
@@ -45,42 +49,16 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
     transcript.numberOfLines = 0
     transcript.sizeToFit()
     
-    /* Style Button */
-    styleMicButton()
-    setupViewsForRippleEffect()
-    
     /* Add Button functionality */
     createMicButtonPressFunctionality()
     
     /* Configure SpeechKit Server */
     configureNuance()
     
-    /* Add gesture capabilities */
-    //addUpSwipeGesture() 
   }
   
-  func setupViewsForRippleEffect(){
-    self.rippleView.layer.zPosition = 1111
-    self.rippleView.layer.cornerRadius = self.rippleView.frame.size.width / 2;
-    self.rippleView.clipsToBounds = true
-    self.rippleView.layer.borderColor = UIColor(red: 3/255.0, green: 169/255.0, blue: 244/255.0, alpha: 1.0).CGColor
-    self.rippleView.layer.borderWidth = 1
-    self.rippleView.hidden = true
-  }
-  
-  func animateRippleEffect(){
-    if (!animation) {
-      return ()
-    }
-    self.rippleView.transform = CGAffineTransformMakeScale(0.2, 0.2)
-    
-    UIView.animateWithDuration(0.8, delay: 0,
-      options: UIViewAnimationOptions.CurveLinear,
-      animations: {
-        self.rippleView.transform = CGAffineTransformMakeScale(1.0, 1.0)
-      }, completion: { finished in
-        self.animateRippleEffect()
-    })
+  func toggle(sender: AnyObject!) {
+    self.button.showsMenu = !self.button.showsMenu
   }
   
   override func didReceiveMemoryWarning() {
@@ -126,17 +104,8 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
     }
   }
   
-  func styleMicButton() {
-    let circlePath = UIBezierPath.init(arcCenter: CGPointMake(MicButton.bounds.size.width / 2, MicButton.bounds.size.height / 2), radius: MicButton.bounds.size.height / 2, startAngle: 0.0, endAngle: 2 * CGFloat(M_PI), clockwise: true)
-    let circleShape = CAShapeLayer()
-    circleShape.path = circlePath.CGPath
-    MicButton.layer.mask = circleShape
-    MicButton.titleLabel?.font = UIFont.fontAwesomeOfSize(50)
-    MicButton.setTitle(String.fontAwesomeIconWithCode("fa-microphone"), forState: .Normal)
-  }
-  
   func createMicButtonPressFunctionality() {
-    self.MicButton.addTarget(self, action: "startListening", forControlEvents: .TouchUpInside)
+//    self.recordButton.addTarget(self, action: "startListening", forControlEvents: .TouchUpInside)
   }
   
   /* Server & API */
@@ -183,6 +152,7 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
 
   /*** Nuance ***/
   func configureNuance() {
+    
     SpeechKit.setupWithID("NMDPTRIAL_garrettmaring_gmail_com20151023221408", host: "sslsandbox.nmdp.nuancemobility.net", port: 443, useSSL: true, delegate: self)
     
     let earconStart = SKEarcon.earconWithName("start_listening.wav") as! SKEarcon
@@ -196,15 +166,12 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   func recognizerDidBeginRecording(recognizer: SKRecognizer!) {
     NSLog("I have started recording")
     animation = true
-    self.rippleView.hidden = false
-    animateRippleEffect()
   }
   
   func recognizerDidFinishRecording(recognizer: SKRecognizer!) {
     NSLog("I have finished recording")
     voiceSearch!.stopRecording()
     animation = false
-    self.rippleView.hidden = true
   }
   
   func recognizer(recognizer: SKRecognizer!, didFinishWithResults results: SKRecognition!) {
