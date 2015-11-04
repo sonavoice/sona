@@ -8,17 +8,50 @@
 import Alamofire
 import UIKit
 
-class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDataSource {
   var apps = [App]()
   var appInfo: App!
+  
   @IBOutlet weak var tableView: UITableView!
+  
+  @IBOutlet var searchBar: UISearchBar!
   
   @IBAction func exitSearch(sender: AnyObject) {
     self.navigationController?.popViewControllerAnimated(true)
   }
   
   override func viewDidLoad() {
+    super.viewDidLoad()
     self.getApp()
+    searchBar.delegate = self
+  }
+  
+  func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+    Alamofire.request(.GET, "http://sonavoice.com/extension", parameters: ["name": searchBar.text as! AnyObject])
+      .responseJSON { response in
+        switch response.result {
+          case .Success:
+            if let JSON = response.result.value {
+              let apps = JSON as! NSArray
+              var newApps = [App]()
+              for item in apps {
+                if self.appCheck(item) {
+                  let appName = item.valueForKey("name") as! String
+                  let appDesc = item.valueForKey("description") as! String
+                  let appComm = item.valueForKey("commands") as! [String]
+                  let appIcon = item.valueForKey("iconURL") as! String
+                  newApps.append(App(name: appName, description: appDesc, commands: appComm, iconURL: appIcon))
+                  }
+                }
+                self.apps = newApps
+                self.tableView.reloadData()
+              } else {
+                
+              }
+          case .Failure:
+            print("failed")
+        }
+    }
   }
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,12 +67,6 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
       cell.name.textColor = UIColor(red: 33/255.0, green: 33/255.0, blue: 33/255.0, alpha: 1)
       cell.name.text = appInfo.name
       
-      //let url = NSURL(string: appInfo.iconURL!)
-//      if let data = NSData(contentsOfURL: url!) {
-//        cell.icon.image = UIImage(data: data)
-//      } else {
-//        cell.icon.image = UIImage(named: "image1")
-//      }
       cell.icon.image = UIImage(named: "image1")
       cell.icon.downloadImageFrom(link: appInfo.iconURL!, contentMode: UIViewContentMode.ScaleAspectFit)
       
@@ -58,7 +85,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
   }
   
   func getApp() {
-    Alamofire.request(.GET, "http://viapi.io/extension", parameters: ["foo": "bar"])
+    Alamofire.request(.GET, "http://sonavoice.com/extension", parameters: ["foo": "bar"])
       .responseJSON { response in
         switch response.result {
           case .Success:
