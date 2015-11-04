@@ -7,7 +7,6 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   
   var voiceSearch: SKRecognizer?
   var tts = TextToSpeech()
-  var animation: Bool = false
   var isListening: Bool = false
   let userId = UIDevice.currentDevice().identifierForVendor!.UUIDString
   var apps = [String]()
@@ -35,10 +34,6 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
       self.button.addTarget(self, action: "toggle:", forControlEvents: .TouchUpInside)
       
       self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: button)
-      
-//      revealViewController().rightViewRevealWidth = 150
-//      extraButton.target = revealViewController()
-//      extraButton.action = "rightRevealToggle:"
       
       view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
@@ -88,20 +83,6 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
     } else {
       self.voiceSearch?.cancel()
       self.isListening = false
-    }
-  }
-  
-  /* UI Set up */
-  func addUpSwipeGesture() {
-    let upSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
-    upSwipe.direction = .Up
-    view.addGestureRecognizer(upSwipe)
-  }
-  
-  func handleSwipes(sender:UISwipeGestureRecognizer) {
-    if (sender.direction == .Up) {
-      NSLog("Swipe Up")
-      startListening()
     }
   }
   
@@ -166,13 +147,13 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
 
   func recognizerDidBeginRecording(recognizer: SKRecognizer!) {
     NSLog("I have started recording")
-    animation = true
   }
   
   func recognizerDidFinishRecording(recognizer: SKRecognizer!) {
     NSLog("I have finished recording")
     voiceSearch!.stopRecording()
-    animation = false
+    /* Ends animation on end of listening */
+    self.recordButton.animating = !self.recordButton.animating
   }
   
   func recognizer(recognizer: SKRecognizer!, didFinishWithResults results: SKRecognition!) {
