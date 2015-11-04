@@ -156,7 +156,7 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
       let authDict = ["token": token]
       
       /* Configure final object to be sent to server as JSON */
-      let parameters : [String: Any] = ["transcript": transcript, "auth": authDict]
+      let parameters = ["transcript": transcript, "auth": authDict]
       
       Alamofire.request(.POST, "http://localhost:3000/command", parameters: parameters as? [String : AnyObject], encoding: .JSON)
         .responseJSON { response in
