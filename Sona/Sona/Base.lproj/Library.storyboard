@@ -15,7 +15,7 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Library-->
+        <!--Library View Controller-->
         <scene sceneID="N1N-Us-4UO">
             <objects>
                 <tableViewController id="sMf-EI-Imf" customClass="LibraryViewController" customModule="Sona" customModuleProvider="target" sceneMemberID="viewController">
@@ -29,7 +29,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="45"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LvU-Ss-LWM" id="QKP-qZ-S8H">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R4w-Xw-hIa">
@@ -82,9 +82,9 @@
                             <outlet property="delegate" destination="sMf-EI-Imf" id="tf8-20-d7L"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Library" id="bgJ-yj-lQM">
+                    <navigationItem key="navigationItem" id="bgJ-yj-lQM">
                         <barButtonItem key="leftBarButtonItem" title="Item" id="6b1-oF-GUe"/>
-                        <barButtonItem key="rightBarButtonItem" title="Add Plug-in" id="kYQ-mO-7Ht">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="kYQ-mO-7Ht">
                             <connections>
                                 <segue destination="4ot-BW-Z5E" kind="show" id="2vw-p2-IcX"/>
                             </connections>
@@ -248,7 +248,7 @@
                                         <rect key="frame" x="0.0" y="28" width="560" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OsE-iG-Ky4" id="eKp-a8-Dzt">
-                                            <rect key="frame" x="0.0" y="0.0" width="560" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="44.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gEG-6x-gM7">

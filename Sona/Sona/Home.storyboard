@@ -27,7 +27,7 @@
             </objects>
             <point key="canvasLocation" x="-587" y="-305"/>
         </scene>
-        <!--Home-->
+        <!--Home View Controller-->
         <scene sceneID="JLx-fj-KJS">
             <objects>
                 <viewController id="rSf-h4-L5D" customClass="HomeViewController" customModule="Sona" customModuleProvider="target" sceneMemberID="viewController">
@@ -101,7 +101,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="8bL-65-0WK">
+                    <navigationItem key="navigationItem" id="8bL-65-0WK">
                         <barButtonItem key="leftBarButtonItem" title="Item" id="hbE-UW-EOb"/>
                     </navigationItem>
                     <connections>

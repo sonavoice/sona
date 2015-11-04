@@ -29,13 +29,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       }
       
       
-      UIApplication.sharedApplication().statusBarStyle = .LightContent
-      UINavigationBar.appearance().titleTextAttributes = [
-        NSFontAttributeName: UIFont(name: "Lato-Regular", size: 24)!,
-        NSForegroundColorAttributeName : UIColor.whiteColor()
-      ]
-      UINavigationBar.appearance().barTintColor = UIColor(red: 3/255.0, green: 169/255.0, blue: 244/255.0, alpha: 1)
-      UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+//      UIApplication.sharedApplication().statusBarStyle = .LightContent
+//      UINavigationBar.appearance().titleTextAttributes = [
+//        NSFontAttributeName: UIFont(name: "Lato-Regular", size: 24)!,
+//        NSForegroundColorAttributeName : UIColor.whiteColor()
+//      ]
+//      UINavigationBar.appearance().barTintColor = UIColor(red: 3/255.0, green: 169/255.0, blue: 244/255.0, alpha: 1)
+//      UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+
       return true
     }
 

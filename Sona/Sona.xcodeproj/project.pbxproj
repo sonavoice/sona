@@ -20,6 +20,7 @@
 		83303FD51BDE9AC90024A10D /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 836DA7E01BDC471F0031D676 /* Lato-Regular.ttf */; };
 		83303FD61BDE9AD00024A10D /* SF-UI-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 836DA7E11BDC477D0031D676 /* SF-UI-Display-Regular.otf */; };
 		83303FD71BDE9AD60024A10D /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 836DA7DF1BDC46580031D676 /* Roboto-Regular.ttf */; };
+		8378B90D1BE9A53B00DB2C25 /* NavigationBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8378B90C1BE9A53B00DB2C25 /* NavigationBarController.swift */; settings = {ASSET_TAGS = (); }; };
 		83FD405A1BE856D100A683B4 /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FD40591BE856D100A683B4 /* RecordButton.swift */; settings = {ASSET_TAGS = (); }; };
 		99334BB3569321B6938147FE /* Pods_SonaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4AA68EEA6A2712BC22C2AFE /* Pods_SonaUITests.framework */; };
 		A634616A1CECEEF34F9E0BA6 /* Pods_SonaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FBD770CD99F84404CD9FAD7 /* Pods_SonaTests.framework */; };
@@ -187,6 +188,7 @@
 		836DA7DF1BDC46580031D676 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		836DA7E01BDC471F0031D676 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		836DA7E11BDC477D0031D676 /* SF-UI-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Regular.otf"; sourceTree = "<group>"; };
+		8378B90C1BE9A53B00DB2C25 /* NavigationBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarController.swift; sourceTree = "<group>"; };
 		83FD40591BE856D100A683B4 /* RecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordButton.swift; sourceTree = "<group>"; };
 		8CED057656D2E548620FC05D /* Pods-Sona.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sona.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sona/Pods-Sona.release.xcconfig"; sourceTree = "<group>"; };
 		A4AA68EEA6A2712BC22C2AFE /* Pods_SonaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SonaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -354,6 +356,7 @@
 			isa = PBXGroup;
 			children = (
 				ECBCCF6A1BE811A90000425F /* NavigatorViewController.swift */,
+				8378B90C1BE9A53B00DB2C25 /* NavigationBarController.swift */,
 			);
 			name = Navigator;
 			sourceTree = "<group>";
@@ -874,6 +877,7 @@
 				056FA6271BE83022007DE1AC /* SWRevealViewController.m in Sources */,
 				EC8838771BE8171100D616C3 /* AppDelegate.swift in Sources */,
 				ECBCCF531BE7FD450000425F /* Language.swift in Sources */,
+				8378B90D1BE9A53B00DB2C25 /* NavigationBarController.swift in Sources */,
 				EC7EFCD01BE81C060063EE70 /* SonaData.xcdatamodeld in Sources */,
 				ECBCCFA31BE812660000425F /* TextToSpeech.swift in Sources */,
 				ECBCCFCA1BE814F40000425F /* AppInfoViewController.swift in Sources */,
