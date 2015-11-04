@@ -20,6 +20,9 @@
 		83303FD51BDE9AC90024A10D /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 836DA7E01BDC471F0031D676 /* Lato-Regular.ttf */; };
 		83303FD61BDE9AD00024A10D /* SF-UI-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 836DA7E11BDC477D0031D676 /* SF-UI-Display-Regular.otf */; };
 		83303FD71BDE9AD60024A10D /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 836DA7DF1BDC46580031D676 /* Roboto-Regular.ttf */; };
+		833947771BE9B94C008747F8 /* brand.png in Resources */ = {isa = PBXBuildFile; fileRef = 833947741BE9B94C008747F8 /* brand.png */; settings = {ASSET_TAGS = (); }; };
+		833947781BE9B94C008747F8 /* logo_thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = 833947751BE9B94C008747F8 /* logo_thumbnail.png */; settings = {ASSET_TAGS = (); }; };
+		833947791BE9B94C008747F8 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 833947761BE9B94C008747F8 /* logo.png */; settings = {ASSET_TAGS = (); }; };
 		8378B90D1BE9A53B00DB2C25 /* NavigationBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8378B90C1BE9A53B00DB2C25 /* NavigationBarController.swift */; settings = {ASSET_TAGS = (); }; };
 		83FD405A1BE856D100A683B4 /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FD40591BE856D100A683B4 /* RecordButton.swift */; settings = {ASSET_TAGS = (); }; };
 		99334BB3569321B6938147FE /* Pods_SonaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4AA68EEA6A2712BC22C2AFE /* Pods_SonaUITests.framework */; };
@@ -182,6 +185,9 @@
 		20AE062583503E9B97AB5A4C /* Pods-SonaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SonaTests/Pods-SonaTests.release.xcconfig"; sourceTree = "<group>"; };
 		5643E61EFBBA406E9A2688DC /* Pods-Sona.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sona.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sona/Pods-Sona.debug.xcconfig"; sourceTree = "<group>"; };
 		6FBD770CD99F84404CD9FAD7 /* Pods_SonaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SonaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		833947741BE9B94C008747F8 /* brand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brand.png; sourceTree = "<group>"; };
+		833947751BE9B94C008747F8 /* logo_thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_thumbnail.png; sourceTree = "<group>"; };
+		833947761BE9B94C008747F8 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		8352C65B1BD6A5DA007B3F5F /* Sona.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sona.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8352C6711BD6A5DA007B3F5F /* Sona.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Sona.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8352C67C1BD6A5DA007B3F5F /* Sona.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Sona.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -493,6 +499,9 @@
 		EC9163CB1BD960E300401DC6 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				833947741BE9B94C008747F8 /* brand.png */,
+				833947751BE9B94C008747F8 /* logo_thumbnail.png */,
+				833947761BE9B94C008747F8 /* logo.png */,
 				ECBCCF721BE8122D0000425F /* Assets.xcassets */,
 				ECBCCF7E1BE812460000425F /* image1.png */,
 				ECBCCF7F1BE812460000425F /* image2.png */,
@@ -658,6 +667,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC88386B1BE8158500D616C3 /* Main.storyboard in Resources */,
+				833947781BE9B94C008747F8 /* logo_thumbnail.png in Resources */,
 				ECBCCF7B1BE8123B0000425F /* dog.jpg in Resources */,
 				ECBCCFB71BE814890000425F /* Home.storyboard in Resources */,
 				83303FD71BDE9AD60024A10D /* Roboto-Regular.ttf in Resources */,
@@ -666,11 +676,13 @@
 				ECBCCFAF1BE814790000425F /* Search.storyboard in Resources */,
 				ECBCCFE71BE8154A0000425F /* Settings.storyboard in Resources */,
 				056FA61E1BE82F6D007DE1AC /* Master.storyboard in Resources */,
+				833947771BE9B94C008747F8 /* brand.png in Resources */,
 				ECBCCF8F1BE812470000425F /* image4.png in Resources */,
 				EC88386E1BE8159B00D616C3 /* LaunchScreen.storyboard in Resources */,
 				ECBCCF8C1BE812470000425F /* image3.png in Resources */,
 				83303FD51BDE9AC90024A10D /* Lato-Regular.ttf in Resources */,
 				ECBCCF9F1BE812570000425F /* start_listening.wav in Resources */,
+				833947791BE9B94C008747F8 /* logo.png in Resources */,
 				ECBCCF981BE812470000425F /* image7.png in Resources */,
 				ECBCCF921BE812470000425F /* image5.png in Resources */,
 				ECBCCF951BE812470000425F /* image6.png in Resources */,
