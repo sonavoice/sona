@@ -53,7 +53,8 @@ class RecordButton: UIButton {
   }
   
   func pulse() {
-    UIView.animateWithDuration(0.5 , delay: 0.0, options: .AllowUserInteraction,
+    /* Options for Keyframes and UI */
+    UIView.animateWithDuration(0.5 , delay: 0.0, options: [.AllowUserInteraction, .AllowUserInteraction],
       animations: {
         self.transform = CGAffineTransformMakeScale(0.85, 0.85)
       },
