@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		056FA61E1BE82F6D007DE1AC /* Master.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 056FA61D1BE82F6D007DE1AC /* Master.storyboard */; settings = {ASSET_TAGS = (); }; };
-		056FA6211BE82FDE007DE1AC /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056FA6201BE82FDE007DE1AC /* MenuController.swift */; settings = {ASSET_TAGS = (); }; };
-		056FA6221BE82FDE007DE1AC /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056FA6201BE82FDE007DE1AC /* MenuController.swift */; settings = {ASSET_TAGS = (); }; };
-		056FA6231BE82FDE007DE1AC /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056FA6201BE82FDE007DE1AC /* MenuController.swift */; settings = {ASSET_TAGS = (); }; };
-		056FA6271BE83022007DE1AC /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 056FA6261BE83022007DE1AC /* SWRevealViewController.m */; settings = {ASSET_TAGS = (); }; };
-		056FA6281BE83022007DE1AC /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 056FA6261BE83022007DE1AC /* SWRevealViewController.m */; settings = {ASSET_TAGS = (); }; };
-		056FA6291BE83022007DE1AC /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 056FA6261BE83022007DE1AC /* SWRevealViewController.m */; settings = {ASSET_TAGS = (); }; };
-		0592AC6A1BE8376900F84307 /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0592AC681BE8376900F84307 /* Library.storyboard */; settings = {ASSET_TAGS = (); }; };
-		0592AC6B1BE8376900F84307 /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0592AC681BE8376900F84307 /* Library.storyboard */; settings = {ASSET_TAGS = (); }; };
-		0592AC6C1BE8376900F84307 /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0592AC681BE8376900F84307 /* Library.storyboard */; settings = {ASSET_TAGS = (); }; };
+		056FA61E1BE82F6D007DE1AC /* Master.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 056FA61D1BE82F6D007DE1AC /* Master.storyboard */; };
+		056FA6211BE82FDE007DE1AC /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056FA6201BE82FDE007DE1AC /* MenuController.swift */; };
+		056FA6221BE82FDE007DE1AC /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056FA6201BE82FDE007DE1AC /* MenuController.swift */; };
+		056FA6231BE82FDE007DE1AC /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056FA6201BE82FDE007DE1AC /* MenuController.swift */; };
+		056FA6271BE83022007DE1AC /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 056FA6261BE83022007DE1AC /* SWRevealViewController.m */; };
+		056FA6281BE83022007DE1AC /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 056FA6261BE83022007DE1AC /* SWRevealViewController.m */; };
+		056FA6291BE83022007DE1AC /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 056FA6261BE83022007DE1AC /* SWRevealViewController.m */; };
+		0592AC6A1BE8376900F84307 /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0592AC681BE8376900F84307 /* Library.storyboard */; };
+		0592AC6B1BE8376900F84307 /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0592AC681BE8376900F84307 /* Library.storyboard */; };
+		0592AC6C1BE8376900F84307 /* Library.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0592AC681BE8376900F84307 /* Library.storyboard */; };
 		83303FD51BDE9AC90024A10D /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 836DA7E01BDC471F0031D676 /* Lato-Regular.ttf */; };
 		83303FD61BDE9AD00024A10D /* SF-UI-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 836DA7E11BDC477D0031D676 /* SF-UI-Display-Regular.otf */; };
 		83303FD71BDE9AD60024A10D /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 836DA7DF1BDC46580031D676 /* Roboto-Regular.ttf */; };
@@ -24,7 +24,7 @@
 		833947781BE9B94C008747F8 /* logo_thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = 833947751BE9B94C008747F8 /* logo_thumbnail.png */; settings = {ASSET_TAGS = (); }; };
 		833947791BE9B94C008747F8 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 833947761BE9B94C008747F8 /* logo.png */; settings = {ASSET_TAGS = (); }; };
 		8378B90D1BE9A53B00DB2C25 /* NavigationBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8378B90C1BE9A53B00DB2C25 /* NavigationBarController.swift */; settings = {ASSET_TAGS = (); }; };
-		83FD405A1BE856D100A683B4 /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FD40591BE856D100A683B4 /* RecordButton.swift */; settings = {ASSET_TAGS = (); }; };
+		83FD405A1BE856D100A683B4 /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FD40591BE856D100A683B4 /* RecordButton.swift */; };
 		99334BB3569321B6938147FE /* Pods_SonaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4AA68EEA6A2712BC22C2AFE /* Pods_SonaUITests.framework */; };
 		A634616A1CECEEF34F9E0BA6 /* Pods_SonaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FBD770CD99F84404CD9FAD7 /* Pods_SonaTests.framework */; };
 		C48C5841D156504A1A618CCA /* Pods_Sona.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C495AC49167F8FC76008486E /* Pods_Sona.framework */; };
@@ -156,6 +156,7 @@
 		ECBCCFEF1BE815650000425F /* LanguageOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBCCFEE1BE815650000425F /* LanguageOptionViewController.swift */; };
 		ECBCCFF01BE815650000425F /* LanguageOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBCCFEE1BE815650000425F /* LanguageOptionViewController.swift */; };
 		ECBCCFF11BE815650000425F /* LanguageOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBCCFEE1BE815650000425F /* LanguageOptionViewController.swift */; };
+		ECCA31C91BEA837400C0BFC2 /* HamburgerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA31C81BEA837400C0BFC2 /* HamburgerButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -255,6 +256,7 @@
 		ECBCCFE61BE8154A0000425F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Sona/Base.lproj/Settings.storyboard; sourceTree = SOURCE_ROOT; };
 		ECBCCFEA1BE8155B0000425F /* LanguageChoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LanguageChoice.swift; path = Sona/LanguageChoice.swift; sourceTree = SOURCE_ROOT; };
 		ECBCCFEE1BE815650000425F /* LanguageOptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LanguageOptionViewController.swift; path = Sona/LanguageOptionViewController.swift; sourceTree = SOURCE_ROOT; };
+		ECCA31C81BEA837400C0BFC2 /* HamburgerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerButton.swift; sourceTree = "<group>"; };
 		ECF6003E1BD80B5300751275 /* Sona-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Sona-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -463,6 +465,7 @@
 				ECBCCFB61BE814890000425F /* Home.storyboard */,
 				ECBCCFBA1BE814900000425F /* HomeViewController.swift */,
 				83FD40591BE856D100A683B4 /* RecordButton.swift */,
+				ECCA31C81BEA837400C0BFC2 /* HamburgerButton.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -888,6 +891,7 @@
 				ECBCCF431BE7FCA80000425F /* DataInitializer.swift in Sources */,
 				056FA6271BE83022007DE1AC /* SWRevealViewController.m in Sources */,
 				EC8838771BE8171100D616C3 /* AppDelegate.swift in Sources */,
+				ECCA31C91BEA837400C0BFC2 /* HamburgerButton.swift in Sources */,
 				ECBCCF531BE7FD450000425F /* Language.swift in Sources */,
 				8378B90D1BE9A53B00DB2C25 /* NavigationBarController.swift in Sources */,
 				EC7EFCD01BE81C060063EE70 /* SonaData.xcdatamodeld in Sources */,

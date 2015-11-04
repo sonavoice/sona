@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYS-p0-R4N">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYS-p0-R4N">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -39,19 +39,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wv2-qq-lZy">
-                                <rect key="frame" x="250" y="480" width="100" height="100"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.0078431372550000003" green="0.6588235294" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="6zD-7w-Q4a"/>
-                                    <constraint firstAttribute="height" constant="100" id="zxH-SX-t9P"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="topRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nkt-xZ-XfK" customClass="TopAlignedLabel" customModule="Sona" customModuleProvider="target">
                                 <rect key="frame" x="20" y="72" width="560" height="200"/>
                                 <animations/>
@@ -62,52 +49,34 @@
                                 <color key="textColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zh8-2U-rUg">
-                                <rect key="frame" x="250" y="480" width="100" height="100"/>
-                                <animations/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.49717216257668712" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICy-pF-KXf" customClass="RecordButton" customModule="Sona" customModuleProvider="target">
-                                <rect key="frame" x="213" y="213" width="175" height="175"/>
+                            <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICy-pF-KXf" customClass="RecordButton" customModule="Sona" customModuleProvider="target">
+                                <rect key="frame" x="225" y="441" width="151" height="151"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="175" id="Inj-kY-8M3"/>
-                                    <constraint firstAttribute="height" constant="175" id="tp0-Ef-OlM"/>
+                                    <constraint firstAttribute="width" constant="151" id="Inj-kY-8M3"/>
+                                    <constraint firstAttribute="height" constant="151" id="tp0-Ef-OlM"/>
                                 </constraints>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ICy-pF-KXf" firstAttribute="centerY" secondItem="V1i-Y3-Ydi" secondAttribute="centerY" id="9LE-kv-noe"/>
-                            <constraint firstItem="wv2-qq-lZy" firstAttribute="height" secondItem="Zh8-2U-rUg" secondAttribute="height" id="B3i-ol-tZB"/>
-                            <constraint firstItem="wv2-qq-lZy" firstAttribute="centerX" secondItem="V1i-Y3-Ydi" secondAttribute="centerX" id="ET6-gg-nsF"/>
-                            <constraint firstItem="Zh8-2U-rUg" firstAttribute="centerX" secondItem="V1i-Y3-Ydi" secondAttribute="centerX" id="Py5-Ct-sO8"/>
-                            <constraint firstAttribute="bottom" secondItem="wv2-qq-lZy" secondAttribute="bottom" constant="20" symbolic="YES" id="Q9a-8U-F6Z"/>
-                            <constraint firstItem="wv2-qq-lZy" firstAttribute="width" secondItem="Zh8-2U-rUg" secondAttribute="width" id="SfE-S3-3Jt"/>
-                            <constraint firstItem="Nkt-xZ-XfK" firstAttribute="centerX" secondItem="wv2-qq-lZy" secondAttribute="centerX" id="WuF-Rr-U0q"/>
+                            <constraint firstItem="ICy-pF-KXf" firstAttribute="centerY" secondItem="V1i-Y3-Ydi" secondAttribute="centerY" constant="216.5" id="9LE-kv-noe"/>
                             <constraint firstItem="ICy-pF-KXf" firstAttribute="centerX" secondItem="V1i-Y3-Ydi" secondAttribute="centerX" id="s0r-pe-8gW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Nkt-xZ-XfK" secondAttribute="trailing" id="tSX-S9-3VS"/>
                             <constraint firstItem="Nkt-xZ-XfK" firstAttribute="centerX" secondItem="V1i-Y3-Ydi" secondAttribute="centerX" id="x12-Va-8XM"/>
                             <constraint firstItem="Nkt-xZ-XfK" firstAttribute="top" secondItem="2Ms-RR-jvF" secondAttribute="bottom" constant="8" symbolic="YES" id="xeD-41-4zQ"/>
                             <constraint firstItem="Nkt-xZ-XfK" firstAttribute="leading" secondItem="V1i-Y3-Ydi" secondAttribute="leadingMargin" id="yHq-dz-TGd"/>
-                            <constraint firstItem="16m-cY-i7o" firstAttribute="top" secondItem="Zh8-2U-rUg" secondAttribute="bottom" constant="20" id="ykP-Zc-Ot3"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="WuF-Rr-U0q"/>
                                 <exclude reference="x12-Va-8XM"/>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="8bL-65-0WK">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="hbE-UW-EOb"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="8bL-65-0WK"/>
                     <connections>
-                        <outlet property="MicButton" destination="wv2-qq-lZy" id="z8t-c0-VSv"/>
-                        <outlet property="menuButton" destination="hbE-UW-EOb" id="Lh9-9R-3aw"/>
-                        <outlet property="rippleView" destination="Zh8-2U-rUg" id="IXB-ng-mda"/>
+                        <outlet property="recordButton" destination="ICy-pF-KXf" id="fns-tq-SfJ"/>
                         <outlet property="transcript" destination="Nkt-xZ-XfK" id="l8T-5z-ezq"/>
                     </connections>
                 </viewController>
