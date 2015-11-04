@@ -7,11 +7,22 @@
 //
 
 import UIKit
+import QuartzCore
 
 let PI:CGFloat = CGFloat(M_PI)
 
 @IBDesignable
 class RecordButton: UIButton {
+  
+  var animating = false
+  
+  override init(frame: CGRect) {
+    super.init(frame: frame)
+  }
+
+  required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+  }
   
   override func drawRect(rect: CGRect) {
     
@@ -33,12 +44,16 @@ class RecordButton: UIButton {
     let innerCirclePath = UIBezierPath(ovalInRect: CGRectMake(15, 15, 120, 120))
     UIColor.whiteColor().setFill()
     innerCirclePath.fill()
-    
     self.addTarget(self, action: "pressAnimation", forControlEvents: .TouchUpInside)
   }
   
   func pressAnimation() {
-    UIView.animateWithDuration(0.5 , delay: 0.0, options: .TransitionNone,
+    self.animating = !self.animating
+    self.pulse()
+  }
+  
+  func pulse() {
+    UIView.animateWithDuration(0.5 , delay: 0.0, options: .AllowUserInteraction,
       animations: {
         self.transform = CGAffineTransformMakeScale(0.85, 0.85)
       },
@@ -48,7 +63,9 @@ class RecordButton: UIButton {
             self.transform = CGAffineTransformIdentity
           },
           completion: { finish in
-            self.pressAnimation()
+            if self.animating {
+              self.pulse()
+            }
         })
     })
   }

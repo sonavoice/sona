@@ -49,7 +49,7 @@
                                 <color key="textColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICy-pF-KXf" customClass="RecordButton" customModule="Sona" customModuleProvider="target">
+                            <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICy-pF-KXf" customClass="RecordButton" customModule="Sona" customModuleProvider="target">
                                 <rect key="frame" x="225" y="441" width="151" height="151"/>
                                 <animations/>
                                 <constraints>
@@ -74,7 +74,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="8bL-65-0WK"/>
+                    <navigationItem key="navigationItem" id="8bL-65-0WK"/>
                     <connections>
                         <outlet property="recordButton" destination="ICy-pF-KXf" id="fns-tq-SfJ"/>
                         <outlet property="transcript" destination="Nkt-xZ-XfK" id="l8T-5z-ezq"/>

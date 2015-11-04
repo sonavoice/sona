@@ -29,10 +29,11 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
     if revealViewController() != nil {
       revealViewController().rearViewRevealWidth = 150
       
-      self.button = HamburgerButton(frame: CGRectMake(0, 0, 40, 40))
+      self.button = HamburgerButton(frame: CGRectMake(0, 0, 20, 20))
       
       self.button.addTarget(revealViewController(), action: "revealToggle:", forControlEvents: .TouchUpInside)
       self.button.addTarget(self, action: "toggle:", forControlEvents: .TouchUpInside)
+      
       self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: button)
       
 //      revealViewController().rightViewRevealWidth = 150
@@ -105,7 +106,7 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   }
   
   func createMicButtonPressFunctionality() {
-//    self.recordButton.addTarget(self, action: "startListening", forControlEvents: .TouchUpInside)
+    self.recordButton.addTarget(self, action: "startListening", forControlEvents: .TouchUpInside)
   }
   
   /* Server & API */
@@ -119,7 +120,7 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
     if extensionName == nil {
       self.tts.speak("Sorry, couldn't find plug-in. Please add relevant plug-in at the plug-in page")
     } else {
-      let token = appManager.getToken(extensionName!)
+      let token = appManager.getToken(extensionName!)!
       
       /* Do call to core data to get token with the extensionName and assign to authDict. */
       let authDict = ["token": token]
