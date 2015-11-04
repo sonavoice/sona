@@ -233,14 +233,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search for an extension" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="174-0T-hc2">
-                                <rect key="frame" x="20" y="72" width="560" height="30"/>
+                            <searchBar contentMode="redraw" placeholder="Search for extension" translatesAutoresizingMaskIntoConstraints="NO" id="XWu-DF-SXL">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="45" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bgW-r5-5FE">
-                                <rect key="frame" x="20" y="102" width="560" height="498"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="45" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bgW-r5-5FE">
+                                <rect key="frame" x="20" y="108" width="560" height="498"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -305,13 +304,9 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="bgW-r5-5FE" secondAttribute="trailing" id="1vR-Uv-hgx"/>
-                            <constraint firstItem="nqH-RK-DXT" firstAttribute="top" secondItem="bgW-r5-5FE" secondAttribute="bottom" id="61a-99-0v6"/>
-                            <constraint firstItem="174-0T-hc2" firstAttribute="top" secondItem="peT-eA-fYC" secondAttribute="bottom" constant="8" id="U7x-ek-yDR"/>
-                            <constraint firstItem="bgW-r5-5FE" firstAttribute="top" secondItem="174-0T-hc2" secondAttribute="bottom" id="VGK-9r-uRw"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="174-0T-hc2" secondAttribute="trailing" id="aZu-L7-xrf"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="174-0T-hc2" secondAttribute="leading" id="rDZ-Kv-KH7"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="bgW-r5-5FE" secondAttribute="leading" id="yCP-df-pHD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XWu-DF-SXL" secondAttribute="trailing" constant="-20" id="bNz-xv-PPh"/>
+                            <constraint firstItem="XWu-DF-SXL" firstAttribute="leading" secondItem="YXK-wz-g6d" secondAttribute="leadingMargin" constant="-20" id="bxW-JP-B07"/>
+                            <constraint firstItem="XWu-DF-SXL" firstAttribute="top" secondItem="peT-eA-fYC" secondAttribute="bottom" id="srC-jx-Yig"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="Uzs-iV-4mX">
@@ -322,6 +317,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="searchBar" destination="XWu-DF-SXL" id="cka-Ws-ajZ"/>
                         <outlet property="tableView" destination="bgW-r5-5FE" id="E2D-Jb-qWc"/>
                     </connections>
                 </viewController>
