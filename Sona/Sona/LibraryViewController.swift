@@ -14,6 +14,11 @@ class LibraryViewController: UITableViewController {
   @IBOutlet weak var menuButton: UIBarButtonItem!
   
   override func viewDidLoad() {
+    super.viewDidLoad()
+    self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+    self.navigationController?.navigationBar.shadowImage = UIImage()
+    self.navigationController?.navigationBar.translucent = true
+    self.navigationController?.view.backgroundColor = UIColor.clearColor()
     self.apps = dummyData
     
     if revealViewController() != nil {
