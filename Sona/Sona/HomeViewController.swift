@@ -145,6 +145,7 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
     /* Seperates words by space */
     let transcriptAsArray = transcript.componentsSeparatedByString(" ")
     let extensionName = appManager.scan(transcriptAsArray)
+    print(extensionName)
     
     if extensionName == nil {
       self.tts.speak("Sorry, couldn't find plug-in. Please add relevant plug-in at the plug-in page")
@@ -155,7 +156,7 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
       let authDict = ["token": token]
       
       /* Configure final object to be sent to server as JSON */
-      let parameters : [String: Any] = ["transcript": transcript, "auth": authDict]
+      let parameters = ["transcript": transcript, "auth": authDict]
       
       Alamofire.request(.POST, "http://localhost:3000/command", parameters: parameters as? [String : AnyObject], encoding: .JSON)
         .responseJSON { response in

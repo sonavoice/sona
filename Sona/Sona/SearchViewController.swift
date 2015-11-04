@@ -85,7 +85,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDa
   }
   
   func getApp() {
-    Alamofire.request(.GET, "http://sonavoice.com/extension")
+    Alamofire.request(.GET, "http://localhost:3000/extension")
       .responseJSON { response in
         switch response.result {
           case .Success:
