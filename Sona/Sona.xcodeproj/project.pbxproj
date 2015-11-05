@@ -24,6 +24,9 @@
 		833947781BE9B94C008747F8 /* logo_thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = 833947751BE9B94C008747F8 /* logo_thumbnail.png */; settings = {ASSET_TAGS = (); }; };
 		833947791BE9B94C008747F8 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 833947761BE9B94C008747F8 /* logo.png */; settings = {ASSET_TAGS = (); }; };
 		8378B90D1BE9A53B00DB2C25 /* NavigationBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8378B90C1BE9A53B00DB2C25 /* NavigationBarController.swift */; settings = {ASSET_TAGS = (); }; };
+		83DEE3201BEAD58900F1C723 /* NavSona.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DEE31F1BEAD58900F1C723 /* NavSona.swift */; settings = {ASSET_TAGS = (); }; };
+		83DEE3221BEAD59000F1C723 /* NavLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DEE3211BEAD59000F1C723 /* NavLibrary.swift */; settings = {ASSET_TAGS = (); }; };
+		83DEE3241BEAD59C00F1C723 /* NavSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DEE3231BEAD59C00F1C723 /* NavSettings.swift */; settings = {ASSET_TAGS = (); }; };
 		83FD405A1BE856D100A683B4 /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FD40591BE856D100A683B4 /* RecordButton.swift */; };
 		99334BB3569321B6938147FE /* Pods_SonaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4AA68EEA6A2712BC22C2AFE /* Pods_SonaUITests.framework */; };
 		A634616A1CECEEF34F9E0BA6 /* Pods_SonaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FBD770CD99F84404CD9FAD7 /* Pods_SonaTests.framework */; };
@@ -196,6 +199,9 @@
 		836DA7E01BDC471F0031D676 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		836DA7E11BDC477D0031D676 /* SF-UI-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Regular.otf"; sourceTree = "<group>"; };
 		8378B90C1BE9A53B00DB2C25 /* NavigationBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarController.swift; sourceTree = "<group>"; };
+		83DEE31F1BEAD58900F1C723 /* NavSona.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavSona.swift; sourceTree = "<group>"; };
+		83DEE3211BEAD59000F1C723 /* NavLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavLibrary.swift; sourceTree = "<group>"; };
+		83DEE3231BEAD59C00F1C723 /* NavSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavSettings.swift; sourceTree = "<group>"; };
 		83FD40591BE856D100A683B4 /* RecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordButton.swift; sourceTree = "<group>"; };
 		8CED057656D2E548620FC05D /* Pods-Sona.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sona.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sona/Pods-Sona.release.xcconfig"; sourceTree = "<group>"; };
 		A4AA68EEA6A2712BC22C2AFE /* Pods_SonaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SonaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -365,6 +371,9 @@
 			children = (
 				ECBCCF6A1BE811A90000425F /* NavigatorViewController.swift */,
 				8378B90C1BE9A53B00DB2C25 /* NavigationBarController.swift */,
+				83DEE31F1BEAD58900F1C723 /* NavSona.swift */,
+				83DEE3211BEAD59000F1C723 /* NavLibrary.swift */,
+				83DEE3231BEAD59C00F1C723 /* NavSettings.swift */,
 			);
 			name = Navigator;
 			sourceTree = "<group>";
@@ -877,6 +886,8 @@
 			files = (
 				056FA6211BE82FDE007DE1AC /* MenuController.swift in Sources */,
 				ECBCCFBB1BE814900000425F /* HomeViewController.swift in Sources */,
+				83DEE3241BEAD59C00F1C723 /* NavSettings.swift in Sources */,
+				83DEE3221BEAD59000F1C723 /* NavLibrary.swift in Sources */,
 				ECBCCF4B1BE7FD030000425F /* LanguageManager.swift in Sources */,
 				ECBCCF671BE8119D0000425F /* transcriptLabel.swift in Sources */,
 				ECBCCF471BE7FCE40000425F /* AppManager.swift in Sources */,
@@ -899,6 +910,7 @@
 				ECBCCFCA1BE814F40000425F /* AppInfoViewController.swift in Sources */,
 				ECBCCFD21BE814FE0000425F /* LibraryViewController.swift in Sources */,
 				ECBCCFB31BE8147D0000425F /* SearchViewController.swift in Sources */,
+				83DEE3201BEAD58900F1C723 /* NavSona.swift in Sources */,
 				ECBCCF6B1BE811A90000425F /* NavigatorViewController.swift in Sources */,
 				ECBCCFDA1BE8151B0000425F /* CellView.swift in Sources */,
 				ECBCCFDE1BE815290000425F /* SigninViewController.swift in Sources */,
