@@ -117,3 +117,4 @@ class SettingsViewController: UITableViewController {
     self.performSegueWithIdentifier("languages", sender: self)
   }
 }
+

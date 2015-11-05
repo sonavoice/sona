@@ -96,12 +96,12 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
     /* Seperates words by space */
     let transcriptAsArray = transcript.componentsSeparatedByString(" ")
     let extensionName = appManager.scan(transcriptAsArray)
-    print(extensionName)
     
     if extensionName == nil {
       self.tts.speak("Sorry, couldn't find plug-in. Please add relevant plug-in at the plug-in page")
     } else {
-      let token = appManager.getToken(extensionName!)!
+      let passport = appManager.getPassport(extensionName!)
+      let token = passport!.valueForKey("accessToken")!
       
       /* Do call to core data to get token with the extensionName and assign to authDict. */
       let authDict = ["token": token]
