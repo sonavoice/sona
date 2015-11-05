@@ -26,7 +26,7 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
     self.navigationController?.view.backgroundColor = UIColor.clearColor()
     
     if revealViewController() != nil {
-      revealViewController().rearViewRevealWidth = 150
+      revealViewController().rearViewRevealWidth = 100
       
       self.button = HamburgerButton(frame: CGRectMake(0, 0, 20, 20))
       

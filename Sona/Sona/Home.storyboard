@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYS-p0-R4N">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYS-p0-R4N">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -50,11 +50,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICy-pF-KXf" customClass="RecordButton" customModule="Sona" customModuleProvider="target">
-                                <rect key="frame" x="225" y="441" width="151" height="151"/>
+                                <rect key="frame" x="225" y="430" width="150" height="150"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="151" id="Inj-kY-8M3"/>
-                                    <constraint firstAttribute="height" constant="151" id="tp0-Ef-OlM"/>
+                                    <constraint firstAttribute="width" constant="150" id="Inj-kY-8M3"/>
+                                    <constraint firstAttribute="height" constant="150" id="tp0-Ef-OlM"/>
                                 </constraints>
                             </button>
                         </subviews>
@@ -62,6 +62,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ICy-pF-KXf" firstAttribute="centerY" secondItem="V1i-Y3-Ydi" secondAttribute="centerY" constant="216.5" id="9LE-kv-noe"/>
+                            <constraint firstItem="ICy-pF-KXf" firstAttribute="centerX" secondItem="V1i-Y3-Ydi" secondAttribute="centerX" id="Fnr-UD-QQO"/>
+                            <constraint firstItem="16m-cY-i7o" firstAttribute="top" secondItem="ICy-pF-KXf" secondAttribute="bottom" constant="20" id="OAF-4d-cDl"/>
                             <constraint firstItem="ICy-pF-KXf" firstAttribute="centerX" secondItem="V1i-Y3-Ydi" secondAttribute="centerX" id="s0r-pe-8gW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Nkt-xZ-XfK" secondAttribute="trailing" id="tSX-S9-3VS"/>
                             <constraint firstItem="Nkt-xZ-XfK" firstAttribute="centerX" secondItem="V1i-Y3-Ydi" secondAttribute="centerX" id="x12-Va-8XM"/>
@@ -71,6 +73,8 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="x12-Va-8XM"/>
+                                <exclude reference="9LE-kv-noe"/>
+                                <exclude reference="s0r-pe-8gW"/>
                             </mask>
                         </variation>
                     </view>

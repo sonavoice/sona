@@ -34,7 +34,7 @@ class SettingsViewController: UITableViewController {
     self.navigationController?.view.backgroundColor = UIColor.clearColor()
     
     if revealViewController() != nil {
-      revealViewController().rearViewRevealWidth = 150
+      revealViewController().rearViewRevealWidth = 100
       menuButton.target = revealViewController()
       menuButton.action = "revealToggle:"
       
