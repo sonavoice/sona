@@ -12,26 +12,39 @@ class LibraryViewController: UITableViewController {
   var apps:[App]?
   var appInfo: App!
   @IBOutlet weak var menuButton: UIBarButtonItem!
+  var burgerButton: HamburgerButton! = nil
+  var addButton: AddExtButton! = nil
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    self.apps = dummyData
+    
     self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
     self.navigationController?.navigationBar.shadowImage = UIImage()
     self.navigationController?.navigationBar.translucent = true
     self.navigationController?.view.backgroundColor = UIColor.clearColor()
-    self.apps = dummyData
+    
+    self.addButton = AddExtButton(frame: CGRectMake(0, 0, 40, 40))
+    
+    self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: addButton)
+    self.addButton.addTarget(self, action: "moveToAddExtPage", forControlEvents: .TouchUpInside)
     
     if revealViewController() != nil {
-      revealViewController().rearViewRevealWidth = 150
-      menuButton.target = revealViewController()
-      menuButton.action = "revealToggle:"
+      revealViewController().rearViewRevealWidth = 100
       
-      //      revealViewController().rightViewRevealWidth = 150
-      //      extraButton.target = revealViewController()
-      //      extraButton.action = "rightRevealToggle:"
+      self.burgerButton = HamburgerButton(frame: CGRectMake(0, 0, 40, 40))
+      
+      self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: burgerButton)
+      
+      self.burgerButton.addTarget(revealViewController(), action: "revealToggle:", forControlEvents: .TouchUpInside)
       
       view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
+  }
+  
+  func moveToAddExtPage() {
+    self.performSegueWithIdentifier("showSearch", sender: self)
   }
   
   override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

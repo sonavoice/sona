@@ -45,12 +45,13 @@ class HamburgerButton : UIButton {
     }
     
     self.top.anchorPoint = CGPointMake(28.0 / 30.0, 0.5)
-    self.top.position = CGPointMake(40, 18)
+    self.top.position = CGPointMake(self.layer.frame.width - 10, 9)
     
-    self.middle.position = CGPointMake(27, 27)
+    self.middle.anchorPoint = CGPointMake(28.0 / 30.0, 0.5)
+    self.middle.position = CGPointMake(self.layer.frame.width - 10, 18)
     
     self.bottom.anchorPoint = CGPointMake(28.0 / 30.0, 0.5)
-    self.bottom.position = CGPointMake(40, 36)
+    self.bottom.position = CGPointMake(self.layer.frame.width - 10, 27)
   }
   
   var showsMenu: Bool = false {
@@ -70,7 +71,7 @@ class HamburgerButton : UIButton {
       let bottomTransform = topTransform.copy() as! CABasicAnimation
       
       if self.showsMenu {
-        let translation = CATransform3DMakeTranslation(-4, 0, 0)
+        let translation = CATransform3DMakeTranslation(0, 0, 0)
         
         topTransform.toValue = NSValue(CATransform3D: CATransform3DRotate(translation, -0.7853975, 0, 0, 1))
         

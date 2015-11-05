@@ -11,19 +11,19 @@ import UIKit
 class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDataSource {
   var apps = [App]()
   var appInfo: App!
+  var backButton: BackToSearch! = nil
   
   @IBOutlet weak var tableView: UITableView!
   
   @IBOutlet var searchBar: UISearchBar!
   
-  @IBAction func exitSearch(sender: AnyObject) {
-    self.navigationController?.popViewControllerAnimated(true)
-  }
-  
   override func viewDidLoad() {
     super.viewDidLoad()
     self.getApp()
     searchBar.delegate = self
+    
+    self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .Done, target: self, action: "exitSearch")
+    self.navigationItem.leftBarButtonItem?.tintColor = UIColor(red: 0.984, green: 0.153, blue: 0.247, alpha: 1.000)
   }
   
   func searchBarSearchButtonClicked(searchBar: UISearchBar) {
@@ -117,6 +117,10 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDa
     } else {
       return false
     }
+  }
+  
+  func exitSearch() {
+    self.navigationController?.popViewControllerAnimated(true)
   }
 
 }

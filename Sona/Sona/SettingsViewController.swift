@@ -37,7 +37,7 @@ class SettingsViewController: UITableViewController {
     if revealViewController() != nil {
       revealViewController().rearViewRevealWidth = 150
       
-      self.burgerButton = HamburgerButton(frame: CGRectMake(0, 0, 20, 20))
+      self.burgerButton = HamburgerButton(frame: CGRectMake(0, 0, 40, 40))
       
       self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: burgerButton)
       
