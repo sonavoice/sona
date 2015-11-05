@@ -1,4 +1,5 @@
 import UIKit
+import SwiftyJSON
 
 class SigninViewController: UIViewController, UIWebViewDelegate {
   var appname: String = ""
@@ -23,6 +24,22 @@ class SigninViewController: UIViewController, UIWebViewDelegate {
       self.appManager.savePassport(self.appname, passport: passportDict)
       self.dismissViewControllerAnimated(true, completion: nil)
     }
+  }
+  
+  /* Utils */
+  
+  func JSONParseDictionary(string: String) -> [String: AnyObject]{
+    
+    if let data = string.dataUsingEncoding(NSUTF8StringEncoding){
+      do{
+        if let dictionary = try NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) as? [String: AnyObject]{
+          return dictionary
+        }
+      }catch {
+        print("error")
+      }
+    }
+    return [String: AnyObject]()
   }
   
   func matchesForRegexInText(regex: String!, text: String!) -> [String] {

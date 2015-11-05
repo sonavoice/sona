@@ -24,6 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellView" rowHeight="45" id="LvU-Ss-LWM" customClass="CellView" customModule="Sona" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="45"/>
@@ -106,18 +107,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="13l-86-h4z">
-                                <rect key="frame" x="250" y="79" width="100" height="100"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="13l-86-h4z">
+                                <rect key="frame" x="250" y="99" width="100" height="100"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="phg-Wr-vPi"/>
+                                    <constraint firstAttribute="height" constant="100" id="vB0-J6-nes"/>
+                                </constraints>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="goS-Rs-0lT">
-                                <rect key="frame" x="20" y="329" width="560" height="271"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6u1-e6-AzT">
+                                <rect key="frame" x="50" y="259" width="500" height="29"/>
+                                <animations/>
+                                <string key="text">Bacon ipsum dolor amet pork pork loin venison filet mignon turkey short ribs bacon kevin beef shoulder. Pork filet mignon meatloaf pork loin hamburger.</string>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
+                                <color key="textColor" red="0.44705882352941173" green="0.44705882352941173" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSV-aq-Zic">
+                                <rect key="frame" x="252" y="209" width="96" height="32"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="24"/>
+                                <color key="textColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="goS-Rs-0lT">
+                                <rect key="frame" x="20" y="305" width="560" height="287"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="560" id="PDD-yQ-qpD"/>
                                     <constraint firstAttribute="height" constant="420" id="ioN-SY-LY1"/>
                                 </constraints>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="PDD-yQ-qpD"/>
@@ -129,38 +150,33 @@
                                     <outlet property="delegate" destination="4Zl-Hm-WZ5" id="Y0X-rg-BNF"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6u1-e6-AzT">
-                                <rect key="frame" x="78" y="262" width="445" height="29"/>
-                                <animations/>
-                                <string key="text">Bacon ipsum dolor amet pork pork loin venison filet mignon turkey short ribs bacon kevin beef shoulder. Pork filet mignon meatloaf pork loin hamburger.</string>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
-                                <color key="textColor" red="0.44705882352941173" green="0.44705882352941173" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="App Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSV-aq-Zic">
-                                <rect key="frame" x="252" y="213" width="96" height="32"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="24"/>
-                                <color key="textColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="FSV-aq-Zic" firstAttribute="top" secondItem="13l-86-h4z" secondAttribute="bottom" constant="-175" id="8Ts-xU-Kmp"/>
-                            <constraint firstItem="FSV-aq-Zic" firstAttribute="centerX" secondItem="Cfa-4N-jzO" secondAttribute="centerX" constant="-32.5" id="YWS-16-of4"/>
-                            <constraint firstItem="goS-Rs-0lT" firstAttribute="top" secondItem="FSV-aq-Zic" secondAttribute="bottom" constant="179" id="ahR-2b-ycl"/>
-                            <constraint firstItem="goS-Rs-0lT" firstAttribute="top" secondItem="6u1-e6-AzT" secondAttribute="bottom" constant="10" id="jPI-pY-Kr4"/>
-                            <constraint firstItem="13l-86-h4z" firstAttribute="centerX" secondItem="Cfa-4N-jzO" secondAttribute="centerX" constant="-192.5" id="rAm-9v-yKj"/>
+                            <constraint firstItem="6u1-e6-AzT" firstAttribute="leading" secondItem="Cfa-4N-jzO" secondAttribute="leadingMargin" constant="30" id="0Su-9a-UJQ"/>
+                            <constraint firstItem="13l-86-h4z" firstAttribute="centerX" secondItem="Cfa-4N-jzO" secondAttribute="centerX" id="88H-K2-mN3"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="goS-Rs-0lT" secondAttribute="leading" id="Aep-vh-EdG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6u1-e6-AzT" secondAttribute="trailing" constant="30" id="HdS-JZ-NmT"/>
+                            <constraint firstItem="6u1-e6-AzT" firstAttribute="top" secondItem="FSV-aq-Zic" secondAttribute="bottom" constant="18" id="YIF-ZH-eCU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="goS-Rs-0lT" secondAttribute="trailing" id="cVg-hq-IcE"/>
+                            <constraint firstItem="goS-Rs-0lT" firstAttribute="top" secondItem="6u1-e6-AzT" secondAttribute="bottom" constant="17" id="dg1-Yb-bNd"/>
+                            <constraint firstItem="6u1-e6-AzT" firstAttribute="centerX" secondItem="Cfa-4N-jzO" secondAttribute="centerX" id="eBy-Tt-EGw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="goS-Rs-0lT" secondAttribute="trailing" id="fdB-aG-jUO"/>
+                            <constraint firstItem="FSV-aq-Zic" firstAttribute="centerX" secondItem="Cfa-4N-jzO" secondAttribute="centerX" id="ngD-m1-9ne"/>
+                            <constraint firstItem="KaR-b3-De5" firstAttribute="top" secondItem="goS-Rs-0lT" secondAttribute="bottom" constant="8" id="oOB-Mo-noj"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="goS-Rs-0lT" secondAttribute="leading" id="qfF-dQ-hyb"/>
+                            <constraint firstItem="FSV-aq-Zic" firstAttribute="top" secondItem="13l-86-h4z" secondAttribute="bottom" constant="10" id="qj4-7Z-7dP"/>
+                            <constraint firstItem="13l-86-h4z" firstAttribute="top" secondItem="eGL-Dj-WpM" secondAttribute="bottom" constant="35" id="qsg-Ra-wlB"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="goS-Rs-0lT" secondAttribute="leading" constant="30" id="tO4-Wn-L9i"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="goS-Rs-0lT" secondAttribute="trailing" id="v6j-9f-6vV"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="rAm-9v-yKj"/>
-                                <exclude reference="8Ts-xU-Kmp"/>
-                                <exclude reference="YWS-16-of4"/>
-                                <exclude reference="ahR-2b-ycl"/>
-                                <exclude reference="jPI-pY-Kr4"/>
+                                <exclude reference="Aep-vh-EdG"/>
+                                <exclude reference="fdB-aG-jUO"/>
+                                <exclude reference="tO4-Wn-L9i"/>
+                                <exclude reference="v6j-9f-6vV"/>
                             </mask>
                         </variation>
                     </view>
@@ -180,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GNw-MW-YST" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1978" y="785"/>
+            <point key="canvasLocation" x="2486" y="803"/>
         </scene>
         <!--Library Nav Controller-->
         <scene sceneID="Uoq-dc-hcc">
@@ -265,13 +281,10 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                         <connections>
-                                            <outlet property="Name" destination="eKp-a8-Dzt" id="MOG-nA-Cze"/>
                                             <outlet property="arrow" destination="LNB-ML-RB9" id="4E7-Hq-h1v"/>
                                             <outlet property="icon" destination="gEG-6x-gM7" id="oN3-Cs-14R"/>
                                             <outlet property="name" destination="N8f-Ku-DCK" id="PIX-RE-PiH"/>
-                                            <segue destination="z1v-y9-fO4" kind="show" identifier="appSegue" id="f61-6l-fpI">
-                                                <nil key="action"/>
-                                            </segue>
+                                            <segue destination="4Zl-Hm-WZ5" kind="show" identifier="appSegue" id="bva-Qh-OUw"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -392,4 +405,7 @@
         <image name="logo.png" width="400" height="400"/>
         <image name="logo_thumbnail.png" width="175" height="175"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="2Nl-mg-Xlq"/>
+    </inferredMetricsTieBreakers>
 </document>

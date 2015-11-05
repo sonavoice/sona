@@ -79,6 +79,9 @@ class LibraryViewController: UITableViewController {
 //      }
       cell.arrow.font = UIFont.fontAwesomeOfSize(30)
       cell.arrow.text = String.fontAwesomeIconWithCode("fa-angle-right")
+      
+      cell.layoutMargins = UIEdgeInsetsZero
+      cell.preservesSuperviewLayoutMargins = false
       return cell
   }
   

@@ -12,7 +12,7 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   var apps = [String]()
   var lang = "eng-USA" // Default to prevent crash
   let appManager = AppManager()
-  var button: HamburgerButton! = nil
+  var burgerButton: HamburgerButton! = nil
   var isConfirmation: Bool = false
   var storedParameters = [String: AnyObject]()
 
@@ -89,7 +89,6 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   
   func processCommand(transcript: String) {
     
-    
     if (!isConfirmation) {
       if (!isValidExtension(transcript)) {
         return
@@ -127,22 +126,22 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
                 if let previousTranscript = JSON["previousTranscript"] as? String {
                   // feedback, requiresConfirmation, and previousTranscript extracted
                   self.processResponse(feedback, requiresConfirmation: requiresConfirmation, previousTranscript: previousTranscript)
-                  return
+                    return
                 }
               }
             }
             print("I DID NOT RETURN")
-            self.tts.speak("Please send help")
+              self.tts.speak("Please send help")
           }
           else {
             self.tts.speak("Please send help")
           }
-          
+
         case .Failure:
           self.tts.speak("Please send help")
         }
-    }
-    
+      }
+
   }
   
   func processResponse(feedback: String, requiresConfirmation: Bool, previousTranscript: String) {

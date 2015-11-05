@@ -33,7 +33,6 @@
 		C48C5841D156504A1A618CCA /* Pods_Sona.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C495AC49167F8FC76008486E /* Pods_Sona.framework */; };
 		EC4D3AE21BDB4618008C245F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4D3AE11BDB4618008C245F /* SystemConfiguration.framework */; };
 		EC7EFCD01BE81C060063EE70 /* SonaData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCCE1BE81C060063EE70 /* SonaData.xcdatamodeld */; };
-		EC88386B1BE8158500D616C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC8838691BE8158500D616C3 /* Main.storyboard */; };
 		EC88386E1BE8159B00D616C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC88386C1BE8159B00D616C3 /* LaunchScreen.storyboard */; };
 		EC8838721BE8160A00D616C3 /* SpeechKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC8838711BE8160A00D616C3 /* SpeechKit.framework */; };
 		EC8838731BE8160A00D616C3 /* SpeechKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC8838711BE8160A00D616C3 /* SpeechKit.framework */; };
@@ -210,7 +209,6 @@
 		E4041EE09D6633BDE5230B04 /* Pods-SonaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SonaUITests/Pods-SonaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EC4D3AE11BDB4618008C245F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		EC7EFCCF1BE81C060063EE70 /* SonaData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SonaData.xcdatamodel; sourceTree = "<group>"; };
-		EC88386A1BE8158500D616C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Sona/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		EC88386D1BE8159B00D616C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Sona/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		EC8838711BE8160A00D616C3 /* SpeechKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpeechKit.framework; path = Sona/SpeechKit.framework; sourceTree = "<group>"; };
 		EC8838761BE8171100D616C3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Sona/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
@@ -410,7 +408,6 @@
 			children = (
 				056FA61F1BE82F7A007DE1AC /* Hamburger */,
 				EC8838761BE8171100D616C3 /* AppDelegate.swift */,
-				EC8838691BE8158500D616C3 /* Main.storyboard */,
 				056FA61D1BE82F6D007DE1AC /* Master.storyboard */,
 				EC88386C1BE8159B00D616C3 /* LaunchScreen.storyboard */,
 				ECBCCFC51BE814EF0000425F /* App.swift */,
@@ -682,7 +679,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC88386B1BE8158500D616C3 /* Main.storyboard in Resources */,
 				833947781BE9B94C008747F8 /* logo_thumbnail.png in Resources */,
 				ECBCCF7B1BE8123B0000425F /* dog.jpg in Resources */,
 				ECBCCFB71BE814890000425F /* Home.storyboard in Resources */,
@@ -1007,14 +1003,6 @@
 				0592AC691BE8376900F84307 /* Base */,
 			);
 			name = Library.storyboard;
-			sourceTree = "<group>";
-		};
-		EC8838691BE8158500D616C3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EC88386A1BE8158500D616C3 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		EC88386C1BE8159B00D616C3 /* LaunchScreen.storyboard */ = {

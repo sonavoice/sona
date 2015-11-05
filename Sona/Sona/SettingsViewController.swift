@@ -49,6 +49,8 @@ class SettingsViewController: UITableViewController {
     // table styling
     self.tableView.allowsSelection = false
     self.tableView.backgroundColor = UIColor.whiteColor()
+    self.tableView.layoutMargins = UIEdgeInsetsZero
+    self.tableView.preservesSuperviewLayoutMargins = false
     
     // persistent data
     let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
