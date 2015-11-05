@@ -18,9 +18,9 @@ class SigninViewController: UIViewController, UIWebViewDelegate {
   
   func webViewDidFinishLoad(webView: UIWebView) {
     if matchesForRegexInText("done$", text: webView.request?.mainDocumentURL?.absoluteString).count >= 1 {
-      let auth = webView.stringByEvaluatingJavaScriptFromString("auth")
-
-      //appManager.saveToken(self.appname, tokenToSave: token!)
+      let auth = webView.stringByEvaluatingJavaScriptFromString("stringedAuth")
+      let passportDict = JSONParseDictionary(auth!)
+      self.appManager.savePassport(self.appname, passport: passportDict)
       self.dismissViewControllerAnimated(true, completion: nil)
     }
   }
@@ -37,4 +37,17 @@ class SigninViewController: UIViewController, UIWebViewDelegate {
       return []
     }
   }
+}
+
+func JSONParseDictionary(string: String) -> [String: AnyObject]{
+  if let data = string.dataUsingEncoding(NSUTF8StringEncoding){
+    do{
+      if let dictionary = try NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) as? [String: AnyObject]{
+        return dictionary
+      }
+    }catch {
+      print("error")
+    }
+  }
+  return [String: AnyObject]()
 }

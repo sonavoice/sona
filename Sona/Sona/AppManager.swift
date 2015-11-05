@@ -9,7 +9,7 @@ class AppManager: NSObject {
     super.init()
   }
   
-  func saveToken(appName: String, passport: AnyObject){
+  func savePassport(appName: String, passport: AnyObject){
     let request = NSFetchRequest(entityName: "AppToken")
     request.returnsObjectsAsFaults = false;
     request.predicate = NSPredicate(format: "name == %@", appName)
