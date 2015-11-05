@@ -9,7 +9,7 @@ class AppManager: NSObject {
     super.init()
   }
   
-  func saveToken(appName: String, tokenToSave: String){
+  func saveToken(appName: String, passport: AnyObject){
     let request = NSFetchRequest(entityName: "AppToken")
     request.returnsObjectsAsFaults = false;
     request.predicate = NSPredicate(format: "name == %@", appName)
@@ -20,10 +20,10 @@ class AppManager: NSObject {
         let entity = NSEntityDescription.entityForName("AppToken", inManagedObjectContext: self.context)
         let token = AppToken(entity: entity!, insertIntoManagedObjectContext: self.context)
         token.name = appName
-        token.token = tokenToSave
+        token.passport = passport
         try self.context.save()
       } else {
-        results[0].setValue(tokenToSave, forKey: "token")
+        results[0].setValue(passport, forKey: "passport")
         try self.context.save()
       }
     } catch {
@@ -31,7 +31,7 @@ class AppManager: NSObject {
     }
   }
   
-  func getToken(appName: String) -> String? {
+  func getPassport(appName: String) -> AnyObject? {
     let request = NSFetchRequest(entityName: "AppToken")
     request.returnsObjectsAsFaults = false;
     request.predicate = NSPredicate(format: "name == %@", appName)
@@ -41,7 +41,7 @@ class AppManager: NSObject {
       if results.count == 0 {
         return nil
       } else {
-        return results[0].valueForKey("token") as! String?
+        return results[0].valueForKey("passport")!
       }
     } catch {
       print("Error: Failed to save token")
@@ -51,7 +51,6 @@ class AppManager: NSObject {
   
   func scan(transcriptArray: [String]) -> String? {
     let request = NSFetchRequest(entityName: "AppToken")
-    print(self.getToken("slack"))
     request.returnsObjectsAsFaults = false
     request.predicate = nil
     // Load all local app to an array

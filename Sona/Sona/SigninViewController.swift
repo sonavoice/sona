@@ -18,8 +18,9 @@ class SigninViewController: UIViewController, UIWebViewDelegate {
   
   func webViewDidFinishLoad(webView: UIWebView) {
     if matchesForRegexInText("done$", text: webView.request?.mainDocumentURL?.absoluteString).count >= 1 {
-      let token = webView.stringByEvaluatingJavaScriptFromString("token")
-      appManager.saveToken(self.appname, tokenToSave: token!)
+      let auth = webView.stringByEvaluatingJavaScriptFromString("auth")
+
+      //appManager.saveToken(self.appname, tokenToSave: token!)
       self.dismissViewControllerAnimated(true, completion: nil)
     }
   }
