@@ -153,7 +153,7 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
     NSLog("I have finished recording")
     voiceSearch!.stopRecording()
     /* Ends animation on end of listening */
-    self.recordButton.animating = !self.recordButton.animating
+    self.recordButton.animating = false
   }
   
   func recognizer(recognizer: SKRecognizer!, didFinishWithResults results: SKRecognition!) {
