@@ -18,6 +18,8 @@ class HamburgerButton : UIButton {
   override init(frame: CGRect) {
     super.init(frame: frame)
     
+    self.addTarget(self, action: "toggle:", forControlEvents: .TouchUpInside)
+    
     self.top.path = shortStroke
     self.middle.path = shortStroke
     self.bottom.path = shortStroke
@@ -95,6 +97,11 @@ class HamburgerButton : UIButton {
   var top: CAShapeLayer! = CAShapeLayer()
   var bottom: CAShapeLayer! = CAShapeLayer()
   var middle: CAShapeLayer! = CAShapeLayer()
+  
+  func toggle(sender: AnyObject!) {
+    self.showsMenu = !self.showsMenu
+  }
+  
 }
 
 extension CALayer {

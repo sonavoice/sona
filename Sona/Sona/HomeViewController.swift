@@ -15,7 +15,7 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   var button: HamburgerButton! = nil
   var isConfirmation: Bool = false
   var storedParameters = [String: AnyObject]()
-  
+
   @IBOutlet var transcript: UILabel!
   @IBOutlet var recordButton: RecordButton!
   
@@ -30,12 +30,11 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
     if revealViewController() != nil {
       revealViewController().rearViewRevealWidth = 100
       
-      self.button = HamburgerButton(frame: CGRectMake(0, 0, 20, 20))
+      self.burgerButton = HamburgerButton(frame: CGRectMake(0, 0, 20, 20))
       
-      self.button.addTarget(revealViewController(), action: "revealToggle:", forControlEvents: .TouchUpInside)
-      self.button.addTarget(self, action: "toggle:", forControlEvents: .TouchUpInside)
+      self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: burgerButton)
       
-      self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: button)
+      self.burgerButton.addTarget(revealViewController(), action: "revealToggle:", forControlEvents: .TouchUpInside)
       
       view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
@@ -53,10 +52,6 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
     /* Configure SpeechKit Server */
     configureNuance()
     
-  }
-  
-  func toggle(sender: AnyObject!) {
-    self.button.showsMenu = !self.button.showsMenu
   }
   
   override func didReceiveMemoryWarning() {

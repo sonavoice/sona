@@ -1,14 +1,14 @@
 import UIKit
 import CoreData
 
+@IBDesignable
 class SettingsViewController: UITableViewController {
   
   // current language
   @IBOutlet var langSet: UILabel!
   // Array of all the switches on the component
   @IBOutlet var settings: Array<UISwitch>?
-  
-  @IBOutlet weak var menuButton: UIBarButtonItem!
+  var burgerButton: HamburgerButton! = nil
   
   // Memory warning handle
   override func didReceiveMemoryWarning() {
@@ -28,26 +28,27 @@ class SettingsViewController: UITableViewController {
   // on load
   override func viewDidLoad() {
     super.viewDidLoad()
+    
     self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
     self.navigationController?.navigationBar.shadowImage = UIImage()
     self.navigationController?.navigationBar.translucent = true
     self.navigationController?.view.backgroundColor = UIColor.clearColor()
     
     if revealViewController() != nil {
-      revealViewController().rearViewRevealWidth = 100
-      menuButton.target = revealViewController()
-      menuButton.action = "revealToggle:"
+      revealViewController().rearViewRevealWidth = 150
       
-      //      revealViewController().rightViewRevealWidth = 150
-      //      extraButton.target = revealViewController()
-      //      extraButton.action = "rightRevealToggle:"
+      self.burgerButton = HamburgerButton(frame: CGRectMake(0, 0, 20, 20))
+      
+      self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: burgerButton)
+      
+      self.burgerButton.addTarget(revealViewController(), action: "revealToggle:", forControlEvents: .TouchUpInside)
       
       view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
     
     // table styling
     self.tableView.allowsSelection = false
-    self.tableView.backgroundColor = UIColor(red: 243.0/255, green: 243.0/255, blue: 243.0/255, alpha: 1)
+    self.tableView.backgroundColor = UIColor.whiteColor()
     
     // persistent data
     let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -117,4 +118,3 @@ class SettingsViewController: UITableViewController {
     self.performSegueWithIdentifier("languages", sender: self)
   }
 }
-

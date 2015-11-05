@@ -160,6 +160,7 @@
 		ECBCCFF01BE815650000425F /* LanguageOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBCCFEE1BE815650000425F /* LanguageOptionViewController.swift */; };
 		ECBCCFF11BE815650000425F /* LanguageOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBCCFEE1BE815650000425F /* LanguageOptionViewController.swift */; };
 		ECCA31C91BEA837400C0BFC2 /* HamburgerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA31C81BEA837400C0BFC2 /* HamburgerButton.swift */; };
+		ECCA31CB1BEAD59E00C0BFC2 /* SonaSwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA31CA1BEAD59E00C0BFC2 /* SonaSwitchButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -263,6 +264,7 @@
 		ECBCCFEA1BE8155B0000425F /* LanguageChoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LanguageChoice.swift; path = Sona/LanguageChoice.swift; sourceTree = SOURCE_ROOT; };
 		ECBCCFEE1BE815650000425F /* LanguageOptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LanguageOptionViewController.swift; path = Sona/LanguageOptionViewController.swift; sourceTree = SOURCE_ROOT; };
 		ECCA31C81BEA837400C0BFC2 /* HamburgerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerButton.swift; sourceTree = "<group>"; };
+		ECCA31CA1BEAD59E00C0BFC2 /* SonaSwitchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SonaSwitchButton.swift; sourceTree = "<group>"; };
 		ECF6003E1BD80B5300751275 /* Sona-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Sona-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -474,7 +476,6 @@
 				ECBCCFB61BE814890000425F /* Home.storyboard */,
 				ECBCCFBA1BE814900000425F /* HomeViewController.swift */,
 				83FD40591BE856D100A683B4 /* RecordButton.swift */,
-				ECCA31C81BEA837400C0BFC2 /* HamburgerButton.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -541,7 +542,9 @@
 		ECBD06041BDC9A9000AB9C01 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				ECCA31C81BEA837400C0BFC2 /* HamburgerButton.swift */,
 				ECBCCF661BE8119D0000425F /* transcriptLabel.swift */,
+				ECCA31CA1BEAD59E00C0BFC2 /* SonaSwitchButton.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -885,6 +888,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				056FA6211BE82FDE007DE1AC /* MenuController.swift in Sources */,
+				ECCA31CB1BEAD59E00C0BFC2 /* SonaSwitchButton.swift in Sources */,
 				ECBCCFBB1BE814900000425F /* HomeViewController.swift in Sources */,
 				83DEE3241BEAD59C00F1C723 /* NavSettings.swift in Sources */,
 				83DEE3221BEAD59000F1C723 /* NavLibrary.swift in Sources */,
