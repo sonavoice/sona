@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       }
       
       
-      UIApplication.sharedApplication().statusBarStyle = .LightContent
+      UIApplication.sharedApplication().statusBarStyle = .Default
 
       return true
     }

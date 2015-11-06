@@ -6,6 +6,11 @@ class LanguageOptionViewController: UIViewController, UITableViewDelegate, UITab
   let choices = languages
   var choice = []
   
+  @IBAction func doneButton(sender: AnyObject) {
+    self.cancelLang()
+  }
+  
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
