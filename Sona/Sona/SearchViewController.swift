@@ -27,7 +27,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDa
   }
   
   func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-    Alamofire.request(.GET, "http://localhost:3000/extension", parameters: ["name": searchBar.text as! AnyObject])
+    Alamofire.request(.GET, "https://sonavoice.com/extension", parameters: ["name": searchBar.text as! AnyObject])
       .responseJSON { response in
         switch response.result {
           case .Success:
