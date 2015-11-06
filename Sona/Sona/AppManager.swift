@@ -49,6 +49,26 @@ class AppManager: NSObject {
     }
   }
   
+  func deleteExt(extensionName: String) -> String? {
+    let request = NSFetchRequest(entityName: "AppToken")
+    request.returnsObjectsAsFaults = false;
+    request.predicate = NSPredicate(format: "name == %@", extensionName)
+    
+    do {
+      let results:NSArray = try context.executeFetchRequest(request)
+      if results.count == 0 {
+        return nil
+      } else {
+        var extName = results[0].valueForKey("name")!
+        self.context.deleteObject(results[0] as! NSManagedObject)
+        return extName as! String
+      }
+    } catch {
+      print("Error: Failed to save token")
+      return nil
+    }
+  }
+  
   func scan(transcriptArray: [String]) -> String? {
     let request = NSFetchRequest(entityName: "AppToken")
     request.returnsObjectsAsFaults = false

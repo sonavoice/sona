@@ -20,20 +20,19 @@
 		83303FD51BDE9AC90024A10D /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 836DA7E01BDC471F0031D676 /* Lato-Regular.ttf */; };
 		83303FD61BDE9AD00024A10D /* SF-UI-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 836DA7E11BDC477D0031D676 /* SF-UI-Display-Regular.otf */; };
 		83303FD71BDE9AD60024A10D /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 836DA7DF1BDC46580031D676 /* Roboto-Regular.ttf */; };
-		833947771BE9B94C008747F8 /* brand.png in Resources */ = {isa = PBXBuildFile; fileRef = 833947741BE9B94C008747F8 /* brand.png */; settings = {ASSET_TAGS = (); }; };
-		833947781BE9B94C008747F8 /* logo_thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = 833947751BE9B94C008747F8 /* logo_thumbnail.png */; settings = {ASSET_TAGS = (); }; };
-		833947791BE9B94C008747F8 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 833947761BE9B94C008747F8 /* logo.png */; settings = {ASSET_TAGS = (); }; };
-		8378B90D1BE9A53B00DB2C25 /* NavigationBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8378B90C1BE9A53B00DB2C25 /* NavigationBarController.swift */; settings = {ASSET_TAGS = (); }; };
-		83DEE3201BEAD58900F1C723 /* NavSona.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DEE31F1BEAD58900F1C723 /* NavSona.swift */; settings = {ASSET_TAGS = (); }; };
-		83DEE3221BEAD59000F1C723 /* NavLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DEE3211BEAD59000F1C723 /* NavLibrary.swift */; settings = {ASSET_TAGS = (); }; };
-		83DEE3241BEAD59C00F1C723 /* NavSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DEE3231BEAD59C00F1C723 /* NavSettings.swift */; settings = {ASSET_TAGS = (); }; };
+		833947771BE9B94C008747F8 /* brand.png in Resources */ = {isa = PBXBuildFile; fileRef = 833947741BE9B94C008747F8 /* brand.png */; };
+		833947781BE9B94C008747F8 /* logo_thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = 833947751BE9B94C008747F8 /* logo_thumbnail.png */; };
+		833947791BE9B94C008747F8 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 833947761BE9B94C008747F8 /* logo.png */; };
+		8378B90D1BE9A53B00DB2C25 /* NavigationBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8378B90C1BE9A53B00DB2C25 /* NavigationBarController.swift */; };
+		83DEE3201BEAD58900F1C723 /* NavSona.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DEE31F1BEAD58900F1C723 /* NavSona.swift */; };
+		83DEE3221BEAD59000F1C723 /* NavLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DEE3211BEAD59000F1C723 /* NavLibrary.swift */; };
+		83DEE3241BEAD59C00F1C723 /* NavSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DEE3231BEAD59C00F1C723 /* NavSettings.swift */; };
 		83FD405A1BE856D100A683B4 /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FD40591BE856D100A683B4 /* RecordButton.swift */; };
 		99334BB3569321B6938147FE /* Pods_SonaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4AA68EEA6A2712BC22C2AFE /* Pods_SonaUITests.framework */; };
 		A634616A1CECEEF34F9E0BA6 /* Pods_SonaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FBD770CD99F84404CD9FAD7 /* Pods_SonaTests.framework */; };
 		C48C5841D156504A1A618CCA /* Pods_Sona.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C495AC49167F8FC76008486E /* Pods_Sona.framework */; };
 		EC4D3AE21BDB4618008C245F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4D3AE11BDB4618008C245F /* SystemConfiguration.framework */; };
 		EC7EFCD01BE81C060063EE70 /* SonaData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCCE1BE81C060063EE70 /* SonaData.xcdatamodeld */; };
-		EC88386B1BE8158500D616C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC8838691BE8158500D616C3 /* Main.storyboard */; };
 		EC88386E1BE8159B00D616C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC88386C1BE8159B00D616C3 /* LaunchScreen.storyboard */; };
 		EC8838721BE8160A00D616C3 /* SpeechKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC8838711BE8160A00D616C3 /* SpeechKit.framework */; };
 		EC8838731BE8160A00D616C3 /* SpeechKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC8838711BE8160A00D616C3 /* SpeechKit.framework */; };
@@ -114,9 +113,6 @@
 		ECBCCFA31BE812660000425F /* TextToSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBCCFA21BE812660000425F /* TextToSpeech.swift */; };
 		ECBCCFA41BE812660000425F /* TextToSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBCCFA21BE812660000425F /* TextToSpeech.swift */; };
 		ECBCCFA51BE812660000425F /* TextToSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBCCFA21BE812660000425F /* TextToSpeech.swift */; };
-		ECBCCFAF1BE814790000425F /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBCCFAE1BE814790000425F /* Search.storyboard */; };
-		ECBCCFB01BE814790000425F /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBCCFAE1BE814790000425F /* Search.storyboard */; };
-		ECBCCFB11BE814790000425F /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBCCFAE1BE814790000425F /* Search.storyboard */; };
 		ECBCCFB31BE8147D0000425F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBCCFB21BE8147D0000425F /* SearchViewController.swift */; };
 		ECBCCFB41BE8147D0000425F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBCCFB21BE8147D0000425F /* SearchViewController.swift */; };
 		ECBCCFB51BE8147D0000425F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBCCFB21BE8147D0000425F /* SearchViewController.swift */; };
@@ -160,6 +156,9 @@
 		ECBCCFF01BE815650000425F /* LanguageOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBCCFEE1BE815650000425F /* LanguageOptionViewController.swift */; };
 		ECBCCFF11BE815650000425F /* LanguageOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBCCFEE1BE815650000425F /* LanguageOptionViewController.swift */; };
 		ECCA31C91BEA837400C0BFC2 /* HamburgerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA31C81BEA837400C0BFC2 /* HamburgerButton.swift */; };
+		ECCA31CB1BEAD59E00C0BFC2 /* SonaSwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA31CA1BEAD59E00C0BFC2 /* SonaSwitchButton.swift */; };
+		ECCA31CD1BEAF42E00C0BFC2 /* AddExtButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA31CC1BEAF42E00C0BFC2 /* AddExtButton.swift */; };
+		ECCA31CF1BEB170B00C0BFC2 /* BackToSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA31CE1BEB170B00C0BFC2 /* BackToSearch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -210,7 +209,6 @@
 		E4041EE09D6633BDE5230B04 /* Pods-SonaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SonaUITests/Pods-SonaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EC4D3AE11BDB4618008C245F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		EC7EFCCF1BE81C060063EE70 /* SonaData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SonaData.xcdatamodel; sourceTree = "<group>"; };
-		EC88386A1BE8158500D616C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Sona/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		EC88386D1BE8159B00D616C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Sona/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		EC8838711BE8160A00D616C3 /* SpeechKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpeechKit.framework; path = Sona/SpeechKit.framework; sourceTree = "<group>"; };
 		EC8838761BE8171100D616C3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Sona/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
@@ -247,7 +245,6 @@
 		ECBCCF851BE812470000425F /* image8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image8.png; path = Sona/image8.png; sourceTree = SOURCE_ROOT; };
 		ECBCCF9E1BE812570000425F /* start_listening.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = start_listening.wav; path = Sona/start_listening.wav; sourceTree = SOURCE_ROOT; };
 		ECBCCFA21BE812660000425F /* TextToSpeech.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextToSpeech.swift; path = Sona/TextToSpeech.swift; sourceTree = SOURCE_ROOT; };
-		ECBCCFAE1BE814790000425F /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Search.storyboard; path = Sona/Search.storyboard; sourceTree = SOURCE_ROOT; };
 		ECBCCFB21BE8147D0000425F /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = Sona/SearchViewController.swift; sourceTree = SOURCE_ROOT; };
 		ECBCCFB61BE814890000425F /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = Sona/Home.storyboard; sourceTree = SOURCE_ROOT; };
 		ECBCCFBA1BE814900000425F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Sona/HomeViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -263,6 +260,9 @@
 		ECBCCFEA1BE8155B0000425F /* LanguageChoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LanguageChoice.swift; path = Sona/LanguageChoice.swift; sourceTree = SOURCE_ROOT; };
 		ECBCCFEE1BE815650000425F /* LanguageOptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LanguageOptionViewController.swift; path = Sona/LanguageOptionViewController.swift; sourceTree = SOURCE_ROOT; };
 		ECCA31C81BEA837400C0BFC2 /* HamburgerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerButton.swift; sourceTree = "<group>"; };
+		ECCA31CA1BEAD59E00C0BFC2 /* SonaSwitchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SonaSwitchButton.swift; sourceTree = "<group>"; };
+		ECCA31CC1BEAF42E00C0BFC2 /* AddExtButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddExtButton.swift; sourceTree = "<group>"; };
+		ECCA31CE1BEB170B00C0BFC2 /* BackToSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackToSearch.swift; sourceTree = "<group>"; };
 		ECF6003E1BD80B5300751275 /* Sona-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Sona-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -408,9 +408,10 @@
 			children = (
 				056FA61F1BE82F7A007DE1AC /* Hamburger */,
 				EC8838761BE8171100D616C3 /* AppDelegate.swift */,
-				EC8838691BE8158500D616C3 /* Main.storyboard */,
 				056FA61D1BE82F6D007DE1AC /* Master.storyboard */,
 				EC88386C1BE8159B00D616C3 /* LaunchScreen.storyboard */,
+				ECBCCFC51BE814EF0000425F /* App.swift */,
+				ECBCCFD51BE815130000425F /* DummyData.swift */,
 				05DE3A301BE1EAA40028B4E0 /* DataManager */,
 				0555B9831BDEECCF00C41580 /* DataModel */,
 				ECBD06041BDC9A9000AB9C01 /* UI */,
@@ -457,11 +458,9 @@
 			isa = PBXGroup;
 			children = (
 				0592AC681BE8376900F84307 /* Library.storyboard */,
-				ECBCCFC51BE814EF0000425F /* App.swift */,
 				ECBCCFC91BE814F40000425F /* AppInfoViewController.swift */,
 				ECBCCFCD1BE814FE0000425F /* LibraryNavController.swift */,
 				ECBCCFCE1BE814FE0000425F /* LibraryViewController.swift */,
-				ECBCCFD51BE815130000425F /* DummyData.swift */,
 				ECBCCFD91BE8151B0000425F /* CellView.swift */,
 				ECBCCFDD1BE815290000425F /* SigninViewController.swift */,
 			);
@@ -473,8 +472,6 @@
 			children = (
 				ECBCCFB61BE814890000425F /* Home.storyboard */,
 				ECBCCFBA1BE814900000425F /* HomeViewController.swift */,
-				83FD40591BE856D100A683B4 /* RecordButton.swift */,
-				ECCA31C81BEA837400C0BFC2 /* HamburgerButton.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -482,7 +479,6 @@
 		8352C6951BD6BD3A007B3F5F /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				ECBCCFAE1BE814790000425F /* Search.storyboard */,
 				ECBCCFB21BE8147D0000425F /* SearchViewController.swift */,
 			);
 			name = Search;
@@ -541,7 +537,12 @@
 		ECBD06041BDC9A9000AB9C01 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				ECCA31C81BEA837400C0BFC2 /* HamburgerButton.swift */,
 				ECBCCF661BE8119D0000425F /* transcriptLabel.swift */,
+				ECCA31CA1BEAD59E00C0BFC2 /* SonaSwitchButton.swift */,
+				ECCA31CC1BEAF42E00C0BFC2 /* AddExtButton.swift */,
+				ECCA31CE1BEB170B00C0BFC2 /* BackToSearch.swift */,
+				83FD40591BE856D100A683B4 /* RecordButton.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -678,14 +679,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC88386B1BE8158500D616C3 /* Main.storyboard in Resources */,
 				833947781BE9B94C008747F8 /* logo_thumbnail.png in Resources */,
 				ECBCCF7B1BE8123B0000425F /* dog.jpg in Resources */,
 				ECBCCFB71BE814890000425F /* Home.storyboard in Resources */,
 				83303FD71BDE9AD60024A10D /* Roboto-Regular.ttf in Resources */,
 				83303FD61BDE9AD00024A10D /* SF-UI-Display-Regular.otf in Resources */,
 				ECBCCF731BE8122D0000425F /* Assets.xcassets in Resources */,
-				ECBCCFAF1BE814790000425F /* Search.storyboard in Resources */,
 				ECBCCFE71BE8154A0000425F /* Settings.storyboard in Resources */,
 				056FA61E1BE82F6D007DE1AC /* Master.storyboard in Resources */,
 				833947771BE9B94C008747F8 /* brand.png in Resources */,
@@ -715,7 +714,6 @@
 				ECBCCF871BE812470000425F /* image1.png in Resources */,
 				ECBCCF8A1BE812470000425F /* image2.png in Resources */,
 				ECBCCF781BE812360000425F /* chris.png in Resources */,
-				ECBCCFB01BE814790000425F /* Search.storyboard in Resources */,
 				ECBCCF901BE812470000425F /* image4.png in Resources */,
 				ECBCCFB81BE814890000425F /* Home.storyboard in Resources */,
 				0592AC6B1BE8376900F84307 /* Library.storyboard in Resources */,
@@ -739,7 +737,6 @@
 				ECBCCF881BE812470000425F /* image1.png in Resources */,
 				ECBCCF8B1BE812470000425F /* image2.png in Resources */,
 				ECBCCF791BE812360000425F /* chris.png in Resources */,
-				ECBCCFB11BE814790000425F /* Search.storyboard in Resources */,
 				ECBCCF911BE812470000425F /* image4.png in Resources */,
 				ECBCCFB91BE814890000425F /* Home.storyboard in Resources */,
 				0592AC6C1BE8376900F84307 /* Library.storyboard in Resources */,
@@ -885,6 +882,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				056FA6211BE82FDE007DE1AC /* MenuController.swift in Sources */,
+				ECCA31CB1BEAD59E00C0BFC2 /* SonaSwitchButton.swift in Sources */,
 				ECBCCFBB1BE814900000425F /* HomeViewController.swift in Sources */,
 				83DEE3241BEAD59C00F1C723 /* NavSettings.swift in Sources */,
 				83DEE3221BEAD59000F1C723 /* NavLibrary.swift in Sources */,
@@ -897,6 +895,7 @@
 				ECBCCFCF1BE814FE0000425F /* LibraryNavController.swift in Sources */,
 				EC90FC431BDB3EFA00F60AE9 /* NuanceHeader.m in Sources */,
 				ECBCCFE21BE8153D0000425F /* SettingsViewController.swift in Sources */,
+				ECCA31CF1BEB170B00C0BFC2 /* BackToSearch.swift in Sources */,
 				83FD405A1BE856D100A683B4 /* RecordButton.swift in Sources */,
 				ECBCCF4F1BE7FD2A0000425F /* Settings.swift in Sources */,
 				ECBCCF431BE7FCA80000425F /* DataInitializer.swift in Sources */,
@@ -904,6 +903,7 @@
 				EC8838771BE8171100D616C3 /* AppDelegate.swift in Sources */,
 				ECCA31C91BEA837400C0BFC2 /* HamburgerButton.swift in Sources */,
 				ECBCCF531BE7FD450000425F /* Language.swift in Sources */,
+				ECCA31CD1BEAF42E00C0BFC2 /* AddExtButton.swift in Sources */,
 				8378B90D1BE9A53B00DB2C25 /* NavigationBarController.swift in Sources */,
 				EC7EFCD01BE81C060063EE70 /* SonaData.xcdatamodeld in Sources */,
 				ECBCCFA31BE812660000425F /* TextToSpeech.swift in Sources */,
@@ -1003,14 +1003,6 @@
 				0592AC691BE8376900F84307 /* Base */,
 			);
 			name = Library.storyboard;
-			sourceTree = "<group>";
-		};
-		EC8838691BE8158500D616C3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EC88386A1BE8158500D616C3 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		EC88386C1BE8159B00D616C3 /* LaunchScreen.storyboard */ = {

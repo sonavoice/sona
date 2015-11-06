@@ -4,19 +4,32 @@ import Lock
 class AppInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
   var appInfo: App!
+  let appManager = AppManager()
+  var signedIn = false
   
   @IBOutlet weak var icon: UIImageView!
   @IBOutlet weak var appTitle: UILabel!
   @IBOutlet weak var appDescription: UILabel!
   @IBOutlet weak var CommandView: UITableView!
   
-  @IBAction func signIn(sender: UIBarButtonItem) {
-//    let lock = Authentication.sharedInstance.lock
-//    lock.identityProviderAuthenticator().authenticateWithConnectionName(appInfo.name!, parameters: nil, success: self.successCallback(), failure: self.errorCallback())
-    let signinController: SigninViewController = SigninViewController()
-    signinController.appname = appInfo.name!
-    self.presentViewController(signinController, animated: true, completion: nil)
-    
+  func signInOut() {
+    if signedIn {
+      /* Sign out */
+      /* Remove token */
+      appManager.deleteExt(appTitle.text!)
+      
+      self.navigationItem.rightBarButtonItem?.title = "Sign In"
+      self.signedIn = false
+    } else {
+      /* Sign in */
+      /* Auth sequence */
+      let signinController: SigninViewController = SigninViewController()
+      signinController.appname = appInfo.name!
+      self.presentViewController(signinController, animated: true, completion: nil)
+      
+      self.navigationItem.rightBarButtonItem?.title = "Log out"
+      self.signedIn = true
+    }
   }
   
   override func viewDidLoad() {
@@ -33,6 +46,22 @@ class AppInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
       icon.image = UIImage(data: data!)
     }
     
+    self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+    self.navigationController?.navigationBar.shadowImage = UIImage()
+    self.navigationController?.navigationBar.translucent = true
+    self.navigationController?.view.backgroundColor = UIColor.clearColor()
+    
+    self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sign In", style: .Done, target: self, action: "signInOut")
+    
+    if (appManager.scan([appTitle.text!]) != nil) {
+      self.navigationItem.rightBarButtonItem?.title = "Log out"
+      self.signedIn = true
+    } else {
+      self.navigationItem.rightBarButtonItem?.title = "Sign In"
+      self.signedIn = false
+    }
+    
+    
     self.CommandView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
     self.CommandView.allowsSelection = false
   }
@@ -48,13 +77,32 @@ class AppInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell:UITableViewCell = self.CommandView.dequeueReusableCellWithIdentifier("cell")!
     
-    cell.textLabel!.font = UIFont(name: "Lato-Regular", size: 11)
+    cell.textLabel!.font = UIFont(name: "Lato-Regular", size: 13)
     cell.textLabel?.textColor = UIColor(red: 33/255.0, green: 33/255.0, blue: 33/255.0, alpha: 1)
     cell.textLabel?.text = self.appInfo.commands[indexPath.row]
+    
+//    let bold = matchesForRegexInText("\\*(\\S*)\\*", text: self.appInfo.commands[indexPath.row])
+    
+    
     cell.textLabel?.numberOfLines = 0
+    cell.layoutMargins = UIEdgeInsetsZero
+    cell.preservesSuperviewLayoutMargins = false
     cell.textLabel?.sizeToFit()
     
     return cell
+  }
+  
+  func matchesForRegexInText(regex: String!, text: String!) -> [String] {
+    do {
+      let regex = try NSRegularExpression(pattern: regex, options: [])
+      let nsString = text as NSString
+      let results = regex.matchesInString(text,
+        options: [], range: NSMakeRange(0, nsString.length))
+      return results.map { nsString.substringWithRange($0.range)}
+    } catch let error as NSError {
+      print("invalid regex: \(error.localizedDescription)")
+      return []
+    }
   }
   
   override func viewWillAppear(animated: Bool) {
@@ -63,21 +111,6 @@ class AppInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
     self.CommandView.estimatedRowHeight = 150 // for example. Set your average height
     self.CommandView.rowHeight = UITableViewAutomaticDimension
     self.CommandView.reloadData()
-  }
-  
-  /* Callbacks for authentication */
-  
-  private func errorCallback() -> NSError -> () {
-    return { error in
-      print("Failed with error \(error)")
-    }
-  }
-  
-  private func successCallback() -> (A0UserProfile, A0Token) -> () {
-    return { (profile, token) -> Void in
-      print("Logged in user \(profile.name)")
-      print("Tokens: \(token)")
-    }
   }
   
 }

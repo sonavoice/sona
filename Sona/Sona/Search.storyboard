@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MAj-qE-wfv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MAj-qE-wfv">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <mutableArray key="Lato-Regular.ttf">
-            <string>Lato-Regular</string>
-        </mutableArray>
-        <mutableArray key="Roboto-Regular.ttf">
-            <string>Roboto-Regular</string>
-        </mutableArray>
-    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="W4E-4O-Ae2">
@@ -93,7 +85,6 @@
                                             <outlet property="arrow" destination="moa-nS-zSa" id="RpG-gY-eqW"/>
                                             <outlet property="icon" destination="90Q-eo-qg0" id="pRA-uP-r0R"/>
                                             <outlet property="name" destination="a8v-8Z-pv8" id="cMy-UE-GKG"/>
-                                            <segue destination="9yR-hL-ZRl" kind="show" identifier="appSegue" id="cJZ-b1-Gag"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -119,13 +110,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="dvh-nY-lSF" secondAttribute="trailing" id="xxS-FG-WBU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Search" id="4j0-Uv-4iy">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="fXt-fd-ake">
-                            <connections>
-                                <action selector="exitSearch:" destination="wF0-2r-Qak" id="4zc-Lz-Jz5"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Search" id="4j0-Uv-4iy"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="94L-C7-ebX" id="DDa-vH-OUl"/>
                         <outlet property="tableView" destination="dvh-nY-lSF" id="x2t-NN-9ro"/>
@@ -144,112 +129,5 @@
             </objects>
             <point key="canvasLocation" x="-445" y="-791"/>
         </scene>
-        <!--App Info View Controller-->
-        <scene sceneID="ObJ-ag-PZx">
-            <objects>
-                <viewController id="9yR-hL-ZRl" customClass="AppInfoViewController" customModule="Sona" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6DF-mM-tNW"/>
-                        <viewControllerLayoutGuide type="bottom" id="Zdg-qE-LSs"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2Gm-km-zrD">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image3.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ywl-HW-44E">
-                                <rect key="frame" x="20" y="79" width="100" height="100"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="51A-5D-8Le"/>
-                                    <constraint firstAttribute="height" constant="100" id="Fr1-xV-fyQ"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hp9-Xh-Jpy">
-                                <rect key="frame" x="135" y="79" width="96" height="32"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="24"/>
-                                <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCQ-Xu-Tdk">
-                                <rect key="frame" x="135" y="111" width="445" height="29"/>
-                                <animations/>
-                                <string key="text">Bacon ipsum dolor amet pork pork loin venison filet mignon turkey short ribs bacon kevin beef shoulder. Pork filet mignon meatloaf pork loin hamburger.</string>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
-                                <color key="textColor" red="0.44705882349999998" green="0.44705882349999998" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vux-Ta-mR3">
-                                <rect key="frame" x="20" y="189" width="560" height="411"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="560" id="31o-lj-gsJ"/>
-                                    <constraint firstAttribute="height" constant="420" id="gif-Ix-AEq"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="31o-lj-gsJ"/>
-                                        <exclude reference="gif-Ix-AEq"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <outlet property="dataSource" destination="9yR-hL-ZRl" id="Ys7-My-7fm"/>
-                                    <outlet property="delegate" destination="9yR-hL-ZRl" id="W3z-vc-3lv"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="hp9-Xh-Jpy" firstAttribute="top" secondItem="Ywl-HW-44E" secondAttribute="bottom" constant="-175" id="0vT-MD-UKC"/>
-                            <constraint firstItem="hp9-Xh-Jpy" firstAttribute="top" secondItem="6DF-mM-tNW" secondAttribute="bottom" constant="15" id="1ID-G7-52J"/>
-                            <constraint firstItem="Zdg-qE-LSs" firstAttribute="top" secondItem="Vux-Ta-mR3" secondAttribute="bottom" id="1b2-7X-IwI"/>
-                            <constraint firstItem="Ywl-HW-44E" firstAttribute="top" secondItem="6DF-mM-tNW" secondAttribute="bottom" constant="15" id="3yf-SS-u0I"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="PCQ-Xu-Tdk" secondAttribute="trailing" id="8Dl-nl-Hcz"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="Ywl-HW-44E" secondAttribute="leading" id="Ayf-KM-afc"/>
-                            <constraint firstItem="Ywl-HW-44E" firstAttribute="centerX" secondItem="2Gm-km-zrD" secondAttribute="centerX" constant="-192.5" id="CFN-3b-q52"/>
-                            <constraint firstItem="hp9-Xh-Jpy" firstAttribute="centerX" secondItem="2Gm-km-zrD" secondAttribute="centerX" constant="-32.5" id="EDN-ez-LDu"/>
-                            <constraint firstItem="Vux-Ta-mR3" firstAttribute="top" secondItem="PCQ-Xu-Tdk" secondAttribute="bottom" constant="10" id="G9Q-fd-Lka"/>
-                            <constraint firstItem="Vux-Ta-mR3" firstAttribute="top" secondItem="hp9-Xh-Jpy" secondAttribute="bottom" constant="179" id="Svh-eM-so3"/>
-                            <constraint firstItem="Vux-Ta-mR3" firstAttribute="top" secondItem="Ywl-HW-44E" secondAttribute="bottom" constant="10" id="TQw-G0-Bbl"/>
-                            <constraint firstItem="PCQ-Xu-Tdk" firstAttribute="top" secondItem="hp9-Xh-Jpy" secondAttribute="bottom" id="WAp-bk-X9Y"/>
-                            <constraint firstItem="hp9-Xh-Jpy" firstAttribute="leading" secondItem="Ywl-HW-44E" secondAttribute="trailing" constant="15" id="fep-L2-Lwl"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="Vux-Ta-mR3" secondAttribute="leading" id="mBp-9m-aeB"/>
-                            <constraint firstItem="Vux-Ta-mR3" firstAttribute="centerX" secondItem="2Gm-km-zrD" secondAttribute="centerX" id="mJ2-c4-8Mg"/>
-                            <constraint firstItem="PCQ-Xu-Tdk" firstAttribute="leading" secondItem="Ywl-HW-44E" secondAttribute="trailing" constant="15" id="sXD-gV-OAF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Vux-Ta-mR3" secondAttribute="trailing" id="x2n-Pc-rAf"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="CFN-3b-q52"/>
-                                <exclude reference="0vT-MD-UKC"/>
-                                <exclude reference="EDN-ez-LDu"/>
-                                <exclude reference="G9Q-fd-Lka"/>
-                                <exclude reference="Svh-eM-so3"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <navigationItem key="navigationItem" id="iDw-iP-W4z">
-                        <barButtonItem key="rightBarButtonItem" title="Install" id="T7y-jU-8zJ">
-                            <connections>
-                                <action selector="signIn:" destination="9yR-hL-ZRl" id="Qc8-cs-CT5"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="CommandView" destination="Vux-Ta-mR3" id="KGb-Nd-6Vj"/>
-                        <outlet property="appDescription" destination="PCQ-Xu-Tdk" id="yCz-ap-KX2"/>
-                        <outlet property="appTitle" destination="hp9-Xh-Jpy" id="ODu-ca-Pmg"/>
-                        <outlet property="icon" destination="Ywl-HW-44E" id="D3T-yn-1jL"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CBq-M1-E3Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="384" y="-703"/>
-        </scene>
     </scenes>
-    <resources>
-        <image name="image3.png" width="950" height="633"/>
-    </resources>
 </document>

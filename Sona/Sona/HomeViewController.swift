@@ -12,10 +12,10 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   var apps = [String]()
   var lang = "eng-USA" // Default to prevent crash
   let appManager = AppManager()
-  var button: HamburgerButton! = nil
+  var burgerButton: HamburgerButton! = nil
   var isConfirmation: Bool = false
   var storedParameters = [String: AnyObject]()
-  
+
   @IBOutlet var transcript: UILabel!
   @IBOutlet var recordButton: RecordButton!
   
@@ -30,12 +30,11 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
     if revealViewController() != nil {
       revealViewController().rearViewRevealWidth = 100
       
-      self.button = HamburgerButton(frame: CGRectMake(0, 0, 20, 20))
+      self.burgerButton = HamburgerButton(frame: CGRectMake(0, 0, 40, 40))
       
-      self.button.addTarget(revealViewController(), action: "revealToggle:", forControlEvents: .TouchUpInside)
-      self.button.addTarget(self, action: "toggle:", forControlEvents: .TouchUpInside)
+      self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: burgerButton)
       
-      self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: button)
+      self.burgerButton.addTarget(revealViewController(), action: "revealToggle:", forControlEvents: .TouchUpInside)
       
       view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
@@ -53,10 +52,6 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
     /* Configure SpeechKit Server */
     configureNuance()
     
-  }
-  
-  func toggle(sender: AnyObject!) {
-    self.button.showsMenu = !self.button.showsMenu
   }
   
   override func didReceiveMemoryWarning() {
@@ -93,7 +88,6 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   }
   
   func processCommand(transcript: String) {
-    
     
     if (!isConfirmation) {
       if (!isValidExtension(transcript)) {
@@ -132,22 +126,22 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
                 if let previousTranscript = JSON["previousTranscript"] as? String {
                   // feedback, requiresConfirmation, and previousTranscript extracted
                   self.processResponse(feedback, requiresConfirmation: requiresConfirmation, previousTranscript: previousTranscript)
-                  return
+                    return
                 }
               }
             }
             print("I DID NOT RETURN")
-            self.tts.speak("Please send help")
+              self.tts.speak("Please send help")
           }
           else {
             self.tts.speak("Please send help")
           }
-          
+
         case .Failure:
           self.tts.speak("Please send help")
         }
-    }
-    
+      }
+
   }
   
   func processResponse(feedback: String, requiresConfirmation: Bool, previousTranscript: String) {
