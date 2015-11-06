@@ -1,6 +1,4 @@
 import UIKit
-import SwiftyJSON
-
 class SigninViewController: UIViewController, UIWebViewDelegate {
   var appname: String = ""
   let appManager = AppManager()

@@ -88,7 +88,6 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   }
   
   func processCommand(transcript: String) {
-    
     if (!isConfirmation) {
       if (!isValidExtension(transcript)) {
         return
@@ -110,6 +109,7 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
       self.storedParameters["confirmed"] = true
     }
     
+    isConfirmation = false
     
     self.postCommandToServer()
   }
@@ -154,11 +154,11 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
     
     isConfirmation = true
     
-    delay(2.0) {
-      self.startListening()
-    }
+//    delay(2.0) {
+//      self.startListening()
+//    }
     
-//    self.listenAgain()
+    self.listenAgain()
   }
   
   func listenAgain() {
@@ -168,7 +168,7 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
       }
       return
     }
-    delay(0.5) {
+    delay(0.2) {
       self.startListening()
     }
   }
