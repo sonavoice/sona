@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="seK-Vb-w7B">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="seK-Vb-w7B">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -44,49 +44,68 @@
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <sections>
-                            <tableViewSection headerTitle="Basic Settings" id="ChS-fq-vRj">
+                            <tableViewSection headerTitle="  Basic Settings" id="ChS-fq-vRj">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationLevel="4" indentationWidth="0.0" shouldIndentWhileEditing="NO" id="3DU-nS-ACA">
-                                        <rect key="frame" x="0.0" y="113.5" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" shouldIndentWhileEditing="NO" id="3DU-nS-ACA">
+                                        <rect key="frame" x="0.0" y="114" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="3DU-nS-ACA" id="hYh-HJ-pSp">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <switch opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mN9-oC-R3G" customClass="SonaSwitchButton" customModule="Sona" customModuleProvider="target">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make Vi listen at all times" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5NA-7D-NXx">
+                                                    <rect key="frame" x="8" y="10" width="196" height="23"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                                    <color key="textColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mN9-oC-R3G" customClass="SonaSwitchButton" customModule="Sona" customModuleProvider="target">
                                                     <rect key="frame" x="543" y="6" width="51" height="31"/>
                                                     <animations/>
                                                     <connections>
                                                         <action selector="switchListener:" destination="hqN-xV-UYj" eventType="valueChanged" id="MtR-L7-WMS"/>
                                                     </connections>
                                                 </switch>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Make Vi listen at all times" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5NA-7D-NXx">
-                                                    <rect key="frame" x="15" y="10" width="196" height="22.5"/>
-                                                    <animations/>
-                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
-                                                    <color key="textColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <animations/>
                                             <constraints>
-                                                <constraint firstItem="5NA-7D-NXx" firstAttribute="centerY" secondItem="mN9-oC-R3G" secondAttribute="centerY" id="LHA-cq-aTH"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="mN9-oC-R3G" secondAttribute="trailing" id="LrT-ut-JnY"/>
-                                                <constraint firstItem="mN9-oC-R3G" firstAttribute="centerY" secondItem="hYh-HJ-pSp" secondAttribute="centerY" id="PGd-ve-Xt5"/>
-                                                <constraint firstItem="5NA-7D-NXx" firstAttribute="leading" secondItem="hYh-HJ-pSp" secondAttribute="leadingMargin" constant="7" id="gQJ-zp-4io"/>
+                                                <constraint firstItem="5NA-7D-NXx" firstAttribute="centerY" secondItem="hYh-HJ-pSp" secondAttribute="centerY" id="Deb-ht-qAJ"/>
+                                                <constraint firstItem="mN9-oC-R3G" firstAttribute="centerY" secondItem="hYh-HJ-pSp" secondAttribute="centerY" id="HIJ-TA-FO4"/>
+                                                <constraint firstItem="mN9-oC-R3G" firstAttribute="centerY" secondItem="hYh-HJ-pSp" secondAttribute="centerY" id="Lfv-lF-mbA"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="5NA-7D-NXx" secondAttribute="leading" id="bOg-2V-zeH"/>
+                                                <constraint firstItem="5NA-7D-NXx" firstAttribute="leading" secondItem="hYh-HJ-pSp" secondAttribute="leadingMargin" id="gUR-Rw-RhI"/>
+                                                <constraint firstItem="5NA-7D-NXx" firstAttribute="centerY" secondItem="hYh-HJ-pSp" secondAttribute="centerY" id="ndN-D1-hBk"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="mN9-oC-R3G" secondAttribute="trailing" id="nnd-9k-x8u"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="mN9-oC-R3G" secondAttribute="trailing" id="tBm-5z-hoF"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="Deb-ht-qAJ"/>
+                                                    <exclude reference="bOg-2V-zeH"/>
+                                                    <exclude reference="HIJ-TA-FO4"/>
+                                                    <exclude reference="tBm-5z-hoF"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <animations/>
                                         <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="8"/>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationLevel="4" indentationWidth="0.0" shouldIndentWhileEditing="NO" id="Gzc-9X-os9">
-                                        <rect key="frame" x="0.0" y="157.5" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="0.0" shouldIndentWhileEditing="NO" id="Gzc-9X-os9">
+                                        <rect key="frame" x="0.0" y="158" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gzc-9X-os9" id="Vhl-Mt-amM">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UI sound" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWb-e8-OyT">
+                                                    <rect key="frame" x="8" y="10" width="69" height="23"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                                    <color key="textColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <switch opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i7t-ey-0s4" customClass="SonaSwitchButton" customModule="Sona" customModuleProvider="target">
                                                     <rect key="frame" x="543" y="6" width="51" height="31"/>
                                                     <animations/>
@@ -94,21 +113,34 @@
                                                         <action selector="switchListener:" destination="hqN-xV-UYj" eventType="valueChanged" id="Nls-9j-Z9m"/>
                                                     </connections>
                                                 </switch>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UI sound" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWb-e8-OyT">
-                                                    <rect key="frame" x="15" y="10.5" width="68.5" height="22.5"/>
-                                                    <animations/>
-                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
-                                                    <color key="textColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <animations/>
                                             <constraints>
                                                 <constraint firstItem="i7t-ey-0s4" firstAttribute="centerY" secondItem="Vhl-Mt-amM" secondAttribute="centerY" id="5Pm-Hw-Ata"/>
+                                                <constraint firstItem="i7t-ey-0s4" firstAttribute="centerY" secondItem="Vhl-Mt-amM" secondAttribute="centerY" id="DAD-RB-Bes"/>
+                                                <constraint firstItem="BWb-e8-OyT" firstAttribute="centerY" secondItem="Vhl-Mt-amM" secondAttribute="centerY" id="E3i-Nz-jM7"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="i7t-ey-0s4" secondAttribute="trailing" id="G3J-HK-FS6"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="i7t-ey-0s4" secondAttribute="trailing" id="HTi-0t-mPg"/>
+                                                <constraint firstItem="BWb-e8-OyT" firstAttribute="centerY" secondItem="Vhl-Mt-amM" secondAttribute="centerY" id="IiK-bc-DB4"/>
+                                                <constraint firstItem="i7t-ey-0s4" firstAttribute="centerY" secondItem="Vhl-Mt-amM" secondAttribute="centerY" id="MCQ-nH-Lm5"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="BWb-e8-OyT" secondAttribute="leading" id="PRC-Qm-HfI"/>
                                                 <constraint firstItem="BWb-e8-OyT" firstAttribute="leading" secondItem="Vhl-Mt-amM" secondAttribute="leadingMargin" constant="7" id="XUW-jh-MCh"/>
                                                 <constraint firstItem="BWb-e8-OyT" firstAttribute="centerY" secondItem="i7t-ey-0s4" secondAttribute="centerY" id="hL6-D1-691"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="i7t-ey-0s4" secondAttribute="trailing" id="nH2-0N-gj9"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="BWb-e8-OyT" secondAttribute="leading" id="sTd-my-h9M"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="E3i-Nz-jM7"/>
+                                                    <exclude reference="XUW-jh-MCh"/>
+                                                    <exclude reference="hL6-D1-691"/>
+                                                    <exclude reference="sTd-my-h9M"/>
+                                                    <exclude reference="5Pm-Hw-Ata"/>
+                                                    <exclude reference="DAD-RB-Bes"/>
+                                                    <exclude reference="HTi-0t-mPg"/>
+                                                    <exclude reference="nH2-0N-gj9"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <animations/>
                                         <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="8"/>
@@ -116,25 +148,25 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Language Settings" id="0vt-YA-nSG">
+                            <tableViewSection headerTitle="  Language Settings" id="0vt-YA-nSG">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" shouldIndentWhileEditing="NO" id="vDt-pc-fws">
-                                        <rect key="frame" x="0.0" y="251.5" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" shouldIndentWhileEditing="NO" id="vDt-pc-fws">
+                                        <rect key="frame" x="0.0" y="253" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vDt-pc-fws" id="a6w-Kg-9Sf">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="User language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcN-Gk-lVW">
-                                                    <rect key="frame" x="15" y="11" width="193" height="23"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcN-Gk-lVW">
+                                                    <rect key="frame" x="8" y="10" width="111" height="23"/>
                                                     <animations/>
                                                     <gestureRecognizers/>
                                                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                                     <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkB-UC-o5M">
-                                                    <rect key="frame" x="541" y="10" width="42" height="23.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkB-UC-o5M">
+                                                    <rect key="frame" x="541" y="10" width="42" height="24"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -143,9 +175,23 @@
                                             </subviews>
                                             <animations/>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="zkB-UC-o5M" secondAttribute="trailing" constant="9" id="DYz-wh-RKQ"/>
-                                                <constraint firstItem="mcN-Gk-lVW" firstAttribute="leading" secondItem="a6w-Kg-9Sf" secondAttribute="leadingMargin" constant="7" id="Q8d-mj-Deq"/>
+                                                <constraint firstItem="mcN-Gk-lVW" firstAttribute="centerY" secondItem="a6w-Kg-9Sf" secondAttribute="centerY" id="CX1-Wx-dSH"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="zkB-UC-o5M" secondAttribute="trailing" id="DYz-wh-RKQ"/>
+                                                <constraint firstItem="mcN-Gk-lVW" firstAttribute="centerY" secondItem="a6w-Kg-9Sf" secondAttribute="centerY" id="FDC-Ua-RNC"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="mcN-Gk-lVW" secondAttribute="leading" id="Htc-1b-W4e"/>
+                                                <constraint firstItem="zkB-UC-o5M" firstAttribute="centerY" secondItem="a6w-Kg-9Sf" secondAttribute="centerY" id="Kzx-De-XCD"/>
+                                                <constraint firstItem="zkB-UC-o5M" firstAttribute="centerY" secondItem="a6w-Kg-9Sf" secondAttribute="centerY" id="NBc-ZM-uN3"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="zkB-UC-o5M" secondAttribute="trailing" constant="9" id="OS1-fu-SQx"/>
+                                                <constraint firstItem="mcN-Gk-lVW" firstAttribute="leading" secondItem="a6w-Kg-9Sf" secondAttribute="leadingMargin" id="Q8d-mj-Deq"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="FDC-Ua-RNC"/>
+                                                    <exclude reference="Q8d-mj-Deq"/>
+                                                    <exclude reference="DYz-wh-RKQ"/>
+                                                    <exclude reference="Kzx-De-XCD"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <animations/>
                                         <gestureRecognizers/>
@@ -156,14 +202,14 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" shouldIndentWhileEditing="NO" id="xyb-D0-2rH">
-                                        <rect key="frame" x="0.0" y="295.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="297" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xyb-D0-2rH" id="OKV-R7-05W">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Vi Voice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2W-WS-JZY">
-                                                    <rect key="frame" x="15" y="11" width="69" height="23"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vi Voice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2W-WS-JZY">
+                                                    <rect key="frame" x="8" y="10" width="62" height="23"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                                     <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -172,30 +218,32 @@
                                             </subviews>
                                             <animations/>
                                             <constraints>
-                                                <constraint firstItem="H2W-WS-JZY" firstAttribute="leading" secondItem="OKV-R7-05W" secondAttribute="leadingMargin" constant="7" id="YkM-cP-Jdz"/>
+                                                <constraint firstItem="H2W-WS-JZY" firstAttribute="centerY" secondItem="OKV-R7-05W" secondAttribute="centerY" id="AHO-Ff-mYh"/>
+                                                <constraint firstItem="H2W-WS-JZY" firstAttribute="leading" secondItem="OKV-R7-05W" secondAttribute="leadingMargin" id="WnU-8a-g6H"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="H2W-WS-JZY" secondAttribute="leading" id="akB-rJ-EX6"/>
+                                                <constraint firstItem="H2W-WS-JZY" firstAttribute="centerY" secondItem="OKV-R7-05W" secondAttribute="centerY" id="grB-f9-dg3"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="WnU-8a-g6H"/>
+                                                    <exclude reference="grB-f9-dg3"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <animations/>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Updates" id="YfC-2Q-YNW">
+                            <tableViewSection headerTitle="  Updates" id="YfC-2Q-YNW">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" shouldIndentWhileEditing="NO" id="3F6-HT-RLQ">
-                                        <rect key="frame" x="0.0" y="389.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="392" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3F6-HT-RLQ" id="wku-Th-a12">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Automatically check for updates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9G-gP-VyQ">
-                                                    <rect key="frame" x="16" y="12" width="246" height="20"/>
-                                                    <animations/>
-                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <switch opaque="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5XF-7K-Yel" customClass="SonaSwitchButton" customModule="Sona" customModuleProvider="target">
                                                     <rect key="frame" x="543" y="6" width="51" height="31"/>
                                                     <animations/>
@@ -203,24 +251,43 @@
                                                         <action selector="switchListener:" destination="hqN-xV-UYj" eventType="valueChanged" id="943-Se-u8Z"/>
                                                     </connections>
                                                 </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Automatically check for updates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9G-gP-VyQ">
+                                                    <rect key="frame" x="8" y="11" width="248" height="23"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <animations/>
                                             <constraints>
                                                 <constraint firstItem="z9G-gP-VyQ" firstAttribute="centerY" secondItem="wku-Th-a12" secondAttribute="centerY" id="69n-tt-GHY"/>
+                                                <constraint firstItem="z9G-gP-VyQ" firstAttribute="centerY" secondItem="wku-Th-a12" secondAttribute="centerY" id="Em7-CM-btR"/>
                                                 <constraint firstItem="5XF-7K-Yel" firstAttribute="centerY" secondItem="wku-Th-a12" secondAttribute="centerY" id="Q8C-Ud-orc"/>
+                                                <constraint firstItem="5XF-7K-Yel" firstAttribute="centerY" secondItem="wku-Th-a12" secondAttribute="centerY" id="Rvc-is-UFj"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="5XF-7K-Yel" secondAttribute="trailing" id="Yj3-eh-fFZ"/>
-                                                <constraint firstItem="z9G-gP-VyQ" firstAttribute="leading" secondItem="wku-Th-a12" secondAttribute="leadingMargin" constant="8" id="evm-ck-iFU"/>
+                                                <constraint firstItem="z9G-gP-VyQ" firstAttribute="leading" secondItem="wku-Th-a12" secondAttribute="leadingMargin" id="evm-ck-iFU"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="5XF-7K-Yel" secondAttribute="trailing" id="ua4-zL-EEP"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="z9G-gP-VyQ" secondAttribute="leading" id="vSg-pm-Ve0"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="69n-tt-GHY"/>
+                                                    <exclude reference="evm-ck-iFU"/>
+                                                    <exclude reference="Q8C-Ud-orc"/>
+                                                    <exclude reference="Yj3-eh-fFZ"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <animations/>
                                         <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="8"/>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" shouldIndentWhileEditing="NO" id="wDt-6Y-23J">
-                                        <rect key="frame" x="0.0" y="433.5" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" shouldIndentWhileEditing="NO" id="wDt-6Y-23J">
+                                        <rect key="frame" x="0.0" y="436" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wDt-6Y-23J" id="49K-Fc-8Q7">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <switch opaque="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1mT-Me-skd" customClass="SonaSwitchButton" customModule="Sona" customModuleProvider="target">
@@ -230,8 +297,8 @@
                                                         <action selector="switchListener:" destination="hqN-xV-UYj" eventType="valueChanged" id="f1h-Ii-uwx"/>
                                                     </connections>
                                                 </switch>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Notify Vi update" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHo-1P-VIp">
-                                                    <rect key="frame" x="16" y="11" width="124" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notify Vi update" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHo-1P-VIp">
+                                                    <rect key="frame" x="8" y="10" width="124" height="23"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -240,11 +307,23 @@
                                             </subviews>
                                             <animations/>
                                             <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="1mT-Me-skd" secondAttribute="trailing" id="DHt-ba-PNQ"/>
                                                 <constraint firstItem="1mT-Me-skd" firstAttribute="centerY" secondItem="49K-Fc-8Q7" secondAttribute="centerY" id="IoE-Bl-Xit"/>
-                                                <constraint firstItem="KHo-1P-VIp" firstAttribute="leading" secondItem="49K-Fc-8Q7" secondAttribute="leadingMargin" constant="8" id="MJg-kK-B6d"/>
+                                                <constraint firstItem="KHo-1P-VIp" firstAttribute="leading" secondItem="49K-Fc-8Q7" secondAttribute="leadingMargin" id="MJg-kK-B6d"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="KHo-1P-VIp" secondAttribute="leading" id="Uy8-OM-std"/>
+                                                <constraint firstItem="KHo-1P-VIp" firstAttribute="centerY" secondItem="49K-Fc-8Q7" secondAttribute="centerY" id="W6L-Fm-q45"/>
                                                 <constraint firstItem="KHo-1P-VIp" firstAttribute="centerY" secondItem="49K-Fc-8Q7" secondAttribute="centerY" id="kQp-oy-zzd"/>
+                                                <constraint firstItem="1mT-Me-skd" firstAttribute="centerY" secondItem="49K-Fc-8Q7" secondAttribute="centerY" id="y84-F0-DHl"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="1mT-Me-skd" secondAttribute="trailing" id="yFJ-YP-oAx"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="MJg-kK-B6d"/>
+                                                    <exclude reference="kQp-oy-zzd"/>
+                                                    <exclude reference="IoE-Bl-Xit"/>
+                                                    <exclude reference="yFJ-YP-oAx"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <animations/>
                                         <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="8"/>
@@ -252,13 +331,13 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Feedback" id="8dF-SF-fvp">
+                            <tableViewSection headerTitle="  Feedback" id="8dF-SF-fvp">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="x9l-i2-ghH">
-                                        <rect key="frame" x="0.0" y="527.5" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" shouldIndentWhileEditing="NO" id="x9l-i2-ghH">
+                                        <rect key="frame" x="0.0" y="531" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x9l-i2-ghH" id="iSr-1I-BgQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <switch opaque="NO" tag="5" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hzX-YG-5Pb" customClass="SonaSwitchButton" customModule="Sona" customModuleProvider="target">
@@ -275,8 +354,8 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Vi's voice response" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2T-As-rhB">
-                                                    <rect key="frame" x="17" y="11" width="147" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vi's voice response" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2T-As-rhB">
+                                                    <rect key="frame" x="8" y="10" width="146" height="23"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                                     <color key="textColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
@@ -285,14 +364,27 @@
                                             </subviews>
                                             <animations/>
                                             <constraints>
-                                                <constraint firstItem="P2T-As-rhB" firstAttribute="leading" secondItem="iSr-1I-BgQ" secondAttribute="leadingMargin" constant="9" id="2BW-fi-vfG"/>
+                                                <constraint firstItem="P2T-As-rhB" firstAttribute="leading" secondItem="iSr-1I-BgQ" secondAttribute="leadingMargin" id="2BW-fi-vfG"/>
                                                 <constraint firstItem="hzX-YG-5Pb" firstAttribute="centerY" secondItem="iSr-1I-BgQ" secondAttribute="centerY" id="3zp-rU-x7c"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="hzX-YG-5Pb" secondAttribute="trailing" id="EYF-4z-4q2"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="hzX-YG-5Pb" secondAttribute="trailing" id="Htt-C0-VPz"/>
                                                 <constraint firstItem="P2T-As-rhB" firstAttribute="centerY" secondItem="iSr-1I-BgQ" secondAttribute="centerY" id="NDa-9V-Las"/>
+                                                <constraint firstItem="hzX-YG-5Pb" firstAttribute="centerY" secondItem="iSr-1I-BgQ" secondAttribute="centerY" id="ToI-7S-07V"/>
+                                                <constraint firstItem="P2T-As-rhB" firstAttribute="centerY" secondItem="iSr-1I-BgQ" secondAttribute="centerY" id="gvW-Wc-9ah"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="P2T-As-rhB" secondAttribute="leading" id="zg1-Fz-qAV"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="2BW-fi-vfG"/>
+                                                    <exclude reference="NDa-9V-Las"/>
+                                                    <exclude reference="3zp-rU-x7c"/>
+                                                    <exclude reference="Htt-C0-VPz"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <animations/>
                                         <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="8"/>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
