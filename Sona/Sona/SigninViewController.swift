@@ -9,7 +9,7 @@ class SigninViewController: UIViewController, UIWebViewDelegate {
     
     let webView:UIWebView = UIWebView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
     
-    let address = "http://localhost:3000/authenticate/" + self.appname
+    let address = "https://sonavoice.com/authenticate/" + self.appname
     webView.loadRequest(NSURLRequest(URL: NSURL(string: address)!))
     webView.delegate = self
     

@@ -116,16 +116,14 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
       self.storedParameters["confirmed"] = true
     }
     
-    print(transcript)
     
     self.postCommandToServer()
   }
   
   func postCommandToServer() {
     print("posting command to server")
-    Alamofire.request(.POST, "http://localhost:3000/command", parameters: self.storedParameters as [String: AnyObject], encoding: .JSON)
+    Alamofire.request(.POST, "https://sonavoice.com/command", parameters: self.storedParameters as [String: AnyObject], encoding: .JSON)
       .responseJSON { response in
-        print(response.result)
         switch response.result {
         case .Success:
           if let JSON = response.result.value {
@@ -155,14 +153,18 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   func processResponse(feedback: String, requiresConfirmation: Bool, previousTranscript: String) {
     self.tts.speak(feedback)
     
-    if (!requiresConfirmation) {
+    if !requiresConfirmation {
       isConfirmation = false
       return
     }
     
     isConfirmation = true
     
-    self.listenAgain()
+    delay(2.0) {
+      self.startListening()
+    }
+    
+//    self.listenAgain()
   }
   
   func listenAgain() {
@@ -182,7 +184,7 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
     let extensionName = appManager.scan(transcriptAsArray)
     
     if extensionName == nil {
-      self.tts.speak("Sorry, couldn't find plug-in. Please add relevant plug-in at the plug-in page")
+      self.tts.speak("Couldn't find anything.")
       return false
     }
     
@@ -234,7 +236,7 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   }
   
   func recognizer(recognizer: SKRecognizer!, didFinishWithError error: NSError!, suggestion: String!) {
-    NSLog("I errored out with the following error: %@", error)
+    NSLog("I errorred out with the following error: %@", error)
   }
   
   func audioSessionReleased() {
