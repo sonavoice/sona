@@ -180,13 +180,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="WQz-Ti-LcY">
-                        <barButtonItem key="rightBarButtonItem" title="Sign In" id="9do-UI-6uy">
-                            <connections>
-                                <action selector="signIn:" destination="4Zl-Hm-WZ5" id="jvW-SA-gEN"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="WQz-Ti-LcY"/>
                     <connections>
                         <outlet property="CommandView" destination="goS-Rs-0lT" id="HCR-h9-F50"/>
                         <outlet property="appDescription" destination="6u1-e6-AzT" id="0hx-nZ-sFJ"/>

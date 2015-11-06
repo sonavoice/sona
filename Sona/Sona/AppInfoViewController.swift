@@ -4,17 +4,32 @@ import Lock
 class AppInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
   var appInfo: App!
+  let appManager = AppManager()
+  var signedIn = false
   
   @IBOutlet weak var icon: UIImageView!
   @IBOutlet weak var appTitle: UILabel!
   @IBOutlet weak var appDescription: UILabel!
   @IBOutlet weak var CommandView: UITableView!
   
-  @IBAction func signIn(sender: UIBarButtonItem) {
-    let signinController: SigninViewController = SigninViewController()
-    signinController.appname = appInfo.name!
-    self.presentViewController(signinController, animated: true, completion: nil)
-    
+  func signInOut() {
+    if signedIn {
+      /* Sign out */
+      /* Remove token */
+      appManager.deleteExt(appTitle.text!)
+      
+      self.navigationItem.rightBarButtonItem?.title = "Sign In"
+      self.signedIn = false
+    } else {
+      /* Sign in */
+      /* Auth sequence */
+      let signinController: SigninViewController = SigninViewController()
+      signinController.appname = appInfo.name!
+      self.presentViewController(signinController, animated: true, completion: nil)
+      
+      self.navigationItem.rightBarButtonItem?.title = "Log out"
+      self.signedIn = true
+    }
   }
   
   override func viewDidLoad() {
@@ -30,6 +45,22 @@ class AppInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
     } else {
       icon.image = UIImage(data: data!)
     }
+    
+    self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+    self.navigationController?.navigationBar.shadowImage = UIImage()
+    self.navigationController?.navigationBar.translucent = true
+    self.navigationController?.view.backgroundColor = UIColor.clearColor()
+    
+    self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sign In", style: .Done, target: self, action: "signInOut")
+    
+    if (appManager.scan([appTitle.text!]) != nil) {
+      self.navigationItem.rightBarButtonItem?.title = "Log out"
+      self.signedIn = true
+    } else {
+      self.navigationItem.rightBarButtonItem?.title = "Sign In"
+      self.signedIn = false
+    }
+    
     
     self.CommandView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
     self.CommandView.allowsSelection = false
