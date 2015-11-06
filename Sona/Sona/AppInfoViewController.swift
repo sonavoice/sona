@@ -83,7 +83,6 @@ class AppInfoViewController: UIViewController, UITableViewDelegate, UITableViewD
     
 //    let bold = matchesForRegexInText("\\*(\\S*)\\*", text: self.appInfo.commands[indexPath.row])
     
-    
     cell.textLabel?.numberOfLines = 0
     cell.layoutMargins = UIEdgeInsetsZero
     cell.preservesSuperviewLayoutMargins = false
