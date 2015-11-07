@@ -127,18 +127,24 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
                 if let previousTranscript = JSON["previousTranscript"] as? String {
                   // feedback, requiresConfirmation, and previousTranscript extracted
                   self.processResponse(feedback, requiresConfirmation: requiresConfirmation, previousTranscript: previousTranscript)
-                    return
+                  return
                 }
               }
             }
-            print("I DID NOT RETURN")
-              self.tts.speak("Please send help")
+            print("Error extracting all arguments")
+            self.tts.speak("Unable to properly parse response")
           }
           else {
-            self.tts.speak("Please send help")
+            self.tts.speak("Received invalid JSON")
           }
 
         case .Failure:
+          if let JSON = response.result.value {
+            if let feedback = JSON["feedback"] as? String {
+              self.tts.speak(feedback)
+              return
+            }
+          }
           self.tts.speak("Please send help")
         }
       }
