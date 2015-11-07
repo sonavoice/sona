@@ -1,4 +1,5 @@
 import UIKit
+
 class SigninViewController: UIViewController, UIWebViewDelegate {
   var appname: String = ""
   let appManager = AppManager()
@@ -16,7 +17,7 @@ class SigninViewController: UIViewController, UIWebViewDelegate {
   }
   
   func webViewDidFinishLoad(webView: UIWebView) {
-    if matchesForRegexInText("done$", text: webView.request?.mainDocumentURL?.absoluteString).count >= 1 {
+    if matchesForRegexInText("done", text: webView.request?.mainDocumentURL?.absoluteString).count >= 1 {
       let auth = webView.stringByEvaluatingJavaScriptFromString("stringedAuth")
       let passportDict = JSONParseDictionary(auth!)
       self.appManager.savePassport(self.appname, passport: passportDict)

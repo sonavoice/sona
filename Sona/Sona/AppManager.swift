@@ -61,12 +61,26 @@ class AppManager: NSObject {
       } else {
         var extName = results[0].valueForKey("name")!
         self.context.deleteObject(results[0] as! NSManagedObject)
+        try self.context.save()
         return extName as! String
       }
     } catch {
       print("Error: Failed to save token")
       return nil
     }
+  }
+  
+  func getAllExt() -> NSArray {
+    let request = NSFetchRequest(entityName: "AppToken")
+    request.returnsObjectsAsFaults = false;
+    request.predicate = nil
+    do {
+      let results = try context.executeFetchRequest(request)
+      return results
+    } catch {
+      print("Error: Failed to search app. check local storage")
+    }
+    return []
   }
   
   func scan(transcriptArray: [String]) -> String? {
