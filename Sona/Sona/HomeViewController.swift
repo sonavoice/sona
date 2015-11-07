@@ -63,9 +63,10 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
     
     detectionType(s):
     - SKLongEndOfSpeechDetection (long utterances)
+    - SKShortEndOfSpeechDetection - good for search look up and short small pause utterances
     
     recoType(s):
-    - SKShortEndOfSpeechDetection - good for search look up and short small pause utterances
+    - SKSearchRecognizerType
     - SKTvRecognizerType - good for pauses occasionally and for messages/dictation
     - SKDictationRecognizerType - Long utterances for dictation
     
@@ -75,7 +76,7 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
     
     */
     if !self.isListening {
-      self.voiceSearch = SKRecognizer(type: SKSearchRecognizerType, detection: UInt(SKShortEndOfSpeechDetection), language:self.lang, delegate: self)
+      self.voiceSearch = SKRecognizer(type: SKDictationRecognizerType, detection: UInt(SKShortEndOfSpeechDetection), language:self.lang, delegate: self)
       self.isListening = true
     } else {
       self.voiceSearch?.cancel()
