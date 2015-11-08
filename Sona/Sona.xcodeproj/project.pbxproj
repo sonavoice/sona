@@ -32,6 +32,7 @@
 		A634616A1CECEEF34F9E0BA6 /* Pods_SonaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FBD770CD99F84404CD9FAD7 /* Pods_SonaTests.framework */; };
 		C48C5841D156504A1A618CCA /* Pods_Sona.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C495AC49167F8FC76008486E /* Pods_Sona.framework */; };
 		EC4D3AE21BDB4618008C245F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4D3AE11BDB4618008C245F /* SystemConfiguration.framework */; };
+		EC6B11D81BEFFFE50028DA60 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6B11D71BEFFFE50028DA60 /* Utils.swift */; };
 		EC7EFCD01BE81C060063EE70 /* SonaData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC7EFCCE1BE81C060063EE70 /* SonaData.xcdatamodeld */; };
 		EC88386E1BE8159B00D616C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC88386C1BE8159B00D616C3 /* LaunchScreen.storyboard */; };
 		EC8838721BE8160A00D616C3 /* SpeechKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC8838711BE8160A00D616C3 /* SpeechKit.framework */; };
@@ -208,6 +209,7 @@
 		C495AC49167F8FC76008486E /* Pods_Sona.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sona.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4041EE09D6633BDE5230B04 /* Pods-SonaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SonaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SonaUITests/Pods-SonaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EC4D3AE11BDB4618008C245F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		EC6B11D71BEFFFE50028DA60 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		EC7EFCCF1BE81C060063EE70 /* SonaData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SonaData.xcdatamodel; sourceTree = "<group>"; };
 		EC88386D1BE8159B00D616C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Sona/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		EC8838711BE8160A00D616C3 /* SpeechKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpeechKit.framework; path = Sona/SpeechKit.framework; sourceTree = "<group>"; };
@@ -406,6 +408,8 @@
 		8352C65D1BD6A5DA007B3F5F /* Sona */ = {
 			isa = PBXGroup;
 			children = (
+				EC6B11D61BEFFFD20028DA60 /* Utils */,
+				EC93991C1BEDCE8A009515CF /* SignIn */,
 				056FA61F1BE82F7A007DE1AC /* Hamburger */,
 				EC8838761BE8171100D616C3 /* AppDelegate.swift */,
 				056FA61D1BE82F6D007DE1AC /* Master.storyboard */,
@@ -462,7 +466,6 @@
 				ECBCCFCD1BE814FE0000425F /* LibraryNavController.swift */,
 				ECBCCFCE1BE814FE0000425F /* LibraryViewController.swift */,
 				ECBCCFD91BE8151B0000425F /* CellView.swift */,
-				ECBCCFDD1BE815290000425F /* SigninViewController.swift */,
 			);
 			name = Library;
 			sourceTree = "<group>";
@@ -490,6 +493,14 @@
 				ECBCCFA21BE812660000425F /* TextToSpeech.swift */,
 			);
 			name = TextToSpeech;
+			sourceTree = "<group>";
+		};
+		EC6B11D61BEFFFD20028DA60 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EC6B11D71BEFFFE50028DA60 /* Utils.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		EC8F9AB81BD9D501001A7CCD /* BridgingHeaders */ = {
@@ -532,6 +543,14 @@
 				ECBCCF6E1BE811BE0000425F /* Info.plist */,
 			);
 			name = Extras;
+			sourceTree = "<group>";
+		};
+		EC93991C1BEDCE8A009515CF /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				ECBCCFDD1BE815290000425F /* SigninViewController.swift */,
+			);
+			name = SignIn;
 			sourceTree = "<group>";
 		};
 		ECBD06041BDC9A9000AB9C01 /* UI */ = {
@@ -892,6 +911,7 @@
 				ECBCCFEB1BE8155B0000425F /* LanguageChoice.swift in Sources */,
 				ECBCCFEF1BE815650000425F /* LanguageOptionViewController.swift in Sources */,
 				ECBCCFC61BE814EF0000425F /* App.swift in Sources */,
+				EC6B11D81BEFFFE50028DA60 /* Utils.swift in Sources */,
 				ECBCCFCF1BE814FE0000425F /* LibraryNavController.swift in Sources */,
 				EC90FC431BDB3EFA00F60AE9 /* NuanceHeader.m in Sources */,
 				ECBCCFE21BE8153D0000425F /* SettingsViewController.swift in Sources */,
