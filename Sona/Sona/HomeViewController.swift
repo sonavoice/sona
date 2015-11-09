@@ -2,20 +2,27 @@ import UIKit
 import QuartzCore
 import Alamofire
 import AudioToolbox
+import CoreLocation
 
-class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate {
+class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate, CLLocationManagerDelegate {
   
+  /* Constants */
   var voiceSearch: SKRecognizer?
   var tts = TextToSpeech()
   var isListening: Bool = false
-  let userId = UIDevice.currentDevice().identifierForVendor!.UUIDString
   var apps = [String]()
-  var lang = "eng-USA" // Default to prevent crash
-  let appManager = AppManager()
-  var burgerButton: HamburgerButton! = nil
+  var lang = "eng-USA"
   var isConfirmation: Bool = false
   var storedParameters = [String: AnyObject]()
+  var userLocation = CLLocation()
+  
+  /* Mutables */
+  let userId = UIDevice.currentDevice().identifierForVendor!.UUIDString
+  let appManager = AppManager()
+  let locationManager = CLLocationManager()
 
+  
+  /* UI */
   @IBOutlet var transcript: UILabel!
   @IBOutlet var recordButton: RecordButton!
   
@@ -30,11 +37,10 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
     if revealViewController() != nil {
       revealViewController().rearViewRevealWidth = 100
       
-      self.burgerButton = HamburgerButton(frame: CGRectMake(0, 0, 40, 40))
+      let burgerButton = HamburgerButton(frame: CGRectMake(0, 0, 40, 40))
+      burgerButton.addTarget(revealViewController(), action: "revealToggle:", forControlEvents: .TouchUpInside)
       
       self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: burgerButton)
-      
-      self.burgerButton.addTarget(revealViewController(), action: "revealToggle:", forControlEvents: .TouchUpInside)
       
       view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
@@ -51,6 +57,9 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
     
     /* Configure SpeechKit Server */
     configureNuance()
+    
+    /* Establish location */
+    locate()
     
   }
   
@@ -97,11 +106,10 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
       let extensionName = appManager.scan(transcriptAsArray)
       let passport = appManager.getPassport(extensionName!)!
       
-      /* Do call to core data to get token with the extensionName and assign to authDict. */
       let authDict = ["passport": passport]
       
       /* Configure final object to be sent to server as JSON */
-      self.storedParameters = ["transcript": transcript, "auth": authDict, "confirmed": false]
+      self.storedParameters = ["transcript": transcript, "auth": authDict, "confirmed": false, "location": self.userLocation]
     } else {
       if transcript.lowercaseString.rangeOfString("no") != nil || transcript.lowercaseString.rangeOfString("don't") != nil {
         self.tts.speak("Aborted the command.")
@@ -247,6 +255,18 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   
   func handlePowerMeter() {
     /* Get power level */
+  }
+  
+  /* Location functions and delegate */
+  func locate() {
+    locationManager.delegate = self;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest
+    locationManager.requestAlwaysAuthorization()
+    locationManager.startUpdatingLocation()
+  }
+  
+  func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    self.userLocation = locations[0]
   }
   
 }
