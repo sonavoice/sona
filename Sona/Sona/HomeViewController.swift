@@ -3,11 +3,12 @@ import QuartzCore
 import Alamofire
 import AudioToolbox
 import CoreLocation
+import AVFoundation
 
-class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate, CLLocationManagerDelegate {
+class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate, CLLocationManagerDelegate, AVSpeechSynthesizerDelegate {
   
-  /* Constants */
-  var voiceSearch: SKRecognizer?
+  /* Mutables */
+  var voiceSearch = SKRecognizer()
   var tts = TextToSpeech()
   var isListening: Bool = false
   var apps = [String]()
@@ -15,8 +16,10 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   var isConfirmation: Bool = false
   var storedParameters = [String: AnyObject]()
   var userLocation = CLLocation()
+  var previousTranscript = String()
+  var requiresConfirmation = Bool()
   
-  /* Mutables */
+  /* Constants */
   let userId = UIDevice.currentDevice().identifierForVendor!.UUIDString
   let appManager = AppManager()
   let locationManager = CLLocationManager()
@@ -51,6 +54,8 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
     
     transcript.numberOfLines = 0
     transcript.sizeToFit()
+    
+    self.tts.speaker.delegate = self
     
     /* Add Button functionality */
     createMicButtonPressFunctionality()
@@ -88,7 +93,7 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
       self.voiceSearch = SKRecognizer(type: SKDictationRecognizerType, detection: UInt(SKShortEndOfSpeechDetection), language:self.lang, delegate: self)
       self.isListening = true
     } else {
-      self.voiceSearch?.cancel()
+      self.voiceSearch.cancel()
       self.isListening = false
     }
   }
@@ -162,29 +167,10 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   func processResponse(feedback: String, requiresConfirmation: Bool, previousTranscript: String) {
     self.tts.speak(feedback)
     
-    if !requiresConfirmation {
-      isConfirmation = false
-      return
-    }
-    
-    isConfirmation = true
-    
-//    delay(2.0) {
-//      self.startListening()
-//    }
-    
-    self.listenAgain()
-  }
-  
-  func listenAgain() {
-    if tts.speaker.speaking {
-      delay(0.2) {
-        self.listenAgain()
-      }
-      return
-    }
-    delay(0.2) {
-      self.startListening()
+    if requiresConfirmation {
+      self.isConfirmation = true
+    } else {
+      self.isConfirmation = false
     }
   }
   
@@ -198,15 +184,6 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
     }
     
     return true
-  }
-  
-  func delay(delay:Double, closure:()->()) {
-    dispatch_after(
-      dispatch_time(
-        DISPATCH_TIME_NOW,
-        Int64(delay * Double(NSEC_PER_SEC))
-      ),
-      dispatch_get_main_queue(), closure)
   }
   
   /*** Nuance ***/
@@ -228,7 +205,7 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   
   func recognizerDidFinishRecording(recognizer: SKRecognizer!) {
     NSLog("I have finished recording")
-    voiceSearch!.stopRecording()
+    voiceSearch.stopRecording()
     /* Ends animation on end of listening */
     self.recordButton.animating = false
   }
@@ -267,6 +244,13 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   
   func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
     self.userLocation = locations[0]
+  }
+  
+  /* SpeechSynthesizer Delegates */
+  func speechSynthesizer(synthesizer: AVSpeechSynthesizer, didFinishSpeechUtterance utterance: AVSpeechUtterance) {
+    if self.isConfirmation {
+      self.startListening()
+    }
   }
   
 }
