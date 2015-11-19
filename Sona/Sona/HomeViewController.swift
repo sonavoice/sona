@@ -107,9 +107,6 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
     self.conversationTable.reloadData()
   }
     
-  func addToConversation(msg: String, isUser : Bool) {
-  }
-  
   func processCommand(transcript: String) {
     if (!isConfirmation) {
       if (!isValidExtension(transcript)) {
