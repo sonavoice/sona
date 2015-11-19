@@ -4,3 +4,4 @@ Sona/**/*.framework
 Sona/**/xcuserdata
 Sona/**/*.xcuserstate
 Sona/Pods/
+*.pbxproj
