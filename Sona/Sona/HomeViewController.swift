@@ -4,9 +4,9 @@ import Alamofire
 import AudioToolbox
 import CoreLocation
 
-class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate, CLLocationManagerDelegate {
+class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDelegate, CLLocationManagerDelegate, UITableViewDataSource, UITableViewDelegate {
   
-  /* Constants */
+  /* Mutables */
   var voiceSearch: SKRecognizer?
   var tts = TextToSpeech()
   var isListening: Bool = false
@@ -15,8 +15,9 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   var isConfirmation: Bool = false
   var storedParameters = [String: AnyObject]()
   var userLocation = CLLocation()
+  var conversation = [[String: AnyObject]]()
   
-  /* Mutables */
+  /* Constants */
   let userId = UIDevice.currentDevice().identifierForVendor!.UUIDString
   let appManager = AppManager()
   let locationManager = CLLocationManager()
@@ -24,6 +25,7 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   
   /* UI */
   @IBOutlet var transcript: UILabel!
+  @IBOutlet var conversationTable: UITableView!
   @IBOutlet var recordButton: RecordButton!
   
   override func viewDidLoad() {
@@ -33,6 +35,8 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
     self.navigationController?.navigationBar.shadowImage = UIImage()
     self.navigationController?.navigationBar.translucent = true
     self.navigationController?.view.backgroundColor = UIColor.clearColor()
+    self.conversationTable.delegate = self
+    self.conversationTable.dataSource = self
     
     if revealViewController() != nil {
       revealViewController().rearViewRevealWidth = 100
@@ -96,7 +100,13 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
   func createMicButtonPressFunctionality() {
     self.recordButton.addTarget(self, action: "startListening", forControlEvents: .TouchUpInside)
   }
-  
+    
+  func speak(msg: String) {
+    self.tts.speak(msg)
+    self.conversation.append(["msg" : msg, "isUser" : false])
+    self.conversationTable.reloadData()
+  }
+    
   func processCommand(transcript: String) {
     if (!isConfirmation) {
       if (!isValidExtension(transcript)) {
@@ -112,7 +122,7 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
       self.storedParameters = ["transcript": transcript, "auth": authDict, "confirmed": false, "location": self.userLocation]
     } else {
       if transcript.lowercaseString.rangeOfString("no") != nil || transcript.lowercaseString.rangeOfString("don't") != nil {
-        self.tts.speak("Aborted the command.")
+        self.speak("Aborted the command.")
         return
       }
       self.storedParameters["confirmed"] = true
@@ -140,27 +150,28 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
               }
             }
             print("Error extracting all arguments")
-            self.tts.speak("Unable to properly parse response")
+            self.speak("Unable to properly parse response")
           }
           else {
-            self.tts.speak("Received invalid JSON")
+            self.speak("Received invalid JSON")
           }
 
         case .Failure:
           if let JSON = response.result.value {
             if let feedback = JSON["feedback"] as? String {
-              self.tts.speak(feedback)
+              self.speak(feedback)
               return
             }
           }
-          self.tts.speak("Please send help")
+          self.speak("Please send help")
         }
       }
 
   }
-  
+    
   func processResponse(feedback: String, requiresConfirmation: Bool, previousTranscript: String) {
-    self.tts.speak(feedback)
+    self.speak(feedback)
+    NSLog("%@", feedback);
     
     if !requiresConfirmation {
       isConfirmation = false
@@ -193,7 +204,7 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
     let extensionName = appManager.scan(transcriptAsArray)
     
     if extensionName == nil {
-      self.tts.speak("Couldn't find anything.")
+      self.speak("Couldn't find anything.")
       return false
     }
     
@@ -237,9 +248,11 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
     NSLog("Some results! \n %@", results.results)
     let res = results.firstResult()
     if res == nil {
-      self.tts.speak("I can't hear you")
+      self.speak("I can't hear you")
     } else {
       transcript.text! = "\"" + res + "\""
+      self.conversation.append(["msg" : res, "isUser" : true])
+      self.conversationTable.reloadData()
       processCommand(res)
     }
   }
@@ -269,4 +282,15 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
     self.userLocation = locations[0]
   }
   
+  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    let cell : ConversationCell = ConversationCell.init()
+    cell.setMsg(conversation[indexPath.row]["msg"] as! String)
+    cell.isUser = conversation[indexPath.row]["isUser"] as! Bool
+    
+    return cell
+  }
+  
+  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return conversation.count
+  }
 }

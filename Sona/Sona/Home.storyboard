@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYS-p0-R4N">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYS-p0-R4N">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -57,11 +57,32 @@
                                     <constraint firstAttribute="height" constant="150" id="tp0-Ef-OlM"/>
                                 </constraints>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MvA-bX-6TG">
+                                <rect key="frame" x="28" y="97" width="545" height="355"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ConversationCell" id="vny-Ws-leZ" customClass="ConversationCell" customModule="Sona" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="545" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vny-Ws-leZ" id="Qu9-HC-JIc">
+                                            <rect key="frame" x="0.0" y="0.0" width="545" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="MvA-bX-6TG" firstAttribute="centerY" secondItem="V1i-Y3-Ydi" secondAttribute="centerY" id="3Ae-eT-tLo"/>
                             <constraint firstItem="ICy-pF-KXf" firstAttribute="centerY" secondItem="V1i-Y3-Ydi" secondAttribute="centerY" constant="216.5" id="9LE-kv-noe"/>
+                            <constraint firstItem="MvA-bX-6TG" firstAttribute="leading" secondItem="V1i-Y3-Ydi" secondAttribute="leadingMargin" constant="8" id="9mi-Nq-hXq"/>
+                            <constraint firstItem="MvA-bX-6TG" firstAttribute="width" secondItem="V1i-Y3-Ydi" secondAttribute="width" id="DJY-CH-BVz"/>
                             <constraint firstItem="ICy-pF-KXf" firstAttribute="centerX" secondItem="V1i-Y3-Ydi" secondAttribute="centerX" id="Fnr-UD-QQO"/>
                             <constraint firstItem="16m-cY-i7o" firstAttribute="top" secondItem="ICy-pF-KXf" secondAttribute="bottom" constant="20" id="OAF-4d-cDl"/>
                             <constraint firstItem="ICy-pF-KXf" firstAttribute="centerX" secondItem="V1i-Y3-Ydi" secondAttribute="centerX" id="s0r-pe-8gW"/>
@@ -73,6 +94,9 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="x12-Va-8XM"/>
+                                <exclude reference="3Ae-eT-tLo"/>
+                                <exclude reference="9mi-Nq-hXq"/>
+                                <exclude reference="DJY-CH-BVz"/>
                                 <exclude reference="9LE-kv-noe"/>
                                 <exclude reference="s0r-pe-8gW"/>
                             </mask>
@@ -80,13 +104,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="8bL-65-0WK"/>
                     <connections>
+                        <outlet property="conversationTable" destination="MvA-bX-6TG" id="Kfb-SU-Zok"/>
                         <outlet property="recordButton" destination="ICy-pF-KXf" id="fns-tq-SfJ"/>
                         <outlet property="transcript" destination="Nkt-xZ-XfK" id="l8T-5z-ezq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cxh-BC-v7O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="241" y="-305"/>
+            <point key="canvasLocation" x="261" y="-285"/>
         </scene>
     </scenes>
 </document>
