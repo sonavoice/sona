@@ -115,11 +115,12 @@ class HomeViewController: UIViewController, SpeechKitDelegate, SKRecognizerDeleg
       let transcriptAsArray = transcript.componentsSeparatedByString(" ")
       let extensionName = appManager.scan(transcriptAsArray)
       let passport = appManager.getPassport(extensionName!)!
+      let location = ["latitude": userLocation.coordinate.latitude, "longitude": userLocation.coordinate.longitude]
       
       let authDict = ["passport": passport]
       
       /* Configure final object to be sent to server as JSON */
-      self.storedParameters = ["transcript": transcript, "auth": authDict, "confirmed": false, "location": self.userLocation]
+      self.storedParameters = ["transcript": transcript, "auth": authDict, "confirmed": false, "location": location]
     } else {
       if transcript.lowercaseString.rangeOfString("no") != nil || transcript.lowercaseString.rangeOfString("don't") != nil {
         self.speak("Aborted the command.")

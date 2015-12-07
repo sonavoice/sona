@@ -5,7 +5,7 @@
 Prerequisites:
 - [CocoaPods](http://guides.cocoapods.org/using/getting-started.html) (install with `sudo gem install cocoapods`)
 
-Simply run `./setup `. This will run `pod install` and will also grab the SpeechKit framework and add it to the project libraries.
+Simply run `./setup `. This will run `pod install` and will also grab the SpeechKit framework from a Dropbox folder and add it to the project libraries.
 
 Open `Sona.xcworkspace` in Xcode.
 

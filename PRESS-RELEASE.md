@@ -51,8 +51,8 @@ Once the project moves into development, the press release can be used as a touc
 
 ## Customer Quote ##
   > "It's so much better than Cortana, Siri, and Google Now!"
-
-## Closing and Call to Action ##
-  > Go to our site, and give it a try!
   
 ## Apps Available on Sona ##
+  > Slack
+  > Venmo
+  > Uber (coming soon)

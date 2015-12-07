@@ -49,6 +49,7 @@
 		EC90FC781BDB45B000F60AE9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC90FC771BDB45B000F60AE9 /* CoreGraphics.framework */; };
 		EC90FC7A1BDB45BD00F60AE9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC90FC791BDB45BD00F60AE9 /* Foundation.framework */; };
 		EC90FC7C1BDB45C700F60AE9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC90FC7B1BDB45C700F60AE9 /* Security.framework */; };
+		EC95536A1C152ABC005EE4D1 /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9553691C152ABC005EE4D1 /* ConversationCell.swift */; };
 		ECBCCF431BE7FCA80000425F /* DataInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBCCF421BE7FCA80000425F /* DataInitializer.swift */; };
 		ECBCCF441BE7FCA80000425F /* DataInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBCCF421BE7FCA80000425F /* DataInitializer.swift */; };
 		ECBCCF451BE7FCA80000425F /* DataInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBCCF421BE7FCA80000425F /* DataInitializer.swift */; };
@@ -225,6 +226,7 @@
 		EC90FC771BDB45B000F60AE9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		EC90FC791BDB45BD00F60AE9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EC90FC7B1BDB45C700F60AE9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		EC9553691C152ABC005EE4D1 /* ConversationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
 		ECBCCF421BE7FCA80000425F /* DataInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataInitializer.swift; path = Sona/DataInitializer.swift; sourceTree = SOURCE_ROOT; };
 		ECBCCF461BE7FCE40000425F /* AppManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppManager.swift; path = Sona/AppManager.swift; sourceTree = SOURCE_ROOT; };
 		ECBCCF4A1BE7FD030000425F /* LanguageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LanguageManager.swift; path = Sona/LanguageManager.swift; sourceTree = SOURCE_ROOT; };
@@ -557,6 +559,7 @@
 			isa = PBXGroup;
 			children = (
 				ECCA31C81BEA837400C0BFC2 /* HamburgerButton.swift */,
+				EC9553691C152ABC005EE4D1 /* ConversationCell.swift */,
 				ECBCCF661BE8119D0000425F /* transcriptLabel.swift */,
 				ECCA31CA1BEAD59E00C0BFC2 /* SonaSwitchButton.swift */,
 				ECCA31CC1BEAF42E00C0BFC2 /* AddExtButton.swift */,
@@ -935,6 +938,7 @@
 				ECBCCFDA1BE8151B0000425F /* CellView.swift in Sources */,
 				ECBCCFDE1BE815290000425F /* SigninViewController.swift in Sources */,
 				ECBCCFD61BE815130000425F /* DummyData.swift in Sources */,
+				EC95536A1C152ABC005EE4D1 /* ConversationCell.swift in Sources */,
 				ECBCCF571BE7FD680000425F /* AppToken.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
