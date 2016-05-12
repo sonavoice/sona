@@ -79,9 +79,6 @@
 		ECBCCF731BE8122D0000425F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECBCCF721BE8122D0000425F /* Assets.xcassets */; };
 		ECBCCF741BE8122D0000425F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECBCCF721BE8122D0000425F /* Assets.xcassets */; };
 		ECBCCF751BE8122D0000425F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECBCCF721BE8122D0000425F /* Assets.xcassets */; };
-		ECBCCF771BE812360000425F /* chris.png in Resources */ = {isa = PBXBuildFile; fileRef = ECBCCF761BE812360000425F /* chris.png */; };
-		ECBCCF781BE812360000425F /* chris.png in Resources */ = {isa = PBXBuildFile; fileRef = ECBCCF761BE812360000425F /* chris.png */; };
-		ECBCCF791BE812360000425F /* chris.png in Resources */ = {isa = PBXBuildFile; fileRef = ECBCCF761BE812360000425F /* chris.png */; };
 		ECBCCF7B1BE8123B0000425F /* dog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ECBCCF7A1BE8123B0000425F /* dog.jpg */; };
 		ECBCCF7C1BE8123B0000425F /* dog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ECBCCF7A1BE8123B0000425F /* dog.jpg */; };
 		ECBCCF7D1BE8123B0000425F /* dog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ECBCCF7A1BE8123B0000425F /* dog.jpg */; };
@@ -237,7 +234,6 @@
 		ECBCCF6A1BE811A90000425F /* NavigatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigatorViewController.swift; path = Sona/NavigatorViewController.swift; sourceTree = SOURCE_ROOT; };
 		ECBCCF6E1BE811BE0000425F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Sona/Info.plist; sourceTree = SOURCE_ROOT; };
 		ECBCCF721BE8122D0000425F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Sona/Assets.xcassets; sourceTree = SOURCE_ROOT; };
-		ECBCCF761BE812360000425F /* chris.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chris.png; path = Sona/chris.png; sourceTree = SOURCE_ROOT; };
 		ECBCCF7A1BE8123B0000425F /* dog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = dog.jpg; path = Sona/dog.jpg; sourceTree = SOURCE_ROOT; };
 		ECBCCF7E1BE812460000425F /* image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image1.png; path = Sona/image1.png; sourceTree = SOURCE_ROOT; };
 		ECBCCF7F1BE812460000425F /* image2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image2.png; path = Sona/image2.png; sourceTree = SOURCE_ROOT; };
@@ -533,7 +529,6 @@
 				ECBCCF841BE812470000425F /* image7.png */,
 				ECBCCF851BE812470000425F /* image8.png */,
 				ECBCCF7A1BE8123B0000425F /* dog.jpg */,
-				ECBCCF761BE812360000425F /* chris.png */,
 				ECBCCF9E1BE812570000425F /* start_listening.wav */,
 			);
 			name = Assets;
@@ -664,7 +659,7 @@
 				TargetAttributes = {
 					8352C65A1BD6A5DA007B3F5F = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = JZ8SB8N6S9;
+						DevelopmentTeam = NE5D4E79R6;
 					};
 					8352C6701BD6A5DA007B3F5F = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -719,7 +714,6 @@
 				ECBCCF981BE812470000425F /* image7.png in Resources */,
 				ECBCCF921BE812470000425F /* image5.png in Resources */,
 				ECBCCF951BE812470000425F /* image6.png in Resources */,
-				ECBCCF771BE812360000425F /* chris.png in Resources */,
 				ECBCCF891BE812470000425F /* image2.png in Resources */,
 				ECBCCF861BE812470000425F /* image1.png in Resources */,
 				0592AC6A1BE8376900F84307 /* Library.storyboard in Resources */,
@@ -735,7 +729,6 @@
 				ECBCCFE81BE8154A0000425F /* Settings.storyboard in Resources */,
 				ECBCCF871BE812470000425F /* image1.png in Resources */,
 				ECBCCF8A1BE812470000425F /* image2.png in Resources */,
-				ECBCCF781BE812360000425F /* chris.png in Resources */,
 				ECBCCF901BE812470000425F /* image4.png in Resources */,
 				ECBCCFB81BE814890000425F /* Home.storyboard in Resources */,
 				0592AC6B1BE8376900F84307 /* Library.storyboard in Resources */,
@@ -758,7 +751,6 @@
 				ECBCCFE91BE8154A0000425F /* Settings.storyboard in Resources */,
 				ECBCCF881BE812470000425F /* image1.png in Resources */,
 				ECBCCF8B1BE812470000425F /* image2.png in Resources */,
-				ECBCCF791BE812360000425F /* chris.png in Resources */,
 				ECBCCF911BE812470000425F /* image4.png in Resources */,
 				ECBCCFB91BE814890000425F /* Home.storyboard in Resources */,
 				0592AC6C1BE8376900F84307 /* Library.storyboard in Resources */,
